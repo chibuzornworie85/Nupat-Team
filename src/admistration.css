@@ -1,0 +1,9 @@
+.stage1 {
+    background-image: url("./assets/");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 602px;
+    border-radius: 20px;
+    height: 448px;
+  }

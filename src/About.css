@@ -1,0 +1,39 @@
+.back {
+  background-image: url("./assets/about/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.body {
+  background-image: url("./assets/about/bg1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.star {
+  color: #03cfd6;
+}
+
+.tex {
+  background: rgba(19, 30, 71, 0.2);
+}
+
+.value {
+  background: rgba(19, 30, 71, 0.1);
+  border-radius: 8px;
+}
+
+.team{
+  background: rgba(19, 30, 71, 0.1);
+}
+
+.imgs1{
+  border: 1px solid #03CFD6;
+}
+
+.text{
+  border: 1px solid #03CFD6;
+  border-radius: 40px;
+}

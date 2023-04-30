@@ -1,0 +1,21 @@
+.serv {
+  background-image: url("./assets/service/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.most button {
+  border: 1px solid #000;
+  color: #000;
+  background: #fff;
+  border-radius: 16px;
+  width: 160px;
+  height: 48px;
+}
+
+.most span{
+    color: #000000;
+    font-size: 20px;
+    font-family: 'Montserrat';
+}
