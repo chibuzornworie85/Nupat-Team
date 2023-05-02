@@ -109,7 +109,7 @@ const Recruitement = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="rec text-white py-6 md:py-10 lg:py-10 xl:py-10 pl-10 md:pl-14 text-xs lg:pl-20 xl:pl-[90px] md:text-xl lg:text-2xl xl:text-2xl font-semibold"
+        className="rec text-white py-6 md:py-10 lg:py-10 xl:py-10 pl-8 md:pl-14 text-xs lg:pl-20 xl:pl-[80px] md:text-xl lg:text-2xl xl:text-2xl font-semibold"
       >
         <h1>
           <span>Home</span>/Recruitment & Selection
@@ -119,11 +119,11 @@ const Recruitement = () => {
         style={{ fontFamily: "Montserrat" }}
         className="bg-[url('/src/assets/rec/bg.png')] bg-no-repeat bg-center bg-cover"
       >
-        <div className=" xl:py-32 lg:py-32 md:py-16 py-12 pl-7 text-white xl:pl-[90px] md:pl-14 lg:pl-20">
-          <h1 className=" font-semibold text-base md:text-2xl lg:text-3xl xl:text-4xl xl:pb-4 lg:pb-4 pb-2">
+        <div className=" xl:py-32 lg:py-32 md:py-16 py-12 pl-7 text-white xl:pl-[80px] md:pl-14 lg:pl-20">
+          <h1 className=" font-semibold text-[13px] md:text-2xl lg:text-3xl xl:text-4xl xl:pb-4 lg:pb-4 pb-2">
             Outsource for Success, Hire Competency...
           </h1>
-          <p className=" text-xs md:text-xl lg:text-2xl xl:text-2xl text-[#03cfd6]">
+          <p className=" text-[10px] md:text-xl lg:text-2xl xl:text-2xl text-[#03cfd6]">
             We help business outsource, select, engage and keep top talents
           </p>
         </div>
@@ -131,9 +131,9 @@ const Recruitement = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" bg-black h-48 xl:h-36 lg:h-36 lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-16 "
+        className=" bg-black h-[164px] xl:h-32 lg:h-32 px-0 text-[14px] lg:text-[16px] xl:text-[16px] lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-12 "
       >
-        <div className=" flex flex-col lg:flex-row lg:gap-5 lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-6 xl:gap-24 text-white">
+        <div className=" flex flex-col lg:flex-row lg:gap-5 lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-5 xl:gap-[130px] text-white">
           <p className=" flex text-center items-center gap-4">
             <img src={box} alt="box" />
             Accomplish greater business infiltration
@@ -151,13 +151,13 @@ const Recruitement = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" flex flex-col lg:flex-row xl:flex-row justify-around px-12 xl:px-12 mt-10"
+        className=" flex flex-col lg:flex-row xl:flex-row justify-around md:px-10 px-10 lg:px-1 xl:px-12 mt-10"
       >
-        <div className="flex flex-col gap-4 text-lg xl:text-3xl lg:text-3xl md:px-10 lg:px-0 xl:px-0">
-          <h2 className=" bg-[#e6e6e6] h-16 p-4 w-full">
+        <div className="flex flex-col gap-4 text-lg xl:text-3xl lg:text-2xl md:px-10 lg:px-0 xl:px-0">
+          <h2 className="bg-[#e6e6e6] h-16 p-4 w-full">
             <Link to="/business">Business Advisory</Link>
           </h2>
-          <p className=" bg-[#e6e6e6] h-16 p-4 w-full font-semibold text-[#03CFD6]">
+          <p className=" text-[#03CFD6] font-semibold bg-[#e6e6e6] h-16 p-4 w-full">
             Recruitment & Selection
           </p>
           <p className=" bg-[#e6e6e6] h-16 p-4 w-full">
@@ -170,8 +170,8 @@ const Recruitement = () => {
             <Link to="/admistration">Administration</Link>
           </p>
         </div>
-        <div className="it1 bg-[url('/src/assets/rec/bg1.png')] bg-no-repeat bg-cover bg-center rounded-2xl ml-5 lg:ml-0 xl:ml-0 mt-8 lg:mt-0 xl:mt-0 lg:w-2/4 xl:w-2/4 h-52 lg:h-96 xl:h-96 flex justify-center md:mx-24 lg:mx-0 xl:mx-0">
-          <div className=" text-xl lg:text-5xl xl:text-5xl text-white flex justify-center items-center font-semibold">
+        <div className="it1 bg-[url('/src/assets/rec/bg1.png')] bg-no-repeat bg-cover bg-center rounded-2xl ml-5 xl:ml-0 lg:ml-0 mt-8 lg:mt-0 xl:mt-0 lg:w-2/4 xl:w-2/4 h-52 lg:h-96 xl:h-96 flex justify-center md:mx-24 lg:mx-0 xl:mx-0">
+          <div className=" text-xl xl:text-5xl text-white flex justify-center items-center font-semibold">
             <h1 className="">Recruitment & Selection</h1>
           </div>
         </div>
@@ -188,39 +188,39 @@ const Recruitement = () => {
         </Link>
         <div className="what flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[180px]">
           <h1 className=" font-semibold">What We Offer at NUPAT</h1>
-          <p className=" hidden xl:block lg:block">
+          <p className=" hidden xl:block lg:block text-sm">
             NUPAT Outsourcing offers Human Resource Outsourcing which includes
             employee management, performance management, and payroll processing.
             Our esteemed clientele base cuts across different industries like
             Banking, Telecoms, Tech Start-ups, Fin-techs and Information
             Technology.
           </p>
-          <p className=" xl:hidden lg:hidden">
+          <p className=" xl:hidden lg:hidden text-sm">
             NUPAT Outsourcing offers Human Resource Outsourcing which includes
             employee management, performance management, and payroll processing.
             Our esteemed clientele base cuts across different industries like
             Banking, Telecoms, Tech Start-ups, Fin-techs and Information
             Technology.
           </p>
-          <p className=" hidden xl:block lg:block">
+          <p className=" hidden xl:block lg:block text-sm">
             No matter how complex your finances or personal situation, we have
             the expertise and market-leading tools at our disposal to provide
             you with sophisticated and forward-thinking advice, tailored
             precisely to your needs.
           </p>
-          <p className=" xl:hidden lg:hidden">
+          <p className=" xl:hidden lg:hidden text-sm">
             No matter how complex your finances or personal situation, we have
             the expertise and market-leading tools at our disposal to provide
             you with sophisticated and forward-thinking advice, tailored
             precisely to your needs.
           </p>
-          <p className=" hidden xl:block lg:block">
+          <p className=" hidden xl:block lg:block text-sm">
             Your personal wealth adviser will consider your finances as a whole
             to ensure your plans, savings and investments are working hard, and
             harmoniously together, to achieve your objectives both now and in
             the future.
           </p>
-          <p className=" xl:hidden lg:hidden">
+          <p className=" xl:hidden lg:hidden text-sm">
             Your personal wealth adviser will consider your finances as a whole
             to ensure your plans, savings and investments are working hard, and
             harmoniously together, to achieve your objectives both now and in
@@ -229,56 +229,56 @@ const Recruitement = () => {
           <h1 className=" font-semibold">
             Why this service is important for your business?
           </h1>
-          <p className=" hidden xl:block lg:block">
+          <p className=" hidden xl:block lg:block text-sm">
             <span>Recruitment & Selection:</span> Because the quality of
             personnel is a critical success factor for your business, you can
             count on us to manage and optimize your recruitment and selection
             needs.
           </p>
-          <p className="xl:hidden lg:hidden">
+          <p className="xl:hidden lg:hidden text-sm">
             <span>Recruitment & Selection:</span> Because the quality of
             personnel is a critical success factor for your business, you can
             count on us to manage and optimize your recruitment and selection
             needs.
           </p>
-          <p className=" xl:block hidden lg:block">
+          <p className=" xl:block hidden lg:block text-sm">
             <span>Personnel Recruitment Services:</span> The employment of
             trained and tested employees goes a long way in achieving your
             organization’s corporate goals. We recruit the best hands to meet
             your unique employee needs. Our services include:
           </p>
-          <p className="xl:hidden lg:hidden">
+          <p className="xl:hidden lg:hidden text-sm">
             <span>Personnel Recruitment Services:</span> The employment of
             trained and tested employees goes a long way in achieving your
             organization’s corporate goals. We recruit the best hands to meet
             your unique employee needs. Our services include:
           </p>
-          <ul className=" list-disc pl-12">
+          <ul className=" list-disc pl-12 text-sm">
             <li>
               Recruitment of professionals for specific positions as advised by
               our clients.
             </li>
           </ul>
-          <ul className=" list-disc pl-12">
+          <ul className=" list-disc pl-12 text-sm">
             <li>
               Head hunting of experienced hands to fill vacant management
               positions.
             </li>
           </ul>
-          <ul className=" list-disc pl-12">
+          <ul className=" list-disc pl-12 text-sm">
             <li> Recruitment of various categories of support staff.</li>
           </ul>
-          <p className=" hidden xl:block lg:block">
+          <p className=" hidden xl:block lg:block text-sm">
             <span>Recruitment Process Review:</span> We review and refine our
             recruitment processes continuously in line with international best
             practices. We achieve this by:
           </p>
-          <p className=" xl:hidden">
+          <p className=" xl:hidden text-sm">
             <span>Recruitment Process Review:</span> We review and refine our
             recruitment processes continuously in line with international best
             practices. We achieve this by:
           </p>
-          <ul className=" list-disc pl-12">
+          <ul className=" list-disc pl-12 text-sm">
             <li className=" hidden xl:block lg:block">
               Developing strategic recruitment initiatives based on the current
               demographics of our client's workforce.
@@ -288,12 +288,12 @@ const Recruitement = () => {
               demographics of our client's workforce.
             </li>
           </ul>
-          <ul className=" list-disc pl-12">
+          <ul className=" list-disc pl-12 text-sm">
             <li>
               Adopting more efficient and professional recruitment processes.
             </li>
           </ul>
-          <ul className=" list-disc pl-12">
+          <ul className=" list-disc pl-12 text-sm">
             <li className=" hidden xl:block lg:block">
               Reviewing and recommending the best selection techniques based on
               the client's unique needs.
@@ -303,7 +303,7 @@ const Recruitement = () => {
               the client's unique needs.
             </li>
           </ul>
-          <ul className=" list-disc pl-12">
+          <ul className=" list-disc pl-12 text-sm">
             <li>Developing work assessments in line with job requirements.</li>
           </ul>
         </div>

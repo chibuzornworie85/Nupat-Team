@@ -109,7 +109,7 @@ const Business = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="rec text-white py-6 xl:py-10 md:py-10 lg:py-10 pl-10 text-xs xl:pl-[90px] md:pl-12 lg:pl-20 md:text-xl lg:text-xl xl:text-2xl font-semibold"
+        className="rec text-white py-6 xl:py-10 md:py-10 lg:py-10 pl-9 text-xs xl:pl-[80px] md:pl-12 lg:pl-20 md:text-xl lg:text-xl xl:text-2xl font-semibold"
       >
         <h1>
           <span>Home</span>/Business Advisory
@@ -119,11 +119,11 @@ const Business = () => {
         style={{ fontFamily: "Montserrat" }}
         className="bg-[url('/src/assets/business/bg1.png')] bg-no-repeat bg-center bg-cover"
       >
-        <div className=" xl:py-32 lg:py-32 md:py-12 py-12 pl-7 text-white md:pl-14 lg:pl-28 xl:pl-[90px]">
-          <h1 className=" font-semibold text-base lg:text-3xl md:text-3xl xl:text-4xl xl:pb-4 pb-2">
+        <div className=" xl:py-32 lg:py-32 md:py-12 py-12 pl-7 text-white md:pl-14 lg:pl-28 xl:pl-[80px]">
+          <h1 className=" font-semibold text-[13px] lg:text-3xl md:text-3xl xl:text-4xl xl:pb-4 pb-2">
             Outsource for Success, Hire Competency...
           </h1>
-          <p className=" text-xs lg:text-xl md:text-xl xl:text-2xl text-[#03cfd6]">
+          <p className=" text-[10px] lg:text-xl md:text-xl xl:text-2xl text-[#03cfd6]">
             We help business outsource, select, engage and keep top talents
           </p>
         </div>
@@ -131,9 +131,9 @@ const Business = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" bg-black h-48 xl:h-36 lg:h-36 lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-16 "
+        className=" bg-black h-[164px] xl:h-32 lg:h-32 px-0 text-[14px] lg:text-[16px] xl:text-[16px] lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-12 "
       >
-        <div className=" flex flex-col lg:flex-row lg:gap-5 lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-6 xl:gap-24 text-white">
+        <div className=" flex flex-col lg:flex-row lg:gap-5 lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-5 xl:gap-[130px] text-white">
           <p className=" flex text-center items-center gap-4">
             <img src={box} alt="box" />
             Accomplish greater business infiltration
@@ -186,15 +186,15 @@ const Business = () => {
             <img src={mess} alt="mess" />
           </div>
         </Link>
-        <div className="what1 flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 w-[702px] xl:ml-[180px]">
+        <div className="what1 flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[180px]">
           <h1 className=" font-semibold text-2xl hidden xl:flex lg:flex">
             Looking for a Management Consulting <br /> Company in Nigeria?
           </h1>
-          <h1 className=" font-semibold text-2xl xl:hidden lg:hidden">
-            Looking for a Management Consulting Company <br /> in Nigeria?
+          <h1 className=" font-semibold text-xl xl:hidden lg:hidden">
+            Looking for a Management Consulting Company in Nigeria?
           </h1>
 
-          <p className=" hidden xl:block lg:block">
+          <p className=" hidden xl:block lg:block text-sm">
             Our management consulting administrations center around our
             customers’ most basic issues and openings: standard procedures,
             marketing, and sales promotions, tasks, innovation, change,
@@ -203,7 +203,7 @@ const Business = () => {
             impact from enhancing the whole of the parts, not simply the
             individual pieces.
           </p>
-          <p className=" xl:hidden lg:hidden">
+          <p className=" xl:hidden lg:hidden text-sm">
             Our management consulting administrations center around our
             customers’ most basic issues and openings: standard procedures,
             marketing, and sales promotions, tasks, innovation, change,
@@ -212,7 +212,7 @@ const Business = () => {
             impact from enhancing the whole of the parts, not simply the
             individual pieces.
           </p>
-          <ul className="list-disc pl-12">
+          <ul className="list-disc pl-12 text-sm">
             <li>Business Modal Analysis</li>
             <li>Coaching Support</li>
             <li>Feasibility Studies</li>
@@ -222,20 +222,22 @@ const Business = () => {
             <li>Business Plan Formulation</li>
           </ul>
 
-          <p className=" hidden xl:block lg:block">
+          <p className=" hidden xl:block lg:block text-sm">
             At <span>NUPAT</span>, we empower our customers to adopt an advanced
             first strategy for each business commitment. Our ability is
             supplemented by an extending technical system of best-of-breed
             partners who are developing tomorrow’s innovations today.
           </p>
 
-          <p className="xl:hidden lg:hidden">
+          <p className="xl:hidden lg:hidden text-sm">
             At <span>NUPAT</span>, we empower our customers to adopt an advanced
             first strategy for each business commitment. Our ability is
             supplemented by an extending technical system of best-of-breed
             partners who are developing tomorrow’s innovations today.
           </p>
-          <h1 className=" font-semibold text-2xl">Sales and Marketing</h1>
+          <h1 className=" font-semibold text-xl xl:text-2xl">
+            Sales and Marketing
+          </h1>
 
           <p className=" hidden xl:block lg:block">
             Our group of world-class specialists assists you with accomplishing
@@ -245,7 +247,7 @@ const Business = () => {
             that guarantee you convey ideal client connections at each touch
             point.
           </p>
-          <p className=" xl:hidden lg:hidden">
+          <p className=" xl:hidden lg:hidden text-sm">
             Our group of world-class specialists assists you with accomplishing
             economical, natural development by concentrating on three basic
             structures: an outside-in approach that puts clients initially,
@@ -256,7 +258,7 @@ const Business = () => {
 
           <h1 className=" font-semibold text-2xl">Cost Transformation</h1>
 
-          <p className=" hidden xl:block lg:block">
+          <p className=" hidden xl:block lg:block text-sm">
             Genuine cost change is tied in with disentangling, pulling together
             and reinforcing your team so you can seek after development and give
             a superior client experience. Our methodology is both all-
@@ -264,7 +266,7 @@ const Business = () => {
             and consistently improve a reasonable cost of executives culture.
           </p>
 
-          <p className="xl:hidden lg:hidden">
+          <p className="xl:hidden lg:hidden text-sm">
             Genuine cost change is tied in with disentangling, pulling together
             and reinforcing your team so you can seek after development and give
             a superior client experience. Our methodology is both all
@@ -272,9 +274,9 @@ const Business = () => {
             and consistently improve a reasonable cost of executives culture.
           </p>
 
-          <h1 className=" font-semibold text-2xl">Strategy</h1>
+          <h1 className=" font-semibold text-xl xl:text-2xl">Strategy</h1>
 
-          <p className=" hidden xl:block lg:block">
+          <p className=" hidden xl:block lg:block text-sm">
             In a period of disturbance, strategy is a higher priority than any
             time in recent memory. We offer innovative arrangements that have
             helped a huge number of organizations over different industries
@@ -287,7 +289,7 @@ const Business = () => {
             supported, gainful development—an accomplishment just 1 out of 11
             organizations figures out how to pull off.
           </p>
-          <p className="xl:hidden lg:hidden">
+          <p className="xl:hidden lg:hidden text-sm">
             In a period of disturbance, strategy is a higher priority than any
             time in recent memory. We offer innovative arrangements that have
             helped a huge number of organizations over different industries
@@ -301,9 +303,11 @@ const Business = () => {
             organizations figures out how to pull off.
           </p>
 
-          <h1 className=" font-semibold text-2xl">Client Learning Programs</h1>
+          <h1 className=" font-semibold text-xl xl:text-2xl">
+            Client Learning Programs
+          </h1>
 
-          <p className="hidden xl:block lg:block">
+          <p className="hidden xl:block lg:block text-sm">
             With regard to ability, industry pioneers concur on two things on
             learning interventions: It’s valuable, and it’s rare. That is the
             reason we made <u>leverage LMS.</u> Through our work with a
@@ -313,7 +317,7 @@ const Business = () => {
             prepares your team with an “Essential Corporate Toolbox” that can be
             customized to address the issues of their specific market condition.
           </p>
-          <p className="xl:hidden lg:hidden">
+          <p className="xl:hidden lg:hidden text-sm">
             With regard to ability, industry pioneers concur on two things on
             learning interventions: It’s valuable, and it’s rare. That is the
             reason we made <u>leverage LMS.</u> Through our work with a
@@ -324,22 +328,22 @@ const Business = () => {
             customized to address the issues of their specific market condition.
           </p>
 
-          <p className=" hidden xl:block lg:block">
+          <p className=" hidden xl:block lg:block text-sm">
             Quicken your advancement and change with a completely coordinated
             suite of abilities that puts your business objectives at the core of
             all that you do.
           </p>
-          <p className="xl:hidden lg:hidden">
+          <p className="xl:hidden lg:hidden text-sm">
             Quicken your advancement and change with a completely coordinated
             suite of abilities that puts your business objectives at the core of
             all that you do.
           </p>
 
-          <p className="hidden xl:block lg:block">
+          <p className="hidden xl:block lg:block text-sm">
             We work with businesses who need to own their future, not avoid it.
             Together, we accomplish phenomenal results.
           </p>
-          <p className="xl:hidden lg:hidden">
+          <p className="xl:hidden lg:hidden text-sm">
             We work with businesses who need to own their future, not avoid it.
             Together, we accomplish phenomenal results.
           </p>
@@ -356,7 +360,7 @@ const Business = () => {
         className=" xl:flex flex justify-center lg:justify-start md:justify-start xl:justify-start pt-8 xl:pt-16 md:pt-16 lg:pt-16 xl:pl-10 xl:pb-20 md:pb-20 lg:pb-20 mx-14"
       >
         <div className=" flex flex-col xl:pr-10 xl:pt-5 lg:pt-5 md:pt-5">
-          <h1 className=" text-xl xl:text-2xl pb-2">Subscribe</h1>
+          <h1 className=" text-sm xl:text-2xl pb-2">Subscribe</h1>
           <p className="text-sm xl:text-base pb-2">
             Create better experience with our business solution by subscribing{" "}
             <br /> to our newsletter.
@@ -367,7 +371,7 @@ const Business = () => {
               <input
                 type="text"
                 placeholder="Enter your Email Address"
-                className=" bg-white text-base flex justify-start pl-2 border-transparent xl:w-96 lg:w-96 md:w-96"
+                className=" bg-white text-sm flex justify-start pl-2 border-transparent xl:w-96 lg:w-96 md:w-96"
               />
               <button className=" bg-black text-white text-sm xl:text-base px-4 lg:text-base md:text-base xl:px-20 xl:py-2 md:px-8 lg:px-20 md:py-2 lg:py-2 rounded-xl relative lg:right-2 xl:right-2 md:right-1">
                 Subscribe

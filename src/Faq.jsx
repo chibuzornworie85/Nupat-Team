@@ -1,9 +1,11 @@
 const Faq = () => {
   return (
     <>
-      <div style={{fontFamily:'Montserrat'}} className="faq">
+      <div style={{ fontFamily: "Montserrat" }} className="faq">
         <div className=" flex justify-end p-5 pb-2">
-          <Link to='/'><img src={x} alt="" /></Link>
+          <Link to="/">
+            <img src={x} alt="" />
+          </Link>
         </div>
         <div className=" flex flex-col justify-center md:pt-20 xl:pt-0 lg:pt-20">
           <div className=" flex justify-center pb-2">
@@ -18,20 +20,20 @@ const Faq = () => {
           </p>
         </div>
       </div>
-      <div style={{fontFamily:'Montserrat'}} className="chat1 xl:p-12 flex items-center xl:pl-10 px-2 xl:px-0">
+      <div
+        style={{ fontFamily: "Montserrat" }}
+        className="chat1 xl:p-12 flex items-center xl:pl-10 px-2 xl:px-0"
+      >
         <img src={chat1} alt="" />
-        <p className=" bg-black mt-32 w-96 text-white">Hello! How can we help you?</p>
+        <p className=" bg-black mt-32 w-96 text-white">
+          Hello! How can we help you?
+        </p>
       </div>
     </>
   );
 };
 
 export default Faq;
-
-
-
-
-
 
 import React from "react";
 import "./faq.css";

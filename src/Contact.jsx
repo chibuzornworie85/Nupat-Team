@@ -109,7 +109,7 @@ const Contact = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="sec1 h-40 lg:h-72 md:h-60 xl:h-72 flex justify-center text-center items-center "
+        className="sec1 h-[104px] lg:h-72 md:h-60 xl:h-72 flex justify-center text-center items-center "
       >
         <div className="">
           <h1 className=" hit text-base md:text-2xl md:pb-5 lg:text-3xl xl:text-3xl lg:pb-8 xl:pb-10 font-semibold ">
@@ -143,9 +143,9 @@ const Contact = () => {
             and we will get in touch with you soon.
           </p>
           <p className=" text-xs pt-4 xl:hidden lg:hidden md:hidden">
-            Thank you for your interest in Nupat Teams <br /> Outsourcing
-            services. For us to help you better, please <br /> take a moment to
-            complete this form and we will get in <br /> touch with you soon.
+            Thank you for your interest in Nupat Teams Outsourcing services. For
+            us to help you better, please take a moment to complete this form
+            and we will get in touch with you soon.
           </p>
         </div>
       </div>
@@ -168,7 +168,7 @@ const Contact = () => {
               Schedule a free consultation to take <br /> your business to the
               next level.
             </h1>
-            <div className="pt-5 xl:pt-10 lg:pt-10 md:pt-10">
+            <div className="pt-5 text-[16px] xl:pt-10 lg:pt-10 md:pt-10">
               <h3>Name*</h3>
               <div className=" flex gap-4">
                 <div className=" pb-2">

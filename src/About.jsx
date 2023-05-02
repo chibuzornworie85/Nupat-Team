@@ -109,7 +109,7 @@ const About = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="back flex xl:h-72 lg:h-72 h-52 justify-center items-center text-center"
+        className="back flex xl:h-72 lg:h-72 h-[104px] justify-center items-center text-center"
       >
         <div className="">
           <h1 className="hit font-semibold xl:text-3xl md:text-2xl lg:text-3xl lg:pb-10 text-base pb-5 xl:pb-10 ">
@@ -154,7 +154,7 @@ const About = () => {
               Starting with <span className="star">NUPAT</span> is the best
               choice you’ll ever make!
             </h1>
-            <p className="xl:text-xl text-xs xl:block flex px-6 xl:px-0 mb-6 lg:block lg:text-base md:text-xl md:pl-12 lg:pl-0 xl:pl-0 lg:px-0 w-[603px]">
+            <p className="xl:text-xl text-xs xl:block flex px-6 xl:px-0 mb-6 lg:block lg:text-base md:text-xl md:pl-12 lg:pl-0 xl:pl-0 lg:px-0 xl:w-[603px]">
               Nupat is a Business Process Outsourcing firm whose business is to
               increase client’s productivity, operational efficiency, and in
               turn profit by taking over some of their intensive business
@@ -163,7 +163,7 @@ const About = () => {
               isuues beyond conventional wisdom to create opportunities for our
               clients, prospects, colleagues, and community.
             </p>
-            <button className=" bg-black text-white px-8 py-2 xl:px-2 xl:py-2 mb-6 xl:mb-0 mx-6 xl:mx-0 rounded-xl lg:mx-0 md:ml-12 xl:ml-0 lg:ml-0 w-[250px] h-[60px]">
+            <button className=" bg-black text-white px-5 py-2 xl:px-2 xl:py-2 mb-6 xl:mb-0 mx-6 xl:mx-0 rounded-xl lg:mx-0 md:ml-12 xl:ml-0 lg:ml-0 xl:w-[250px] xl:h-[60px]">
               <Link to="/contact">Contact us Today!</Link>
             </button>
           </div>
@@ -174,7 +174,7 @@ const About = () => {
         style={{ fontFamily: "Montserrat" }}
         className=" pt-8 xl:pt-16 items-center lg:pt-16 md:pt-16"
       >
-        <p className="tex rounded-3xl flex justify-center items-center p-4 w-56 md:w-80 lg:w-80 xl:w-[390px] xl:h-[80px] mx-6 xl:ml-24 lg:ml-16 md:text-xl lg:text-xl text-base xl:text-2xl xl:mb-8 mb-12 md:ml-12">
+        <p className="tex rounded-3xl flex justify-center items-center p-4 w-56 md:w-80 lg:w-80 xl:w-[390px] xl:h-[80px] mx-6 xl:ml-24 lg:ml-16 md:text-xl lg:text-xl text-sm xl:text-2xl xl:mb-8 mb-12 md:ml-12">
           What makes us Stand out
         </p>
         <h1 className=" xl:pl-24 lg:pl-10 lg:text-3xl md:text-3xl text-base xl:text-4xl mx-6 xl:mx-0 pb-4 md:pl-6">
@@ -209,7 +209,7 @@ const About = () => {
         <h1 className=" text-black text-base px-6 xl:px-0 xl:text-3xl md:text-2xl lg:text-2xl md:pl-12 lg:pl-16 font-semibold xl:pl-24 pb-10 ">
           <span className=" underline underline-offset-4">OUR</span> CORE VALUES
         </h1>
-        <div className="value xl:mx-20 pb-12 pt-12 lg:mx-16 md:mx-10 xl:h-[780px] xl:w-[1232px]">
+        <div className="value xl:mx-20 pb-12 pt-12 lg:mx-16 md:mx-10 xl:h-[780px] xl:w-[1232px] xl:px-0 lg:px-0 px-[30px]">
           <div className="flex flex-col gap-8 xl:gap-0 lg:gap-0 md:gap-0 md:flex-row xl:flex-row lg:flex-row xl:flex justify-around text-center pb-10">
             <div>
               <div className=" flex justify-center p-4">
@@ -293,7 +293,7 @@ const About = () => {
         </p>
         <p className=" text-xs xl:hidden lg:hidden md:hidden">
           To build a world where Global opportunities are accessible to every
-          talented individual regardless of location and <br /> background
+          talented individual regardless of location and background
         </p>
 
         <h1 className=" font-semibold text-black text-xl xl:text-3xl lg:text-3xl md:text-3xl lg:pl-16 md:pl-12 md:pb-6 lg:pb-6 xl:pl-18 pb-3 xl:pb-6 pt-4 ">
@@ -310,9 +310,9 @@ const About = () => {
           that can add value to your business.
         </p>
         <p className=" text-xs xl:hidden lg:hidden md:hidden">
-          Our team is made up of highly competent, experienced <br />{" "}
-          professionals fully committed to provide high quality client <br />{" "}
-          focused service that can add value to your business.
+          Our team is made up of highly competent, experienced professionals
+          fully committed to provide high quality client focused service that
+          can add value to your business.
         </p>
 
         <div>
@@ -407,16 +407,16 @@ const About = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="bg-[url('/src/assets/about/bg2.png')] w-[1076px] xl:h-[280px] bg-no-repeat bg-center bg-cover xl:px-0 lg:px-0 px-2 mx-6 md:mt-20 h-36 md:h-72 lg:h-72 text-white lg:pt-5 xl:pt-10 md:mx-24 lg:mx-36 lg:mt-10 xl:mx-[130px] mt-5 xl:mt-10"
+        className="bg-[url('/src/assets/about/bg2.png')] xl:w-[1076px] xl:h-[280px] bg-no-repeat bg-center bg-cover xl:px-0 lg:px-0 px-2 mx-6 md:mt-20 h-36 md:h-72 lg:h-72 text-white lg:pt-5 xl:pt-10 md:mx-24 lg:mx-36 lg:mt-10 xl:mx-[130px] mt-5 xl:mt-10"
       >
         <div className="flex justify-around items-center">
-          <div className=" text-xs xl:text-3xl lg:text-2xl md:text-xl h-[117px] w-[519px]">
+          <div className=" text-[10px] xl:text-3xl lg:text-2xl md:text-xl xl:h-[117px] w-[183.29px] xl:w-[519px]">
             <h1>
               Schedule a free consultaion to take your business to the next
               level.
             </h1>
           </div>
-          <div className=" py-1 xl:py-0 lg:py-0 md:py-0 text-xs xl:text-xl md:text-xl w-[224px] h-[48px] flex items-center lg:text-xl text-black xl:bg-yellow-300 md:bg-yellow-300 lg:bg-yellow-300 bg-[#03CFD6] rounded-md px-1 md:p-2 lg:p-2 lg:mt-40 md:mt-40 xl:p-2 mt-20 xl:mt-40">
+          <div className=" py-1 xl:py-0 lg:py-0 md:py-0 text-[10px] xl:text-xl md:text-xl xl:w-[224px] xl:h-[48px] flex items-center lg:text-xl text-black xl:bg-yellow-300 md:bg-yellow-300 lg:bg-yellow-300 bg-[#03CFD6] rounded-md px-1 md:p-2 lg:p-2 lg:mt-40 md:mt-40 xl:p-2 mt-20 xl:mt-40">
             <p>Get in touch with us </p>
           </div>
         </div>

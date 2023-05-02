@@ -6,12 +6,10 @@
 }
 
 .most button {
-  border: 1px solid #000;
+  border: 1px solid #1F335F;
   color: #000;
   background: #fff;
   border-radius: 16px;
-  width: 160px;
-  height: 48px;
 }
 
 .most span{

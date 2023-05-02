@@ -25,13 +25,13 @@ function App() {
     <>
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="nav flex px-0 gap-20 lg:gap-2 bg-black xl:flex items-center justify-around xl:gap-[81px] sticky top-0 xl:px-4 z-10 md:gap-0 text-[16px]"
+        className="nav flex px-0 gap-20 lg:gap-2 bg-black xl:flex items-center justify-around xl:gap-[81px] sticky top-0 xl:px-4 z-10 md:gap-[450px] text-[16px]"
       >
-        <div className=" mr-20 lg:mr-0 xl:mr-0 flex items-center text-center h-20 pt-6 md:mr-0">
+        <div className=" mr-20 lg:mr-0 xl:mr-0 md:mr-20 flex items-center text-center h-20 pt-6">
           <img src={logo} alt="logo" />
         </div>
-        <div className="hidden md:block lg:block text-white xl:flex">
-          <ul className=" flex lg:gap-10 xl:gap-16 items-center text-center md:gap-2">
+        <div className="hidden md:hidden lg:block text-white xl:flex">
+          <ul className=" flex lg:gap-10 xl:gap-16 items-center text-center">
             <li className=" underline">HOME</li>
             <li className=" hover:underline">
               <Link to="/about">ABOUT US</Link>
@@ -51,7 +51,7 @@ function App() {
             <button className="but1 ">Hire Talent</button>
           </ul>
         </div>
-        <div className="flex justify-end lg:hidden xl:hidden mr-10 md:hidden">
+        <div className="flex justify-end lg:hidden xl:hidden mr-10 md:block">
           <div className="" onClick={() => setNavClose(!navClose)}>
             {navClose ? (
               <div className="ham">
@@ -92,16 +92,16 @@ function App() {
         </div>
       </div>
 
-      <div className="sec h-40 lg:h-72 md:h-56 lg:pt-20 xl:h-72 text-center pt-10 xl:pt-20">
+      <div className="sec h-[104px] lg:h-72 md:h-[190px] lg:pt-20 xl:h-72 text-center pt-10 xl:pt-20">
         <h1
           style={{ fontFamily: "Montserrat" }}
-          className=" items-center h-0 font-semibold text-sm md:text-3xl md:h-7 lg:h-12 lg:text-4xl xl:h-12 xl:text-[47px] flex justify-center"
+          className=" items-center h-0 font-semibold text-xs md:text-[27px] md:h-7 lg:h-12 lg:text-4xl xl:h-12 xl:text-[47px] flex justify-center"
         >
           THE RIGHT TALENT MAKES ALL THE DIFFERENCE
         </h1>
         <p
           style={{ fontFamily: "Montserrat" }}
-          className=" h-0 pt-8 xl:h-7 md:h-4 text-[#1F335F] text-xs md:text-2xl xl:text-[32px] lg:text-2xl xl:pt-12 flex justify-center"
+          className=" h-0 pt-5 xl:h-7 md:h-4 text-[#1F335F] text-[10px] md:text-xl xl:text-[32px] lg:text-2xl xl:pt-12 flex justify-center"
         >
           DREAM JOBS, AFRICAN TOP TALENTS; All IN ONE PLACE
         </p>
@@ -109,9 +109,9 @@ function App() {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" bg-black h-48 xl:h-32 lg:h-32 lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-16 "
+        className=" bg-black h-[164px] xl:h-32 lg:h-32 px-0 text-[14px] lg:text-[16px] xl:text-[16px] lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-16 "
       >
-        <div className=" flex flex-col lg:flex-row lg:gap-5 lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-6 xl:gap-24 text-white">
+        <div className=" flex flex-col lg:flex-row lg:gap-5 lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-5 xl:gap-24 text-white">
           <p className=" flex text-center items-center gap-4">
             <img src={box} alt="box" />
             Accomplish greater business infiltration
@@ -129,10 +129,10 @@ function App() {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" flex flex-col md:flex-row lg:flex-row md:flex lg:flex md:justify-around lg:justify-around xl:flex-row xl:flex xl:justify-around pt-5 xl:px-7 md:mx-8 lg:mx-10"
+        className=" flex flex-col md:flex-row lg:flex-row md:flex lg:flex md:justify-around lg:justify-around xl:flex-row xl:flex xl:justify-around pt-5 xl:px-7 md:mx-0 lg:mx-10"
       >
         <div className=" flex flex-col md:flex-row lg:flex-row md:gap-1 lg:gap-1 xl:flex-row xl:flex gap-0 xl:gap-1">
-          <div className=" flex justify-center px-6 md:hidden lg:hidden xl:hidden">
+          <div className=" flex justify-center px-6 md:block lg:hidden xl:hidden">
             <img src={meet} alt="meet" />
           </div>
           <div className=" flex pt-10 xl:pt-0 xl:pl-2 lg:pl-10 md:pl-10 pl-6">
@@ -145,11 +145,11 @@ function App() {
             </div>
             <div>
               <p className=" xl:font-light pb-4 pl-2">WHY CHOOSE NUPAT?</p>
-              <h1 className=" h-28 xl:text-4xl md:text-2xl pl-2 hidden lg:block xl:block md:block xl:w-[822px]">
+              <h1 className=" h-28 xl:text-4xl md:text-xl pl-2 hidden lg:block xl:block md:hidden xl:w-[822px]">
                 We are A Full-Service Outsourcing <br />
                 Agency
               </h1>
-              <h1 className=" h-10 xl:h-14 text-base pl-2 xl:hidden lg:hidden md:hidden">
+              <h1 className=" h-10 xl:h-14 text-base pl-2 xl:hidden lg:hidden md:block">
                 We are A Full-Service Outsourcing Agency
               </h1>
               <p className=" text-xl hidden xl:block lg:block md:block xl:w-[842px]">
@@ -169,7 +169,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className=" hidden xl:block lg:block md:block md:pt-8 xl:pt-0 lg:pt-0">
+        <div className=" hidden xl:block lg:block md:hidden md:pt-8 xl:pt-0 lg:pt-0">
           <img src={image} alt="an image" />
         </div>
       </div>
@@ -178,7 +178,7 @@ function App() {
         style={{ fontFamily: "Montserrat" }}
         className=" xl:flex xl:justify-around pt-10 xl:px-[20px] lg:flex md:flex-col lg:flex-row xl:flex-row md:justify-around md:px-4 lg:justify-around lg:px-8"
       >
-        <div className=" bg-[url('/src/assets/cover1.png')] bg-no-repeat bg-center bg-cover mx-6 xl:mx-10 md:mx-10 lg:mx-10 text-white">
+        <div className=" bg-[url('/src/assets/cover1.png')] h-[350px] xl:h-[470px] lg:h-[470px] bg-no-repeat bg-center bg-cover mx-6 xl:mx-10 md:mx-10 lg:mx-10 text-white">
           <div className=" pl-3 lg:pl-6 md:pl-6 xl:pl-6 pt-10">
             <h1 className=" text-xl font-semibold xl:text-3xl lg:text-3xl md:text-2xl">
               Encouraging you to <span className="hit">Achieve</span> <br />{" "}
@@ -192,15 +192,15 @@ function App() {
               Solution & support, Business intellligence, Developer’s operation
               and hiring Talents.
             </p>
-            <p className=" text-xl pt-4 hidden xl:hidden lg:text-base lg:hidden md:block">
-              <span className=" text-xl font-semibold">Nupat Teams</span>{" "}
-              accelerate growth by simplifying and personalizing <br />
-              interactions that build deep and friendly relationship and
-              environment <br /> between people and organisations. Our services
-              includes HR Services, IT <br /> Solution & support, Business
-              intellligence, Developer’s operation and hiring Talents.
+            <p className=" text-xl pt-4 hidden xl:hidden xl:w-[731px] lg:text-base lg:hidden md:block">
+              <span className=" text-xl font-semibold">Nupat Teams</span>
+              accelerate growth by simplifying and personalizing interactions
+              that build deep and friendly relationship and environment between
+              people and organisations. Our services includes HR Services, IT
+              Solution & support, Business intellligence, Developer’s operation
+              and hiring Talents.
             </p>
-            <p className=" text-sm pt-4 xl:hidden lg:hidden md:hidden">
+            <p className="text-sm pt-4 xl:hidden lg:hidden md:hidden">
               <span className=" text-xl font-semibold">Nupat Teams</span>{" "}
               accelerate growth by simplifying and personalizing interactions
               that build deep and friendly relationship and environment between
@@ -210,7 +210,7 @@ function App() {
             </p>
             <p className=" pl-8 pt-3 text-yellow-400">Read More</p>
           </div>
-          <div className=" xl:flex flex justify-center relative -mt-20 xl:top-20 lg:top-40 md:top-40 md:pt-8 lg:pt-8 md:-mt-40 lg:-mt-40 px-14 mb-32 xl:mb-0 gap-2 top-8 xl:px-12 lg:px-12">
+          <div className=" xl:flex flex justify-center relative -mt-20 xl:top-20 lg:top-40 md:top-40 md:pt-8 lg:pt-8 md:-mt-40 lg:-mt-40 px-10 mb-32 xl:mb-0 gap-2 top-14 xl:px-12 lg:px-12">
             <img
               src={overLay}
               alt="overlay img"
@@ -226,7 +226,7 @@ function App() {
           </div>
         </div>
 
-        <div className="fifth flex flex-col items-center lg:mt-0 lg:mx-0 mt-44 xl:mt-0 xl:p-5 mx-6 xl:mx-0">
+        <div className="fifth flex flex-col items-center lg:mt-0 lg:mx-0 mt-32 xl:mt-0 xl:p-5 mx-6 xl:mx-0">
           <div>
             <img src={chat} alt="chat" />
           </div>
@@ -242,17 +242,15 @@ function App() {
             businesses build top-tier talents by hiring, vetting, and managing
             talents.
           </p>
-          <p className=" text-center text-sm pb-2 xl:hidden lg:hidden md:hidden">
-            Our purpose and passion at{" "}
+          <p className=" w-[340px] text-center text-sm pb-2 xl:hidden lg:hidden md:hidden p-[15px]">
+            Our purpose and passion at
             <span className=" font-semibold">
               Nupat <br /> Teams
             </span>{" "}
-            is to significantly impact
-            <br /> employee’s lives and the
-            <br /> organizations they partner with by <br /> discovering
-            mutually beneficial <br /> opportunities as well as promote <br />{" "}
-            diversity in the workplace. We also <br /> help businesses build
-            top-tier talents <br /> by hiring, vetting, and managing <br />{" "}
+            is to significantly impact employee’s lives and the organizations
+            they partner with by discovering mutually beneficial opportunities
+            as well as promote diversity in the workplace. We also help
+            businesses build top-tier talents by hiring, vetting, and managing
             talents.
           </p>
           <p className=" text-[#1F335F] flex items-center text-xl gap-6 font-light pb-6 xl:pb-0">
@@ -276,9 +274,9 @@ function App() {
             <br /> SOLUTIONS.
           </h1>
         </div>
-        <div className="text-center items-center pt-4 px-6 xl:px-28 flex flex-col gap-8 xl:gap-[10px] lg:gap-0 xl:w-[1160px] xl:mx-[50px]">
+        <div className="text-center items-center pt-4 px-6 xl:px-28 flex flex-col gap-8 xl:gap-[10px] lg:gap-0 lg:w-[1160px] xl:w-[1160px] xl:mx-[50px]">
           <div className=" xl:flex md:gap-2 lg:gap-2 md:flex lg:flex xl:gap-[30px] flex flex-col md:flex-row lg:flex-row gap-6">
-            <div className=" h-[262px] w-[374px] bg-[#000] rounded-xl pt-4 xl:pt-8 flex flex-col">
+            <div className=" xl:h-[262px] w-[320px] h-[270px] xl:w-[374px] bg-[#000] rounded-xl pt-4 xl:pt-8 flex flex-col">
               <h1 className=" text-[#03cfd6] font-semibold  pb-2 xl:pb-4">
                 RECRUITMENT
               </h1>
@@ -298,7 +296,7 @@ function App() {
                 <Link to="/recruitement">Learn More</Link>
               </button>
             </div>
-            <div className="h-[262px] w-[374px] bg-[#03CFD6] rounded-xl pt-8 md:pt-5 flex flex-col">
+            <div className="xl:h-[262px] xl:w-[374px] w-[320px] h-[270px] bg-[#03CFD6] rounded-xl pt-8 md:pt-5 flex flex-col">
               <h1 className=" pb-2 xl:pb-4 font-semibold text-black xl:pt-4">
                 IT OUTSOURCING
               </h1>
@@ -316,7 +314,7 @@ function App() {
                 <Link to="/it">Learn More</Link>
               </button>
             </div>
-            <div className="h-[262px] w-[374px] text-[#03cfd6] font-semibold bg-[#000] rounded-xl md:pt-5 pt-8 flex flex-col">
+            <div className="w-[320px] h-[270px] xl:h-[262px] xl:w-[374px] text-[#03cfd6] font-semibold bg-[#000] rounded-xl md:pt-5 pt-8 flex flex-col">
               <h1 className=" pb-2 xl:pb-4">BUSINESS ADVISORY</h1>
               <p className=" pb-6 text-sm px-5 text-white hidden xl:block lg:block md:hidden">
                 This service focuses on non-permanent employee hiring. Our
@@ -336,7 +334,7 @@ function App() {
 
           <div className=" flex justify-center">
             <div className=" xl:flex flex flex-col md:flex-row xl:flex-row lg:flex-row lg:pt-8 xl:gap-8 lg:gap-2 gap-5 xl:pt-8 items-center">
-              <div className="h-[262px] w-[374px] text-[#03cfd6] font-semibold bg-[#000] rounded-xl pt-4 flex flex-col">
+              <div className="xl:h-[262px] xl:w-[374px] w-[320px] h-[270px] text-[#03cfd6] font-semibold bg-[#000] rounded-xl pt-4 flex flex-col">
                 <h1 className="pb-2 xl:pb-4">TALENT HIRING</h1>
                 <p className=" text-sm pb-2 px-5 text-white hidden xl:block lg:block md:hidden">
                   To excel, your organisation needs the right talent. Our expert
@@ -356,19 +354,19 @@ function App() {
                   Learn More
                 </button>
               </div>
-              <div className="h-[262px] w-[374px] text-[#03cfd6] font-semibold bg-[#000] rounded-xl pt-4 flex text-left flex-col">
-                <h1 className="pl-5 pb-4">WORKFORCE CAPACITY DEVELOPMENT</h1>
+              <div className="xl:h-[262px] xl:w-[374px] w-[320px] h-[270px] text-[#03cfd6] font-semibold bg-[#000] rounded-xl pt-4 flex flex-col">
+                <h1 className="pl-5 pb-4">LEARNING AND DEVELOPMENT</h1>
                 <p className=" pb-4 text-sm px-5 text-white hidden xl:block lg:block md:hidden">
-                  Capacity development is the process by which individuals and
-                  organisation improve, and retain the skills, knowlegde, tools,
-                  equipment, and other resources neede to do their jobs
-                  effectively.
+                  Learning and development is very esssential for the training
+                  of employee of an organisation. Employee needs to relearn and
+                  unlearn, so they can develop in their chosen career within the
+                  organisation. effectively.
                 </p>
                 <p className=" pb-4 text-sm px-5 text-white xl:hidden lg:hidden md:block">
-                  Capacity development is the process by which individuals and
-                  organisation improve, and retain the skills, knowlegde, tools,
-                  equipment, and other resources neede to do their jobs
-                  effectively.
+                  Learning and development is very esssential for the training
+                  of employee of an organisation. Employee needs to relearn and
+                  unlearn, so they can develop in their chosen career within the
+                  organisation.
                 </p>
                 <button className="bg-[#03cfd6] rounded-xl mx-20 h-10 text-base font-normal text-black xl:mb-4">
                   Learn More
@@ -376,7 +374,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="bg-[#000] h-[316px] w-[1160px] rounded-xl xl:mt-10 lg:mt-10 pt-14 xl:px-28 flex flex-col items-center lg:px-20">
+          <div className="bg-[#000] w-[320px] h-[400px] xl:h-[316px] xl:w-[1160px] rounded-xl xl:mt-10 lg:mt-10 pt-14 xl:px-28 flex flex-col items-center lg:px-20">
             <h2 className=" lg:text-2xl text-xl xl:text-3xl text-white pb-4">
               Reduce Costs through Outsourcing
             </h2>
@@ -394,7 +392,7 @@ function App() {
               gap-specific business support solutions which results in verifable
               positive business results.
             </p>
-            <button className="btn2 font-normal text-base h-10 bg-[#03cfd6] rounded-xl lg:-mx-20 xl:mx-20 mb-5 px-4">
+            <button className="btn2 font-normal text-sm xl:text-base h-10 bg-[#03cfd6] rounded-xl lg:-mx-20 xl:mx-20 mb-5 px-4">
               SCHEDULE OUR FREE CONSULTATION
             </button>
           </div>
@@ -402,7 +400,7 @@ function App() {
       </div>
 
       <div className="pt-10">
-        <div className=" flex justify-around xl:pr-[250px] items-center lg:pr-[250px] md:pr-24">
+        <div className=" flex justify-around xl:pr-[250px] items-center lg:pr-[250px] pr-[50px] md:pr-24">
           <Link to="/faq">
             <img
               src={mess}
@@ -442,7 +440,7 @@ function App() {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" w-[1160px] h-[456px] bg-[url('/src/assets/cover2.png')] bg-cover bg-center bg-no-repeat mt-10 pt-10 md:mx-32 lg:mx-[110px] xl:mx-[110px] mb-10 mx-6"
+        className=" xl:w-[1160px] xl:h-[456px] bg-[url('/src/assets/cover2.png')] bg-cover bg-center bg-no-repeat mt-10 pt-10 md:mx-32 lg:mx-[110px] xl:mx-[110px] mb-10 mx-6"
       >
         <div className=" flex flex-col items-center">
           <h1 className=" xl:pb-5 text-base pb-2 xl:text-3xl lg:text-3xl md:text-2xl">
@@ -464,7 +462,7 @@ function App() {
               vetted employees. Join teams who have hired competent talents from
               NUPAT Outsourcing from few months to present time.
             </p>
-            <div className=" flex items-center gap-4 pt-8 px-5">
+            <div className=" flex items-center gap-4 pt-2 pb-6 xl:pb-0 xl:pt-8 px-5">
               <div className=" rounded-full bg-white h-10 w-10"></div>
               <div className=" flex flex-col">
                 <p>
@@ -486,7 +484,7 @@ function App() {
               vetted employees. Join teams who have hired competent talents from
               NUPAT Outsourcing from few months to present time.
             </p>
-            <div className=" flex items-center gap-4 pt-8 px-5">
+            <div className=" flex items-center gap-4 pt-2 pb-6 xl:pb-0 xl:pt-8 px-5">
               <div className=" rounded-full bg-white h-10 w-10"></div>
               <div className=" flex flex-col">
                 <p>
@@ -536,20 +534,20 @@ function App() {
         className=" flex flex-col gap-4 pb-10"
       >
         <div className=" flex flex-col items-center text-center lg:p-6 xl:p-6">
-          <h1 className=" font-semibold text-lg lg:text-3xl md:text-2xl xl:text-4xl py-4">
+          <h1 className=" font-semibold text-base lg:text-3xl md:text-2xl xl:text-4xl py-4">
             Benefits of working with NUPAT TEAMS
           </h1>
           <p className=" xl:text-2xl lg:text-xl md:text-lg text-base px-[100px] hidden xl:block">
             We have various and specific potential benefits as to why you should
             work with us for the progress of your business.
           </p>
-          <p className=" text-xl px-6 xl:hidden block">
+          <p className="px-6 xl:hidden block text-sm">
             We have various and specific potential benefits as to why you should
             work with us for the progress of your business.
           </p>
         </div>
         <div className=" flex flex-col xl:flex-row lg:flex-row md:flex-row justify-around mx-6 xl:mx-[200px] gap-4">
-          <div className="jet h-[393px] xl:w-[520px]">
+          <div className="jet h-[300px] xl:h-[393px] xl:w-[520px]">
             <div className=" text-[#03CFD6] flex flex-col items-center p-3 xl:p-6 text-xl font-semibold">
               <img src={cost} alt="image" />
               <h1 className=" pt-4">Cost Effective</h1>
@@ -561,7 +559,7 @@ function App() {
               of scale, lower labor costs in other regions, and specialized
               expertise to offer lower prices.
             </p>
-            <p className=" text-lg px-4 block xl:hidden">
+            <p className=" px-4 block xl:hidden text-sm">
               Outsourcing with Nupat Teams is cost efficient and a
               cost-effective solution compared to hiring in- house staff to
               perform the same tasks. Nupat Teams takes advantage of economies
@@ -569,8 +567,8 @@ function App() {
               expertise to offer lower prices.
             </p>
           </div>
-          <div className="jet h-[393px] xl:w-[520px]">
-            <div className=" text-[#03CFD6] flex flex-col items-center p-6 text-xl font-semibold">
+          <div className="jet h-[300px] xl:h-[393px] xl:w-[520px]">
+            <div className=" text-[#03CFD6] flex flex-col items-center p-3 xl:p-6 text-xl font-semibold">
               <img src={access} alt="image" />
               <h1 className=" pt-4">ACCESS TO EXPERTISE</h1>
             </div>
@@ -579,7 +577,7 @@ function App() {
               skills and expertise that may not be available in-house, such as
               language translation, web design, or IT services.
             </p>
-            <p className=" text-lg px-4 block xl:hidden">
+            <p className=" px-4 block xl:hidden text-sm">
               Outsourcing with Nupat Teams can provide access to specialized
               skills and expertise that may not be available in-house, such as
               language translation, web design, or IT services.
@@ -587,7 +585,7 @@ function App() {
           </div>
         </div>
         <div className=" flex flex-col xl:flex-row lg:flex-row md:flex-row justify-around mx-6 xl:mx-[200px] gap-4">
-          <div className="jet h-[393px] xl:w-[520px]">
+          <div className="jet h-[300px] xl:h-[393px] xl:w-[520px]">
             <div className=" text-[#03CFD6] flex flex-col items-center xl:p-6 p-4 text-xl font-semibold">
               <img src={team} alt="image" />
               <h1 className=" pt-4">Improved efficiency</h1>
@@ -597,13 +595,13 @@ function App() {
               the time and resources required to perform non-core functions.
               This can lead to increased productivity and efficiency.
             </p>
-            <p className=" text-lg px-8 block xl:hidden">
+            <p className=" text-sm px-8 block xl:hidden">
               We allow businesses to focus on its core competencies and reduce
               the time and resources required to perform non-core functions.
               This can lead to increased productivity and efficiency.
             </p>
           </div>
-          <div className="jet h-[393px] xl:w-[520px]">
+          <div className="jet h-[300px] xl:h-[393px] xl:w-[520px]">
             <div className=" text-[#03CFD6] flex flex-col items-center p-4 xl:p-6 text-xl font-semibold">
               <img src={cli} alt="image" />
               <h1 className=" pt-4">Risk Reduction</h1>
@@ -613,7 +611,7 @@ function App() {
               outsourcing company for certain functions, such as data security,
               compliance, or legal issues.
             </p>
-            <p className=" text-lg px-8 block xl:hidden">
+            <p className=" text-sm px-8 block xl:hidden">
               We help mitigate risk by shifting responsibility to the
               outsourcing company for certain functions, such as data security,
               compliance, or legal issues.
@@ -626,7 +624,7 @@ function App() {
         style={{ fontFamily: "Montserrat" }}
         className=" bg-black xl:mt-12 md:mt-12 lg:mt-12 md:mx-32 lg:mx-32 xl:mx-[70px] mx-6 font-semibold text-white"
       >
-        <div className=" text-white text-xl xl:text-5xl md:text-2xl lg:text-4xl flex justify-center pt-5">
+        <div className=" text-white text-[24px] xl:text-5xl md:text-2xl lg:text-4xl flex justify-center pt-5">
           <h1 className=" hidden xl:block lg:block md:block">
             Want your business to stand out?
           </h1>
@@ -634,7 +632,7 @@ function App() {
             Want your business <br /> to stand out?
           </h1>
         </div>
-        <div className=" xl:flex lg:flex md:flex hidden justify-around pt-8 items-center text-center pb-10">
+        <div className=" xl:flex text-[20px] xl:text-[32px] lg:flex md:flex hidden justify-around pt-8 items-center text-center pb-10">
           <div className=" items-center flex flex-col">
             <img src={group} alt="group" className=" pb-4" />
             <p>
@@ -654,7 +652,7 @@ function App() {
         </div>
         <div className=" xl:hidden md:hidden lg:hidden pt-8 items-center text-center pb-10">
           <div className=" flex justify-around items-center text-center">
-            <div className=" items-center flex flex-col">
+            <div className=" text-[20px] xl:text-[36px] items-center flex flex-col">
               <img src={group} alt="group" className=" pb-4" />
               <p>
                 Schedule your <br /> consultation
@@ -696,7 +694,7 @@ function App() {
             </h1>
           </div>
 
-          <div className=" pt-5 xl:pt-10 lg:pt-10">
+          <div className=" text-[16px] pt-5 xl:pt-10 lg:pt-10">
             <h3>Name*</h3>
             <div className=" flex gap-5">
               <div className=" pb-2">

@@ -109,15 +109,15 @@ const Admistration = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="rec text-white py-6 md:py-10 lg:py-10 xl:py-10 pl-10 text-xs md:pl-14 lg:pl-20 xl:pl-[90px] md:text-xl lg:text-2xl xl:text-2xl font-semibold"
+        className="rec text-white py-6 md:py-10 lg:py-10 xl:py-10 pl-10 text-xs md:pl-14 lg:pl-20 xl:pl-[80px] md:text-xl lg:text-2xl xl:text-2xl font-semibold"
       >
         <h1>
           <span>Home</span>/Administration
         </h1>
       </div>
       <div className="bg-black bg-no-repeat bg-center bg-cover">
-        <div className=" xl:py-32 md:py-14 lg:py-32 lg:pl-20 md:pl-14 py-12 pl-7 text-white xl:pl-[90px]">
-          <h1 className=" font-semibold text-base md:text-xl lg:text-4xl lg:pb-4 md:pb-4 xl:text-4xl xl:pb-4 pb-2">
+        <div className=" xl:py-32 md:py-14 lg:py-32 lg:pl-20 md:pl-14 py-12 pl-7 text-white xl:pl-[80px]">
+          <h1 className=" font-semibold text-[15px] md:text-xl lg:text-4xl lg:pb-4 md:pb-4 xl:text-4xl xl:pb-4 pb-2">
             Outsource for Success, Hire Competency...
           </h1>
           <p className=" text-xs lg:text-2xl md:text-xl xl:text-2xl text-[#03cfd6]">
@@ -128,9 +128,9 @@ const Admistration = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" bg-black h-48 xl:h-36 lg:h-36 lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-16 "
+        className=" bg-black h-[164px] xl:h-32 lg:h-32 px-0 text-[14px] lg:text-[16px] xl:text-[16px] lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-12"
       >
-        <div className=" flex flex-col lg:flex-row lg:gap-5 lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-6 xl:gap-24 text-white">
+        <div className=" flex flex-col lg:flex-row lg:gap-5 lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-5 xl:gap-[130px] text-white">
           <p className=" flex text-center items-center gap-4">
             <img src={box} alt="box" />
             Accomplish greater business infiltration
@@ -148,27 +148,27 @@ const Admistration = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" flex flex-col lg:flex-row xl:flex-row justify-around px-12 mt-10 xl:px-12"
+        className=" flex flex-col lg:flex-row xl:flex-row justify-around md:px-10 px-10 lg:px-1 xl:px-12 mt-10"
       >
-        <div className="flex flex-col gap-4 text-lg lg:text-3xl xl:text-3xl md:px-10 lg:px-0 xl:px-0">
-          <h2 className=" bg-[#e6e6e6] h-16 p-4 w-full">
+        <div className="flex flex-col gap-4 text-lg xl:text-3xl lg:text-2xl md:px-10 lg:px-0 xl:px-0">
+          <h2 className="bg-[#e6e6e6] h-16 p-4 w-full">
             <Link to="/business">Business Advisory</Link>
           </h2>
           <p className=" bg-[#e6e6e6] h-16 p-4 w-full">
-            <Link to="/recruitement">Recruitment & Selection</Link>
+            <Link to="/recruitement"> Recruitment & Selection</Link>
           </p>
-          <p className=" bg-[#e6e6e6] h-16 p-4 w-full">
+          <p className=" bg-[#e6e6e6] h-16 p-4 w-full ">
             <Link to="/it">IT Solution</Link>
           </p>
           <p className=" bg-[#e6e6e6] h-16 p-4 w-full">
             <Link to="/learning">Learning and Development</Link>
           </p>
           <p className=" bg-[#e6e6e6] h-16 p-4 w-full text-[#03CFD6] font-semibold">
-            Administration
+            <Link to="/admistration">Administration</Link>
           </p>
         </div>
-        <div className="it1 bg-[url('/src/assets/admi/stage.png')] bg-no-repeat bg-cover bg-center rounded-2xl ml-5 lg:ml-0 lg:mt-0 lg:w-2/4 lg:h-96 xl:ml-0 mt-8 xl:mt-0 xl:w-2/4 h-52 xl:h-96 flex justify-center md:mx-24 lg:mx-0 xl:mx-0">
-          <div className=" text-2xl xl:text-5xl lg:text-5xl text-white flex justify-center items-center font-semibold">
+        <div className="it1 bg-[url('/src/assets/admi/stage.png')] bg-no-repeat bg-cover bg-center rounded-2xl ml-5 xl:ml-0 lg:ml-0 mt-8 lg:mt-0 xl:mt-0 lg:w-2/4 xl:w-2/4 h-52 lg:h-96 xl:h-96 flex justify-center md:mx-24 lg:mx-0 xl:mx-0">
+          <div className=" text-xl xl:text-5xl text-white flex justify-center items-center font-semibold">
             <h1 className="">Administration</h1>
           </div>
         </div>
@@ -184,7 +184,7 @@ const Admistration = () => {
           </div>
         </Link>
 
-        <div className=" what flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[160px]">
+        <div className=" what flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[160px] text-sm">
           <p className=" hidden xl:block">
             Every department in a business is entrusted with various roles which
             are critical to the development and growth of that entity, with all
@@ -216,7 +216,7 @@ const Admistration = () => {
             confidential and quick assistance with the services listed below.
           </p>
 
-          <h1 className=" font-semibold text-2xl">
+          <h1 className=" font-semibold text-xl md:text-xl lg:text-2xl xl:text-2xl">
             Why this service is important for your business?
           </h1>
 

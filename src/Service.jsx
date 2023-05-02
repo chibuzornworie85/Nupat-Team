@@ -109,7 +109,7 @@ const Service = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="serv h-40 lg:h-72 md:h-72 xl:h-72 flex justify-center items-center text-center"
+        className="serv h-[104px] lg:h-72 md:h-72 xl:h-72 flex justify-center items-center text-center"
       >
         <div className="">
           <h1 className="hit text-base md:text-3xl lg:text-4xl xl:text-4xl pb-5 xl:pb-10 lg:pb-8 font-semibold ">
@@ -139,7 +139,7 @@ const Service = () => {
           turn profit
         </p>
         <div className=" grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 pt-4 lg:pt-10 xl:pt-10 lg:px-24 xl:px-[90px] gap-4 lg:gap-20 xl:gap-0">
-          <p className=" bg-black flex justify-center font-semibold rounded-xl py-3 w-52 text-[#03CFD6] ml-6 xl:hidden lg:hidden md:py-4 md:ml-12">
+          <p className=" bg-black text-[16px] flex justify-center font-semibold rounded-xl py-3 w-52 text-[#03CFD6] ml-6 xl:hidden lg:hidden md:py-4 md:ml-12">
             BUSINESS ADVISORY
           </p>
           <div className=" px-8 xl:px-0 lg:px-0 md:ml-5 xl:ml-0 lg:ml-0">
@@ -160,26 +160,22 @@ const Service = () => {
               in strategising <br /> plans at every level, help start ups to
               achieve maximum profit from their businesses.
             </p>
-            <p className=" xl:hidden lg:block lg:text-lg text-xs pb-4 px-2 md:py-4 md:px-12 lg:px-0 md:text-xl">
+            <p className=" xl:hidden lg:block lg:text-lg text-xs pb-4 px-5 md:py-4 md:px-12 lg:px-0 md:text-xl">
               Business Advisory is more than helping clients understand the
               figures of business. We not only advise, aid and assist companies
               inidentifying their potentials and overcoming obstacles in
               specific area. <br /> <br />
               Growth of businesses in terms of customers, business opportunities
-              and advancement,
-              <span className="text-xl lg:font-medium font-normal md:font-medium xl:font-medium">
-                {" "}
-                NUPAT Teams
-              </span>{" "}
-              help in strategisingplans at every level, help start ups to
-              achieve maximum profit fromtheir businesses.
+              and advancement, NUPAT Teams help in strategisingplans at every
+              level, help start ups to achieve maximum profit fromtheir
+              businesses.
             </p>
-            <button className=" xl:ml-0 mt-10 ml-2 md:ml-12 lg:ml-0">
+            <button className=" xl:ml-0 xl:mt-10 ml-5 md:ml-12 lg:ml-0 w-[120px] xl:w-[160px] h-[48px]">
               <Link to="/business">Read More</Link>
             </button>
           </div>
-          <div className=" pt-[40px]">
-            <p className=" text-[#03CFD6] lg:text-2xl xl:text-4xl text-base w-56 lg:w-full xl:w-[556px] lg:ml-0 xl:m-auto ml-6 font-semibold bg-black flex justify-center mb-4 rounded-xl md:py-4 py-3 lg:py-2 xl:py-2 md:ml-12">
+          <div className=" xl:pt-[40px]">
+            <p className=" text-[#03CFD6] lg:text-2xl xl:text-4xl text-[16px] w-[280px] lg:w-full xl:w-[556px] lg:ml-0 xl:m-auto ml-6 font-semibold bg-black flex justify-center mb-4 rounded-xl md:py-4 py-3 lg:py-2 xl:py-2 md:ml-12">
               RECRUITMENT & SELECTION
             </p>
             <div className=" px-8 xl:hidden lg:hidden md:ml-5">
@@ -199,32 +195,28 @@ const Service = () => {
                 competent to fill up particular roles seamless without hassles.
               </p>
             </p>
-            <p className=" xl:hidden lg:block lg:text-lg lg:pt-0 text-xs pb-4 px-2 pt-4 md:text-xl md:px-12">
+            <p className=" xl:hidden lg:block lg:text-lg lg:pt-0 text-xs pb-4 px-5 pt-4 md:text-xl md:px-12">
               Every department in an organization is entrusted with various
               roles which are critical to the development and growth of that
               entity. We designed to maximize employee strength in order to meet
               the employer's strategic goals and objectives. <br /> <br />
               <p>
-                At{" "}
-                <span className=" text-xl lg:font-medium md:font-medium xl:font-medium">
-                  {" "}
-                  NUPAT
-                </span>
-                , the goal is to connect prospective selected candidates
-                competent to fill up particular roles seamless without hassles.
+                At NUPAT , the goal is to connect prospective selected
+                candidates competent to fill up particular roles seamless
+                without hassles.
               </p>
             </p>
-            <button className=" xl:ml-0 mt-16 lg:ml-0 ml-2 md:ml-12">
+            <button className=" xl:ml-0 xl:mt-16 lg:ml-0 ml-5 w-[120px] xl:w-[160px] h-[48px] md:ml-12">
               <Link to="/recruitement">Read More</Link>
             </button>
           </div>
-          <div className=" xl:block hidden lg:block ml-[100px] mt-[40px]">
+          <div className=" xl:block hidden lg:block ml-[100px] xl:mt-[40px]">
             <img src={pic2} alt="" />
           </div>
-          <div className=" mt-[40px]">
+          <div className=" xl:mt-[40px]">
             <img src={pic5} alt="" className=" hidden xl:block lg:block" />
           </div>
-          <div className=" pt-[40px]">
+          <div className=" xl:pt-[40px]">
             <p className=" text-[#03CFD6] hidden lg:flex xl:flex lg:text-2xl xl:text-4xl bg-black justify-center mb-4 rounded-xl lg:mx-20 xl:mx-36 py-2">
               IT SOLUTION
             </p>
@@ -254,7 +246,7 @@ const Service = () => {
               for businesses to implement solutions that are cost effective and
               reliable for businesses relating to IT Solutions.
             </p>
-            <p className=" xl:hidden lg:block lg:text-lg text-xs lg:px-0 px-2 pb-4 md:px-12 md:text-xl">
+            <p className=" xl:hidden lg:block lg:text-lg text-xs lg:px-0 px-5 pb-4 md:px-12 md:text-xl">
               Every organisation has different IT needs. The ever-evolving
               technology needs has to be addressed in order to keep up the pace
               with competitors and deliver more value to cutomers. <br /> <br />
@@ -262,23 +254,21 @@ const Service = () => {
               and control IT strategies for more eefective delivery of
               IT-enabled business processes, application services and
               infrastructure solutions for business outcomes. <br /> <br />
-              <span className=" text-xl lg:font-medium md:font-medium xl:font-medium">
-                NUPAT Outsourcing Agency
-              </span>{" "}
-              has been acclaimed for our endeavor toward quality, consistent
-              support and consulting and we also understand how important it is
-              for businesses to implement solutions that are cost effective and
-              reliable for businesses relating to IT Solutions.
+              NUPAT Outsourcing Agency has been acclaimed for our endeavor
+              toward quality, consistent support and consulting and we also
+              understand how important it is for businesses to implement
+              solutions that are cost effective and reliable for businesses
+              relating to IT Solutions.
             </p>
-            <button className=" lg:ml-0 xl:ml-0 ml-2 md:ml-12 mt-14">
+            <button className=" lg:ml-0 xl:ml-0 ml-5 w-[120px] xl:w-[160px] h-[48px] md:ml-12 xl:mt-14">
               <Link to="/it">Read More</Link>
             </button>
           </div>
-          <div className=" pt-[40px]">
+          <div className=" xl:pt-[40px]">
             <p className=" text-[#03CFD6] hidden w-[552px] h-[61px] m-auto lg:flex xl:flex lg:text-2xl xl:text-4xl bg-black justify-center mb-4 rounded-xl py-2">
               LEARNING & DEVELOPMENT
             </p>
-            <p className=" text-[#03CFD6] w-56 lg:hidden xl:hidden text-base bg-black flex justify-center mb-4 rounded-xl py-3 ml-6 md:py-4 md:ml-10">
+            <p className=" text-[#03CFD6] w-[280px] text-[16px] lg:hidden xl:hidden text-base bg-black flex justify-center mb-4 rounded-xl py-3 ml-6 md:py-4 md:ml-10">
               LEARNING & DEVELOPMENT
             </p>
             <div className="xl:hidden lg:hidden px-8 pb-4 md:ml-4">
@@ -291,16 +281,16 @@ const Service = () => {
               workforce advancement and increase employee performance by
               providing clear and helpful training. <br /> <br />
               Learning and development is very esssential for the training of
-              <br /> employee of an organisation. Employee needs to relearn and
+              employee of an organisation. Employee needs to relearn and
               unlearn, so they can develop in their chosen career within the
-              <br /> organisation. <br />
+              organisation. <br />
               <br />
               In
               <span className=" font-semibold"> NUPAT Outsourcing Agency,</span>
               we help individuals transform themselves, their teams and their
               organisations so they have more impact.
             </p>
-            <p className=" xl:hidden lg:block lg:text-lg text-xs pb-4 px-2 md:px-12 lg:px-0 md:text-xl">
+            <p className=" xl:hidden lg:block lg:text-lg text-xs pb-4 px-5 md:px-12 lg:px-0 md:text-xl">
               In an environment where the only continuous thing is change,
               learning has become completely vital to every organisation’s
               competitiveness. Our learning and development services simplify
@@ -310,24 +300,21 @@ const Service = () => {
               employee of an organisation. Employee needs to relearn and
               unlearn, so they can develop in their chosen career within the
               organisation. <br /> <br />
-              In{" "}
-              <span className="text-xl lg:font-medium md:font-medium xl:font-medium">
-                NUPAT Outsourcing Agency,
-              </span>{" "}
-              we help individuals transform themselves, their teams and their
-              organisations so they have more impact.
+              In NUPAT Outsourcing Agency, we help individuals transform
+              themselves, their teams and their organisations so they have more
+              impact.
             </p>
-            <button className=" xl:ml-0 ml-2 lg:ml-0 md:ml-12 mt-14">
+            <button className=" xl:ml-0 ml-5 w-[120px] xl:w-[160px] h-[48px] lg:ml-0 md:ml-12 xl:mt-14">
               <Link to="/learning">Read More</Link>
             </button>
           </div>
           <div className=" hidden xl:block lg:block mt-[40px ml-[100px]">
             <img src={pic3} alt="" />
           </div>
-          <div className=" pt-[40px]">
+          <div className=" xl:pt-[40px]">
             <img src={pic4} alt="" className="hidden xl:block lg:block" />
           </div>
-          <div className=" pt-[40px]">
+          <div className=" xl:pt-[40px]">
             <p className=" text-[#03CFD6] lg:text-2xl xl:text-4xl bg-black justify-center mb-4 rounded-xl xl:mx-28 lg:mx-20 py-2 xl:flex lg:flex hidden">
               ADMINISTRATION
             </p>
@@ -349,7 +336,7 @@ const Service = () => {
               At NUPAT, our key responsibility is to provide professional
               outsourced administrative services to our clients.
             </p>
-            <p className=" xl:hidden lg:hidden text-xs px-2 pb-4 md:px-12 md:text-xl">
+            <p className=" xl:hidden lg:hidden text-xs px-5 pb-4 md:px-12 md:text-xl">
               Every department in a business is entrusted with various roles
               which are critical to the development and growth of that entity,
               with all the activities that businesses engage in, it is essential
@@ -358,7 +345,7 @@ const Service = () => {
               At NUPAT, our key responsibility is to provide professional
               outsourced administrative services to our clients.
             </p>
-            <button className=" lg:ml-0 xl:ml-0 ml-2 md:ml-12 mt-14">
+            <button className=" lg:ml-0 xl:ml-0 ml-5 w-[120px] xl:w-[160px] h-[48px] md:ml-12 xl:mt-14">
               <Link to="/admistration">Read More</Link>
             </button>
             <Link to="/faq">
@@ -372,16 +359,16 @@ const Service = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="bg-[url('/src/assets/about/bg2.png')] bg-no-repeat bg-center bg-cover xl:w-[1076px] xl:h-[280px] xl:px-0 lg:px-0 px-2 mx-6 md:mt-20 h-36 md:h-72 lg:h-72 text-white lg:pt-5 xl:pt-5 md:mx-12 lg:mx-36 lg:mt-10 xl:mx-[150px] mt-5 xl:mt-10"
+        className="bg-[url('/src/assets/about/bg2.png')] xl:w-[1076px] xl:h-[280px] bg-no-repeat bg-center bg-cover xl:px-0 lg:px-0 px-2 mx-6 md:mt-20 h-36 md:h-72 lg:h-72 text-white lg:pt-5 xl:pt-10 md:mx-24 lg:mx-36 lg:mt-10 xl:mx-[130px] mt-5 xl:mt-10"
       >
         <div className="flex justify-around items-center">
-          <div className=" text-xs xl:text-3xl lg:text-2xl md:text-xl xl:w-[519px]">
+          <div className=" text-[10px] xl:text-3xl lg:text-2xl md:text-xl xl:h-[117px] w-[183.29px] xl:w-[519px]">
             <h1>
               Schedule a free consultaion to take your business to the next
               level.
             </h1>
           </div>
-          <div className=" py-1 xl:py-0 lg:py-0 md:py-0 text-xs xl:text-xl md:text-xl lg:text-xl text-black w-[224px] h-[48px] flex items-center justify-center xl:bg-[#03CFD6] md:bg-[#03CFD6] lg:bg-[#03CFD6] bg-[#03CFD6] rounded-md px-1 md:p-2 lg:p-2 lg:mt-40 md:mt-40 xl:p-2 mt-20 xl:mt-40">
+          <div className=" py-1 xl:py-0 lg:py-0 md:py-0 text-[10px] xl:text-xl md:text-xl xl:w-[224px] xl:h-[48px] flex items-center lg:text-xl text-black xl:bg-yellow-300 md:bg-yellow-300 lg:bg-yellow-300 bg-[#03CFD6] rounded-md px-1 md:p-2 lg:p-2 lg:mt-40 md:mt-40 xl:p-2 mt-20 xl:mt-40">
             <p>Get in touch with us </p>
           </div>
         </div>
