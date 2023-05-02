@@ -170,7 +170,7 @@ const Contact = () => {
             </h1>
             <div className="pt-5 text-[16px] xl:pt-10 lg:pt-10 md:pt-10">
               <h3>Name*</h3>
-              <div className=" flex gap-4">
+              <div className=" flex gap-6">
                 <div className=" pb-2">
                   <input
                     type="text"
@@ -228,7 +228,7 @@ const Contact = () => {
               </h1>
               <p className=" text-white text-base xl:text-xl lg:text-xl pb-8">
                 We are here to answer any question you may have.
-                <br /> Feel free to reach us via contact form.
+                Feel free to reach us via contact form.
               </p>
               <p className=" mb-4 p-4 text-xs lg:text-2xl xl:text-2xl flex items-center gap-2 bg-white">
                 <img src={video} alt="video" /> 46, Community street, Akoka,
@@ -242,7 +242,7 @@ const Contact = () => {
                 <img src={mess} alt="mess" />
                 +2348031958586, +2347081475750
               </p>
-              <div className=" flex justify-center bg-white p-4 gap-4 h-14 lg:h-16 xl:h-16 mb-4 xl:mb-20">
+              <div className=" flex justify-center items-center bg-white p-4 gap-4 h-14 lg:h-16 xl:h-16 mb-4 xl:mb-20">
                 <img src={foot4} alt="" />
                 <img src={foot5} alt="" />
                 <img src={foot6} alt="" />
@@ -352,7 +352,7 @@ const Contact = () => {
               <img src={foot3} alt="foot3" className=" h-4" />
               info@nupat.com.ng
             </p>
-            <div className="flex gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
+            <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
               <img src={foot4} alt="foot4" />
               <img src={foot5} alt="foot5" />
               <img src={foot6} alt="foot6" />

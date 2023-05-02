@@ -376,7 +376,7 @@ const It = () => {
               <img src={foot3} alt="foot3" className=" h-4" />
               info@nupat.com.ng
             </p>
-            <div className="flex gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
+            <div className="flex gap-5 items-center pb-5 xl:pb-0 h-10 xl:h-8">
               <img src={foot4} alt="foot4" />
               <img src={foot5} alt="foot5" />
               <img src={foot6} alt="foot6" />
