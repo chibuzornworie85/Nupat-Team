@@ -274,13 +274,13 @@ function App() {
             <br /> SOLUTIONS.
           </h1>
         </div>
-        <div className="text-center items-center pt-4 px-6 xl:px-28 flex flex-col gap-8 xl:gap-[10px] lg:gap-0 lg:w-[1160px] xl:w-[1160px] xl:mx-[50px]">
-          <div className=" xl:flex md:gap-2 lg:gap-2 md:flex lg:flex xl:gap-[30px] flex flex-col md:flex-row lg:flex-row gap-6">
+        <div className="text-center items-center mt-10">
+          <div className=" xl:flex md:gap-2 lg:gap-2 md:flex lg:flex xl:gap-[30px] flex flex-col md:flex-row lg:flex-row gap-6 justify-center">
             <div className=" xl:h-[262px] w-[320px] h-[270px] xl:w-[374px] bg-[#000] rounded-xl pt-4 xl:pt-8 flex flex-col">
-              <h1 className=" text-[#03cfd6] font-semibold  pb-2 xl:pb-4">
+              <h1 className=" text-[#03cfd6] font-semibold  pb-2 xl:pb-4 flex justify-center">
                 RECRUITMENT
               </h1>
-              <p className=" pb-4 text-sm px-5 text-white hidden xl:block lg:block md:hidden">
+              <p className=" text-sm px-5 text-white hidden xl:block lg:block md:hidden">
                 We source and screen for the right people whowill deliver the
                 right result for your organisation; professional and
                 unprofessional positions thatsolve cpmpliance scalability, cost,
@@ -292,15 +292,15 @@ function App() {
                 unprofessional positions that solve cpmpliance scalability,
                 cost, quality or other recruiting challenge.
               </p>
-              <button className=" bg-[#03cfd6] rounded-xl mx-20 h-10 text-base font-normal xl:mb-4">
-                <Link to="/recruitement">Learn More</Link>
-              </button>
+              <button className="bg-[#03cfd6] rounded-xl mx-20 h-10 text-base font-normal text-black m-auto">
+              <Link to="/recruitement">Learn More</Link>
+                </button>
             </div>
             <div className="xl:h-[262px] xl:w-[374px] w-[320px] h-[270px] bg-[#03CFD6] rounded-xl pt-8 md:pt-5 flex flex-col">
-              <h1 className=" pb-2 xl:pb-4 font-semibold text-black xl:pt-4">
+              <h1 className=" pb-2 xl:pb-4 font-semibold text-black xl:pt-4 flex justify-center">
                 IT OUTSOURCING
               </h1>
-              <p className=" text-sm pb-6 px-5 text-black hidden xl:block lg:block md:hidden">
+              <p className=" text-sm pb-3 px-5 text-black hidden xl:block lg:block md:hidden">
                 We’ve increased business productivity and efficiency in many
                 organisations using technology, Let’s help your business scale
                 with bespoke IT Solutions.
@@ -310,13 +310,15 @@ function App() {
                 organisations using technology, Let’s help your business scale
                 with bespoke IT Solutions.
               </p>
-              <button className="bg-[#000] rounded-xl mx-20 md:mx-10 h-10 text-base font-normal xl:mb-4 text-white">
-                <Link to="/it">Learn More</Link>
-              </button>
+              <button className="bg-[#000] rounded-xl mx-20 h-10 text-base text-white font-normal m-auto">
+              <Link to="/it">Learn More</Link>
+                </button>
             </div>
             <div className="w-[320px] h-[270px] xl:h-[262px] xl:w-[374px] text-[#03cfd6] font-semibold bg-[#000] rounded-xl md:pt-5 pt-8 flex flex-col">
-              <h1 className=" pb-2 xl:pb-4">BUSINESS ADVISORY</h1>
-              <p className=" pb-6 text-sm px-5 text-white hidden xl:block lg:block md:hidden">
+              <h1 className=" pb-2 xl:pb-4 flex justify-center">
+                BUSINESS ADVISORY
+              </h1>
+              <p className=" text-sm px-5 text-white hidden xl:block lg:block md:hidden">
                 This service focuses on non-permanent employee hiring. Our
                 clients delegate the endless functions involved with contingent
                 worker hiring and management.
@@ -326,16 +328,18 @@ function App() {
                 clients delegate the endless functions involved with contingent
                 worker hiring and management.
               </p>
-              <button className="bg-[#03cfd6] rounded-xl md:mx-10 mx-20 h-10 text-base font-normal text-black">
-                <Link to="/business">Learn More</Link>
-              </button>
+              <button className="bg-[#03cfd6] rounded-xl mx-20 h-10 text-base font-normal text-black m-auto">
+              <Link to="/business">Learn More</Link>
+                </button>
             </div>
           </div>
 
           <div className=" flex justify-center">
             <div className=" xl:flex flex flex-col md:flex-row xl:flex-row lg:flex-row lg:pt-8 xl:gap-8 lg:gap-2 gap-5 xl:pt-8 items-center">
               <div className="xl:h-[262px] xl:w-[374px] w-[320px] h-[270px] text-[#03cfd6] font-semibold bg-[#000] rounded-xl pt-4 flex flex-col">
-                <h1 className="pb-2 xl:pb-4">TALENT HIRING</h1>
+                <h1 className="pb-2 xl:pb-4 flex justify-center">
+                  TALENT HIRING
+                </h1>
                 <p className=" text-sm pb-2 px-5 text-white hidden xl:block lg:block md:hidden">
                   To excel, your organisation needs the right talent. Our expert
                   recruiters source, screen and process candidates, using our
@@ -350,12 +354,14 @@ function App() {
                   faster and more effectively than traditional recruitment
                   methods.
                 </p>
-                <button className="bg-[#03cfd6] rounded-xl mx-20 h-10 text-base font-normal text-black xl:mb-2">
+                <button className="bg-[#03cfd6] rounded-xl mx-20 h-10 text-base font-normal text-black m-auto">
                   Learn More
                 </button>
               </div>
               <div className="xl:h-[262px] xl:w-[374px] w-[320px] h-[270px] text-[#03cfd6] font-semibold bg-[#000] rounded-xl pt-4 flex flex-col">
-                <h1 className="pl-5 pb-4">LEARNING AND DEVELOPMENT</h1>
+                <h1 className="pl-5 pb-4 flex justify-center">
+                  LEARNING AND DEVELOPMENT
+                </h1>
                 <p className=" pb-4 text-sm px-5 text-white hidden xl:block lg:block md:hidden">
                   Learning and development is very esssential for the training
                   of employee of an organisation. Employee needs to relearn and
@@ -368,33 +374,35 @@ function App() {
                   unlearn, so they can develop in their chosen career within the
                   organisation.
                 </p>
-                <button className="bg-[#03cfd6] rounded-xl mx-20 h-10 text-base font-normal text-black xl:mb-4">
+                <button className="bg-[#03cfd6] rounded-xl mx-20 h-10 text-base font-normal text-black m-auto">
                   Learn More
                 </button>
               </div>
             </div>
           </div>
-          <div className="bg-[#000] w-[320px] h-[400px] xl:h-[316px] xl:w-[1160px] rounded-xl xl:mt-10 lg:mt-10 pt-14 xl:px-28 flex flex-col items-center lg:px-20">
-            <h2 className=" lg:text-2xl text-xl xl:text-3xl text-white pb-4">
-              Reduce Costs through Outsourcing
-            </h2>
-            <p className=" text-base text-white pb-4 hidden xl:block lg:block md:hidden">
-              Our esteemed clients attain admirable business outcome working
-              with our professional and competent personnel <br /> toidentify
-              and close efficiency gaps. Our company’s objective is to innovate
-              and set gap-specific business support <br /> solutions which
-              results in verifable positive business results.
-            </p>
-            <p className=" text-sm text-white pb-4 xl:hidden px-2 lg:hidden md:block">
-              Our esteemed clients attain admirable business outcome working
-              with our professional and competent personnel toidentify and close
-              efficiency gaps. Our company’s objective is to innovate and set
-              gap-specific business support solutions which results in verifable
-              positive business results.
-            </p>
-            <button className="btn2 font-normal text-sm xl:text-base h-10 bg-[#03cfd6] rounded-xl lg:-mx-20 xl:mx-20 mb-5 px-4">
-              SCHEDULE OUR FREE CONSULTATION
-            </button>
+          <div className=" flex justify-center">
+            <div className="bg-[#000] w-[320px] h-[400px] xl:h-[316px] xl:w-[1160px] rounded-xl xl:mt-10 lg:mt-10 pt-14 xl:px-28 flex flex-col items-center lg:px-20">
+              <h2 className=" lg:text-2xl text-xl xl:text-3xl text-white pb-4">
+                Reduce Costs through Outsourcing
+              </h2>
+              <p className=" text-base text-white pb-4 hidden xl:block lg:block md:hidden">
+                Our esteemed clients attain admirable business outcome working
+                with our professional and competent personnel <br /> toidentify
+                and close efficiency gaps. Our company’s objective is to
+                innovate and set gap-specific business support <br /> solutions
+                which results in verifable positive business results.
+              </p>
+              <p className=" text-sm text-white pb-4 xl:hidden px-2 lg:hidden md:block">
+                Our esteemed clients attain admirable business outcome working
+                with our professional and competent personnel toidentify and
+                close efficiency gaps. Our company’s objective is to innovate
+                and set gap-specific business support solutions which results in
+                verifable positive business results.
+              </p>
+              <button className="font-normal text-sm xl:text-base h-10 bg-[#03cfd6] rounded-xl lg:-mx-20 xl:mx-20 px-4 m-auto">
+                SCHEDULE OUR FREE CONSULTATION
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -412,14 +420,16 @@ function App() {
             CLIENTS THAT TRUST US
           </h1>
         </div>
-        <div className=" xl:h-48 xl:border-2 xl:border-black flex justify-around xl:gap-44 xl:p-4 items-center w-[1160px] mt-4 xl:mx-28">
-          <marquee>
-            <div className=" hidden xl:flex gap-44 lg:block md:block">
-              <img src={client} alt="group" />
-              <img src={client} alt="group" />
-              <img src={client} alt="group" />
-            </div>
-          </marquee>
+        <div className=" flex justify-center">
+          <div className=" xl:h-48 xl:border-2 xl:border-black flex justify-around xl:gap-44 xl:p-4 items-center w-[1160px] mt-4 xl:mx-28">
+            <marquee>
+              <div className=" hidden xl:flex gap-44 lg:block md:block">
+                <img src={client} alt="group" />
+                <img src={client} alt="group" />
+                <img src={client} alt="group" />
+              </div>
+            </marquee>
+          </div>
         </div>
         <div className="border-2 h-24 border-black mx-7 xl:hidden lg:hidden md:hidden flex justify-around items-center">
           <marquee>
@@ -438,9 +448,10 @@ function App() {
         </div>
       </div>
 
-      <div
+     <div className=" flex justify-center">
+     <div
         style={{ fontFamily: "Montserrat" }}
-        className=" xl:w-[1160px] xl:h-[456px] bg-[url('/src/assets/cover2.png')] bg-cover bg-center bg-no-repeat mt-10 pt-10 md:mx-32 lg:mx-[110px] xl:mx-[110px] mb-10 mx-6"
+        className=" xl:w-[1160px] xl:h-[456px] bg-[url('/src/assets/cover2.png')] bg-cover bg-center bg-no-repeat mt-10 pt-10 mb-10 mx-6"
       >
         <div className=" flex flex-col items-center">
           <h1 className=" xl:pb-5 text-base pb-2 xl:text-3xl lg:text-3xl md:text-2xl">
@@ -496,6 +507,7 @@ function App() {
           </div>
         </div>
       </div>
+     </div>
 
       {/* <div className="bg-black h-fit">
         <div className=" xl:flex flex text-center justify-center text-xl md:text-2xl lg:text-3xl xl:text-3xl pt-8 text-[#03cfd6] font-semibold">
@@ -748,7 +760,7 @@ function App() {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" xl:flex flex justify-center md:justify-end lg:justify-end xl:justify-end pt-8 xl:pt-16 mx-14"
+        className=" xl:flex flex justify-center md:justify-end lg:justify-end xl:justify-end pt-8 xl:pt-16 mx-20"
       >
         <div className=" flex flex-col xl:pt-5 lg:pt-5 md:pt-5">
           <h1 className="text-xl xl:text-2xl pb-2">Subscribe</h1>
@@ -929,7 +941,7 @@ function App() {
               <img src={foot3} alt="foot3" className=" h-4" />
               info@nupat.com.ng
             </p>
-            <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
+            <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-5">
               <img src={foot4} alt="foot4" />
               <img src={foot5} alt="foot5" />
               <img src={foot6} alt="foot6" />

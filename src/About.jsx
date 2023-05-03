@@ -209,61 +209,63 @@ const About = () => {
         <h1 className=" text-black text-base px-6 xl:px-0 xl:text-3xl md:text-2xl lg:text-2xl md:pl-12 lg:pl-16 font-semibold xl:pl-24 pb-10 ">
           <span className=" underline underline-offset-4">OUR</span> CORE VALUES
         </h1>
-        <div className="value xl:mx-20 pb-12 pt-12 lg:mx-16 md:mx-10 xl:h-[780px] xl:w-[1232px] xl:px-0 lg:px-0 px-[30px]">
-          <div className="flex flex-col gap-8 xl:gap-0 lg:gap-0 md:gap-0 md:flex-row xl:flex-row lg:flex-row xl:flex justify-around text-center pb-10">
-            <div>
-              <div className=" flex justify-center p-4">
-                <img src={group} alt="group" />
+        <div className=" flex justify-center">
+          <div className="value xl:mx-20 pb-12 pt-12 lg:mx-16 md:mx-10 xl:h-[780px] xl:w-[1232px] xl:px-0 lg:px-0 px-[30px]">
+            <div className="flex flex-col gap-8 xl:gap-0 lg:gap-0 md:gap-0 md:flex-row xl:flex-row lg:flex-row xl:flex justify-around text-center pb-10">
+              <div>
+                <div className=" flex justify-center p-4">
+                  <img src={group} alt="group" />
+                </div>
+                <h1 className=" xl:text-3xl lg:text-2xl md:text-2xl text-base font-semibold pb-2 text-blue-900">
+                  Committed to Excellence
+                </h1>
+                <p className="text-xs xl:text-base lg:text-base md:text-base xl:h-[76px ] xl:w-[363px]">
+                  While we care about the outcomes, service is at the heart of
+                  how we make it happen. Our culture is built on the highest
+                  quality and value
+                </p>
               </div>
-              <h1 className=" xl:text-3xl lg:text-2xl md:text-2xl text-base font-semibold pb-2 text-blue-900">
-                Committed to Excellence
-              </h1>
-              <p className="text-xs xl:text-base lg:text-base md:text-base xl:h-[76px ] xl:w-[363px]">
-                While we care about the outcomes, service is at the heart of how
-                we make it happen. Our culture is built on the highest quality
-                and value
-              </p>
+              <div>
+                <div className=" flex justify-center p-4">
+                  <img src={group2} alt="group2" />
+                </div>
+                <h1 className="text-base lg:text-2xl md:text-2xl xl:text-3xl font-semibold pb-2 text-blue-900">
+                  Customer Centric
+                </h1>
+                <p className=" text-xs xl:text-base lg:text-base md:text-base xl:w-[363px] xl:h-[106px]">
+                  At NUPAT Outsourcing Agency, we demands that the customer is
+                  the focal point of all decisions related to delivering
+                  products, services and experiences to create customer
+                  satisfaction, loyalty and advocacy
+                </p>
+              </div>
             </div>
-            <div>
-              <div className=" flex justify-center p-4">
-                <img src={group2} alt="group2" />
+            <div className="flex flex-col xl:flex-row md:flex-row lg:flex-row xl:flex justify-around text-center gap-8 xl:gap-0 xl:pt-10 pb-10">
+              <div>
+                <div className=" flex justify-center p-4">
+                  <img src={group3} alt="group3" />
+                </div>
+                <h1 className="text-base xl:text-3xl md:text-2xl lg:text-2xl font-semibold pb-2 text-blue-900">
+                  Growth Mindset
+                </h1>
+                <p className=" text-xs xl:text-base lg:text-base md:text-base xl:w-[363px] xl:h-[106px]">
+                  Growth is the core of our misiion which is why our processes
+                  were formed on strict standards, to constantly ensure the best
+                  possibilities
+                </p>
               </div>
-              <h1 className="text-base lg:text-2xl md:text-2xl xl:text-3xl font-semibold pb-2 text-blue-900">
-                Customer Centric
-              </h1>
-              <p className=" text-xs xl:text-base lg:text-base md:text-base xl:w-[363px] xl:h-[106px]">
-                At NUPAT Outsourcing Agency, we demands that the customer is the
-                focal point of all decisions related to delivering products,
-                services and experiences to create customer satisfaction,
-                loyalty and advocacy
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-col xl:flex-row md:flex-row lg:flex-row xl:flex justify-around text-center gap-8 xl:gap-0 xl:pt-10 pb-10">
-            <div>
-              <div className=" flex justify-center p-4">
-                <img src={group3} alt="group3" />
+              <div>
+                <div className=" flex justify-center p-4">
+                  <img src={group4} alt="group4" />
+                </div>
+                <h1 className="text-base xl:text-3xl lg:text-2xl md:text-2xl font-semibold pb-2 text-blue-900">
+                  Value Driven
+                </h1>
+                <p className=" text-sm xl:text-base lg:text-base md:text-base xl:w-[363px] xl:h-[56px]">
+                  At NUPAT Outsourcing Agency, our utmost desire is to create
+                  value and derive value from services rendered.
+                </p>
               </div>
-              <h1 className="text-base xl:text-3xl md:text-2xl lg:text-2xl font-semibold pb-2 text-blue-900">
-                Growth Mindset
-              </h1>
-              <p className=" text-xs xl:text-base lg:text-base md:text-base xl:w-[363px] xl:h-[106px]">
-                Growth is the core of our misiion which is why our processes
-                were formed on strict standards, to constantly ensure the best
-                possibilities
-              </p>
-            </div>
-            <div>
-              <div className=" flex justify-center p-4">
-                <img src={group4} alt="group4" />
-              </div>
-              <h1 className="text-base xl:text-3xl lg:text-2xl md:text-2xl font-semibold pb-2 text-blue-900">
-                Value Driven
-              </h1>
-              <p className=" text-sm xl:text-base lg:text-base md:text-base xl:w-[363px] xl:h-[56px]">
-                At NUPAT Outsourcing Agency, our utmost desire is to create
-                value and derive value from services rendered.
-              </p>
             </div>
           </div>
         </div>
@@ -324,100 +326,104 @@ const About = () => {
           </button>
         </div>
 
-        <div className="team hidden font-semibold lg:flex xl:flex text-black mt-12 pt-12 flex-col gap-10 px-20 pb-16 xl:mx-[60px] lg:mx-10 md:flex md:mx-10 w-[1200px] h-[1746px]">
-          <div className=" xl:flex lg:flex xl:justify-around lg:justify-around xl:gap-10 lg:gap-4 md:grid md:grid-cols-2 md:gap-24">
-            <div>
-              <div className=" h-72 xl:w-[300px] xl:h-[280px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
-                <img src={ceo} alt="" />
+        <div className=" flex justify-center">
+          <div className="team hidden font-semibold lg:flex xl:flex text-black mt-12 pt-12 flex-col gap-10 px-20 pb-16 md:flex w-[1200px] h-[1746px]">
+            <div className=" xl:flex lg:flex xl:justify-around lg:justify-around xl:gap-10 lg:gap-4 md:grid md:grid-cols-2 md:gap-24">
+              <div>
+                <div className=" h-72 xl:w-[300px] xl:h-[280px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
+                  <img src={ceo} alt="" />
+                </div>
+                <div className="text md:w-72 flex justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+                  <p>Nnamdi Ugwu</p>
+                  <p>CEO/Managing Director</p>
+                </div>
               </div>
-              <div className="text md:w-72 flex justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
-                <p>Nnamdi Ugwu</p>
-                <p>CEO/Managing Director</p>
+              <div>
+                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
+                  <img src={coo} alt="" />
+                </div>
+                <div className="text flex md:w-72 justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:w-[350px] xl:h-[400px] lg:w-64 lg:h-64 bg-white">
+                  <p>Olanrewaju Paul</p>
+                  <p>COO/Business Manager</p>
+                </div>
+              </div>
+              <div>
+                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
+                  <img src={cto} alt="" />
+                </div>
+                <div className="text flex md:w-72 justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+                  <p>Chibuike Ugwu</p>
+                  <p>CEO/Managing Director</p>
+                </div>
+              </div>
+              <div className="md:block xl:hidden lg:hidden">
+                <div className=" h-72 xl:w-72 lg:w-52 rounded-3xl relative xl:left-4 lg:left-4 md:left-6 -mt-[160px] top-[160px] ">
+                  <img src={cbo} alt="" />
+                </div>
+                <div className="text flex md:w-72 justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-80 xl:w-80 lg:w-64 lg:h-64 bg-white">
+                  <p>Ogunfunmilade Ibukunoluwa</p>
+                  <p>CBO/Brand Manager</p>
+                </div>
               </div>
             </div>
-            <div>
-              <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
-                <img src={coo} alt="" />
-              </div>
-              <div className="text flex md:w-72 justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:w-[350px] xl:h-[400px] lg:w-64 lg:h-64 bg-white">
-                <p>Olanrewaju Paul</p>
-                <p>COO/Business Manager</p>
-              </div>
-            </div>
-            <div>
-              <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
-                <img src={cto} alt="" />
-              </div>
-              <div className="text flex md:w-72 justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
-                <p>Chibuike Ugwu</p>
-                <p>CEO/Managing Director</p>
-              </div>
-            </div>
-            <div className="md:block xl:hidden lg:hidden">
-              <div className=" h-72 xl:w-72 lg:w-52 rounded-3xl relative xl:left-4 lg:left-4 md:left-6 -mt-[160px] top-[160px] ">
-                <img src={cbo} alt="" />
-              </div>
-              <div className="text flex md:w-72 justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-80 xl:w-80 lg:w-64 lg:h-64 bg-white">
-                <p>Ogunfunmilade Ibukunoluwa</p>
-                <p>CBO/Brand Manager</p>
-              </div>
-            </div>
-          </div>
 
-          <div className=" xl:flex lg:flex lg:justify-around xl:justify-around gap-12 md:grid md:grid-cols-2 md:gap-24 xl:gap-10 lg:gap-12">
-            <div className="md:hidden xl:block lg:block">
-              <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative left-6 -mt-[160px] top-[160px] ">
-                <img src={cbo} alt="" />
+            <div className=" xl:flex lg:flex lg:justify-around xl:justify-around gap-12 md:grid md:grid-cols-2 md:gap-24 xl:gap-10 lg:gap-12">
+              <div className="md:hidden xl:block lg:block">
+                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative left-6 -mt-[160px] top-[160px] ">
+                  <img src={cbo} alt="" />
+                </div>
+                <div className="text flex md:w-72 justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+                  <p>Ogunfunmilade Ibukunoluwa</p>
+                  <p>CBO/Brand Manager</p>
+                </div>
               </div>
-              <div className="text flex md:w-72 justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
-                <p>Ogunfunmilade Ibukunoluwa</p>
-                <p>CBO/Brand Manager</p>
+              <div>
+                <div className="imgs1 h-72 xl:w-[300px] lg:w-52 w-72 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
+                  <img src="" alt="" />
+                </div>
+                <div className="text flex md:w-72 justify-center items-center flex-col pt-44 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+                  <p>Anuoluwapo Adedeji</p>
+                  <p>Senior HR Manager</p>
+                </div>
+              </div>
+              <div>
+                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
+                  <img src={anu} alt="" />
+                </div>
+                <div className="text flex md:w-72 justify-center text-xl items-center lg:text-lg flex-col pt-40 xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+                  <p>Anuoluwapo Bankole</p>
+                  <p>Talent Specialist</p>
+                </div>
               </div>
             </div>
-            <div>
-              <div className="imgs1 h-72 xl:w-[300px] lg:w-52 w-72 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
+            <div className=" flex flex-col items-center">
+              <div className="imgs1 h-72 xl:w-[300px] lg:w-52 w-72 rounded-3xl relative xl:left-0 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
                 <img src="" alt="" />
               </div>
               <div className="text flex md:w-72 justify-center items-center flex-col pt-44 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
-                <p>Anuoluwapo Adedeji</p>
-                <p>Senior HR Manager</p>
+                <p>Gbolaga Adegbola </p>
+                <p>Human Capital Manager</p>
               </div>
-            </div>
-            <div>
-              <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
-                <img src={anu} alt="" />
-              </div>
-              <div className="text flex md:w-72 justify-center text-xl items-center lg:text-lg flex-col pt-40 xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
-                <p>Anuoluwapo Bankole</p>
-                <p>Talent Specialist</p>
-              </div>
-            </div>
-          </div>
-          <div className=" flex flex-col items-center">
-            <div className="imgs1 h-72 xl:w-[300px] lg:w-52 w-72 rounded-3xl relative xl:left-0 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
-              <img src="" alt="" />
-            </div>
-            <div className="text flex md:w-72 justify-center items-center flex-col pt-44 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
-              <p>Gbolaga Adegbola </p>
-              <p>Human Capital Manager</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div
-        style={{ fontFamily: "Montserrat" }}
-        className="bg-[url('/src/assets/about/bg2.png')] xl:w-[1076px] xl:h-[280px] bg-no-repeat bg-center bg-cover xl:px-0 lg:px-0 px-2 mx-6 md:mt-20 h-36 md:h-72 lg:h-72 text-white lg:pt-5 xl:pt-10 md:mx-24 lg:mx-36 lg:mt-10 xl:mx-[130px] mt-5 xl:mt-10"
-      >
-        <div className="flex justify-around items-center">
-          <div className=" text-[10px] xl:text-3xl lg:text-2xl md:text-xl xl:h-[117px] w-[183.29px] xl:w-[519px]">
-            <h1>
-              Schedule a free consultaion to take your business to the next
-              level.
-            </h1>
-          </div>
-          <div className=" py-1 xl:py-0 lg:py-0 md:py-0 text-[10px] xl:text-xl md:text-xl xl:w-[224px] xl:h-[48px] flex items-center lg:text-xl text-black xl:bg-yellow-300 md:bg-yellow-300 lg:bg-yellow-300 bg-[#03CFD6] rounded-md px-1 md:p-2 lg:p-2 lg:mt-40 md:mt-40 xl:p-2 mt-20 xl:mt-40">
-            <p>Get in touch with us </p>
+      <div className=" flex justify-center">
+        <div
+          style={{ fontFamily: "Montserrat" }}
+          className="bg-[url('/src/assets/about/bg2.png')] xl:w-[1076px] xl:h-[280px] bg-no-repeat bg-center bg-cover xl:px-0 lg:px-0 px-2 mx-6 md:mt-20 h-36 md:h-72 lg:h-72 text-white lg:pt-5 xl:pt-10 md:mx-24 lg:mx-36 lg:mt-10 xl:mx-[130px] mt-5 xl:mt-10"
+        >
+          <div className="flex justify-around items-center">
+            <div className=" text-[10px] xl:text-3xl lg:text-2xl md:text-xl xl:h-[117px] w-[183.29px] xl:w-[519px]">
+              <h1>
+                Schedule a free consultaion to take your business to the next
+                level.
+              </h1>
+            </div>
+            <div className=" py-1 xl:py-0 lg:py-0 md:py-0 text-[10px] xl:text-xl md:text-xl xl:w-[224px] xl:h-[48px] flex items-center lg:text-xl text-black xl:bg-yellow-300 md:bg-yellow-300 lg:bg-yellow-300 bg-[#03CFD6] rounded-md px-1 md:p-2 lg:p-2 lg:mt-40 md:mt-40 xl:p-2 mt-20 xl:mt-40">
+              <p>Get in touch with us </p>
+            </div>
           </div>
         </div>
       </div>

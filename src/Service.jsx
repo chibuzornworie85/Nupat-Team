@@ -357,19 +357,21 @@ const Service = () => {
         </div>
       </div>
 
-      <div
-        style={{ fontFamily: "Montserrat" }}
-        className="bg-[url('/src/assets/about/bg2.png')] xl:w-[1076px] xl:h-[280px] bg-no-repeat bg-center bg-cover xl:px-0 lg:px-0 px-2 mx-6 md:mt-20 h-36 md:h-72 lg:h-72 text-white lg:pt-5 xl:pt-10 md:mx-24 lg:mx-36 lg:mt-10 xl:mx-[130px] mt-5 xl:mt-10"
-      >
-        <div className="flex justify-around items-center">
-          <div className=" text-[10px] xl:text-3xl lg:text-2xl md:text-xl xl:h-[117px] w-[183.29px] xl:w-[519px]">
-            <h1>
-              Schedule a free consultaion to take your business to the next
-              level.
-            </h1>
-          </div>
-          <div className=" py-1 xl:py-0 lg:py-0 md:py-0 text-[10px] xl:text-xl md:text-xl xl:w-[224px] xl:h-[48px] flex items-center lg:text-xl text-black xl:bg-yellow-300 md:bg-yellow-300 lg:bg-yellow-300 bg-[#03CFD6] rounded-md px-1 md:p-2 lg:p-2 lg:mt-40 md:mt-40 xl:p-2 mt-20 xl:mt-40">
-            <p>Get in touch with us </p>
+      <div className=" flex justify-center">
+        <div
+          style={{ fontFamily: "Montserrat" }}
+          className="bg-[url('/src/assets/about/bg2.png')] xl:w-[1076px] xl:h-[280px] bg-no-repeat bg-center bg-cover xl:px-0 lg:px-0 px-2 mx-6 md:mt-20 h-36 md:h-72 lg:h-72 text-white lg:pt-5 xl:pt-10 md:mx-24 lg:mx-36 lg:mt-10 xl:mx-[130px] mt-5 xl:mt-10"
+        >
+          <div className="flex justify-around items-center">
+            <div className=" text-[10px] xl:text-3xl lg:text-2xl md:text-xl xl:h-[117px] w-[183.29px] xl:w-[519px]">
+              <h1>
+                Schedule a free consultaion to take your business to the next
+                level.
+              </h1>
+            </div>
+            <div className=" py-1 xl:py-0 lg:py-0 md:py-0 text-[10px] xl:text-xl md:text-xl xl:w-[224px] xl:h-[48px] flex items-center lg:text-xl text-black xl:bg-yellow-300 md:bg-yellow-300 lg:bg-yellow-300 bg-[#03CFD6] rounded-md px-1 md:p-2 lg:p-2 lg:mt-40 md:mt-40 xl:p-2 mt-20 xl:mt-40">
+              <p>Get in touch with us </p>
+            </div>
           </div>
         </div>
       </div>
