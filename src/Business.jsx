@@ -5,12 +5,12 @@ const Business = () => {
     <>
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="nav flex px-0 gap-20 lg:gap-2 bg-black xl:flex items-center justify-around xl:gap-16 sticky top-0 xl:px-4 z-10 md:gap-0"
+        className="nav flex px-0 gap-20 lg:gap-2 bg-black xl:flex items-center justify-around xl:gap-16 sticky top-0 xl:px-4 z-10 md:gap-[550px]"
       >
         <div className=" mr-20 lg:mr-0 xl:mr-0 flex items-center text-center h-20 pt-6 md:mr-0">
           <img src={logo} alt="logo" />
         </div>
-        <div className="hidden md:block lg:block text-white xl:flex">
+        <div className="hidden md:hidden lg:block text-white xl:flex">
           <ul className=" flex lg:gap-10 xl:gap-16 items-center text-center md:gap-2">
             <li className=" hover:underline">
               <Link to="/">HOME</Link>
@@ -64,7 +64,7 @@ const Business = () => {
             <button className="but1 ">Hire Talent</button>
           </ul>
         </div>
-        <div className="flex justify-end lg:hidden xl:hidden mr-6 md:hidden">
+        <div className="flex justify-end lg:hidden xl:hidden mr-6 md:block">
           <div className="" onClick={() => setNavClose(!navClose)}>
             {navClose ? (
               <div className="ham">
@@ -83,7 +83,7 @@ const Business = () => {
 
           <div className={navClose ? "nav-close" : "nav-open"}>
             <div className=" text-white xl:hidden">
-              <ul className=" flex flex-col gap-4 items-center pt-4">
+              <ul className=" flex flex-col gap-4 items-center pt-4 md:gap-6">
                 <li>
                   <Link to="/">HOME</Link>
                 </li>
@@ -99,7 +99,9 @@ const Business = () => {
                 <li>
                   <Link to="/contact">CONTACT US</Link>
                 </li>
-                <button className="but text-[#000]">Join Us</button>
+                <button className="but text-[#000]">
+                  <Link to="/join">Join Us</Link>
+                </button>
                 <button className="but1 ">Hire Talent</button>
               </ul>
             </div>
@@ -119,7 +121,7 @@ const Business = () => {
         style={{ fontFamily: "Montserrat" }}
         className="bg-[url('/src/assets/business/bg1.png')] bg-no-repeat bg-center bg-cover"
       >
-        <div className=" xl:py-32 lg:py-32 md:py-12 py-12 pl-7 text-white md:pl-14 lg:pl-28 xl:pl-[80px]">
+        <div className=" xl:py-32 lg:py-32 md:py-12 py-12 pl-7 text-white md:pl-12 lg:pl-28 xl:pl-[80px]">
           <h1 className=" font-semibold text-[13px] lg:text-3xl md:text-3xl xl:text-4xl xl:pb-4 pb-2">
             Outsource for Success, Hire Competency...
           </h1>
@@ -131,20 +133,35 @@ const Business = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" bg-black h-[164px] xl:h-32 lg:h-32 px-0 text-[14px] lg:text-[16px] xl:text-[16px] lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-12 "
+        className=" bg-black h-[164px] xl:h-32 lg:h-32 px-0 text-[14px] lg:text-[16px] xl:text-[16px] lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-16 "
       >
-        <div className=" flex flex-col lg:flex-row lg:gap-5 lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-5 xl:gap-[130px] text-white">
+        <div className=" flex flex-col lg:flex-row lg:gap-5 md:hidden lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-5 xl:gap-24 text-white">
           <p className=" flex text-center items-center gap-4">
             <img src={box} alt="box" />
-            Accomplish greater business infiltration
+            Access to Top Tech Talents in Africa
           </p>
           <p className=" flex text-center items-center gap-4">
             <img src={box} alt="box" />
-            Achieving greater outcomes
+            Gain Competitive Edge
           </p>
           <p className=" flex text-center items-center gap-4">
             <img src={box} alt="box" />
-            Make expository market decisions
+            Customized Solution for Your Business
+          </p>
+        </div>
+
+        <div className=" xl:hidden lg:hidden hidden md:flex md:flex-col md:gap-5 md:pt-5 md:pl-[50px] text-white">
+          <p className=" flex text-center items-center gap-4">
+            <img src={box} alt="box" />
+            Access to Top Tech Talents in Africa
+          </p>
+          <p className=" flex text-center items-center gap-4">
+            <img src={box} alt="box" />
+            Gain Competitive Edge
+          </p>
+          <p className=" flex text-center items-center gap-4">
+            <img src={box} alt="box" />
+            Customized Solution for Your Business
           </p>
         </div>
       </div>
@@ -477,9 +494,9 @@ const Business = () => {
             </p>
             <div className="flex gap-5 items-center pb-5 xl:pb-0 h-10 xl:h-8">
               <img src={foot4} alt="foot4" />
-              <img src={foot5} alt="foot5" />
-              <img src={foot6} alt="foot6" />
-              <img src={foot7} alt="foot7" />
+              <img src={foot5} alt="foot5" className=" h-8" />
+              <img src={foot6} alt="foot6" className=" h-7" />
+              <img src={foot7} alt="foot7" className=" h-7" />
             </div>
           </div>
         </div>

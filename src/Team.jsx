@@ -26,7 +26,9 @@ const Team = () => {
             <li>
               <Link to="/contact">CONTACT US</Link>
             </li>
-            <button className="but text-[#000]">Join Us</button>
+            <button className="but text-[#000]">
+              <Link to="/join">Join Us</Link>
+            </button>
             <button className="but1 ">Hire Talent</button>
           </ul>
         </div>
@@ -49,7 +51,7 @@ const Team = () => {
 
           <div className={navClose ? "nav-close" : "nav-open"}>
             <div className=" text-white lg:hidden">
-              <ul className=" flex flex-col gap-4 items-center pt-4">
+              <ul className=" flex flex-col gap-4 items-center pt-4 md:gap-6">
                 <li>
                   <Link to="/">HOME</Link>
                 </li>
@@ -256,9 +258,9 @@ const Team = () => {
             </p>
             <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
               <img src={foot4} alt="foot4" />
-              <img src={foot5} alt="foot5" />
-              <img src={foot6} alt="foot6" />
-              <img src={foot7} alt="foot7" />
+              <img src={foot5} alt="foot5" className=" h-8" />
+              <img src={foot6} alt="foot6" className=" h-7" />
+              <img src={foot7} alt="foot7" className=" h-7" />
             </div>
           </div>
         </div>

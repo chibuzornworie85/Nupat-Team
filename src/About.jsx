@@ -5,12 +5,12 @@ const About = () => {
     <>
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="nav flex px-0 gap-20 lg:gap-2 bg-black xl:flex items-center justify-around xl:gap-[81px]  sticky top-0 xl:px-4 z-10 md:gap-0"
+        className="nav flex px-0 gap-20 lg:gap-2 bg-black xl:flex items-center justify-around xl:gap-[81px] md:gap-[550px] sticky top-0 xl:px-4 z-10"
       >
         <div className=" mr-20 lg:mr-0 xl:mr-0 flex items-center text-center h-20 pt-6 md:mr-0">
           <img src={logo} alt="logo" />
         </div>
-        <div className="hidden md:block lg:block text-white xl:flex">
+        <div className="hidden md:hidden lg:block text-white xl:flex">
           <ul className=" flex lg:gap-10 xl:gap-16 items-center text-center md:gap-2">
             <li className=" hover:underline">
               <Link to="/">HOME</Link>
@@ -64,7 +64,7 @@ const About = () => {
             <button className="but1 ">Hire Talent</button>
           </ul>
         </div>
-        <div className="flex justify-end lg:hidden xl:hidden mr-6 md:hidden">
+        <div className="flex justify-end lg:hidden xl:hidden mr-6 md:block">
           <div className="" onClick={() => setNavClose(!navClose)}>
             {navClose ? (
               <div className="ham">
@@ -83,7 +83,7 @@ const About = () => {
 
           <div className={navClose ? "nav-close" : "nav-open"}>
             <div className=" text-white xl:hidden">
-              <ul className=" flex flex-col gap-4 items-center pt-4">
+              <ul className=" flex flex-col gap-4 md:gap-6 items-center pt-4">
                 <li>
                   <Link to="/">HOME</Link>
                 </li>
@@ -99,7 +99,9 @@ const About = () => {
                 <li>
                   <Link to="/contact">CONTACT US</Link>
                 </li>
-                <button className="but text-[#000]">Join Us</button>
+                <button className="but text-[#000]">
+                  <Link to="/join">Join Us</Link>
+                </button>
                 <button className="but1 ">Hire Talent</button>
               </ul>
             </div>
@@ -109,7 +111,7 @@ const About = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="back flex xl:h-72 lg:h-72 h-[104px] justify-center items-center text-center"
+        className="back flex xl:h-72 lg:h-72 md:h-[200px] h-[104px] justify-center items-center text-center"
       >
         <div className="">
           <h1 className="hit font-semibold xl:text-3xl md:text-2xl lg:text-3xl lg:pb-10 text-base pb-5 xl:pb-10 ">
@@ -125,7 +127,7 @@ const About = () => {
         style={{ fontFamily: "Montserrat" }}
         className="body pt-5 xl:pt-10 lg:pt-10"
       >
-        <div className=" xl:flex flex flex-col lg:flex-row xl:flex-row xl:gap-14 justify-around lg:px-20 xl:px-14">
+        <div className=" xl:flex flex flex-col lg:flex-row xl:flex-row xl:gap-[100px] justify-around lg:px-20 xl:px-14">
           <div className=" px-6 xl:px-6 lg:px-6 md:mx-4 lg:mx-0 xl:mx-0">
             <div className=" flex gap-2 xl:gap-0 lg:block xl:block lg:gap-0">
               <div className="pic1">
@@ -174,13 +176,13 @@ const About = () => {
         style={{ fontFamily: "Montserrat" }}
         className=" pt-8 xl:pt-16 items-center lg:pt-16 md:pt-16"
       >
-        <p className="tex rounded-3xl flex justify-center items-center p-4 w-56 md:w-80 lg:w-80 xl:w-[390px] xl:h-[80px] mx-6 xl:ml-24 lg:ml-16 md:text-xl lg:text-xl text-sm xl:text-2xl xl:mb-8 mb-12 md:ml-12">
+        <p className="tex rounded-3xl flex justify-center items-center p-4 w-56 md:w-80 lg:w-80 xl:w-[390px] xl:h-[80px] mx-6 xl:ml-20 lg:ml-16 md:text-xl lg:text-xl text-sm xl:text-2xl xl:mb-8 mb-12 md:ml-12">
           What makes us Stand out
         </p>
-        <h1 className=" xl:pl-24 lg:pl-10 lg:text-3xl md:text-3xl text-base xl:text-4xl mx-6 xl:mx-0 pb-4 md:pl-6">
+        <h1 className=" xl:pl-20 lg:pl-10 lg:text-3xl md:text-3xl text-base xl:text-4xl mx-6 xl:mx-0 pb-4 md:pl-6">
           At <span className="hit font-semibold">NUPAT!</span>
         </h1>
-        <p className="hidden xl:block xl:text-xl lg:text-base xl:pl-[100px] lg:pl-16 lg:block md:hidden xl:w-[1232px]">
+        <p className="hidden xl:block xl:text-xl lg:text-base xl:pl-[80px] lg:pl-16 lg:block md:hidden xl:w-[1232px]">
           Our desire to consistently deliver value-added services to our clients
           has helped us to evolve into a pacesetter and standard bearer in our
           industry. We have a reputation for satisfying and surpassing our
@@ -206,7 +208,7 @@ const About = () => {
         style={{ fontFamily: "Montserrat" }}
         className=" pt-8 xl:pt-10 lg:pt-10 md:pt-10"
       >
-        <h1 className=" text-black text-base px-6 xl:px-0 xl:text-3xl md:text-2xl lg:text-2xl md:pl-12 lg:pl-16 font-semibold xl:pl-24 pb-10 ">
+        <h1 className=" text-black text-base px-6 xl:px-0 xl:text-3xl md:text-2xl lg:text-2xl md:pl-12 lg:pl-16 font-semibold xl:pl-20 pb-10 ">
           <span className=" underline underline-offset-4">OUR</span> CORE VALUES
         </h1>
         <div className=" flex justify-center">
@@ -219,7 +221,7 @@ const About = () => {
                 <h1 className=" xl:text-3xl lg:text-2xl md:text-2xl text-base font-semibold pb-2 text-blue-900">
                   Committed to Excellence
                 </h1>
-                <p className="text-xs xl:text-base lg:text-base md:text-base xl:h-[76px ] xl:w-[363px]">
+                <p className="text-xs xl:text-base lg:text-base md:text-base xl:h-[76px] xl:w-[363px]">
                   While we care about the outcomes, service is at the heart of
                   how we make it happen. Our culture is built on the highest
                   quality and value
@@ -232,7 +234,7 @@ const About = () => {
                 <h1 className="text-base lg:text-2xl md:text-2xl xl:text-3xl font-semibold pb-2 text-blue-900">
                   Customer Centric
                 </h1>
-                <p className=" text-xs xl:text-base lg:text-base md:text-base xl:w-[363px] xl:h-[106px]">
+                <p className=" text-xs xl:text-base lg:text-base md:text-base xl:w-[363px] md:px-10 lg:mx-0 xl:mx-0 xl:h-[76px]">
                   At NUPAT Outsourcing Agency, we demands that the customer is
                   the focal point of all decisions related to delivering
                   products, services and experiences to create customer
@@ -275,21 +277,21 @@ const About = () => {
         style={{ fontFamily: "Montserrat" }}
         className=" px-6 xl:px-6 lg:px-6 md:px-6"
       >
-        <h1 className=" font-semibold text-black text-xl xl:text-3xl md:text-3xl lg:text-3xl md:pl-12 lg:pl-16 md:pb-6 lg:pb-6 xl:pl-18 pb-3 xl:pb-6 pt-8 ">
+        <h1 className=" font-semibold text-black text-xl xl:text-3xl md:text-3xl lg:text-3xl md:pl-5 lg:pl-16 md:pb-6 lg:pb-6 xl:pl-14 pb-3 xl:pb-6 pt-8 ">
           <span className=" underline underline-offset-4">OUR</span> MISSION
         </h1>
-        <p className=" text-xs xl:text-2xl xl:pl-18 lg:pl-16 md:pl-12 md:text-xl lg:text-2xl">
+        <p className=" text-xs xl:text-2xl xl:pl-14 lg:pl-16 md:pl-5 md:text-xl lg:text-2xl">
           To connect Top Talents with Global opportunities.
         </p>
 
-        <h1 className=" font-semibold text-black text-xl lg:text-3xl md:text-3xl xl:text-3xl md:pl-12 lg:pl-16 xl:pl-18 pb-3 md:pb-6 lg:pb-6 xl:pb-6 pt-4 ">
+        <h1 className=" font-semibold text-black text-xl lg:text-3xl md:text-3xl xl:text-3xl md:pl-5 lg:pl-16 xl:pl-14 pb-3 md:pb-6 lg:pb-6 xl:pb-6 pt-4 ">
           <span className=" underline underline-offset-4">OUR</span> VISION
         </h1>
-        <p className=" hidden xl:block h-[58px] md:text-x lg:text-2xl xl:text-2xl xl:pl-18 pl-32 lg:pl-16 md:pl-16 lg:block w-[1224px] md:hidden">
+        <p className=" hidden xl:block h-[58px] md:text-x lg:text-2xl xl:text-2xl xl:pl-14 pl-32 lg:pl-16 md:pl-5 lg:block w-[1224px] md:hidden">
           To build a world where Global opportunities are accessible to every
           talented individual regardless of location and background
         </p>
-        <p className=" hidden xl:hidden md:text-xl lg:text-2xl xl:text-2xl xl:pl-32 pl-32 lg:pl-16 md:pl-12 lg:hidden md:block">
+        <p className=" hidden xl:hidden md:text-xl lg:text-2xl xl:text-2xl xl:pl-32 pl-32 lg:pl-16 md:pl-5 lg:hidden md:block">
           To build a world where Global opportunities are accessible to every
           talented individual regardless of location and background
         </p>
@@ -298,15 +300,15 @@ const About = () => {
           talented individual regardless of location and background
         </p>
 
-        <h1 className=" font-semibold text-black text-xl xl:text-3xl lg:text-3xl md:text-3xl lg:pl-16 md:pl-12 md:pb-6 lg:pb-6 xl:pl-18 pb-3 xl:pb-6 pt-4 ">
+        <h1 className=" font-semibold text-black text-xl xl:text-3xl lg:text-3xl md:text-3xl lg:pl-16 md:pl-5 md:pb-6 lg:pb-6 xl:pl-14 pb-3 xl:pb-6 pt-4 ">
           <span className=" underline underline-offset-4">OUR</span> TEAM
         </h1>
-        <p className=" hidden xl:block md:text-xl lg:text-2xl xl:text-2xl xl:pl-18 w-[1232px] h-[58px] lg:pl-16 md:pl-16 lg:block md:hidden">
+        <p className=" hidden xl:block md:text-xl lg:text-2xl xl:text-2xl xl:pl-14 w-[1232px] h-[58px] lg:pl-16 md:pl-5 lg:block md:hidden">
           Our team is made up of highly competent, experienced professionals
           fully committed to provide high quality client focused service that
           can add value to your business.
         </p>
-        <p className=" hidden xl:hidden md:text-xl lg:text-2xl xl:text-2xl xl:pl-32 lg:pl-16 md:pl-12 lg:hidden md:block">
+        <p className=" hidden xl:hidden md:text-xl lg:text-2xl xl:text-2xl xl:pl-32 lg:pl-16 md:pl-5 lg:hidden md:block">
           Our team is made up of highly competent, experienced professionals
           fully <br /> committed to provide high quality client focused service
           that can add value to your business.
@@ -327,41 +329,41 @@ const About = () => {
         </div>
 
         <div className=" flex justify-center">
-          <div className="team hidden font-semibold lg:flex xl:flex text-black mt-12 pt-12 flex-col gap-10 px-20 pb-16 md:flex w-[1200px] h-[1746px]">
+          <div className="team hidden font-semibold lg:flex xl:flex text-black mt-12 pt-12 flex-col gap-10 px-20 pb-16 md:flex mx-5 xl:mx-0 lg:mx-0 w-[1200px] h-[1746px]">
             <div className=" xl:flex lg:flex xl:justify-around lg:justify-around xl:gap-10 lg:gap-4 md:grid md:grid-cols-2 md:gap-24">
               <div>
-                <div className=" h-72 xl:w-[300px] xl:h-[280px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
+                <div className=" h-72 xl:w-[300px] xl:h-[280px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-3 -mt-[160px] top-[160px]">
                   <img src={ceo} alt="" />
                 </div>
-                <div className="text md:w-72 flex justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+                <div className="text md:w-[300px] flex justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                   <p>Nnamdi Ugwu</p>
                   <p>CEO/Managing Director</p>
                 </div>
               </div>
               <div>
-                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
+                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-3 -mt-[160px] top-[160px]">
                   <img src={coo} alt="" />
                 </div>
-                <div className="text flex md:w-72 justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:w-[350px] xl:h-[400px] lg:w-64 lg:h-64 bg-white">
+                <div className="text flex md:w-[300px] justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:w-[350px] xl:h-[400px] lg:w-64 lg:h-64 bg-white">
                   <p>Olanrewaju Paul</p>
                   <p>COO/Business Manager</p>
                 </div>
               </div>
               <div>
-                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
+                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-3 -mt-[160px] top-[160px]">
                   <img src={cto} alt="" />
                 </div>
-                <div className="text flex md:w-72 justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+                <div className="text flex md:w-[300px] justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                   <p>Chibuike Ugwu</p>
                   <p>CEO/Managing Director</p>
                 </div>
               </div>
               <div className="md:block xl:hidden lg:hidden">
-                <div className=" h-72 xl:w-72 lg:w-52 rounded-3xl relative xl:left-4 lg:left-4 md:left-6 -mt-[160px] top-[160px] ">
+                <div className=" h-72 xl:w-72 lg:w-52 rounded-3xl relative xl:left-4 lg:left-4 md:left-3 -mt-[160px] top-[160px] ">
                   <img src={cbo} alt="" />
                 </div>
-                <div className="text flex md:w-72 justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-80 xl:w-80 lg:w-64 lg:h-64 bg-white">
-                  <p>Ogunfunmilade Ibukunoluwa</p>
+                <div className="text flex md:w-[300px] justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-80 xl:w-80 lg:w-64 lg:h-64 bg-white">
+                  <p>Ogunfunmilade I.</p>
                   <p>CBO/Brand Manager</p>
                 </div>
               </div>
@@ -378,29 +380,29 @@ const About = () => {
                 </div>
               </div>
               <div>
-                <div className="imgs1 h-72 xl:w-[300px] lg:w-52 w-72 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
+                <div className="imgs1 h-72 xl:w-[300px] lg:w-52 w-72 rounded-3xl relative xl:left-6 lg:left-4 md:left-3 -mt-[160px] top-[160px]">
                   <img src="" alt="" />
                 </div>
-                <div className="text flex md:w-72 justify-center items-center flex-col pt-44 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+                <div className="text flex md:w-[300px] justify-center items-center flex-col pt-44 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                   <p>Anuoluwapo Adedeji</p>
                   <p>Senior HR Manager</p>
                 </div>
               </div>
               <div>
-                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
+                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-3 -mt-[160px] top-[160px]">
                   <img src={anu} alt="" />
                 </div>
-                <div className="text flex md:w-72 justify-center text-xl items-center lg:text-lg flex-col pt-40 xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+                <div className="text flex md:w-[300px] justify-center text-xl items-center lg:text-lg flex-col pt-40 xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                   <p>Anuoluwapo Bankole</p>
                   <p>Talent Specialist</p>
                 </div>
               </div>
             </div>
             <div className=" flex flex-col items-center">
-              <div className="imgs1 h-72 xl:w-[300px] lg:w-52 w-72 rounded-3xl relative xl:left-0 lg:left-4 md:left-6 -mt-[160px] top-[160px]">
+              <div className="imgs1 h-72 xl:w-[300px] lg:w-52 w-72 rounded-3xl relative xl:left-0 lg:left-4 md:left-3 -mt-[160px] top-[160px]">
                 <img src="" alt="" />
               </div>
-              <div className="text flex md:w-72 justify-center items-center flex-col pt-44 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+              <div className="text flex md:w-[300px] justify-center items-center flex-col pt-44 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                 <p>Gbolaga Adegbola </p>
                 <p>Human Capital Manager</p>
               </div>
@@ -415,13 +417,13 @@ const About = () => {
           className="bg-[url('/src/assets/about/bg2.png')] xl:w-[1076px] xl:h-[280px] bg-no-repeat bg-center bg-cover xl:px-0 lg:px-0 px-2 mx-6 md:mt-20 h-36 md:h-72 lg:h-72 text-white lg:pt-5 xl:pt-10 md:mx-24 lg:mx-36 lg:mt-10 xl:mx-[130px] mt-5 xl:mt-10"
         >
           <div className="flex justify-around items-center">
-            <div className=" text-[10px] xl:text-3xl lg:text-2xl md:text-xl xl:h-[117px] w-[183.29px] xl:w-[519px]">
+            <div className=" text-[10px] xl:text-3xl lg:text-2xl md:text-xl xl:h-[117px] w-[183.29px] md:w-[519px] xl:w-[519px]">
               <h1>
                 Schedule a free consultaion to take your business to the next
                 level.
               </h1>
             </div>
-            <div className=" py-1 xl:py-0 lg:py-0 md:py-0 text-[10px] xl:text-xl md:text-xl xl:w-[224px] xl:h-[48px] flex items-center lg:text-xl text-black xl:bg-yellow-300 md:bg-yellow-300 lg:bg-yellow-300 bg-[#03CFD6] rounded-md px-1 md:p-2 lg:p-2 lg:mt-40 md:mt-40 xl:p-2 mt-20 xl:mt-40">
+            <div className=" py-1 xl:py-0 lg:py-0 md:py-0 text-[10px] xl:text-xl md:text-xl xl:w-[224px] lg:w-[224px] md:w-[220px] xl:h-[48px] md:h-[48px] lg:h-[48px] flex items-center lg:text-xl text-black xl:bg-yellow-300 md:bg-yellow-300 lg:bg-yellow-300 bg-[#03CFD6] rounded-md px-1 md:p-2 lg:p-2 lg:mt-40 md:mt-40 xl:p-2 mt-20 xl:mt-40">
               <p>Get in touch with us </p>
             </div>
           </div>
@@ -430,7 +432,7 @@ const About = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" xl:flex hidden justify-around gap-[220px] items-center pt-14 lg:flex md:flex md:mx-6 xl:mx-0 lg:mx-0"
+        className=" xl:flex hidden justify-around xl:gap-[220px] items-center pt-14 lg:flex md:flex md:mx-0 xl:mx-0 lg:mx-0"
       >
         <div className=" flex flex-col pr-10 pt-5">
           <h1 className=" md:text-xl lg:text-2xl xl:text-2xl pb-2 font-semibold">
@@ -441,12 +443,12 @@ const About = () => {
             <br /> to our newsletter.
           </p>
 
-          <div className=" bg-black p-4 rounded-xl mr-6 ">
+          <div className=" bg-black p-4 rounded-xl mr-6">
             <div className=" flex justify-center">
               <input
                 type="text"
                 placeholder="Enter your Email Address"
-                className=" bg-white text-base flex justify-start pl-2 border-transparent w-96"
+                className=" bg-white text-base flex justify-start pl-2 border-transparent w-96 md:w-[300px]"
               />
               <button className=" bg-black text-white text-base px-20 py-2 rounded-xl relative right-2">
                 Subscribe
@@ -585,11 +587,11 @@ const About = () => {
               <img src={foot3} alt="foot3" className=" h-4" />
               info@nupat.com.ng
             </p>
-            <div className="flex gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
+            <div className="flex items-center justify-start gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
               <img src={foot4} alt="foot4" />
-              <img src={foot5} alt="foot5" />
-              <img src={foot6} alt="foot6" />
-              <img src={foot7} alt="foot7" />
+              <img src={foot5} alt="foot5" className=" h-8" />
+              <img src={foot6} alt="foot6" className=" h-7" />
+              <img src={foot7} alt="foot7" className=" h-7" />
             </div>
           </div>
         </div>

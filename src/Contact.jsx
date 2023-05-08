@@ -5,12 +5,12 @@ const Contact = () => {
     <>
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="nav flex px-0 gap-20 lg:gap-2 bg-black xl:flex items-center justify-around xl:gap-[81px] sticky top-0 xl:px-4 z-10 md:gap-0"
+        className="nav flex px-0 gap-20 lg:gap-2 bg-black xl:flex items-center justify-around xl:gap-[81px] sticky top-0 xl:px-4 z-10 md:gap-[560px]"
       >
         <div className=" mr-20 lg:mr-0 xl:mr-0 flex items-center text-center h-20 pt-6 md:mr-0">
           <img src={logo} alt="logo" />
         </div>
-        <div className="hidden md:block lg:block text-white xl:flex">
+        <div className="hidden md:hidden lg:block text-white xl:flex">
           <ul className=" flex lg:gap-10 xl:gap-16 items-center text-center md:gap-2">
             <li className=" hover:underline">
               <Link to="/">HOME</Link>
@@ -64,7 +64,7 @@ const Contact = () => {
             <button className="but1 ">Hire Talent</button>
           </ul>
         </div>
-        <div className="flex justify-end lg:hidden xl:hidden mr-6 md:hidden">
+        <div className="flex justify-end lg:hidden xl:hidden mr-6 md:block">
           <div className="" onClick={() => setNavClose(!navClose)}>
             {navClose ? (
               <div className="ham">
@@ -83,7 +83,7 @@ const Contact = () => {
 
           <div className={navClose ? "nav-close" : "nav-open"}>
             <div className=" text-white xl:hidden">
-              <ul className=" flex flex-col gap-4 items-center pt-4">
+              <ul className=" flex flex-col gap-4 items-center pt-4 md:gap-6">
                 <li>
                   <Link to="/">HOME</Link>
                 </li>
@@ -99,7 +99,9 @@ const Contact = () => {
                 <li>
                   <Link to="/contact">CONTACT US</Link>
                 </li>
-                <button className="but text-[#000]">Join Us</button>
+                <button className="but text-[#000]">
+                  <Link to="/join">Join Us</Link>
+                </button>
                 <button className="but1 ">Hire Talent</button>
               </ul>
             </div>
@@ -109,7 +111,7 @@ const Contact = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="sec1 h-[104px] lg:h-72 md:h-60 xl:h-72 flex justify-center text-center items-center "
+        className="sec1 h-[104px] lg:h-72 md:h-[200px] xl:h-72 flex justify-center text-center items-center "
       >
         <div className="">
           <h1 className=" hit text-base md:text-2xl md:pb-5 lg:text-3xl xl:text-3xl lg:pb-8 xl:pb-10 font-semibold ">
@@ -221,14 +223,14 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="free h-1/5 bg-black p-4 mt-8 xl:mt-0 lg:mt-0 md:mt-0">
+          <div className="free h-1/5 bg-black p-4 mt-8 xl:mt-0 lg:mt-0 md:mt-0 xl:w-[600px]">
             <div className="">
               <h1 className=" text-white text-2xl lg:text-4xl xl:text-4xl pb-4 lg:pb-8 xl:pb-8">
                 Get in touch with us.
               </h1>
               <p className=" text-white text-base xl:text-xl lg:text-xl pb-8">
-                We are here to answer any question you may have.
-                Feel free to reach us via contact form.
+                We are here to answer any question you may have. Feel free to
+                reach us via contact form.
               </p>
               <p className=" mb-4 p-4 text-xs lg:text-2xl xl:text-2xl flex items-center gap-2 bg-white">
                 <img src={video} alt="video" /> 46, Community street, Akoka,
@@ -354,9 +356,9 @@ const Contact = () => {
             </p>
             <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
               <img src={foot4} alt="foot4" />
-              <img src={foot5} alt="foot5" />
-              <img src={foot6} alt="foot6" />
-              <img src={foot7} alt="foot7" />
+              <img src={foot5} alt="foot5" className=" h-8" />
+              <img src={foot6} alt="foot6" className=" h-7" />
+              <img src={foot7} alt="foot7" className=" h-7" />
             </div>
           </div>
         </div>
