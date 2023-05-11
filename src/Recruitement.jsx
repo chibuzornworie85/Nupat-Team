@@ -1,6 +1,27 @@
 const Recruitement = () => {
   const [navClose, setNavClose] = useState(true);
   const [drop, setDrop] = useState(true);
+  // const form = useRef();
+
+  // const sendEmail = (e) => {
+  //   // e.preventDefault();
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_6z6j9vv",
+  //       "template_04ujg5i",
+  //       form.current,
+  //       "KQagYOgrTv4yC0uV6"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
   return (
     <>
       <div
@@ -61,7 +82,9 @@ const Recruitement = () => {
             <button className="but text-[#000]">
               <Link to="/join">Join Us</Link>
             </button>
-            <button className="but1 ">Hire Talent</button>
+            <button className="but1 ">
+              <Link to="/hire">Hire Talent</Link>
+            </button>
           </ul>
         </div>
         <div className="flex justify-end lg:hidden xl:hidden mr-6 md:block">
@@ -102,7 +125,9 @@ const Recruitement = () => {
                 <button className="but text-[#000]">
                   <Link to="/join">Join Us</Link>
                 </button>
-                <button className="but1 ">Hire Talent</button>
+                <button className="but1 ">
+                  <Link to="/hire">Hire Talent</Link>
+                </button>
               </ul>
             </div>
           </div>
@@ -331,7 +356,7 @@ const Recruitement = () => {
         </div>
       </Link>
 
-      <div
+      {/* <div
         style={{ fontFamily: "Montserrat" }}
         className=" xl:flex flex justify-center lg:justify-start md:justify-start xl:justify-start pt-8 xl:pt-16 lg:pl-14 xl:pl-16 md:pb-20 lg:pb-20 xl:pb-20 mx-14"
       >
@@ -343,19 +368,28 @@ const Recruitement = () => {
           </p>
 
           <div className=" bg-black p-4 rounded-xl xl:mr-6 lg:mr-6 md:mr-6">
-            <div className=" flex justify-center">
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className=" flex justify-center"
+            >
               <input
                 type="text"
                 placeholder="Enter your Email Address"
                 className=" bg-white text-base flex justify-start pl-2 border-transparent xl:w-96 lg:w-96 md:w-96"
+                name="user_email"
               />
-              <button className=" bg-black text-white text-sm xl:text-base px-4 lg:text-base md:text-base xl:px-20 xl:py-2 md:px-10 lg:px-20 md:py-2 lg:py-2 rounded-xl relative lg:right-2 xl:right-2 md:right-1">
+              <button
+                className=" bg-black text-white text-sm xl:text-base px-4 lg:text-base md:text-base xl:px-20 xl:py-2 md:px-10 lg:px-20 md:py-2 lg:py-2 rounded-xl relative lg:right-2 xl:right-2 md:right-1"
+                type="submit"
+                value="Send"
+              >
                 Subscribe
               </button>
-            </div>
+            </form>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div
         style={{ fontFamily: "Montserrat" }}
@@ -490,3 +524,6 @@ import foot4 from "./assets/foot4.png";
 import foot5 from "./assets/foot5.png";
 import foot6 from "./assets/foot6.png";
 import foot7 from "./assets/foot7.png";
+
+// import emailjs from "emailjs-com";
+// import { useRef } from "react";

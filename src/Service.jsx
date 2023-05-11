@@ -1,6 +1,27 @@
 const Service = () => {
   const [navClose, setNavClose] = useState(true);
   const [drop, setDrop] = useState(true);
+  // const form = useRef();
+
+  // const sendEmail = (e) => {
+  //   // e.preventDefault();
+
+  //   emailjs
+  //     .sendForm(
+  //       "service_6z6j9vv",
+  //       "template_04ujg5i",
+  //       form.current,
+  //       "KQagYOgrTv4yC0uV6"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  // };
   return (
     <>
       <div
@@ -61,7 +82,9 @@ const Service = () => {
             <button className="but text-[#000]">
               <Link to="/join">Join Us</Link>
             </button>
-            <button className="but1 ">Hire Talent</button>
+            <button className="but1 ">
+              <Link to="/hire">Hire Talent</Link>
+            </button>
           </ul>
         </div>
         <div className="flex justify-end lg:hidden xl:hidden mr-6 md:block">
@@ -102,7 +125,9 @@ const Service = () => {
                 <button className="but text-[#000]">
                   <Link to="/join">Join Us</Link>
                 </button>
-                <button className="but1 ">Hire Talent</button>
+                <button className="but1 ">
+                  <Link to="/hire">Hire Talent</Link>
+                </button>
               </ul>
             </div>
           </div>
@@ -378,7 +403,7 @@ const Service = () => {
         </div>
       </div>
 
-      <div
+      {/* <div
         style={{ fontFamily: "Montserrat" }}
         className=" xl:flex hidden justify-around xl:gap-[220px] items-center pt-14 lg:flex md:flex md:mx-0 xl:mx-0 lg:mx-0"
       >
@@ -392,16 +417,25 @@ const Service = () => {
           </p>
 
           <div className=" bg-black p-4 rounded-xl mr-6">
-            <div className=" flex justify-center">
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className=" flex justify-center"
+            >
               <input
                 type="text"
                 placeholder="Enter your Email Address"
                 className=" bg-white text-base flex justify-start pl-2 border-transparent w-96 md:w-[300px]"
+                name="user_email"
               />
-              <button className=" bg-black text-white text-base px-20 py-2 rounded-xl relative right-2">
+              <button
+                className=" bg-black text-white text-base px-20 py-2 rounded-xl relative right-2"
+                type="submit"
+                value="Send"
+              >
                 Subscribe
               </button>
-            </div>
+            </form>
           </div>
         </div>
         <Link to="/faq">
@@ -413,7 +447,7 @@ const Service = () => {
             />
           </div>
         </Link>
-      </div>
+      </div> */}
 
       <div
         style={{ fontFamily: "Montserrat" }}
@@ -552,3 +586,6 @@ import foot4 from "./assets/foot4.png";
 import foot5 from "./assets/foot5.png";
 import foot6 from "./assets/foot6.png";
 import foot7 from "./assets/foot7.png";
+
+// import emailjs from "emailjs-com";
+// import { useRef } from "react";

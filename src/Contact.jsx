@@ -1,6 +1,28 @@
 const Contact = () => {
   const [navClose, setNavClose] = useState(true);
   const [drop, setDrop] = useState(true);
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    // e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_so4bkjk",
+        "template_l14i0u8",
+        form.current,
+        "KQagYOgrTv4yC0uV6"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <>
       <div
@@ -61,7 +83,9 @@ const Contact = () => {
             <button className="but text-[#000]">
               <Link to="/join">Join Us</Link>
             </button>
-            <button className="but1 ">Hire Talent</button>
+            <button className="but1 ">
+              <Link to="/hire">Hire Talent</Link>
+            </button>
           </ul>
         </div>
         <div className="flex justify-end lg:hidden xl:hidden mr-6 md:block">
@@ -102,7 +126,9 @@ const Contact = () => {
                 <button className="but text-[#000]">
                   <Link to="/join">Join Us</Link>
                 </button>
-                <button className="but1 ">Hire Talent</button>
+                <button className="but1 ">
+                  <Link to="/hire">Hire Talent</Link>
+                </button>
               </ul>
             </div>
           </div>
@@ -170,13 +196,18 @@ const Contact = () => {
               Schedule a free consultation to take <br /> your business to the
               next level.
             </h1>
-            <div className="pt-5 text-[16px] xl:pt-10 lg:pt-10 md:pt-10">
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="pt-5 text-[16px] xl:pt-10 lg:pt-10 md:pt-10"
+            >
               <h3>Name*</h3>
               <div className=" flex gap-6">
                 <div className=" pb-2">
                   <input
                     type="text"
                     className=" h-8 w-40 xl:w-56 lg:w-56 md:w-48 text-black"
+                    name="user_first"
                   />
                   <p>First</p>
                 </div>
@@ -184,6 +215,7 @@ const Contact = () => {
                   <input
                     type="text"
                     className=" h-8 w-40 xl:w-56 lg:w-56 md:w-48 text-black"
+                    name="user_last"
                   />
                   <p>Last</p>
                 </div>
@@ -192,35 +224,62 @@ const Contact = () => {
               <div className="pb-12">
                 <div className=" pb-2">
                   <p>Email</p>
-                  <input type="text" className=" h-8 w-full text-black" />
+                  <input
+                    type="text"
+                    className=" h-8 w-full text-black"
+                    name="user_email"
+                  />
                 </div>
                 <div className=" pb-2">
                   <p>Phone number</p>
-                  <input type="text" className=" h-8 w-full text-black" />
+                  <input
+                    type="text"
+                    className=" h-8 w-full text-black"
+                    name="user_number"
+                  />
                 </div>
                 <div className=" pb-2">
                   <p>Company Name</p>
-                  <input type="text" className=" h-8 w-full text-black" />
+                  <input
+                    type="text"
+                    className=" h-8 w-full text-black"
+                    name="user_companyname"
+                  />
                 </div>
                 <div className=" pb-2">
                   <p>Company Website</p>
-                  <input type="text" className=" h-8 w-full text-black" />
+                  <input
+                    type="text"
+                    className=" h-8 w-full text-black"
+                    name="user_companywebsite"
+                  />
                 </div>
                 <div className=" pb-2">
                   <p>Comment or Message*</p>
-                  <textarea className="area h-20 w-full  text-black"></textarea>
+                  <textarea
+                    className="area h-20 w-full  text-black"
+                    name="user_comment"
+                  ></textarea>
                 </div>
                 <div className=" pb-2">
                   <p>How did you hear about us?</p>
-                  <input type="text" className=" h-8 w-full text-black" />
+                  <input
+                    type="text"
+                    className=" h-8 w-full text-black"
+                    name="user_howdidyouhear"
+                  />
                 </div>
                 <div className=" pt-2">
-                  <button className="but1 h-10 xl:mb-8 lg:mb-8 w-28">
+                  <button
+                    className="but1 h-10 xl:mb-8 lg:mb-8 w-28"
+                    type="submit"
+                    value="Send"
+                  >
                     Submit
                   </button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
 
           <div className="free h-1/5 bg-black p-4 mt-8 xl:mt-0 lg:mt-0 md:mt-0 xl:w-[600px]">
@@ -395,3 +454,6 @@ import call from "./assets/contact/call.png";
 import mess from "./assets/contact/mess.png";
 import mess1 from "./assets/contact/circle.png";
 import { Link } from "react-router-dom";
+
+import emailjs from "emailjs-com";
+import { useRef } from "react";

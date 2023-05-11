@@ -29,7 +29,9 @@ const Team = () => {
             <button className="but text-[#000]">
               <Link to="/join">Join Us</Link>
             </button>
-            <button className="but1 ">Hire Talent</button>
+            <button className="but1 ">
+              <Link to="/hire">Hire Talent</Link>
+            </button>
           </ul>
         </div>
         <div className="flex justify-end lg:hidden mr-6">
@@ -69,7 +71,9 @@ const Team = () => {
                   <Link to="/contact">CONTACT US</Link>
                 </li>
                 <button className="but text-[#000]">Join Us</button>
-                <button className="but1 ">Hire Talent</button>
+                <button className="but1 ">
+                  <Link to="/hire">Hire Talent</Link>
+                </button>
               </ul>
             </div>
           </div>

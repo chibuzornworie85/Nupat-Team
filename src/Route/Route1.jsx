@@ -12,7 +12,10 @@ import Business from "../Business";
 import Learning from "../Learning";
 import Team from "../Team";
 import ScrollToTop from "../scrollToTop";
-import Join from "../Join"
+import Join from "../Join";
+import Additional from "../Additional";
+import Employ from "../Employ";
+import Hire from "../Hire"
 
 const Route1 = () => {
   return (
@@ -31,6 +34,9 @@ const Route1 = () => {
         <Route path="/learning" element={<Learning />} />
         <Route path="/team" element={<Team />} />
         <Route path="/join" element={<Join />} />
+        <Route path="/additional" element={<Additional />} />
+        <Route path="/employ" element={<Employ />} />
+        <Route path="/hire" element={<Hire />} />
       </Routes>
     </div>
   );

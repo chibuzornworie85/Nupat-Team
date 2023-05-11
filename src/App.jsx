@@ -7,8 +7,8 @@ function App() {
 
     emailjs
       .sendForm(
-        "service_6z6j9vv",
-        "template_04ujg5i",
+        "service_so4bkjk",
+        "template_l14i0u8",
         form.current,
         "KQagYOgrTv4yC0uV6"
       )
@@ -48,7 +48,9 @@ function App() {
             <button className="but text-[#000]">
               <Link to="/join">Join Us</Link>
             </button>
-            <button className="but1 ">Hire Talent</button>
+            <button className="but1 ">
+              <Link to="/hire">Hire Talent</Link>
+            </button>
           </ul>
         </div>
         <div className="flex justify-end lg:hidden xl:hidden mr-10 md:block">
@@ -87,7 +89,9 @@ function App() {
                 <button className="but text-[#000]">
                   <Link to="/join">Join Us</Link>
                 </button>
-                <button className="but1 ">Hire Talent</button>
+                <button className="but1 ">
+                  <Link to="/hire">Hire Talent</Link>
+                </button>
               </ul>
             </div>
           </div>
@@ -331,7 +335,7 @@ function App() {
                   <Link to="/it">Learn More</Link>
                 </button>
               </div>
-              <div className="w-[320px] h-[270px] xl:h-[262px] xl:w-[374px] text-[#03cfd6] font-semibold bg-[#000] rounded-xl md:pt-5 pt-8 flex flex-col md:hidden">
+              <div className="w-[320px] h-[270px] xl:h-[262px] xl:w-[374px] text-[#03cfd6] font-semibold bg-[#000] rounded-xl md:pt-5 pt-8 flex flex-col md:hidden lg:flex xl:flex">
                 <h1 className=" pb-2 xl:pb-4 flex justify-center">
                   BUSINESS ADVISORY
                 </h1>
@@ -724,13 +728,18 @@ function App() {
             </h1>
           </div>
 
-          <div className=" text-[16px] pt-5 xl:pt-10 lg:pt-10">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className=" text-[16px] pt-5 xl:pt-10 lg:pt-10"
+          >
             <h3>Name*</h3>
             <div className=" flex gap-5">
               <div className=" pb-2">
                 <input
                   type="text"
                   className=" h-8 w-36 xl:w-56 lg:w-56 text-black"
+                  name="user_first"
                 />
                 <p>First</p>
               </div>
@@ -738,6 +747,7 @@ function App() {
                 <input
                   type="text"
                   className=" h-8 w-36 xl:w-56 lg:w-56 text-black"
+                  name="user_last"
                 />
                 <p>Last</p>
               </div>
@@ -746,37 +756,66 @@ function App() {
             <div className="pb-12">
               <div className=" pb-2">
                 <p>Email</p>
-                <input type="text" className=" h-8 w-full text-black" />
+                <input
+                  type="text"
+                  className=" h-8 w-full text-black"
+                  name="user_email"
+                />
               </div>
               <div className=" pb-2">
                 <p>Phone number</p>
-                <input type="text" className=" h-8 w-full text-black" />
+                <input
+                  type="text"
+                  className=" h-8 w-full text-black"
+                  name="user_number"
+                />
               </div>
               <div className=" pb-2">
                 <p>Company Name</p>
-                <input type="text" className=" h-8 w-full text-black" />
+                <input
+                  type="text"
+                  className=" h-8 w-full text-black"
+                  name="user_companyname"
+                />
               </div>
               <div className=" pb-2">
                 <p>Company Website</p>
-                <input type="text" className=" h-8 w-full text-black" />
+                <input
+                  type="text"
+                  className=" h-8 w-full text-black"
+                  name="user_companywebsite"
+                />
               </div>
               <div className=" pb-2">
                 <p>Comment or Message*</p>
-                <textarea className="area h-20 w-full  text-black"></textarea>
+                <textarea
+                  className="area h-20 w-full  text-black"
+                  name="user_comment"
+                ></textarea>
               </div>
               <div className=" pb-2">
                 <p>How did you hear about us?</p>
-                <input type="text" className=" h-8 w-full text-black" />
+                <input
+                  type="text"
+                  className=" h-8 w-full text-black"
+                  name="user_howdidyouhear"
+                />
               </div>
               <div className=" pt-2">
-                <button className="but1 h-10 xl:mb-8 w-28">Submit</button>
+                <button
+                  className="but1 h-10 xl:mb-8 w-28"
+                  type="submit"
+                  value="Send"
+                >
+                  Submit
+                </button>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
 
-      <div
+      {/* <div
         style={{ fontFamily: "Montserrat" }}
         className=" xl:flex flex justify-center md:justify-end lg:justify-end xl:justify-end pt-8 xl:pt-16 md:mx-12 lg:mx-20 xl:mx-20"
       >
@@ -809,7 +848,7 @@ function App() {
             </form>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div
         style={{ fontFamily: "Montserrat" }}
