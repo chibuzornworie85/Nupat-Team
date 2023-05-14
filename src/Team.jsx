@@ -134,7 +134,7 @@ const Team = () => {
         </div>
       </div>
 
-      <div className=" flex justify-end h-18 p-3">
+      {/* <div className=" flex justify-end h-18 p-3">
         <Link to="/faq">
           <img src={mess} alt="mess" />
         </Link>
@@ -164,7 +164,7 @@ const Team = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div
         style={{ fontFamily: "Montserrat" }}
@@ -284,7 +284,7 @@ const Team = () => {
 export default Team;
 
 import React from "react";
-import mess from "./assets/contact/circle.png";
+// import mess from "./assets/contact/circle.png";
 import logo from "./assets/logo.png";
 import { Link } from "react-router-dom";
 import arrow from "./assets/arrow.png";

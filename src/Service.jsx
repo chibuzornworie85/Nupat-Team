@@ -43,7 +43,7 @@ const Service = () => {
               <div className="" onClick={() => setDrop(!drop)}>
                 {drop ? (
                   <div className=" flex items-center gap-2">
-                    <Link to="/service">SERVICES</Link>
+                    SERVICES
                     <img src={arrow} alt="arrow" />
                   </div>
                 ) : (
@@ -113,9 +113,7 @@ const Service = () => {
                 <li>
                   <Link to="/about">ABOUT US</Link>
                 </li>
-                <li className=" flex items-center gap-2">
-                  <Link to="/service">SERVICES</Link>
-                </li>
+                <li className=" flex items-center gap-2">SERVICES</li>
                 <li>
                   <Link to="/faq">FAQs</Link>
                 </li>
@@ -152,7 +150,7 @@ const Service = () => {
         <h1 className=" justify-center lg:text-3xl xl:text-4xl text-black lg:py-5 md:py-5 xl:py-8 font-semibold xl:flex hidden lg:flex md:flex md:text-2xl">
           THE MOST OUTSTANDING SERVICES FOR YOUR BUSINESS
         </h1>
-        <h1 className=" flex justify-center text-base text-center text-black py-4 font-semibold xl:hidden lg:hidden md:hidden">
+        <h1 className=" flex justify-center text-[15px] text-center text-black py-4 font-semibold xl:hidden lg:hidden md:hidden">
           THE MOST OUTSTANDING SERVICES FOR <br /> YOUR BUSINESS
         </h1>
         <p className=" hidden xl:flex justify-center text-base lg:flex md:hidden">

@@ -98,7 +98,7 @@ function App() {
         </div>
       </div>
 
-      <div className="sec h-[104px] lg:h-72 md:h-[200px] lg:pt-20 xl:h-[70vh] text-center pt-10 xl:pt-28">
+      <div className="sec h-[120px] lg:h-72 md:h-[200px] lg:pt-20 xl:h-[70vh] text-center pt-10 xl:pt-28">
         <h1
           style={{ fontFamily: "Montserrat" }}
           className=" items-center h-0 font-semibold text-[11px] md:text-[25px] md:h-7 lg:h-12 lg:text-4xl xl:h-12 xl:text-[44px] flex justify-center text-white"
@@ -172,7 +172,7 @@ function App() {
                 We have a pool of highly skilled and <br />
                 vetted tech talents
               </h1>
-              <h1 className=" h-10 xl:h-14 text-base pl-2 xl:hidden lg:hidden md:block pb-[50px]">
+              <h1 className=" h-10 xl:h-14 text-base pl-2 xl:hidden lg:hidden md:block pb-[55px]">
                 We have a pool of highly skilled and vetted tech talents
               </h1>
               <p className=" text-xl hidden xl:block lg:block md:block xl:w-[842px]">
@@ -209,7 +209,7 @@ function App() {
               Access our pool of Tech <span className="hit">Talents</span> To
               Meet Your Business Needs...
             </h1>
-            <div className=" xl:flex gap-[30px] xl:justify-center p-2 xl:p-0 pt-[10px] xl:pt-[50px]">
+            <div className=" xl:flex gap-[30px] p-2 xl:p-0 pt-[10px] xl:pt-[50px]">
               <ul className=" flex flex-col gap-2 pt-3 pb-3 xl:pb-0">
                 <li>Frontend Developer</li>
                 <li>Backend developer (C#, Java, NodeJS)</li>
@@ -658,7 +658,7 @@ function App() {
         style={{ fontFamily: "Montserrat" }}
         className=" bg-black xl:mt-12 md:mt-12 lg:mt-12 md:mx-10 lg:mx-32 xl:mx-[70px] mx-6 font-semibold text-white"
       >
-        <div className=" text-white text-[24px] xl:text-5xl md:text-2xl lg:text-4xl flex justify-center pt-5">
+        <div className=" text-white text-[24px] xl:text-5xl text-lg md:text-2xl lg:text-4xl flex justify-center pt-5">
           <h1 className=" hidden xl:block lg:block md:block">
             Want your business to stand out?
           </h1>
@@ -686,19 +686,19 @@ function App() {
         </div>
         <div className=" xl:hidden md:hidden lg:hidden pt-8 items-center text-center pb-10">
           <div className=" flex justify-around items-center text-center">
-            <div className=" text-[20px] xl:text-[36px] items-center flex flex-col">
+            <div className=" text-[15px] xl:text-[36px] items-center flex flex-col">
               <img src={group} alt="group" className=" pb-4" />
               <p>
                 Schedule your <br /> consultation
               </p>
             </div>
-            <div className=" items-center flex flex-col">
+            <div className=" text-[15px] items-center flex flex-col">
               <img src={customer} alt="customer" className=" pb-4" />
               <p>We contact you</p>
             </div>
           </div>
           <div className=" flex justify-center pt-4">
-            <div className=" items-center flex flex-col">
+            <div className=" text-[15px] items-center flex flex-col">
               <img src={business} alt="business" className=" pb-4" />
               <p>
                 Watch us offer you <br /> the best talents

@@ -36,9 +36,7 @@ function About() {
             <li className=" hover:underline">
               <Link to="/">HOME</Link>
             </li>
-            <li className=" underline">
-              <Link to="/about">ABOUT US</Link>
-            </li>
+            <li className=" underline">ABOUT US</li>
             <li className=" hover:underline">
               <div className="" onClick={() => setDrop(!drop)}>
                 {drop ? (
@@ -110,9 +108,7 @@ function About() {
                 <li>
                   <Link to="/">HOME</Link>
                 </li>
-                <li>
-                  <Link to="/about">ABOUT US</Link>
-                </li>
+                <li>ABOUT US</li>
                 <li className=" flex items-center gap-2">
                   <Link to="/service">SERVICES</Link>
                 </li>

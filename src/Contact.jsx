@@ -77,9 +77,7 @@ const Contact = () => {
             <li className=" hover:underline">
               <Link to="/faq">FAQs</Link>
             </li>
-            <li className=" underline">
-              <Link to="/contact">CONTACT US</Link>
-            </li>
+            <li className=" underline">CONTACT US</li>
             <button className="but text-[#000]">
               <Link to="/join">Join Us</Link>
             </button>
@@ -120,9 +118,7 @@ const Contact = () => {
                 <li>
                   <Link to="/faq">FAQs</Link>
                 </li>
-                <li>
-                  <Link to="/contact">CONTACT US</Link>
-                </li>
+                <li>CONTACT US</li>
                 <button className="but text-[#000]">
                   <Link to="/join">Join Us</Link>
                 </button>
@@ -202,11 +198,11 @@ const Contact = () => {
               className="pt-5 text-[16px] xl:pt-10 lg:pt-10 md:pt-10"
             >
               <h3>Name*</h3>
-              <div className=" flex gap-6">
+              <div className=" flex gap-2">
                 <div className=" pb-2">
                   <input
                     type="text"
-                    className=" h-8 w-40 xl:w-56 lg:w-56 md:w-48 text-black"
+                    className=" h-8 w-[100%] xl:w-56 lg:w-56 md:w-48 text-black"
                     name="user_first"
                   />
                   <p>First</p>
@@ -214,7 +210,7 @@ const Contact = () => {
                 <div className=" pb-2">
                   <input
                     type="text"
-                    className=" h-8 w-40 xl:w-56 lg:w-56 md:w-48 text-black"
+                    className=" h-8 w-[100%] xl:w-56 lg:w-56 md:w-48 text-black"
                     name="user_last"
                   />
                   <p>Last</p>
@@ -305,9 +301,9 @@ const Contact = () => {
               </p>
               <div className=" flex justify-center items-center bg-white p-4 gap-4 h-14 lg:h-16 xl:h-16 mb-4 xl:mb-20">
                 <img src={foot4} alt="" />
-                <img src={foot5} alt="" />
-                <img src={foot6} alt="" />
-                <img src={foot7} alt="" />
+                <img src={foot5} alt="foot5" className=" h-8" />
+                <img src={foot6} alt="foot6" className=" h-7" />
+                <img src={foot7} alt="foot7" className=" h-7" />
               </div>
             </div>
             <div className=" xl:flex md:flex justify-end relative md:top-28 lg:top-28 xl:top-28 md:-mt-28 lg:-mt-28 xl:-mt-28 hidden">
