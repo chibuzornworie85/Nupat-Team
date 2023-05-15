@@ -195,7 +195,7 @@ const Business = () => {
         style={{ fontFamily: "Montserrat" }}
         className=" flex flex-col lg:flex-row xl:flex-row justify-around md:px-10 px-10 lg:px-1 xl:px-12 mt-10"
       >
-        <div className="flex flex-col gap-4 text-lg xl:text-3xl lg:text-2xl md:px-10 lg:px-0 xl:px-0">
+        <div className="flex flex-col gap-4 text-[16px] xl:text-3xl lg:text-2xl md:px-10 lg:px-0 xl:px-0">
           <h2 className=" text-[#03CFD6] bg-[#e6e6e6] font-semibold h-16 p-4 w-full">
             Business Advisory
           </h2>
@@ -213,7 +213,7 @@ const Business = () => {
           </p>
         </div>
         <div className="it1 bg-[url('/src/assets/business/bg.png')] bg-no-repeat bg-cover bg-center rounded-2xl ml-5 xl:ml-0 lg:ml-0 mt-8 lg:mt-0 xl:mt-0 lg:w-2/4 xl:w-2/4 h-52 lg:h-96 xl:h-96 flex justify-center md:mx-24 lg:mx-0 xl:mx-0">
-          <div className=" text-2xl xl:text-5xl text-white flex justify-center items-center font-semibold">
+          <div className=" text-xl xl:text-5xl text-white flex justify-center items-center font-semibold">
             <h1 className="">Business Advisory</h1>
           </div>
         </div>
@@ -221,22 +221,22 @@ const Business = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" text-base lg:text-xl md:text-xl xl:text-2xl flex flex-col lg:flex-row xl:flex-row justify-around items-center pt-10 lg:gap-72 xl:gap-72 lg:pl-20 lg:px-1 xl:px-12"
+        className=" flex flex-col lg:flex-row xl:flex-row justify-around items-center pt-10 lg:gap-72 xl:gap-72 lg:pl-20 lg:px-1 xl:px-12"
       >
         <Link to="/faq">
           <div className="pt-96 items-center hidden xl:flex lg:flex xl:ml-[50px]">
             <img src={mess} alt="mess" />
           </div>
         </Link>
-        <div className="what1 flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[180px]">
+        <div className="what1 md:text-xl xl:text-[20px] lg:text-[20px] flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[180px]">
           <h1 className=" font-semibold text-2xl hidden xl:flex lg:flex">
             Looking for a Management Consulting <br /> Company in Nigeria?
           </h1>
-          <h1 className=" font-semibold text-xl xl:hidden lg:hidden">
+          <h1 className=" font-semibold text-[15px] xl:hidden lg:hidden">
             Looking for a Management Consulting Company in Nigeria?
           </h1>
 
-          <p className=" hidden xl:block lg:block text-sm">
+          <p className=" hidden xl:block lg:block">
             Our management consulting administrations center around our
             customers’ most basic issues and openings: standard procedures,
             marketing, and sales promotions, tasks, innovation, change,
@@ -245,7 +245,7 @@ const Business = () => {
             impact from enhancing the whole of the parts, not simply the
             individual pieces.
           </p>
-          <p className=" xl:hidden lg:hidden text-sm">
+          <p className=" xl:hidden lg:hidden">
             Our management consulting administrations center around our
             customers’ most basic issues and openings: standard procedures,
             marketing, and sales promotions, tasks, innovation, change,
@@ -254,7 +254,7 @@ const Business = () => {
             impact from enhancing the whole of the parts, not simply the
             individual pieces.
           </p>
-          <ul className="list-disc pl-12 text-sm">
+          <ul className="list-disc pl-12 xl">
             <li>Business Modal Analysis</li>
             <li>Coaching Support</li>
             <li>Feasibility Studies</li>
@@ -264,20 +264,20 @@ const Business = () => {
             <li>Business Plan Formulation</li>
           </ul>
 
-          <p className=" hidden xl:block lg:block text-sm">
+          <p className=" hidden xl:block lg:block">
             At <span>NUPAT</span>, we empower our customers to adopt an advanced
             first strategy for each business commitment. Our ability is
             supplemented by an extending technical system of best-of-breed
             partners who are developing tomorrow’s innovations today.
           </p>
 
-          <p className="xl:hidden lg:hidden text-sm">
+          <p className="xl:hidden lg:hidden">
             At <span>NUPAT</span>, we empower our customers to adopt an advanced
             first strategy for each business commitment. Our ability is
             supplemented by an extending technical system of best-of-breed
             partners who are developing tomorrow’s innovations today.
           </p>
-          <h1 className=" font-semibold text-xl xl:text-2xl">
+          <h1 className=" font-semibold text-[15px] xl:text-2xl">
             Sales and Marketing
           </h1>
 
@@ -289,7 +289,7 @@ const Business = () => {
             that guarantee you convey ideal client connections at each touch
             point.
           </p>
-          <p className=" xl:hidden lg:hidden text-sm">
+          <p className=" xl:hidden lg:hidden">
             Our group of world-class specialists assists you with accomplishing
             economical, natural development by concentrating on three basic
             structures: an outside-in approach that puts clients initially,
@@ -298,9 +298,9 @@ const Business = () => {
             point.
           </p>
 
-          <h1 className=" font-semibold text-2xl">Cost Transformation</h1>
+          <h1 className=" font-semibold text-[15px] xl:text-2xl">Cost Transformation</h1>
 
-          <p className=" hidden xl:block lg:block text-sm">
+          <p className=" hidden xl:block lg:block">
             Genuine cost change is tied in with disentangling, pulling together
             and reinforcing your team so you can seek after development and give
             a superior client experience. Our methodology is both all-
@@ -308,7 +308,7 @@ const Business = () => {
             and consistently improve a reasonable cost of executives culture.
           </p>
 
-          <p className="xl:hidden lg:hidden text-sm">
+          <p className="xl:hidden lg:hidden">
             Genuine cost change is tied in with disentangling, pulling together
             and reinforcing your team so you can seek after development and give
             a superior client experience. Our methodology is both all
@@ -316,9 +316,9 @@ const Business = () => {
             and consistently improve a reasonable cost of executives culture.
           </p>
 
-          <h1 className=" font-semibold text-xl xl:text-2xl">Strategy</h1>
+          <h1 className=" font-semibold text-[15px] xl:text-2xl">Strategy</h1>
 
-          <p className=" hidden xl:block lg:block text-sm">
+          <p className=" hidden xl:block lg:block">
             In a period of disturbance, strategy is a higher priority than any
             time in recent memory. We offer innovative arrangements that have
             helped a huge number of organizations over different industries
@@ -331,7 +331,7 @@ const Business = () => {
             supported, gainful development—an accomplishment just 1 out of 11
             organizations figures out how to pull off.
           </p>
-          <p className="xl:hidden lg:hidden text-sm">
+          <p className="xl:hidden lg:hidden">
             In a period of disturbance, strategy is a higher priority than any
             time in recent memory. We offer innovative arrangements that have
             helped a huge number of organizations over different industries
@@ -345,11 +345,11 @@ const Business = () => {
             organizations figures out how to pull off.
           </p>
 
-          <h1 className=" font-semibold text-xl xl:text-2xl">
+          <h1 className=" font-semibold text-[15px] xl:text-2xl">
             Client Learning Programs
           </h1>
 
-          <p className="hidden xl:block lg:block text-sm">
+          <p className="hidden xl:block lg:block">
             With regard to ability, industry pioneers concur on two things on
             learning interventions: It’s valuable, and it’s rare. That is the
             reason we made <u>leverage LMS.</u> Through our work with a
@@ -359,7 +359,7 @@ const Business = () => {
             prepares your team with an “Essential Corporate Toolbox” that can be
             customized to address the issues of their specific market condition.
           </p>
-          <p className="xl:hidden lg:hidden text-sm">
+          <p className="xl:hidden lg:hidden">
             With regard to ability, industry pioneers concur on two things on
             learning interventions: It’s valuable, and it’s rare. That is the
             reason we made <u>leverage LMS.</u> Through our work with a
@@ -370,32 +370,32 @@ const Business = () => {
             customized to address the issues of their specific market condition.
           </p>
 
-          <p className=" hidden xl:block lg:block text-sm">
+          <p className=" hidden xl:block lg:block">
             Quicken your advancement and change with a completely coordinated
             suite of abilities that puts your business objectives at the core of
             all that you do.
           </p>
-          <p className="xl:hidden lg:hidden text-sm">
+          <p className="xl:hidden lg:hidden">
             Quicken your advancement and change with a completely coordinated
             suite of abilities that puts your business objectives at the core of
             all that you do.
           </p>
 
-          <p className="hidden xl:block lg:block text-sm">
+          <p className="hidden xl:block lg:block">
             We work with businesses who need to own their future, not avoid it.
             Together, we accomplish phenomenal results.
           </p>
-          <p className="xl:hidden lg:hidden text-sm">
+          <p className="xl:hidden block lg:hidden text-[8p]">
             We work with businesses who need to own their future, not avoid it.
             Together, we accomplish phenomenal results.
           </p>
         </div>
       </div>
-      <Link to="/faq">
+      {/* <Link to="/faq">
         <div className=" flex justify-end xl:hidden lg:hidden mr-10">
           <img src={mess} alt="mess" />
         </div>
-      </Link>
+      </Link> */}
 
       {/* <div
         style={{ fontFamily: "Montserrat" }}

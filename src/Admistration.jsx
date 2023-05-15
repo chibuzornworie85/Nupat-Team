@@ -228,7 +228,7 @@ const Admistration = () => {
           </div>
         </Link>
 
-        <div className=" what flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[160px] text-sm">
+        <div className=" what flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[160px] md:text-xl xl:text-[20px] lg:text-[20px]">
           <p className=" hidden xl:block">
             Every department in a business is entrusted with various roles which
             are critical to the development and growth of that entity, with all
@@ -260,7 +260,7 @@ const Admistration = () => {
             confidential and quick assistance with the services listed below.
           </p>
 
-          <h1 className=" font-semibold text-xl md:text-xl lg:text-2xl xl:text-2xl">
+          <h1 className=" font-semibold md:text-xl lg:text-2xl xl:text-2xl">
             Why this service is important for your business?
           </h1>
 
@@ -277,11 +277,11 @@ const Admistration = () => {
           </ul>
         </div>
       </div>
-      <Link to="/faq">
+      {/* <Link to="/faq">
         <div className=" flex justify-end xl:hidden mr-10 lg:hidden">
           <img src={mess} alt="mess" />
         </div>
-      </Link>
+      </Link> */}
 
       {/* <div
         style={{ fontFamily: "Montserrat" }}

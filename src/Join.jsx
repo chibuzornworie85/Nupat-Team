@@ -100,7 +100,7 @@ const Join = () => {
               </div>
             </div>
             <div className=" text-white flex items-center justify-center text-[20px] bg-black w-[150px] h-[54px] rounded-[16px] ml-[75px] mt-[15px]">
-              <button>
+              <button type="submit" value="Send">
                 <Link to="/employ">Continue</Link>
               </button>
             </div>
@@ -177,7 +177,7 @@ const Join = () => {
               </div>
             </div>
             <div className=" text-white flex items-center justify-center text-[20px] bg-black w-[150px] h-[54px] rounded-[16px] ml-[20px] mt-[15px]">
-              <button>
+              <button type="submit" value="Send">
                 <Link to="/employ">Continue</Link>
               </button>
             </div>

@@ -8,7 +8,7 @@ const Hire = () => {
 
     emailjs
       .sendForm(
-        "service_1oikrgp",
+        "service_6z6j9vv",
         "template_04ujg5i",
         form.current,
         "KQagYOgrTv4yC0uV6"
@@ -49,6 +49,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[450px] text-black pl-2"
+                    name="user_firstName"
                   />
                 </div>
                 <div className=" pb-2">
@@ -56,6 +57,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[450px] text-black pl-2"
+                    name="user_lastName"
                   />
                 </div>
               </div>
@@ -65,6 +67,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[450px] text-black pl-2"
+                    name="user_workEmailAddress"
                   />
                 </div>
                 <div className=" pb-2">
@@ -72,6 +75,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[450px] text-black pl-2"
+                    name="user_noOfEmployees"
                   />
                 </div>
               </div>
@@ -81,6 +85,7 @@ const Hire = () => {
                   <input
                     type="radius"
                     className=" h-[48px] w-[450px] text-black pl-2"
+                    name="user_projectHiringFor"
                   />
                 </div>
                 <div className=" pb-2">
@@ -88,6 +93,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[450px] text-black pl-2"
+                    name="user_levelOfCommitment"
                   />
                 </div>
               </div>
@@ -97,6 +103,7 @@ const Hire = () => {
                   <input
                     type="radius"
                     className=" h-[48px] w-[450px] text-black pl-2"
+                    name="user_roleHiringFor"
                   />
                 </div>
                 <div className=" pb-2">
@@ -104,6 +111,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[450px] text-black pl-2"
+                    name="user_skillRequirement"
                   />
                 </div>
               </div>
@@ -114,6 +122,7 @@ const Hire = () => {
                     placeholder="DD/MM/YY"
                     type="radius"
                     className=" h-[48px] w-[450px] text-black pl-2"
+                    name="user_proposedStartDate"
                   />
                 </div>
                 <div className=" pb-2">
@@ -121,6 +130,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[450px] text-black pl-2"
+                    name="user_workModel"
                   />
                 </div>
               </div>
@@ -130,6 +140,7 @@ const Hire = () => {
                   <input
                     type="radius"
                     className=" h-[48px] w-[450px] text-black pl-2"
+                    name="user_teamContributionLevel"
                   />
                 </div>
                 <div className=" pb-2">
@@ -137,6 +148,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[450px] text-black pl-2"
+                    name="user_companyWebsite"
                   />
                 </div>
               </div>
@@ -146,6 +158,7 @@ const Hire = () => {
                   <input
                     type="radius"
                     className=" h-[48px] w-[450px] text-black pl-2"
+                    name="user_companyName"
                   />
                 </div>
                 <div className=" pb-2">
@@ -153,6 +166,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[450px] text-black pl-2"
+                    name="user_contactInfo"
                   />
                 </div>
               </div>
@@ -163,6 +177,7 @@ const Hire = () => {
                 <input
                   type="radius"
                   className=" h-[48px] w-[450px] text-black pl-2"
+                  name="user_designationClient"
                 />
               </div>
             </div>
@@ -198,6 +213,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[340px] text-black pl-2"
+                    name="user_firstName"
                   />
                 </div>
                 <div className=" pb-2">
@@ -205,6 +221,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[340px] text-black pl-2"
+                    name="user_lastName"
                   />
                 </div>
               </div>
@@ -214,6 +231,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[340px] text-black pl-2"
+                    name="user_workEmailAddress"
                   />
                 </div>
                 <div className=" pb-2">
@@ -221,6 +239,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[340px] text-black pl-2"
+                    name="user_noOfEmployees"
                   />
                 </div>
               </div>
@@ -230,6 +249,7 @@ const Hire = () => {
                   <input
                     type="radius"
                     className=" h-[48px] w-[340px] text-black pl-2"
+                    name="user_projectHiringFor"
                   />
                 </div>
                 <div className=" pb-2">
@@ -237,6 +257,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[340px] text-black pl-2"
+                    name="user_levelOfCommitment"
                   />
                 </div>
               </div>
@@ -246,6 +267,7 @@ const Hire = () => {
                   <input
                     type="radius"
                     className=" h-[48px] w-[340px] text-black pl-2"
+                    name="user_roleHiringFor"
                   />
                 </div>
                 <div className=" pb-2">
@@ -253,6 +275,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[340px] text-black pl-2"
+                    name="user_skillRequirement"
                   />
                 </div>
               </div>
@@ -263,6 +286,7 @@ const Hire = () => {
                     placeholder="DD/MM/YY"
                     type="radius"
                     className=" h-[48px] w-[340px] text-black pl-2"
+                    name="user_proposedStartDate"
                   />
                 </div>
                 <div className=" pb-2">
@@ -270,6 +294,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[340px] text-black pl-2"
+                    name="user_workModel"
                   />
                 </div>
               </div>
@@ -279,6 +304,7 @@ const Hire = () => {
                   <input
                     type="radius"
                     className=" h-[48px] w-[340px] text-black pl-2"
+                    name="user_teamContributionLevel"
                   />
                 </div>
                 <div className=" pb-2">
@@ -286,6 +312,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[340px] text-black pl-2"
+                    name="user_companyWebsite"
                   />
                 </div>
               </div>
@@ -295,6 +322,7 @@ const Hire = () => {
                   <input
                     type="radius"
                     className=" h-[48px] w-[340px] text-black pl-2"
+                    name="user_companyName"
                   />
                 </div>
                 <div className=" pb-2">
@@ -302,6 +330,7 @@ const Hire = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[340px] text-black pl-2"
+                    name="user_contactInfo"
                   />
                 </div>
               </div>
@@ -312,6 +341,7 @@ const Hire = () => {
                 <input
                   type="radius"
                   className=" h-[48px] w-[340px] text-black pl-2"
+                  name="user_designationClient"
                 />
               </div>
             </div>

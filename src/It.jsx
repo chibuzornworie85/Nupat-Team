@@ -226,63 +226,63 @@ const It = () => {
             <img src={mess} alt="mess" />
           </div>
         </Link>
-        <div className="what flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[150px]">
+        <div className="what md:text-xl xl:text-[20px] lg:text-[20px] flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[150px]">
           <h1 className=" font-semibold hidden xl:block lg:block">
             Do you need a business innovation that <br /> integrates and is
             driven by next- <br /> generation technology?
           </h1>
-          <h1 className=" font-semibold xl:hidden lg:hidden">
+          <h1 className=" font-semibold text-[16px] xl:hidden lg:hidden">
             Do you need a business innovation that integrates and is driven by
             next-generation technology?
           </h1>
 
-          <p className=" text-sm">
+          <p className="">
             IT Outsourcing Solution – Every organization has different IT needs;
           </p>
 
-          <p className=" hidden xl:block lg:block text-sm">
+          <p className=" hidden xl:block lg:block">
             This ever-evolving technology need has to be addressed in order to
             keep up the pace with competitors and deliver more value to
             customers.
           </p>
-          <p className=" xl:hidden lg:hidden text-sm">
+          <p className=" xl:hidden lg:hidden">
             This ever-evolving technology need has to be addressed in order to
             keep up the pace with competitors and deliver more value to
             customers.
           </p>
 
-          <p className="hidden xl:block lg:block text-sm">
+          <p className="hidden xl:block lg:block">
             According to reports, 90% of companies involved in outsourcing their
             IT functions are looking out for outcomes and collaborations that
             are customer-centric and hinge on cost-effective cutting-edge
             technology.
           </p>
-          <p className="xl:hidden lg:hidden text-sm">
+          <p className="xl:hidden lg:hidden">
             According to reports, 90% of companies involved in outsourcing their
             IT functions are looking out for outcomes and collaborations that
             are customer-centric and hinge on cost-effective cutting-edge
             technology.
           </p>
 
-          <p className=" hidden xl:block lg:block text-sm">
+          <p className=" hidden xl:block lg:block">
             Our IT Solution services allow business executives to retain control
             over IT strategies for more effective delivery of IT-enabled
             business processes, application services and infrastructure
             solutions for business outcomes.
           </p>
-          <p className=" xl:hidden lg:hidden text-sm">
+          <p className=" xl:hidden lg:hidden">
             Our IT Solution services allow business executives to retain control
             over IT strategies for more effective delivery of IT-enabled
             business processes, application services and infrastructure
             solutions for business outcomes.
           </p>
-          <p className="hidden xl:block lg:block text-sm">
+          <p className="hidden xl:block lg:block">
             NUPAT Outsourcing has been critically acclaimed for our endeavor
             towards quality, consistent support and consulting and we also
             understand how important it is for businesses to implement solutions
             that are cost-effective.
           </p>
-          <p className=" xl:hidden lg:hidden text-sm">
+          <p className=" xl:hidden lg:hidden">
             NUPAT Outsourcing has been critically acclaimed for our endeavor
             towards quality, consistent support and consulting and we also
             understand how important it is for businesses to implement solutions
@@ -290,11 +290,11 @@ const It = () => {
           </p>
         </div>
       </div>
-      <Link to="/faq">
+      {/* <Link to="/faq">
         <div className=" flex justify-end xl:hidden lg:hidden mr-10 pt-5">
           <img src={mess} alt="mess" />
         </div>
-      </Link>
+      </Link> */}
       {/* 
       <div
         style={{ fontFamily: "Montserrat" }}

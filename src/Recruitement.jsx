@@ -195,7 +195,7 @@ const Recruitement = () => {
         style={{ fontFamily: "Montserrat" }}
         className=" flex flex-col lg:flex-row xl:flex-row justify-around md:px-10 px-10 lg:px-1 xl:px-12 mt-10"
       >
-        <div className="flex flex-col gap-4 text-lg xl:text-3xl lg:text-2xl md:px-10 lg:px-0 xl:px-0">
+        <div className="flex flex-col gap-4 text-[16px] xl:text-3xl lg:text-2xl md:px-10 lg:px-0 xl:px-0">
           <h2 className="bg-[#e6e6e6] h-16 p-4 w-full">
             <Link to="/business">Business Advisory</Link>
           </h2>
@@ -228,41 +228,41 @@ const Recruitement = () => {
             <img src={mess} alt="mess" />
           </div>
         </Link>
-        <div className="what flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[180px]">
+        <div className="what md:text-xl xl:text-[20px] lg:text-[20px] flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[180px]">
           <h1 className=" font-semibold">What We Offer at NUPAT</h1>
-          <p className=" hidden xl:block lg:block text-sm">
+          <p className=" hidden xl:block lg:block">
             NUPAT Outsourcing offers Human Resource Outsourcing which includes
             employee management, performance management, and payroll processing.
             Our esteemed clientele base cuts across different industries like
             Banking, Telecoms, Tech Start-ups, Fin-techs and Information
             Technology.
           </p>
-          <p className=" xl:hidden lg:hidden text-sm">
+          <p className=" xl:hidden lg:hidden">
             NUPAT Outsourcing offers Human Resource Outsourcing which includes
             employee management, performance management, and payroll processing.
             Our esteemed clientele base cuts across different industries like
             Banking, Telecoms, Tech Start-ups, Fin-techs and Information
             Technology.
           </p>
-          <p className=" hidden xl:block lg:block text-sm">
+          <p className=" hidden xl:block lg:block">
             No matter how complex your finances or personal situation, we have
             the expertise and market-leading tools at our disposal to provide
             you with sophisticated and forward-thinking advice, tailored
             precisely to your needs.
           </p>
-          <p className=" xl:hidden lg:hidden text-sm">
+          <p className=" xl:hidden lg:hidden">
             No matter how complex your finances or personal situation, we have
             the expertise and market-leading tools at our disposal to provide
             you with sophisticated and forward-thinking advice, tailored
             precisely to your needs.
           </p>
-          <p className=" hidden xl:block lg:block text-sm">
+          <p className=" hidden xl:block lg:block">
             Your personal wealth adviser will consider your finances as a whole
             to ensure your plans, savings and investments are working hard, and
             harmoniously together, to achieve your objectives both now and in
             the future.
           </p>
-          <p className=" xl:hidden lg:hidden text-sm">
+          <p className=" xl:hidden lg:hidden">
             Your personal wealth adviser will consider your finances as a whole
             to ensure your plans, savings and investments are working hard, and
             harmoniously together, to achieve your objectives both now and in
@@ -271,56 +271,56 @@ const Recruitement = () => {
           <h1 className=" font-semibold">
             Why this service is important for your business?
           </h1>
-          <p className=" hidden xl:block lg:block text-sm">
+          <p className=" hidden xl:block lg:block">
             <span>Recruitment & Selection:</span> Because the quality of
             personnel is a critical success factor for your business, you can
             count on us to manage and optimize your recruitment and selection
             needs.
           </p>
-          <p className="xl:hidden lg:hidden text-sm">
+          <p className="xl:hidden lg:hidden">
             <span>Recruitment & Selection:</span> Because the quality of
             personnel is a critical success factor for your business, you can
             count on us to manage and optimize your recruitment and selection
             needs.
           </p>
-          <p className=" xl:block hidden lg:block text-sm">
+          <p className=" xl:block hidden lg:block">
             <span>Personnel Recruitment Services:</span> The employment of
             trained and tested employees goes a long way in achieving your
             organization’s corporate goals. We recruit the best hands to meet
             your unique employee needs. Our services include:
           </p>
-          <p className="xl:hidden lg:hidden text-sm">
+          <p className="xl:hidden lg:hidden">
             <span>Personnel Recruitment Services:</span> The employment of
             trained and tested employees goes a long way in achieving your
             organization’s corporate goals. We recruit the best hands to meet
             your unique employee needs. Our services include:
           </p>
-          <ul className=" list-disc pl-12 text-sm">
+          <ul className=" list-disc pl-12">
             <li>
               Recruitment of professionals for specific positions as advised by
               our clients.
             </li>
           </ul>
-          <ul className=" list-disc pl-12 text-sm">
+          <ul className=" list-disc pl-12">
             <li>
               Head hunting of experienced hands to fill vacant management
               positions.
             </li>
           </ul>
-          <ul className=" list-disc pl-12 text-sm">
+          <ul className=" list-disc pl-12">
             <li> Recruitment of various categories of support staff.</li>
           </ul>
-          <p className=" hidden xl:block lg:block text-sm">
+          <p className=" hidden xl:block lg:block">
             <span>Recruitment Process Review:</span> We review and refine our
             recruitment processes continuously in line with international best
             practices. We achieve this by:
           </p>
-          <p className=" xl:hidden text-sm">
+          <p className=" xl:hidden">
             <span>Recruitment Process Review:</span> We review and refine our
             recruitment processes continuously in line with international best
             practices. We achieve this by:
           </p>
-          <ul className=" list-disc pl-12 text-sm">
+          <ul className=" list-disc pl-12">
             <li className=" hidden xl:block lg:block">
               Developing strategic recruitment initiatives based on the current
               demographics of our client's workforce.
@@ -330,12 +330,12 @@ const Recruitement = () => {
               demographics of our client's workforce.
             </li>
           </ul>
-          <ul className=" list-disc pl-12 text-sm">
+          <ul className=" list-disc pl-12">
             <li>
               Adopting more efficient and professional recruitment processes.
             </li>
           </ul>
-          <ul className=" list-disc pl-12 text-sm">
+          <ul className=" list-disc pl-12">
             <li className=" hidden xl:block lg:block">
               Reviewing and recommending the best selection techniques based on
               the client's unique needs.
@@ -345,16 +345,16 @@ const Recruitement = () => {
               the client's unique needs.
             </li>
           </ul>
-          <ul className=" list-disc pl-12 text-sm">
+          <ul className=" list-disc pl-12">
             <li>Developing work assessments in line with job requirements.</li>
           </ul>
         </div>
       </div>
-      <Link to="/faq">
+      {/* <Link to="/faq">
         <div className=" flex justify-end xl:hidden mr-10 pt-10">
           <img src={mess} alt="mess" />
         </div>
-      </Link>
+      </Link> */}
 
       {/* <div
         style={{ fontFamily: "Montserrat" }}
@@ -380,7 +380,7 @@ const Recruitement = () => {
                 name="user_email"
               />
               <button
-                className=" bg-black text-white text-sm xl:text-base px-4 lg:text-base md:text-base xl:px-20 xl:py-2 md:px-10 lg:px-20 md:py-2 lg:py-2 rounded-xl relative lg:right-2 xl:right-2 md:right-1"
+                className=" bg-black text-white xl:text-base px-4 lg:text-base md:text-base xl:px-20 xl:py-2 md:px-10 lg:px-20 md:py-2 lg:py-2 rounded-xl relative lg:right-2 xl:right-2 md:right-1"
                 type="submit"
                 value="Send"
               >

@@ -226,7 +226,7 @@ const Learning = () => {
             <img src={mess} alt="mess" />
           </div>
         </Link>
-        <div className=" what1 flex text-sm flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[180px]">
+        <div className=" what1 md:text-xl xl:text-[20px] lg:text-[20px] flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[180px]">
           <p className=" hidden xl:block lg:block">
             As the global leader in professional training, NUPAT provides
             innovative learning and development solutions, covering multiple
@@ -309,11 +309,11 @@ const Learning = () => {
           </ul>
         </div>
       </div>
-      <Link to="/faq">
+      {/* <Link to="/faq">
         <div className=" flex justify-end xl:hidden lg:hidden mr-10 pt-10">
           <img src={mess} alt="mess" />
         </div>
-      </Link>
+      </Link> */}
 
       {/* <div
         style={{ fontFamily: "Montserrat" }}

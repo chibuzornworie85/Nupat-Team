@@ -144,7 +144,7 @@ const Employ = () => {
               </div>
             </div>
             <div className=" text-white flex items-center justify-center text-[20px] bg-black w-[150px] h-[54px] rounded-[16px] ml-[70px]">
-              <button>
+              <button type="submit" value="Send">
                 <Link to="/additional">Continue</Link>
               </button>
             </div>
@@ -265,7 +265,7 @@ const Employ = () => {
               </div>
             </div>
             <div className=" text-white flex items-center justify-center text-[20px] bg-black w-[150px] h-[54px] rounded-[16px] ml-[15px]">
-              <button>
+              <button type="submit" value="Send">
                 <Link to="/additional">Continue</Link>
               </button>
             </div>

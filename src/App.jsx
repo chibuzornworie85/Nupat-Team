@@ -273,9 +273,12 @@ function App() {
             businesses build top-tier talents by hiring, vetting, and managing
             talents.
           </p>
-          <p className=" text-[#1F335F] flex items-center text-xl gap-6 font-light pb-6 xl:pb-0">
-            Search for Jobs
-            <img src={right} alt="arrow" />
+          <p className=" text-[#1F335F]">
+            <Link to="/join" className="flex items-center text-xl gap-6 font-light pb-6 xl:pb-0">
+              {" "}
+              Search for Jobs
+              <img src={right} alt="arrow" />
+            </Link>
           </p>
         </div>
       </div>
