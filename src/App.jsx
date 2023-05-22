@@ -837,7 +837,7 @@ function App() {
         style={{ fontFamily: "Montserrat" }}
         className=" rounded-xl bg-black text-white mt-10 md:mt-20 lg:mt-20 md:px-4 lg:px-4 md:mx-10 lg:mx-[60px] xl:mt-20 xl:px-4 xl:mx-[100px]"
       >
-        <div className="flex flex-col lg:flex-row md:flex-row xl:flex-row xl:flex items-center justify-around md:pt-0 lg:pt-0 xl:px-12 pt-6 xl:pt-0 lg:px-0 xl:px-0 px-[30px]">
+        <div className="flex flex-col lg:flex-row md:flex-row xl:flex-row xl:flex items-center justify-around md:pt-0 lg:pt-0 xl:px-12 pt-6 xl:pt-0 px-[30px]">
           <div className=" xl:text-4xl text-xl lg:text-2xl md:text-xl">
             <h1 className=" hidden xl:block lg:block md:block">
               <span className="hit">
