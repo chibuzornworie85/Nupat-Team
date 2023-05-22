@@ -600,8 +600,8 @@ function App() {
           style={{ fontFamily: "Montserrat" }}
           className=" xl:w-[1160px] xl:h-[456px] bg-[url('/src/assets/cover2.png')] bg-cover bg-center bg-no-repeat mt-10 pt-10 mb-10 mx-6 md:mx-12 xl:mx-0 lg:mx-[100px]"
         >
-          <div className=" flex flex-col items-center">
-            <h1 className=" xl:pb-5 text-base pb-2 xl:text-3xl lg:text-3xl md:text-2xl">
+          <div className=" flex flex-col items-center px-6 lg:px-0 xl:px-0">
+            <h1 className=" xl:pb-5 text-[16px] pb-2 xl:text-3xl lg:text-3xl md:text-2xl">
               DON’T JUST TAKE OUR WORDS FOR IT
             </h1>
             <p className=" font-semibold text-black text-sm xl:text-2xl lg:text-2xl md:text-xl">

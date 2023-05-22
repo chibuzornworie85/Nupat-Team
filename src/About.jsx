@@ -154,17 +154,17 @@ function About() {
         <div className=" xl:flex flex lg:flex flex-col lg:flex-col xl:flex-row xl:gap-[80px] justify-around lg:px-10 xl:px-14">
           <div className=" px-6 xl:px-6 lg:px-0 md:mx-4 lg:mx-4 xl:mx-0">
             <div data-aos="flip-right" className=" flex lg:gap-[10px] gap-2 xl:gap-0 lg:flex xl:block">
-              <div className="pic1 relative xl:left-[15px]">
+              <div className="pic1 relative xl:left-[15px] h-[300px] w-[300px]">
                 <img src={pic1} alt="pic1" />
               </div>
-              <div className="pic2 relative xl:-mb-60 xl:bottom-60 xl:left-48 ">
+              <div className="pic2 relative xl:-mb-60 xl:bottom-60 xl:left-48 h-[300px] w-[300px] ">
                 <img src={pic2} alt="pic2" />
               </div>
-              <div className="pic3 relative xl:left-8 xl:bottom-96 xl:-mb-96">
+              <div className="pic3 relative xl:left-8 xl:bottom-[100px] xl:-mb-[100px h-[300px] w-[300px]">
                 <img src={pic3} alt="pic3" />
               </div>
             </div>
-            <div data-aos="flip-left" className=" relative xl:bottom-72 px-20 xl:px-0 bottom-8 lg:flex lg:justify-center md:ml-20 lg:pt-3 -mb-8 xl:left-60 xl:-mb-72">
+            <div data-aos="flip-left" className=" relative px-20 xl:px-0 bottom-8 lg:flex lg:justify-center md:ml-20 lg:pt-3 -mb-8 xl:left-[90px] xl:bottom-[200px] xl:-mb-[200px]">
               <img src={pic4} alt="pic4" />
             </div>
           </div>
