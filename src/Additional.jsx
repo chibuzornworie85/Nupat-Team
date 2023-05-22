@@ -1,6 +1,40 @@
-import React from "react";
-
 const Additional = () => {
+  // const [resume, setResume] = useState("");
+  const [hear, setHear] = useState("");
+  const [referral, setRerral] = useState("");
+  // const [resumeError, setResumeError] = useState("");
+  const [hearError, setHearError] = useState("");
+  const [referralError, setRerralError] = useState("");
+
+  const validateForm = (event) => {
+    event.preventDefault();
+
+    // if (!validateResume(resume)) {
+    //   setRerralError("Please add your resume.");
+    // }
+    if (!validateHear(hear)) {
+      setHearError("Please add up.");
+    }
+    if (!validateReferral(referral)) {
+      setRerralError("Please add up.");
+    }
+
+    alert("Form submitted successfully!");
+    setResume("");
+    setHear("");
+    setRerral("");
+  };
+
+  // const validateResume = (resume) => {
+  //   return resume.length >= 0;
+  // };
+  const validateHear = (hear) => {
+    return hear.length >= 0;
+  };
+  const validateReferral = (referral) => {
+    return referral.length >= 0;
+  };
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -24,61 +58,76 @@ const Additional = () => {
   };
   return (
     <>
-      <div className=" hidden lg:hidden xl:block">
-        <div className=" bg-[url(./assets/new/join.png)] bg-cover bg-no-repeat bg-center w-[300px] h-[100%] fixed">
+      <div className="hidden lg:flex md:hidden xl:flex">
+        <div className=" bg-[url(./assets/new/join.png)] bg-cover bg-no-repeat bg-center w-[20%] h-[100vh] sticky top-0">
           <div className=" flex items-center text-center h-20 pt-12">
             <img src={logo} alt="logo" />
           </div>
         </div>
-        <div className=" bg-[#e0e0e069] ml-[300px]">
-          <div className=" bg-[#000] flex flex-col fixed w-[100%] p-3">
-            <div className=" flex items-center gap-[380px] px-[60px]">
+        <div className=" bg-[#e0e0e069] w-[80%]">
+          <div className=" bg-[#000] flex sticky top-0 flex-col p-3">
+            <div className=" flex justify-between px-[30px]">
               <h1 className=" text-[#03CFD6] text-[40px]">
                 Additional Information
               </h1>
-              <p className=" text-white text-4xl">3/3</p>
+              <p className=" text-white text-3xl">3/3</p>
             </div>
-            <p className=" text-white text-[24px] ml-[60px]">
+            <p className=" text-white text-[24px] ml-[30px]">
               LET’S know who introuded you to Nupat Team
             </p>
           </div>
-          <form ref={form} onSubmit={sendEmail} className="join h-[100vh]">
-            <h1 className=" pt-[150px] font-bold text-2xl ml-[70px]">
-              Resume and Skills
-            </h1>
-            <div className=" flex flex-col pt-[30px] gap-8 ml-[70px]">
+          <form
+            ref={form}
+            onSubmit={validateForm}
+            onClick={sendEmail}
+            className="join h-[100vh] px-[40px]"
+          >
+            <h1 className=" pt-[30px] font-bold text-2xl">Resume and Skills</h1>
+            <div className=" flex flex-col pt-[30px] gap-8">
               <div className=" pb-2">
                 <p>* Resume</p>
                 <input
                   type="file"
-                  className=" h-[48px] w-[450px] text-black pl-2"
+                  className=" h-[48px] w-[100%] text-black pl-2"
                   name="user_resume"
+                  // value={resume}
+                  // onChange={(e) => setResume(e.target.value)}
+                  // required
                 />
+                {/* {resumeError && <p>{resumeError}</p>} */}
               </div>
               <div className=" pb-2">
                 <p>How did you hear about us?</p>
                 <input
                   type="text"
-                  className=" h-[48px] w-[450px] text-black pl-2"
+                  className=" h-[48px] w-[100%] text-black pl-2"
                   name="user_howDoYouHearAboutUs"
+                  value={hear}
+                  onChange={(e) => setHear(e.target.value)}
+                  required
                 />
+                {hearError && <p>{hearError}</p>}
               </div>
               <div className=" pb-2">
                 <p>Name of Referral</p>
                 <input
                   type="radius"
-                  className=" h-[48px] w-[800px] text-black pl-2"
+                  className=" h-[48px] w-[100%] text-black pl-2"
                   name="user_referral"
+                  value={referral}
+                  onChange={(e) => setRerral(e.target.value)}
+                  required
                 />
+                {referralError && <p>{referralError}</p>}
               </div>
               <p>
                 By submitting to this form, you agree to Nupat Team's{" "}
                 <span className=" underline">term and condition</span>{" "}
               </p>
             </div>
-            <div className=" text-white flex items-center justify-center text-[20px] bg-black w-[150px] h-[54px] rounded-[16px] ml-[75px] mt-[15px]">
+            <div className=" text-white flex items-center justify-center text-[20px] bg-black w-[150px] h-[54px] rounded-[16px] mt-[15px]">
               <button type="submit" value="Send">
-                <Link to="/">Submit</Link>
+                Submit
               </button>
             </div>
           </form>
@@ -96,43 +145,60 @@ const Additional = () => {
           <p className=" px-4 text-[13px]">LET’S GET TO KNOW YOU BETTER</p>
         </div>
         <div>
-          <form ref={form} onSubmit={sendEmail} className="join pb-[20px]">
+          <form
+            ref={form}
+            onSubmit={validateForm}
+            onClick={sendEmail}
+            className="join pb-[20px]"
+          >
             <h1 className=" pt-[10px] font-bold text-2xl pl-[18px]">
               Resume and Skills
             </h1>
-            <div className=" flex flex-col pt-[30px] gap-5 items-center">
+            <div className=" flex flex-col pt-[30px] gap-5 mx-[15px]">
               <div className=" pb-2">
                 <p>* Resume</p>
                 <input
                   type="file"
-                  className=" h-[48px] w-[340px] text-black pl-2"
+                  className=" h-[48px] w-[100%] text-black pl-2"
                   name="user_resume"
+                  // value={resume}
+                  // onChange={(e) => setResume(e.target.value)}
+                  // required
                 />
+                {/* {resumeError && <p>{resumeError}</p>} */}
               </div>
               <div className=" pb-2">
                 <p>How did you hear about us?</p>
                 <input
                   type="text"
-                  className=" h-[48px] w-[340px] text-black pl-2"
+                  className=" h-[48px] w-[100%] text-black pl-2"
                   name="user_howDoYouHearAboutUs"
+                  value={hear}
+                  onChange={(e) => setHear(e.target.value)}
+                  required
                 />
+                {hearError && <p>{hearError}</p>}
               </div>
               <div className=" pb-2">
                 <p>Name of Referral</p>
                 <input
                   type="radius"
-                  className=" h-[48px] w-[340px] text-black pl-2"
+                  className=" h-[48px] w-[100%] text-black pl-2"
                   name="user_referral"
+                  value={referral}
+                  onChange={(e) => setRerral(e.target.value)}
+                  required
                 />
+                {referralError && <p>{referralError}</p>}
               </div>
-              <p className=" pl-[20px]">
+              <p>
                 By submitting to this form, you agree to Nupat Team's{" "}
                 <span className=" underline">term and condition</span>{" "}
               </p>
             </div>
             <div className=" text-white flex items-center justify-center text-[20px] bg-black w-[150px] h-[54px] rounded-[16px] ml-[15px] mt-[15px]">
               <button type="submit" value="Send">
-                <Link to="/">Submit</Link>
+                Submit
               </button>
             </div>
           </form>
@@ -144,8 +210,9 @@ const Additional = () => {
 
 export default Additional;
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
+import React, { useState } from "react";
 import { useRef } from "react";
 import logo from "./assets/logo.png";
 import "./join.css";

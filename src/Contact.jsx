@@ -2,6 +2,124 @@ const Contact = () => {
   const [navClose, setNavClose] = useState(true);
   const [drop, setDrop] = useState(true);
 
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+  }, []);
+
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setphoneNumber] = useState("");
+  const [comName, setComName] = useState("");
+  const [comWeb, setComWeb] = useState("");
+  const [comment, setComment] = useState("");
+  const [hear, setHear] = useState("");
+
+  const [nameError, setNameError] = useState("");
+  const [lastNameError, setLastNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [phoneNumberError, setphoneNumberError] = useState("");
+  const [comNameError, setComNameError] = useState("");
+  const [comWebError, setComWebError] = useState("");
+  const [commentError, setCommentError] = useState("");
+  const [hearError, setHearError] = useState("");
+
+  const validateForm = (event) => {
+    event.preventDefault();
+
+    if (!validateName(name)) {
+      setNameError("Please add your name.");
+    }
+
+    if (!validateLastName(lastName)) {
+      setLastNameError("Please add your last name.");
+    }
+
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address.");
+      return;
+    }
+
+    if (!validatephoneNumber(phoneNumber)) {
+      setPasswordError(
+        "Please enter a phoneNumber with at least 11 characters."
+      );
+      return;
+    }
+
+    if (!validatecomName(comName)) {
+      setComNameError("Please enter your company name.");
+      return;
+    }
+
+    if (!validatecomWeb(comWeb)) {
+      setComWebError("Please enter website name.");
+      return;
+    }
+
+    if (!validateComment(comment)) {
+      setCommentError("Please enter a comment.");
+      return;
+    }
+
+    if (!validatehear(hear)) {
+      setHearError("Please enter any social media.");
+      return;
+    }
+
+    alert("Form submitted successfully!");
+    setName("");
+    setLastName("");
+    setEmail("");
+    setphoneNumber("");
+    setComName("");
+    setComWeb("");
+    setHear("");
+    setComment("");
+    setNameError("");
+    setNameError("");
+    setEmailError("");
+    setphoneNumberError("");
+    setComWebError("");
+    setComNameError("");
+    setHearError("");
+    setCommentError("");
+  };
+
+  const validateName = (name) => {
+    return name.length >= 0;
+  };
+
+  const validateLastName = (lastName) => {
+    return lastName.length >= 0;
+  };
+
+  const validateEmail = (email) => {
+    // Regular expression for email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatephoneNumber = (phoneNumber) => {
+    return phoneNumber.length >= 11;
+  };
+
+  const validatecomName = (comName) => {
+    return comName.length >= 0;
+  };
+
+  const validatecomWeb = (comWeb) => {
+    return comWeb.length >= 0;
+  };
+
+  const validateComment = (comment) => {
+    return comment.length >= 0;
+  };
+
+  const validatehear = (hear) => {
+    return hear.length >= 0;
+  };
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -53,7 +171,7 @@ const Contact = () => {
                       <Link>SERVICES</Link>
                       <img src={arrow} alt="arrow" />
                     </div>
-                    <div className="close1 absolute left-[540px] bg-black flex flex-col items-start gap-2 text-[#03cfd6] top-[50px] p-[20px]">
+                    <div className="close1 absolute lg:left-[400px] xl:left-[540px] bg-black flex flex-col items-start gap-2 text-[#03cfd6] top-[50px] p-[20px]">
                       <h1 className=" hover:underline">
                         <Link to="/business">BUSINESS ADVISORY</Link>
                       </h1>
@@ -74,9 +192,9 @@ const Contact = () => {
                 )}
               </div>
             </li>
-            <li className=" hover:underline">
+            {/* <li className=" hover:underline">
               <Link to="/faq">FAQs</Link>
-            </li>
+            </li> */}
             <li className=" underline">CONTACT US</li>
             <button className="but text-[#000]">
               <Link to="/join">Join Us</Link>
@@ -115,9 +233,9 @@ const Contact = () => {
                 <li className=" flex items-center gap-2">
                   <Link to="/service">SERVICES</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/faq">FAQs</Link>
-                </li>
+                </li> */}
                 <li>CONTACT US</li>
                 <button className="but text-[#000]">
                   <Link to="/join">Join Us</Link>
@@ -136,10 +254,10 @@ const Contact = () => {
         className="sec1 h-[104px] lg:h-72 md:h-[200px] xl:h-72 flex justify-center text-center items-center "
       >
         <div className="">
-          <h1 className=" hit text-base md:text-2xl md:pb-5 lg:text-3xl xl:text-3xl lg:pb-8 xl:pb-10 font-semibold ">
+          <h1 data-aos="zoom-in" className=" hit text-base md:text-2xl md:pb-5 lg:text-3xl xl:text-3xl lg:pb-8 xl:pb-10 font-semibold ">
             CONTACT US
           </h1>
-          <p className=" text-white text-xs xl:text-2xl md:text-xl lg:text-2xl">
+          <p data-aos="zoom-in" className=" text-white text-xs xl:text-2xl md:text-xl lg:text-2xl">
             Get in touch with us today
           </p>
         </div>
@@ -150,23 +268,23 @@ const Contact = () => {
         className=" bg-black text-white lg:h-52 md:mx-10 lg:mx-28 lg:p-0 lg:mt-3 xl:h-[247px] xl:w-[120  0px] xl:mx-[90px] mt-3 xl:mt-6 p-6 xl:p-0"
       >
         <div className=" flex flex-col xl:items-center lg:items-center md:items-center xl:pt-10">
-          <h1 className="hidden lg:block xl:block text-4xl pt-6 md:block">
+          <h1 data-aos="zoom-in" className="hidden lg:block xl:block text-4xl pt-6 md:block">
             HOW CAN WE BE OF SERVICE TO YOU?
           </h1>
-          <h1 className=" text-sm xl:hidden lg:hidden md:hidden">
+          <h1 data-aos="zoom-in" className=" text-sm xl:hidden lg:hidden md:hidden">
             HOW CAN WE BE OF SERVICE <br /> TO YOU?
           </h1>
-          <p className="hidden xl:block text-xl xl:pt-6 md:pt-6 lg:pt-6 lg:block md:hidden">
+          <p data-aos="zoom-in" className="hidden xl:block text-xl xl:pt-6 md:pt-6 lg:pt-6 lg:hidden md:hidden">
             Thank you for your interest in Nupat Teams Outsourcing services. For
             us to help you better, <br /> please take a moment to complete this
             form and we will get in touch with you soon.
           </p>
-          <p className="hidden xl:hidden text-xl xl:pt-6 md:pt-6 lg:pt-6 lg:hidden md:block">
+          <p data-aos="zoom-in" className="hidden xl:hidden text-xl xl:pt-6 md:pt-6 lg:pt-6 lg:block lg:p-6 md:block">
             Thank you for your interest in Nupat Teams Outsourcing services. For
             us to help you better, please take a moment to complete this form
             and we will get in touch with you soon.
           </p>
-          <p className=" text-xs pt-4 xl:hidden lg:hidden md:hidden">
+          <p data-aos="zoom-in" className=" text-xs pt-4 xl:hidden lg:hidden md:hidden">
             Thank you for your interest in Nupat Teams Outsourcing services. For
             us to help you better, please take a moment to complete this form
             and we will get in touch with you soon.
@@ -174,7 +292,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div
+      <div data-aos="flip-right"
         style={{ fontFamily: "Montserrat" }}
         className=" bg-white pt-5 md:pt-14 lg:pt-14 md:px-10 lg:px-12 xl:pt-14 xl:px-12 px-4"
       >
@@ -194,25 +312,34 @@ const Contact = () => {
             </h1>
             <form
               ref={form}
-              onSubmit={sendEmail}
+              onSubmit={validateForm}
+              onClick={sendEmail}
               className="pt-5 text-[16px] xl:pt-10 lg:pt-10 md:pt-10"
             >
               <h3>Name*</h3>
-              <div className=" flex gap-2">
+              <div className="grid grid-cols-2 gap-2">
                 <div className=" pb-2">
                   <input
                     type="text"
-                    className=" h-8 w-[100%] xl:w-56 lg:w-56 md:w-48 text-black"
+                    className=" h-8 w-[100%] text-black"
                     name="user_first"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
                   />
+                  {nameError && <p>{nameError}</p>}
                   <p>First</p>
                 </div>
                 <div className=" pb-2">
                   <input
-                    type="text"
-                    className=" h-8 w-[100%] xl:w-56 lg:w-56 md:w-48 text-black"
+                    type="lastname"
+                    className=" h-8 w-[100%] text-black"
                     name="user_last"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    required
                   />
+                  {lastNameError && <p>{lastNameError}</p>}
                   <p>Last</p>
                 </div>
               </div>
@@ -221,10 +348,14 @@ const Contact = () => {
                 <div className=" pb-2">
                   <p>Email</p>
                   <input
-                    type="text"
+                    type="email"
                     className=" h-8 w-full text-black"
                     name="user_email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
                   />
+                  {emailError && <p>{emailError}</p>}
                 </div>
                 <div className=" pb-2">
                   <p>Phone number</p>
@@ -232,7 +363,11 @@ const Contact = () => {
                     type="text"
                     className=" h-8 w-full text-black"
                     name="user_number"
+                    value={phoneNumber}
+                    onChange={(e) => setphoneNumber(e.target.value)}
+                    required
                   />
+                  {phoneNumberError && <p>{phoneNumberError}</p>}
                 </div>
                 <div className=" pb-2">
                   <p>Company Name</p>
@@ -240,7 +375,11 @@ const Contact = () => {
                     type="text"
                     className=" h-8 w-full text-black"
                     name="user_companyname"
+                    value={comName}
+                    onChange={(e) => setComName(e.target.value)}
+                    required
                   />
+                  {comNameError && <p>{comNameError}</p>}
                 </div>
                 <div className=" pb-2">
                   <p>Company Website</p>
@@ -248,14 +387,22 @@ const Contact = () => {
                     type="text"
                     className=" h-8 w-full text-black"
                     name="user_companywebsite"
+                    value={comWeb}
+                    onChange={(e) => setComWeb(e.target.value)}
+                    required
                   />
+                  {comWebError && <p>{comWebError}</p>}
                 </div>
                 <div className=" pb-2">
                   <p>Comment or Message*</p>
                   <textarea
                     className="area h-20 w-full  text-black"
                     name="user_comment"
+                    value={comment}
+                    onChange={(e) => setComment(e.target.value)}
+                    required
                   ></textarea>
+                  {commentError && <p>{commentError}</p>}
                 </div>
                 <div className=" pb-2">
                   <p>How did you hear about us?</p>
@@ -263,7 +410,11 @@ const Contact = () => {
                     type="text"
                     className=" h-8 w-full text-black"
                     name="user_howdidyouhear"
+                    value={hear}
+                    onChange={(e) => setHear(e.target.value)}
+                    required
                   />
+                  {hearError && <p>{emailError}</p>}
                 </div>
                 <div className=" pt-2">
                   <button
@@ -278,7 +429,7 @@ const Contact = () => {
             </form>
           </div>
 
-          <div className="free h-1/5 bg-black p-4 mt-8 xl:mt-0 lg:mt-0 md:mt-0 xl:w-[600px]">
+          <div className="free h-1/5 bg-black p-4 mt-8 xl:mt-0 lg:mt-0 md:mt-0 lg:w-[450px] xl:w-[600px]">
             <div className="">
               <h1 className=" text-white text-2xl lg:text-4xl xl:text-4xl pb-4 lg:pb-8 xl:pb-8">
                 Get in touch with us.
@@ -322,7 +473,7 @@ const Contact = () => {
         <div className=" xl:flex flex flex-col xl:flex-row lg:flex-row justify-around">
           <div className="relative bottom-6">
             <img src={logo} alt="logo" className="relative right-8" />
-            <p className=" relative bottom-7 -mb-0 w-[296px]">
+            <p className=" relative bottom-7 -mb-0 lg:w-[296px] xl:w-[296px]">
               NUPAT Teams is a Business Process Outsourcing firm whose business
               is to increase clients' productivity, operational efficiency, and
               in turn profit by taking over some of their intensive business
@@ -453,3 +604,7 @@ import { Link } from "react-router-dom";
 
 import emailjs from "emailjs-com";
 import { useRef } from "react";
+
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";

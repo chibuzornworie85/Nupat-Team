@@ -1,5 +1,124 @@
 function App() {
+  useEffect(() => {
+    AOS.init({duration:3000});
+  }, []);
+
   const [navClose, setNavClose] = useState(true);
+
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setphoneNumber] = useState("");
+  const [comName, setComName] = useState("");
+  const [comWeb, setComWeb] = useState("");
+  const [comment, setComment] = useState("");
+  const [hear, setHear] = useState("");
+
+  const [nameError, setNameError] = useState("");
+  const [lastNameError, setLastNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [phoneNumberError, setphoneNumberError] = useState("");
+  const [comNameError, setComNameError] = useState("");
+  const [comWebError, setComWebError] = useState("");
+  const [commentError, setCommentError] = useState("");
+  const [hearError, setHearError] = useState("");
+
+  const validateForm = (event) => {
+    event.preventDefault();
+
+    if (!validateName(name)) {
+      setNameError("Please add your name.");
+    }
+
+    if (!validateLastName(lastName)) {
+      setLastNameError("Please add your last name.");
+    }
+
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address.");
+      return;
+    }
+
+    if (!validatephoneNumber(phoneNumber)) {
+      setPasswordError(
+        "Please enter a phoneNumber with at least 11 characters."
+      );
+      return;
+    }
+
+    if (!validatecomName(comName)) {
+      setComNameError("Please enter your company name.");
+      return;
+    }
+
+    if (!validatecomWeb(comWeb)) {
+      setComWebError("Please enter website name.");
+      return;
+    }
+
+    if (!validateComment(comment)) {
+      setCommentError("Please enter a comment.");
+      return;
+    }
+
+    if (!validatehear(hear)) {
+      setHearError("Please enter any social media.");
+      return;
+    }
+
+    alert("Form submitted successfully!");
+    setName("");
+    setLastName("");
+    setEmail("");
+    setphoneNumber("");
+    setComName("");
+    setComWeb("");
+    setHear("");
+    setComment("");
+    setNameError("");
+    setNameError("");
+    setEmailError("");
+    setphoneNumberError("");
+    setComWebError("");
+    setComNameError("");
+    setHearError("");
+    setCommentError("");
+  };
+
+  const validateName = (name) => {
+    return name.length >= 0;
+  };
+
+  const validateLastName = (lastName) => {
+    return lastName.length >= 0;
+  };
+
+  const validateEmail = (email) => {
+    // Regular expression for email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatephoneNumber = (phoneNumber) => {
+    return phoneNumber.length >= 11;
+  };
+
+  const validatecomName = (comName) => {
+    return comName.length >= 0;
+  };
+
+  const validatecomWeb = (comWeb) => {
+    return comWeb.length >= 0;
+  };
+
+  const validateComment = (comment) => {
+    return comment.length >= 0;
+  };
+
+  const validatehear = (hear) => {
+    return hear.length >= 0;
+  };
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -25,13 +144,13 @@ function App() {
     <>
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="nav flex px-0 gap-20 lg:gap-2 bg-black xl:flex items-center justify-around xl:gap-[81px] sticky top-0 xl:px-4 z-10 md:gap-[500px] text-[16px]"
+        className="nav flex px-0 gap-[150px] bg-black xl:flex items-center justify-around xl:gap-[100px] lg:gap-[81px] sticky top-0 xl:px-4 z-10 md:gap-[500px] text-[16px]"
       >
-        <div className=" mr-20 lg:mr-0 xl:mr-0 md:mr-20 flex items-center text-center h-20 pt-6">
+        <div className=" flex items-center text-center h-20 pt-6">
           <img src={logo} alt="logo" />
         </div>
         <div className="hidden md:hidden lg:block text-white xl:flex">
-          <ul className=" flex lg:gap-10 xl:gap-16 items-center text-center">
+          <ul className=" flex lg:gap-10 xl:gap-[60px] items-center text-center">
             <li className=" underline">HOME</li>
             <li className=" hover:underline">
               <Link to="/about">ABOUT US</Link>
@@ -39,9 +158,9 @@ function App() {
             <li className=" flex items-center gap-2 hover:underline">
               <Link to="/service">SERVICES</Link>
             </li>
-            <li className=" hover:underline">
+            {/* <li className=" hover:underline">
               <Link to="/faq">FAQs</Link>
-            </li>
+            </li> */}
             <li className=" hover:underline">
               <Link to="/contact">CONTACT US</Link>
             </li>
@@ -80,9 +199,9 @@ function App() {
                 <li className=" flex items-center gap-2">
                   <Link to="/service">SERVICES</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/faq">FAQs</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/contact">CONTACT US</Link>
                 </li>
@@ -98,18 +217,18 @@ function App() {
         </div>
       </div>
 
-      <div className="sec h-[120px] lg:h-72 md:h-[200px] lg:pt-20 xl:h-[70vh] text-center pt-10 xl:pt-28">
-        <h1
+      <div className="sec h-[120px] lg:h-[60vh] md:h-[200px] lg:pt-20 xl:h-[70vh] text-center pt-10 xl:pt-28">
+        <h1 data-aos="zoom-in"
           style={{ fontFamily: "Montserrat" }}
-          className=" items-center h-0 font-semibold text-[11px] md:text-[25px] md:h-7 lg:h-12 lg:text-4xl xl:h-12 xl:text-[44px] flex justify-center text-white"
+          className=" items-center h-0 font-semibold text-[11px] md:text-[25px] md:h-7 lg:h-12 lg:text-[34px] xl:h-12 xl:text-[42px] flex justify-center text-white"
         >
           FIND THE RIGHT TECH TALENT FOR YOUR BUSINESS
         </h1>
         <p
-          style={{ fontFamily: "Montserrat" }}
-          className=" h-0 pt-5 xl:h-7 md:h-4 text-[#aeb1b6] text-[10px] md:text-xl xl:text-[32px] lg:text-2xl xl:pt-12 flex justify-center gap-2"
+          style={{ fontFamily: "Montserrat" }}  data-aos="zoom-in"
+          className=" h-0 pt-5 xl:h-7 md:h-4 text-[#aeb1b6] text-[10px] md:text-xl xl:text-[32px] lg:text-2xl xl:pt-12"
         >
-          DREAM JOBS, AFRICAN TOP TALENTS;
+          DREAM JOBS, AFRICAN TOP TALENTS;{" "}
           <span className=" text-[#03CFD6]">All IN ONE PLACE</span>
         </p>
       </div>
@@ -118,30 +237,30 @@ function App() {
         style={{ fontFamily: "Montserrat" }}
         className=" bg-black h-[164px] xl:h-32 lg:h-32 px-0 text-[13px] md:text-[16px]  lg:text-[16px] xl:text-[16px] lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-16 "
       >
-        <div className=" md:hidden flex flex-col lg:flex-row lg:gap-5 lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-5 xl:gap-24 text-white">
-          <p className=" flex text-center items-center gap-4">
+        <div className=" md:hidden flex flex-col lg:flex lg:flex-row lg:gap-[17px] lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-4 xl:gap-24 text-white">
+          <p data-aos="zoom-in" className=" flex text-center items-center gap-2 xl:gap-4">
             <img src={box} alt="box" />
             Access to Top Tech Talents in Africa
           </p>
-          <p className=" flex text-center items-center gap-4">
+          <p data-aos="zoom-in" className=" flex text-center items-center gap-2 xl:gap-4">
             <img src={box} alt="box" />
             Gain Competitive Edge
           </p>
-          <p className=" flex text-center items-center gap-4">
+          <p data-aos="zoom-in" className=" flex text-center items-center gap-2 xl:gap-4">
             <img src={box} alt="box" />
             Customized Solution for Your Business
           </p>
         </div>
         <div className=" xl:hidden lg:hidden hidden md:flex md:flex-col md:gap-5 md:pt-5 md:pl-[50px] text-white">
-          <p className=" flex text-center items-center gap-4">
+          <p data-aos="zoom-in" className=" flex text-center items-center gap-4">
             <img src={box} alt="box" />
             Access to Top Tech Talents in Africa
           </p>
-          <p className=" flex text-center items-center gap-4">
+          <p data-aos="zoom-in" className=" flex text-center items-center gap-4">
             <img src={box} alt="box" />
             Gain Competitive Edge
           </p>
-          <p className=" flex text-center items-center gap-4">
+          <p data-aos="zoom-in" className=" flex text-center items-center gap-4">
             <img src={box} alt="box" />
             Customized Solution for Your Business
           </p>
@@ -156,19 +275,19 @@ function App() {
           <div className=" flex justify-center px-6 md:block lg:hidden xl:hidden md:pl-[50px]">
             <img src={meet} alt="meet" />
           </div>
-          <div className=" flex pt-10 xl:pt-0 xl:pl-3 lg:pl-10 md:pl-[50px] pl-6">
+          <div className=" flex pt-10 xl:pt-0 xl:pl-8 lg:pl-3 md:pl-[50px] pl-6">
             <div className=" xl:w-[10px]">
               <img
                 src={line}
                 alt="line"
-                className=" h-16 md:h-16 lg:h-32 xl:h-[110px]"
+                className=" h-16 md:h-16 lg:h-[80px] xl:h-[110px]"
               />
             </div>
-            <div>
+            <div data-aos="zoom-in">
               <p className=" xl:font-semibold xl:pb-4 pl-2">
                 WHY CHOOSE NUPAT?
               </p>
-              <h1 className=" h-28 xl:text-4xl md:text-xl pl-2 hidden lg:block xl:block md:hidden xl:w-[822px]">
+              <h1 className="h-[70px] xl:h-28 xl:text-4xl lg:text-2xl md:text-xl pl-2 hidden lg:block xl:block md:hidden xl:w-[822px]">
                 We have a pool of highly skilled and <br />
                 vetted tech talents
               </h1>
@@ -199,11 +318,11 @@ function App() {
         </div> */}
       </div>
 
-      <div
+      <div data-aos="flip-right"
         style={{ fontFamily: "Montserrat" }}
-        className=" xl:flex xl:justify-around pt-10 xl:px-[40px] lg:flex md:flex-col lg:flex-row xl:flex-row md:justify-around md:px-4 lg:justify-around lg:px-8"
+        className=" xl:flex xl:justify-around pt-10 xl:px-[60px] lg:flex md:flex-col lg:flex-row xl:flex-row md:justify-around md:px-4 lg:justify-around lg:px-[20px]"
       >
-        <div className=" bg-[url('/src/assets/cover1.png')] h-[600px] xl:h-[430px] lg:h-[470px] bg-no-repeat bg-center bg-cover mx-6 xl:mx-10 md:mx-10 lg:mx-10 text-white">
+        <div className=" bg-[url('/src/assets/cover1.png')] h-[600px] xl:h-[430px] bg-no-repeat bg-center bg-cover mx-6 xl:mx-10 md:mx-10 lg:mx-10 text-white">
           <div className=" pl-3 lg:pl-6 md:pl-6 xl:pl-6 pt-10">
             <h1 className=" text-[14px] font-semibold xl:text-3xl lg:text-3xl md:text-2xl">
               Access our pool of Tech <span className="hit">Talents</span> To
@@ -251,7 +370,7 @@ function App() {
             <img src={chat} alt="chat" />
           </div>
           <img src={line1} alt="line" className=" pt-6 pb-4" />
-          <p className=" text-center text-xl pb-8 xl:w-[377.77px] md:text-xl lg:text-base hidden xl:block md:block md:px-[40px] lg:px-0 xl:px-0 lg:block">
+          <p className=" text-center text-xl pb-8 lg:w-[377.77px] xl:w-[377.77px] md:text-xl lg:text-[20px] xl:text-base hidden xl:block md:block md:px-[40px] lg:px-0 xl:px-0 lg:block">
             Our purpose and passion at{" "}
             <span className=" font-semibold">
               Nupat <br /> Teams
@@ -262,7 +381,7 @@ function App() {
             businesses build top-tier talents by hiring, vetting, and managing
             talents.
           </p>
-          <p className=" w-[340px] text-center text-sm pb-2 xl:hidden lg:hidden md:hidden p-[15px]">
+          <p className=" text-center text-sm pb-2 xl:hidden lg:hidden md:hidden p-[15px]">
             Our purpose and passion at
             <span className=" font-semibold">
               Nupat <br /> Teams
@@ -274,7 +393,10 @@ function App() {
             talents.
           </p>
           <p className=" text-[#1F335F]">
-            <Link to="/join" className="flex items-center text-xl gap-6 font-light pb-6 xl:pb-0">
+            <Link
+              to="/join"
+              className="flex items-center text-xl gap-6 font-light pb-6 xl:pb-0"
+            >
               {" "}
               Search for Jobs
               <img src={right} alt="arrow" />
@@ -293,14 +415,14 @@ function App() {
             SOLUTIONS.
           </h1>
           <h1 className=" xl:hidden text-base font-semibold lg:hidden md:hidden">
-            OUR OUTSOURCING SERVICES AND <br /> DISTINGUISHED BUSINESS ASSIST{" "}
-            <br /> SOLUTIONS.
+            OUR OUTSOURCING SERVICES AND DISTINGUISHED BUSINESS ASSIST{" "}
+            SOLUTIONS.
           </h1>
         </div>
         <div className="text-center items-center mt-10 flex flex-col gap-10 xl:gap-0">
-          <div className=" flex justify-center">
-            <div className=" xl:flex md:gap-5 lg:gap-2 md:flex lg:flex xl:gap-[30px] flex flex-col md:flex-row   lg:flex-row gap-6 justify-center">
-              <div className=" xl:h-[262px] w-[320px] h-[270px] xl:w-[374px] bg-[#000] rounded-xl pt-4 xl:pt-8 flex flex-col">
+          <div className=" flex justify-center mx-[25px]">
+            <div data-aos="zoom-in" className=" xl:flex md:gap-5 lg:gap-[30px] md:flex lg:flex xl:gap-[15px] flex flex-col md:flex-row lg:flex-row gap-6 justify-center">
+              <div className=" xl:h-[262px] lg:h-[262px] lg:w-[374px] pb-6 xl:pb-0 lg:pb-0 xl:w-[374px] bg-[#000] rounded-xl pt-4 xl:pt-8 flex flex-col">
                 <h1 className=" text-[#03cfd6] font-semibold  pb-2 xl:pb-4 flex justify-center">
                   RECRUITMENT
                 </h1>
@@ -316,11 +438,11 @@ function App() {
                   unprofessional positions that solve cpmpliance scalability,
                   cost, quality or other recruiting challenge.
                 </p>
-                <button className="bg-[#03cfd6] rounded-xl mx-20 h-10 text-base font-normal text-black m-auto">
+                <button className="bg-[#03cfd6] rounded-xl p-[10px] xl:p-0 lg:p-0 lg:mx-[100px] xl:mx-20 h-10 text-base font-normal text-black m-auto">
                   <Link to="/recruitement">Learn More</Link>
                 </button>
               </div>
-              <div className="xl:h-[262px] xl:w-[374px] w-[320px] h-[270px] bg-[#03CFD6] rounded-xl pt-8 md:pt-5 flex flex-col">
+              <div className="xl:h-[262px] lg:h-[262px] lg:w-[374px] pb-6 xl:pb-0 lg:pb-0 xl:w-[374px] bg-[#03CFD6] rounded-xl pt-8 md:pt-5 flex flex-col">
                 <h1 className=" pb-2 xl:pb-4 font-semibold text-black xl:pt-4 flex justify-center">
                   IT OUTSOURCING
                 </h1>
@@ -334,11 +456,11 @@ function App() {
                   organisations using technology, Let’s help your business scale
                   with bespoke IT Solutions.
                 </p>
-                <button className="bg-[#000] rounded-xl mx-20 h-10 text-base text-white font-normal m-auto">
+                <button className="bg-[#000] rounded-xl p-[10px] xl:p-0 lg:mx-[100px] lg:p-0 xl:mx-20 h-10 text-base text-white font-normal m-auto">
                   <Link to="/it">Learn More</Link>
                 </button>
               </div>
-              <div className="w-[320px] h-[270px] xl:h-[262px] xl:w-[374px] text-[#03cfd6] font-semibold bg-[#000] rounded-xl md:pt-5 pt-8 flex flex-col md:hidden lg:flex xl:flex">
+              <div className=" xl:h-[262px] xl:w-[374px] lg:h-[262px] lg:hidden lg:w-[374px] text-[#03cfd6] pb-6 xl:pb-0 lg:pb-0 font-semibold bg-[#000] rounded-xl md:pt-5 pt-8 flex flex-col md:hidden xl:flex">
                 <h1 className=" pb-2 xl:pb-4 flex justify-center">
                   BUSINESS ADVISORY
                 </h1>
@@ -352,16 +474,16 @@ function App() {
                   clients delegate the endless functions involved with
                   contingent worker hiring and management.
                 </p>
-                <button className="bg-[#03cfd6] rounded-xl mx-20 h-10 text-base font-normal text-black m-auto">
+                <button className="bg-[#03cfd6] lg:mx-[100px] rounded-xl p-[10px] xl:p-0 lg:p-0 xl:mx-20 h-10 text-base font-normal text-black m-auto">
                   <Link to="/business">Learn More</Link>
                 </button>
               </div>
             </div>
           </div>
 
-          <div className=" flex justify-center">
-            <div className=" xl:flex flex flex-col md:flex-row xl:flex-row lg:flex-row lg:pt-8 xl:gap-8 lg:gap-2 gap-5 xl:pt-8 items-center">
-              <div className="xl:h-[262px] xl:w-[374px] w-[320px] h-[270px] text-[#03cfd6] font-semibold bg-[#000] rounded-xl pt-4 flex flex-col">
+          <div className=" flex justify-center mx-[25px]">
+            <div data-aos="zoom-in" className=" xl:flex flex flex-col md:flex-row xl:flex-row lg:flex-row lg:pt-8 xl:gap-[15px] lg:gap-[30px] gap-5 xl:pt-8 items-center">
+              <div className="xl:h-[262px] xl:w-[374px] lg:h-[262px] lg:w-[374px] text-[#03cfd6] pb-6 xl:pb-0 lg:pb-0 font-semibold bg-[#000] rounded-xl pt-4 flex flex-col">
                 <h1 className="pb-2 xl:pb-4 flex justify-center">
                   TALENT HIRING
                 </h1>
@@ -379,11 +501,11 @@ function App() {
                   faster and more effectively than traditional recruitment
                   methods.
                 </p>
-                <button className="bg-[#03cfd6] rounded-xl mx-20 h-10 text-base font-normal text-black m-auto">
+                <button className="bg-[#03cfd6] rounded-xl lg:mx-[100px] p-[10px] xl:p-0 lg:p-0 xl:mx-20 h-10 text-base font-normal text-black m-auto">
                   <Link to="/recruitement">Learn More</Link>
                 </button>
               </div>
-              <div className="xl:h-[262px] xl:w-[374px] w-[320px] h-[270px] text-[#03cfd6] font-semibold bg-[#000] rounded-xl pt-4 flex flex-col">
+              <div className="xl:h-[262px] xl:w-[374px] lg:h-[262px] lg:w-[374px] text-[#03cfd6] font-semibold bg-[#000] pb-6 rounded-xl pt-4 flex flex-col">
                 <h1 className="pl-5 pb-4 flex justify-center">
                   LEARNING AND DEVELOPMENT
                 </h1>
@@ -399,14 +521,14 @@ function App() {
                   unlearn, so they can develop in their chosen career within the
                   organisation.
                 </p>
-                <button className="bg-[#03cfd6] rounded-xl mx-20 h-10 text-base font-normal text-black m-auto">
+                <button className="bg-[#03cfd6] lg:mx-[100px] rounded-xl p-[10px] xl:p-0 lg:p-0 xl:mx-20 h-10 text-base font-normal text-black m-auto">
                   <Link to="/learning">Learn More</Link>
                 </button>
               </div>
             </div>
           </div>
           <div className=" flex justify-center">
-            <div className="bg-[#000] mx-[20px] xl:mx-0 lg:mx-0 h-[400px] md:h-[316px] lg:h-[316px] md:mx-12 md:px-8 xl:h-[316px] rounded-xl xl:mt-10 lg:mt-10 pt-14 xl:px-28 flex flex-col items-center lg:px-20">
+            <div data-aos="zoom-in" className="bg-[#000] mx-[20px] xl:mx-[60px] lg:mx-[60px] h-[350px] md:h-[316px] lg:h-[316px] md:mx-12 md:px-8 xl:h-[316px] rounded-xl xl:mt-10 lg:mt-10 pt-[20px] xl:pt-14 xl:px-28 flex flex-col items-center lg:px-20">
               <h2 className=" lg:text-2xl text-xl xl:text-3xl text-white pb-4">
                 Reduce Costs through Outsourcing
               </h2>
@@ -424,7 +546,7 @@ function App() {
                 and set gap-specific business support solutions which results in
                 verifable positive business results.
               </p>
-              <button className="font-normal text-sm xl:text-base h-10 bg-[#03cfd6] rounded-xl lg:-mx-20 xl:mx-20 px-4 m-auto">
+              <button className="font-normal text-sm xl:text-base h-10 bg-[#03cfd6] rounded-xl lg:mx-20 xl:mx-20 px-4 m-auto">
                 SCHEDULE OUR FREE CONSULTATION
               </button>
             </div>
@@ -474,9 +596,9 @@ function App() {
       </div> */}
 
       <div className=" flex justify-center">
-        <div
+        <div data-aos="zoom-in"
           style={{ fontFamily: "Montserrat" }}
-          className=" xl:w-[1160px] xl:h-[456px] bg-[url('/src/assets/cover2.png')] bg-cover bg-center bg-no-repeat mt-10 pt-10 mb-10 mx-6 md:mx-12 xl:mx-0 lg:mx-0"
+          className=" xl:w-[1160px] xl:h-[456px] bg-[url('/src/assets/cover2.png')] bg-cover bg-center bg-no-repeat mt-10 pt-10 mb-10 mx-6 md:mx-12 xl:mx-0 lg:mx-[100px]"
         >
           <div className=" flex flex-col items-center">
             <h1 className=" xl:pb-5 text-base pb-2 xl:text-3xl lg:text-3xl md:text-2xl">
@@ -583,8 +705,8 @@ function App() {
             work with us for the progress of your business.
           </p>
         </div>
-        <div className=" flex flex-col xl:flex-row lg:flex-row md:flex-col justify-around mx-6 md:mx-12 lg:mx-[200px] xl:mx-[200px] gap-4">
-          <div className="jet h-[300px] xl:h-[393px] xl:w-[520px]">
+        <div data-aos="flip-right" className=" flex flex-col xl:flex-row lg:flex-row md:flex-col justify-around mx-6 md:mx-12 lg:mx-[60px] xl:mx-[200px] gap-4">
+          <div className="jet pb-[20px] xl:h-[393px] lg:w-[520px] lg:h-[393px] xl:w-[520px]">
             <div className=" text-[#03CFD6] flex flex-col items-center p-3 xl:p-6 text-xl font-semibold">
               <img src={cost} alt="image" />
               <h1 className=" pt-4">Cost Effective</h1>
@@ -604,7 +726,7 @@ function App() {
               expertise to offer lower prices.
             </p>
           </div>
-          <div className="jet h-[300px] xl:h-[393px] xl:w-[520px]">
+          <div className="jet pb-[20px] xl:h-[393px] lg:w-[520px] lg:h-[393px] xl:w-[520px]">
             <div className=" text-[#03CFD6] flex flex-col items-center p-3 xl:p-6 text-xl font-semibold">
               <img src={access} alt="image" />
               <h1 className=" pt-4">ACCESS TO EXPERTISE</h1>
@@ -621,8 +743,8 @@ function App() {
             </p>
           </div>
         </div>
-        <div className=" flex flex-col xl:flex-row md:flex-col lg:flex-row justify-around mx-6 md:mx-12 lg:mx-[200px] xl:mx-[200px] gap-4">
-          <div className="jet h-[300px] xl:h-[393px] xl:w-[520px]">
+        <div data-aos="flip-left" className=" flex flex-col xl:flex-row md:flex-col lg:flex-row justify-around mx-6 md:mx-12 lg:mx-[60px] xl:mx-[200px] gap-4">
+          <div className="jet pb-[20px] xl:h-[393px] lg:w-[520px] xl:w-[520px]">
             <div className=" text-[#03CFD6] flex flex-col items-center xl:p-6 p-4 text-xl font-semibold">
               <img src={team} alt="image" />
               <h1 className=" pt-4">Improved efficiency</h1>
@@ -638,12 +760,12 @@ function App() {
               This can lead to increased productivity and efficiency.
             </p>
           </div>
-          <div className="jet h-[300px] xl:h-[393px] xl:w-[520px]">
+          <div className="jet pb-[20px] xl:h-[393px] lg:h-[393px] lg:w-[520px] xl:w-[520px]">
             <div className=" text-[#03CFD6] flex flex-col items-center p-4 xl:p-6 text-xl font-semibold">
               <img src={cli} alt="image" />
               <h1 className=" pt-4">Risk Reduction</h1>
             </div>
-            <p className=" text-xl px-8 hidden xl:block md:block lg:hidden">
+            <p className=" text-xl px-8 hidden xl:block md:block lg:block">
               We help mitigate risk by shifting responsibility to the
               outsourcing company for certain functions, such as data security,
               compliance, or legal issues.
@@ -659,49 +781,49 @@ function App() {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" bg-black xl:mt-12 md:mt-12 lg:mt-12 md:mx-10 lg:mx-32 xl:mx-[70px] mx-6 font-semibold text-white"
+        className=" bg-black xl:mt-12 md:mt-12 lg:mt-12 md:mx-10 lg:mx-[60px] xl:mx-[100px] mx-6 font-semibold text-white"
       >
         <div className=" text-white text-[24px] xl:text-5xl text-lg md:text-2xl lg:text-4xl flex justify-center pt-5">
-          <h1 className=" hidden xl:block lg:block md:block">
+          <h1 data-aos="zoom-in" className=" hidden xl:block lg:block md:block">
             Want your business to stand out?
           </h1>
-          <h1 className=" xl:hidden text-center lg:hidden md:hidden">
+          <h1 data-aos="zoom-in" className=" xl:hidden text-center lg:hidden md:hidden">
             Want your business <br /> to stand out?
           </h1>
         </div>
         <div className=" xl:flex text-[20px] xl:text-[32px] lg:flex md:flex hidden justify-around pt-8 items-center text-center pb-10">
-          <div className=" items-center flex flex-col">
+          <div data-aos="zoom-in" className=" items-center flex flex-col">
             <img src={group} alt="group" className=" pb-4" />
             <p>
               Schedule your <br /> consultation
             </p>
           </div>
-          <div className=" items-center flex flex-col">
+          <div data-aos="zoom-in" className=" items-center flex flex-col">
             <img src={customer} alt="customer" className=" pb-4" />
             <p>We contact you</p>
           </div>
-          <div className=" items-center flex flex-col">
+          <div data-aos="zoom-in" className=" items-center flex flex-col">
             <img src={business} alt="business" className=" pb-4" />
-            <p>
+            <p >
               Watch us offer you <br /> the best talents
             </p>
           </div>
         </div>
         <div className=" xl:hidden md:hidden lg:hidden pt-8 items-center text-center pb-10">
           <div className=" flex justify-around items-center text-center">
-            <div className=" text-[15px] xl:text-[36px] items-center flex flex-col">
+            <div data-aos="zoom-in" className=" text-[15px] xl:text-[36px] items-center flex flex-col">
               <img src={group} alt="group" className=" pb-4" />
               <p>
                 Schedule your <br /> consultation
               </p>
             </div>
-            <div className=" text-[15px] items-center flex flex-col">
+            <div data-aos="zoom-in" className=" text-[15px] items-center flex flex-col">
               <img src={customer} alt="customer" className=" pb-4" />
               <p>We contact you</p>
             </div>
           </div>
           <div className=" flex justify-center pt-4">
-            <div className=" text-[15px] items-center flex flex-col">
+            <div data-aos="zoom-in" className=" text-[15px] items-center flex flex-col">
               <img src={business} alt="business" className=" pb-4" />
               <p>
                 Watch us offer you <br /> the best talents
@@ -713,9 +835,9 @@ function App() {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" rounded-xl bg-black text-white mt-10 md:mt-20 lg:mt-20 md:px-4 lg:px-4 md:mx-10 lg:mx-32 xl:mt-20 xl:px-4 xl:mx-[70px]"
+        className=" rounded-xl bg-black text-white mt-10 md:mt-20 lg:mt-20 md:px-4 lg:px-4 md:mx-10 lg:mx-[60px] xl:mt-20 xl:px-4 xl:mx-[100px]"
       >
-        <div className="flex flex-col lg:flex-row md:flex-row xl:flex-row xl:flex items-center justify-around md:pt-0 lg:pt-0 xl:px-12 pt-6 xl:pt-0 ">
+        <div className="flex flex-col lg:flex-row md:flex-row xl:flex-row xl:flex items-center justify-around md:pt-0 lg:pt-0 xl:px-12 pt-6 xl:pt-0 lg:px-0 xl:px-0 px-[30px]">
           <div className=" xl:text-4xl text-xl lg:text-2xl md:text-xl">
             <h1 className=" hidden xl:block lg:block md:block">
               <span className="hit">
@@ -733,25 +855,34 @@ function App() {
 
           <form
             ref={form}
-            onSubmit={sendEmail}
-            className=" text-[16px] pt-5 xl:pt-10 lg:pt-10"
+            onSubmit={validateForm}
+            onClick={sendEmail}
+            className="pt-5 text-[16px] xl:pt-10 lg:pt-10 md:pt-10"
           >
             <h3>Name*</h3>
-            <div className=" flex gap-5">
+            <div className="grid grid-cols-2 gap-2">
               <div className=" pb-2">
                 <input
                   type="text"
-                  className=" h-8 w-36 xl:w-56 lg:w-56 text-black"
+                  className=" h-8 w-[100%] text-black"
                   name="user_first"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
                 />
+                {nameError && <p>{nameError}</p>}
                 <p>First</p>
               </div>
               <div className=" pb-2">
                 <input
-                  type="text"
-                  className=" h-8 w-36 xl:w-56 lg:w-56 text-black"
+                  type="lastname"
+                  className=" h-8 w-[100%] text-black"
                   name="user_last"
+                  value={lastName}
+                  onChange={(e) => setLastName(e.target.value)}
+                  required
                 />
+                {lastNameError && <p>{lastNameError}</p>}
                 <p>Last</p>
               </div>
             </div>
@@ -760,10 +891,14 @@ function App() {
               <div className=" pb-2">
                 <p>Email</p>
                 <input
-                  type="text"
+                  type="email"
                   className=" h-8 w-full text-black"
                   name="user_email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
+                {emailError && <p>{emailError}</p>}
               </div>
               <div className=" pb-2">
                 <p>Phone number</p>
@@ -771,7 +906,11 @@ function App() {
                   type="text"
                   className=" h-8 w-full text-black"
                   name="user_number"
+                  value={phoneNumber}
+                  onChange={(e) => setphoneNumber(e.target.value)}
+                  required
                 />
+                {phoneNumberError && <p>{phoneNumberError}</p>}
               </div>
               <div className=" pb-2">
                 <p>Company Name</p>
@@ -779,7 +918,11 @@ function App() {
                   type="text"
                   className=" h-8 w-full text-black"
                   name="user_companyname"
+                  value={comName}
+                  onChange={(e) => setComName(e.target.value)}
+                  required
                 />
+                {comNameError && <p>{comNameError}</p>}
               </div>
               <div className=" pb-2">
                 <p>Company Website</p>
@@ -787,14 +930,22 @@ function App() {
                   type="text"
                   className=" h-8 w-full text-black"
                   name="user_companywebsite"
+                  value={comWeb}
+                  onChange={(e) => setComWeb(e.target.value)}
+                  required
                 />
+                {comWebError && <p>{comWebError}</p>}
               </div>
               <div className=" pb-2">
                 <p>Comment or Message*</p>
                 <textarea
                   className="area h-20 w-full  text-black"
                   name="user_comment"
+                  value={comment}
+                  onChange={(e) => setComment(e.target.value)}
+                  required
                 ></textarea>
+                {commentError && <p>{commentError}</p>}
               </div>
               <div className=" pb-2">
                 <p>How did you hear about us?</p>
@@ -802,11 +953,15 @@ function App() {
                   type="text"
                   className=" h-8 w-full text-black"
                   name="user_howdidyouhear"
+                  value={hear}
+                  onChange={(e) => setHear(e.target.value)}
+                  required
                 />
+                {hearError && <p>{emailError}</p>}
               </div>
               <div className=" pt-2">
                 <button
-                  className="but1 h-10 xl:mb-8 w-28"
+                  className="but1 h-10 xl:mb-8 lg:mb-8 w-28"
                   type="submit"
                   value="Send"
                 >
@@ -857,7 +1012,7 @@ function App() {
         style={{ fontFamily: "Montserrat" }}
         className=" bg-white pt-20 px-4 xl:px-0"
       >
-        <div className=" flex flex-col xl:ml-18 md:ml-5 lg:ml-20 md:w-[80%] lg:w-1/2 xl:w-1/2 gap-5 xl:pl-0">
+        <div className=" flex flex-col xl:ml-[130px] md:ml-5 lg:ml-20 md:w-[80%] lg:w-1/2 xl:w-1/2 gap-5 xl:pl-0">
           <div className=" xl:text-3xl text-sm md:text-xl">
             <h1>Frequently Asked Questions</h1>
           </div>
@@ -914,7 +1069,7 @@ function App() {
         <div className=" xl:flex flex flex-col xl:flex-row lg:flex-row justify-around">
           <div className="relative bottom-6">
             <img src={logo} alt="logo" className="relative right-8" />
-            <p className=" relative bottom-7 -mb-0 w-[296px]">
+            <p className=" relative bottom-7 -mb-0 lg:w-[296px] xl:w-[296px]">
               NUPAT Teams is a Business Process Outsourcing firm whose business
               is to increase clients' productivity, operational efficiency, and
               in turn profit by taking over some of their intensive business
@@ -1067,4 +1222,7 @@ import foot7 from "./assets/foot7.png";
 import { Link } from "react-router-dom";
 
 import emailjs from "emailjs-com";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
+

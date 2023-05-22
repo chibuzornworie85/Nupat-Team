@@ -1,6 +1,10 @@
 const Learning = () => {
   const [navClose, setNavClose] = useState(true);
   const [drop, setDrop] = useState(true);
+
+  useEffect(() => {
+    AOS.init({duration:3000});
+  }, []);
   // const form = useRef();
 
   // const sendEmail = (e) => {
@@ -52,7 +56,7 @@ const Learning = () => {
                       <Link>SERVICES</Link>
                       <img src={arrow} alt="arrow" />
                     </div>
-                    <div className="close1 absolute left-[540px] bg-black flex flex-col items-start gap-2 text-[#03cfd6] top-[50px] p-[20px]">
+                    <div className="close1 absolute lg:left-[400px] xl:left-[540px] bg-black flex flex-col items-start gap-2 text-[#03cfd6] top-[50px] p-[20px]">
                       <h1 className=" hover:underline">
                         <Link to="/business">BUSINESS ADVISORY</Link>
                       </h1>
@@ -73,9 +77,9 @@ const Learning = () => {
                 )}
               </div>
             </li>
-            <li className=" hover:underline">
+            {/* <li className=" hover:underline">
               <Link to="/faq">FAQs</Link>
-            </li>
+            </li> */}
             <li className=" hover:underline">
               <Link to="/contact">CONTACT US</Link>
             </li>
@@ -116,9 +120,9 @@ const Learning = () => {
                 <li className=" flex items-center gap-2">
                   <Link to="/service">SERVICES</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/faq">FAQs</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/contact">CONTACT US</Link>
                 </li>
@@ -134,9 +138,9 @@ const Learning = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="rec text-white py-6 md:py-10 lg:py-10 xl:py-10 pl-7 text-xs md:pl-14 lg:pl-20 lg:text-2xl xl:pl-[80px] md:text-xl xl:text-2xl font-semibold"
+        className="rec text-white py-6 md:py-10 lg:py-10 xl:py-10 pl-7 text-xs md:pl-14 lg:pl-[50px] lg:text-2xl xl:pl-[100px] md:text-xl xl:text-2xl font-semibold"
       >
-        <h1>
+        <h1 data-aos="zoom-in">
           <span>Home</span>/Learning & Development
         </h1>
       </div>
@@ -144,7 +148,7 @@ const Learning = () => {
         style={{ fontFamily: "Montserrat" }}
         className="bg-[url('/src/assets/learning/bg1.png')] bg-no-repeat bg-center bg-cover"
       >
-        <div className=" xl:py-32 py-12 pl-7 text-white xl:pl-[70px] lg:pl-20 md:pl-14 lg:py-32">
+        <div data-aos="zoom-in" className=" xl:py-32 py-12 pl-7 text-white xl:pl-[100px] lg:pl-[50px] md:pl-14 lg:py-32">
           <h1 className=" font-semibold text-[13px] xl:text-4xl md:text-2xl md:pb-4 lg:text-4xl xl:pb-4 pb-2 lg:pb-4">
             Outsource for Success, Hire Competency...
           </h1>
@@ -154,20 +158,20 @@ const Learning = () => {
         </div>
       </div>
 
-      <div
+      <div data-aos="zoom-in"
         style={{ fontFamily: "Montserrat" }}
         className=" bg-black h-[164px] xl:h-32 lg:h-32 px-0 text-[14px] lg:text-[16px] xl:text-[16px] lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-16 "
       >
-        <div className=" flex flex-col md:hidden lg:flex-row lg:gap-5 lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-5 xl:gap-24 text-white">
-          <p className=" flex text-center items-center gap-4">
+          <div className=" md:hidden flex flex-col lg:flex lg:flex-row lg:gap-[17px] lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-4 xl:gap-24 text-white">
+          <p className=" flex text-center items-center gap-2 xl:gap-4">
             <img src={box} alt="box" />
             Access to Top Tech Talents in Africa
           </p>
-          <p className=" flex text-center items-center gap-4">
+          <p className=" flex text-center items-center gap-2 xl:gap-4">
             <img src={box} alt="box" />
             Gain Competitive Edge
           </p>
-          <p className=" flex text-center items-center gap-4">
+          <p className=" flex text-center items-center gap-2 xl:gap-4">
             <img src={box} alt="box" />
             Customized Solution for Your Business
           </p>
@@ -189,9 +193,9 @@ const Learning = () => {
         </div>
       </div>
 
-      <div
+      <div data-aos="zoom-in"
         style={{ fontFamily: "Montserrat" }}
-        className=" flex flex-col lg:flex-row xl:flex-row justify-around md:px-10 px-10 lg:px-1 xl:px-12 mt-10"
+        className=" flex flex-col lg:flex-row xl:flex-row justify-around md:px-10 px-10 lg:px-[40px] xl:px-12 mt-10"
       >
         <div className="flex flex-col gap-4 text-lg xl:text-3xl lg:text-2xl md:px-10 lg:px-0 xl:px-0">
           <h2 className="bg-[#e6e6e6] h-16 p-4 w-full">
@@ -217,16 +221,16 @@ const Learning = () => {
         </div>
       </div>
 
-      <div
+      <div data-aos="zoom-in"
         style={{ fontFamily: "Montserrat" }}
-        className=" text-base md:text-2xl xl:text-2xl lg:text-2xl flex justify-around items-center pt-10 xl:gap-72 lg:px-0 xl:px-10 xl:ml-0 lg:ml-36"
+        className=" text-base md:text-2xl xl:text-2xl lg:text-2xl flex justify-around items-center pt-10 xl:gap-72 lg:gap-72 lg:px-0 xl:px-10 xl:ml-0 lg:ml-36"
       >
         <Link to="/faq">
           <div className=" xl:flex lg:flex pt-96 items-center hidden xl:ml-[50px]">
             <img src={mess} alt="mess" />
           </div>
         </Link>
-        <div className=" what1 md:text-xl xl:text-[20px] lg:text-[20px] flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 xl:w-[702px] xl:ml-[180px]">
+        <div className=" what1 md:text-xl xl:text-[20px] lg:text-[20px] flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 lg:w-[600px] xl:w-[702px] xl:ml-[180px]">
           <p className=" hidden xl:block lg:block">
             As the global leader in professional training, NUPAT provides
             innovative learning and development solutions, covering multiple
@@ -357,7 +361,7 @@ const Learning = () => {
         <div className=" xl:flex flex flex-col xl:flex-row lg:flex-row justify-around">
           <div className="relative bottom-6">
             <img src={logo} alt="logo" className="relative right-8" />
-            <p className=" relative bottom-7 -mb-0 w-[296px]">
+            <p className=" relative bottom-7 -mb-0 lg:w-[296px] xl:w-[296px]">
               NUPAT Teams is a Business Process Outsourcing firm whose business
               is to increase clients' productivity, operational efficiency, and
               in turn profit by taking over some of their intensive business
@@ -483,6 +487,9 @@ import foot4 from "./assets/foot4.png";
 import foot5 from "./assets/foot5.png";
 import foot6 from "./assets/foot6.png";
 import foot7 from "./assets/foot7.png";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 // import emailjs from "emailjs-com";
 // import { useRef } from "react";

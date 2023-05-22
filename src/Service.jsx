@@ -1,6 +1,10 @@
 const Service = () => {
   const [navClose, setNavClose] = useState(true);
   const [drop, setDrop] = useState(true);
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+  }, []);
+
   // const form = useRef();
 
   // const sendEmail = (e) => {
@@ -52,7 +56,7 @@ const Service = () => {
                       <Link>SERVICES</Link>
                       <img src={arrow} alt="arrow" />
                     </div>
-                    <div className="close1 absolute left-[540px] bg-black flex flex-col items-start gap-2 text-[#03cfd6] top-[50px] p-[20px]">
+                    <div className="close1 absolute lg:left-[400px] xl:left-[540px] bg-black flex flex-col items-start gap-2 text-[#03cfd6] top-[50px] p-[20px]">
                       <h1 className=" hover:underline">
                         <Link to="/business">BUSINESS ADVISORY</Link>
                       </h1>
@@ -73,9 +77,9 @@ const Service = () => {
                 )}
               </div>
             </li>
-            <li className=" hover:underline">
+            {/* <li className=" hover:underline">
               <Link to="/faq">FAQs</Link>
-            </li>
+            </li> */}
             <li className=" hover:underline">
               <Link to="/contact">CONTACT US</Link>
             </li>
@@ -114,9 +118,9 @@ const Service = () => {
                   <Link to="/about">ABOUT US</Link>
                 </li>
                 <li className=" flex items-center gap-2">SERVICES</li>
-                <li>
+                {/* <li>
                   <Link to="/faq">FAQs</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/contact">CONTACT US</Link>
                 </li>
@@ -137,10 +141,16 @@ const Service = () => {
         className="serv h-[104px] lg:h-72 md:h-[200px] xl:h-72 flex justify-center items-center text-center"
       >
         <div className="">
-          <h1 className="hit text-base md:text-3xl lg:text-4xl xl:text-4xl pb-5 xl:pb-10 lg:pb-8 font-semibold ">
+          <h1
+            data-aos="zoom-in"
+            className="hit text-base md:text-3xl lg:text-4xl xl:text-4xl pb-5 xl:pb-10 lg:pb-8 font-semibold "
+          >
             OUR SERVICE
           </h1>
-          <p className=" text-white text-xs lg:text-2xl md:text-xl xl:text-2xl">
+          <p
+            data-aos="zoom-in"
+            className=" text-white text-xs lg:text-2xl md:text-xl xl:text-2xl"
+          >
             WHAT WE OFFER
           </p>
         </div>
@@ -150,31 +160,34 @@ const Service = () => {
         <h1 className=" justify-center lg:text-3xl xl:text-4xl text-black lg:py-5 md:py-5 xl:py-8 font-semibold xl:flex hidden lg:flex md:flex md:text-2xl">
           THE MOST OUTSTANDING SERVICES FOR YOUR BUSINESS
         </h1>
-        <h1 className=" flex justify-center text-[15px] text-center text-black py-4 font-semibold xl:hidden lg:hidden md:hidden">
-          THE MOST OUTSTANDING SERVICES FOR <br /> YOUR BUSINESS
+        <h1 className=" flex justify-center px-[20px] text-[15px] text-center text-black py-4 font-semibold xl:hidden lg:hidden md:hidden">
+          THE MOST OUTSTANDING SERVICES FOR YOUR BUSINESS
         </h1>
-        <p className=" hidden xl:flex justify-center text-base lg:flex md:hidden">
+        <p className=" hidden xl:flex justify-center text-base lg:px-[60px] lg:flex md:hidden">
           NUPAT provides a wide range of business outsourcing services to
           increase client’s productivity, operational efficiency, and in turn
           profit
         </p>
-        <p className=" flex justify-center text-xs text-center xl:hidden lg:hidden md:block md:text-xl">
-          NUPAT provides a wide range of business outsourcing <br /> services to
-          increase client’s productivity, operational <br /> efficiency, and in
-          turn profit
+        <p className=" flex justify-center text-xs text-center px-[10px] xl:hidden lg:hidden md:block md:text-xl">
+          NUPAT provides a wide range of business outsourcing services to
+          increase client’s productivity, operational efficiency, and in turn
+          profit
         </p>
-        <div className=" grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 pt-4 lg:pt-10 xl:pt-10 lg:px-24 xl:px-[90px] gap-4 lg:gap-20 xl:gap-0">
+        <div className=" grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 pt-4 lg:pt-10 xl:pt-10 lg:px-24 xl:px-[95px] gap-4 lg:gap-20 xl:gap-0">
           <p className=" bg-black text-[16px] flex justify-center font-semibold rounded-xl py-3 w-52 text-[#03CFD6] ml-6 xl:hidden lg:hidden md:py-4 md:ml-12">
             BUSINESS ADVISORY
           </p>
-          <div className=" px-8 xl:px-0 lg:px-0 md:ml-5 xl:ml-0 lg:ml-0">
+          <div
+            data-aos="flip-right"
+            className=" px-8 xl:px-0 lg:px-0 md:ml-5 xl:ml-0 lg:ml-0"
+          >
             <img src={pic} alt="" />
           </div>
           <div>
             <p className=" text-[#03CFD6] lg:text-2xl xl:text-4xl lg:flex w-[416px] xl:flex bg-black hidden font-semibold justify-center mb-4 rounded-xl m-auto py-2">
               BUSINESS ADVISORY
             </p>
-            <p className=" hidden xl:block text-lg w-[670px] h-[216px]">
+            <p className=" hidden xl:block lg:block lg:w-[450px] text-lg xl:w-[670px] xl:h-[216px]">
               Business Advisory is more than helping clients understand the
               figures of business. We not only advise, aid and assist companies
               inidentifying their potentials and overcoming obstacles in
@@ -185,7 +198,7 @@ const Service = () => {
               in strategising <br /> plans at every level, help start ups to
               achieve maximum profit from their businesses.
             </p>
-            <p className=" xl:hidden lg:block lg:text-lg text-xs pb-4 px-5 md:py-4 md:px-12 lg:px-0 md:text-xl">
+            <p className=" xl:hidden lg:hidden lg:text-lg text-xs pb-4 px-5 md:py-4 md:px-12 lg:px-0 md:text-xl">
               Business Advisory is more than helping clients understand the
               figures of business. We not only advise, aid and assist companies
               inidentifying their potentials and overcoming obstacles in
@@ -200,13 +213,16 @@ const Service = () => {
             </button>
           </div>
           <div className=" xl:pt-[40px]">
-            <p className=" text-[#03CFD6] lg:text-2xl xl:text-4xl text-[16px] w-[280px] lg:w-full xl:w-[556px] lg:ml-0 xl:m-auto ml-6 font-semibold bg-black flex justify-center mb-4 rounded-xl md:py-4 py-3 lg:py-2 xl:py-2 md:ml-12">
+            <p className=" text-[#03CFD6] lg:text-2xl mx-[10px] xl:mx-0 lg:mx-0 xl:text-4xl text-[16px] lg:w-full xl:w-[556px] lg:ml-0 xl:m-auto ml-6 font-semibold bg-black flex justify-center mb-4 rounded-xl md:py-4 py-3 lg:py-2 xl:py-2 md:ml-12">
               RECRUITMENT & SELECTION
             </p>
-            <div className=" px-8 xl:hidden lg:hidden md:ml-5">
+            <div
+              data-aos="flip-right"
+              className=" px-8 xl:hidden lg:hidden md:ml-5"
+            >
               <img src={pic2} alt="" />
             </div>
-            <p className="hidden xl:block w-[670px] h-[168px] lg:hidden text-lg pt-4">
+            <p className="hidden xl:block xl:w-[670px] lg:w-[450px] xl:h-[168px] lg:block text-lg pt-4">
               Every department in an organization is entrusted with various
               roles which are critical to the development and growth of that
               entity. We designed to maximize employee strength in order to meet
@@ -220,7 +236,7 @@ const Service = () => {
                 competent to fill up particular roles seamless without hassles.
               </p>
             </p>
-            <p className=" xl:hidden lg:block lg:text-lg lg:pt-0 text-xs pb-4 px-5 pt-4 md:text-xl md:px-12">
+            <p className=" xl:hidden lg:hidden lg:text-lg lg:pt-0 text-xs pb-4 px-5 pt-4 md:text-xl md:px-12">
               Every department in an organization is entrusted with various
               roles which are critical to the development and growth of that
               entity. We designed to maximize employee strength in order to meet
@@ -235,10 +251,13 @@ const Service = () => {
               <Link to="/recruitement">Read More</Link>
             </button>
           </div>
-          <div className=" xl:block hidden lg:block ml-[100px] xl:mt-[40px]">
+          <div
+            data-aos="flip-right"
+            className=" xl:block hidden lg:block ml-[100px] xl:mt-[40px]"
+          >
             <img src={pic2} alt="" />
           </div>
-          <div className=" xl:mt-[40px]">
+          <div data-aos="flip-right" className=" xl:mt-[40px]">
             <img src={pic5} alt="" className=" hidden xl:block lg:block" />
           </div>
           <div className=" xl:pt-[40px]">
@@ -250,12 +269,13 @@ const Service = () => {
             </p>
             <div>
               <img
+                data-aos="flip-right"
                 src={pic5}
                 alt=""
                 className=" px-8 xl:px-0 xl:hidden lg:hidden pb-4 md:ml-4"
               />
             </div>
-            <p className=" hidden w-[670px] h-[341px] xl:block lg:hidden text-lg pb-4">
+            <p className=" hidden xl:w-[670px] lg:w-[450px] xl:h-[341px] xl:block lg:block text-lg pb-4">
               Every organisation has different IT needs. The ever-evolving
               technology needs has to be addressed in order to keep up the pace
               with competitors and deliver more value to cutomers. <br /> <br />
@@ -271,7 +291,7 @@ const Service = () => {
               for businesses to implement solutions that are cost effective and
               reliable for businesses relating to IT Solutions.
             </p>
-            <p className=" xl:hidden lg:block lg:text-lg text-xs lg:px-0 px-5 pb-4 md:px-12 md:text-xl">
+            <p className=" xl:hidden lg:hidden lg:text-lg text-xs lg:px-0 px-5 pb-4 md:px-12 md:text-xl">
               Every organisation has different IT needs. The ever-evolving
               technology needs has to be addressed in order to keep up the pace
               with competitors and deliver more value to cutomers. <br /> <br />
@@ -290,16 +310,19 @@ const Service = () => {
             </button>
           </div>
           <div className=" xl:pt-[40px]">
-            <p className=" text-[#03CFD6] hidden w-[552px] h-[61px] m-auto lg:flex xl:flex lg:text-2xl xl:text-4xl bg-black justify-center mb-4 rounded-xl py-2">
+            <p className=" text-[#03CFD6] hidden xl:w-[552px] h-[61px] m-auto lg:flex xl:flex lg:text-2xl xl:text-4xl bg-black justify-center mb-4 rounded-xl py-2">
               LEARNING & DEVELOPMENT
             </p>
-            <p className=" text-[#03CFD6] w-[280px] text-[16px] lg:hidden xl:hidden text-base bg-black flex justify-center mb-4 rounded-xl py-3 ml-6 md:py-4 md:ml-10">
+            <p className=" text-[#03CFD6] text-[16px] lg:hidden xl:hidden mx-[10px] text-base bg-black flex justify-center mb-4 rounded-xl py-3 ml-6 md:py-4 md:ml-10">
               LEARNING & DEVELOPMENT
             </p>
-            <div className="xl:hidden lg:hidden px-8 pb-4 md:ml-4">
+            <div
+              data-aos="flip-right"
+              className="xl:hidden lg:hidden px-8 pb-4 md:ml-4"
+            >
               <img src={pic3} alt="" />
             </div>
-            <p className=" hidden xl:block w-[670px] h-[325px] lg:hidden text-lg pb-4">
+            <p className=" hidden xl:block xl:w-[670px] lg:w-[450px] xl:h-[325px] lg:block text-lg pb-4">
               In an environment where the only continuous thing is change,
               learning has become completely vital to every organisation’s
               competitiveness. Our learning and development services simplify
@@ -315,7 +338,7 @@ const Service = () => {
               we help individuals transform themselves, their teams and their
               organisations so they have more impact.
             </p>
-            <p className=" xl:hidden lg:block lg:text-lg text-xs pb-4 px-5 md:px-12 lg:px-0 md:text-xl">
+            <p className=" xl:hidden lg:hidden lg:text-lg text-xs pb-4 px-5 md:px-12 lg:px-0 md:text-xl">
               In an environment where the only continuous thing is change,
               learning has become completely vital to every organisation’s
               competitiveness. Our learning and development services simplify
@@ -333,10 +356,13 @@ const Service = () => {
               <Link to="/learning">Read More</Link>
             </button>
           </div>
-          <div className=" hidden xl:block lg:block mt-[40px ml-[100px]">
+          <div
+            data-aos="flip-right"
+            className=" hidden xl:block lg:block mt-[40px ml-[100px]"
+          >
             <img src={pic3} alt="" />
           </div>
-          <div className=" xl:pt-[40px]">
+          <div data-aos="flip-right" className=" xl:pt-[40px]">
             <img src={pic4} alt="" className="hidden xl:block lg:block" />
           </div>
           <div className=" xl:pt-[40px]">
@@ -348,12 +374,13 @@ const Service = () => {
             </p>
             <div>
               <img
+                data-aos="flip-right"
                 src={pic4}
                 alt=""
                 className=" xl:hidden lg:hidden px-8 pb-4 md:ml-4"
               />
             </div>
-            <p className=" hidden w-[670px] h-[168px] xl:block lg:block text-lg pb-4">
+            <p className=" hidden xl:w-[670px] xl:h-[168px] lg:w-[450px] xl:block lg:block text-lg pb-4">
               Every department in a business is entrusted with various roles
               which are critical to the development and growth of that entity,
               with all the activities that businesses engage in, it is essential
@@ -385,9 +412,9 @@ const Service = () => {
       <div className=" flex justify-center">
         <div
           style={{ fontFamily: "Montserrat" }}
-          className="bg-[url('/src/assets/about/bg2.png')] xl:w-[1076px] xl:h-[280px] bg-no-repeat bg-center bg-cover xl:px-0 lg:px-0 px-2 mx-6 md:mt-20 h-36 md:h-72 lg:h-72 text-white lg:pt-5 xl:pt-10 md:mx-24 lg:mx-36 lg:mt-10 xl:mx-[130px] mt-5 xl:mt-10"
+          className="bg-[url('/src/assets/about/bg2.png')] xl:w-[1076px] xl:h-[280px] bg-no-repeat bg-center bg-cover xl:px-0 lg:px-[50px] px-2 mx-6 md:mt-20 h-36 md:h-72 lg:h-72 text-white lg:pt-5 xl:pt-10 md:mx-24 lg:mx-36 lg:mt-10 xl:mx-[130px] mt-5 xl:mt-10"
         >
-          <div className="flex justify-around items-center">
+          <div data-aos="flip-right" className="flex justify-around items-center">
             <div className=" text-[10px] xl:text-3xl lg:text-2xl md:text-xl xl:h-[117px] w-[183.29px] md:w-[519px] xl:w-[519px]">
               <h1>
                 Schedule a free consultaion to take your business to the next
@@ -454,7 +481,7 @@ const Service = () => {
         <div className=" xl:flex flex flex-col xl:flex-row lg:flex-row justify-around">
           <div className="relative bottom-6">
             <img src={logo} alt="logo" className="relative right-8" />
-            <p className=" relative bottom-7 -mb-0 w-[296px]">
+            <p className=" relative bottom-7 -mb-0 lg:w-[296px] xl:w-[296px]">
               NUPAT Teams is a Business Process Outsourcing firm whose business
               is to increase clients' productivity, operational efficiency, and
               in turn profit by taking over some of their intensive business
@@ -584,6 +611,9 @@ import foot4 from "./assets/foot4.png";
 import foot5 from "./assets/foot5.png";
 import foot6 from "./assets/foot6.png";
 import foot7 from "./assets/foot7.png";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 // import emailjs from "emailjs-com";
 // import { useRef } from "react";

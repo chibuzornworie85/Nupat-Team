@@ -20,9 +20,9 @@ const Team = () => {
             <li className=" flex items-center gap-2">
               <Link to="/service">SERVICES</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/faq">FAQs</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/contact">CONTACT US</Link>
             </li>
@@ -94,42 +94,42 @@ const Team = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" flex flex-col items-center gap-8 font-semibold pt-8"
+        className="team2 flex flex-col items-center gap-8 font-semibold pt-8 pb-[50px]"
       >
         <div>
-          <div className=" h-72 w-72 rounded-3xl relative left-4 -mt-52 top-52">
-            <img src={ceo} alt="" />
+          <div className=" h-72 w-72 rounded-3xl relative -mt-[160px] top-[160px]">
+            <img src={ceo} className="image1 object-cover" alt="" />
           </div>
-          <div className="text flex justify-center items-center flex-col pt-40 text-lg h-80 w-80">
+          <div className="text flex justify-center items-center bg-[white] flex-col pt-40 text-lg h-[260px] w-[100%]">
             <p>Nnamdi Ugwu</p>
             <p>CEO/Managing Director</p>
-            <button className=" bg-[#1F335F] text-white mt-4 px-4 py-1 rounded-lg">
+            {/* <button className=" bg-[#1F335F] text-white mt-4 px-4 py-1 rounded-lg">
               See More
-            </button>
+            </button> */}
           </div>
         </div>
         <div>
-          <div className=" h-72 w-72 rounded-3xl relative left-4 -mt-52 top-52">
-            <img src={coo} alt="" />
+          <div className=" h-72 w-72 rounded-3xl relative -mt-[160px] top-[160px]">
+            <img src={coo} className="image1 object-cover" alt="" />
           </div>
-          <div className="text flex justify-center items-center flex-col pt-40 text-lg h-80 w-80">
+          <div className="text flex justify-center items-center bg-[white] flex-col pt-40 text-lg h-[260px] w-[100%]">
             <p>Olanrewaju Paul</p>
             <p>COO/Business Manager</p>
-            <button className=" bg-[#1F335F] text-white mt-4 px-4 py-1 rounded-lg">
+            {/* <button className=" bg-[#1F335F] text-white mt-4 px-4 py-1 rounded-lg">
               See More
-            </button>
+            </button> */}
           </div>
         </div>
         <div>
-          <div className=" h-72 w-72 rounded-3xl relative left-4 -mt-52 top-52">
-            <img src={cto} alt="" />
+          <div className=" h-72 w-72 rounded-3xl relative -mt-[160px] top-[160px]">
+            <img src={cto} className="image1 object-cover" alt="" />
           </div>
-          <div className="text flex justify-center items-center flex-col pt-40 text-lg h-80 w-80">
+          <div className="text flex justify-center items-center bg-[white] flex-col pt-40 text-lg h-[260px] w-[100%]">
             <p>Chibuike Ugwu</p>
             <p>CEO/Managing Director</p>
-            <button className=" bg-[#1F335F] text-white mt-4 px-4 py-1 rounded-lg">
+            {/* <button className=" bg-[#1F335F] text-white mt-4 px-4 py-1 rounded-lg">
               See More
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
@@ -173,7 +173,7 @@ const Team = () => {
         <div className=" xl:flex flex flex-col xl:flex-row lg:flex-row justify-around">
           <div className="relative bottom-6">
             <img src={logo} alt="logo" className="relative right-8" />
-            <p className=" relative bottom-7 -mb-0 w-[296px]">
+            <p className=" relative bottom-7 -mb-0 xl:w-[296px]">
               NUPAT Teams is a Business Process Outsourcing firm whose business
               is to increase clients' productivity, operational efficiency, and
               in turn profit by taking over some of their intensive business
@@ -284,6 +284,7 @@ const Team = () => {
 export default Team;
 
 import React from "react";
+import "./team.css"
 // import mess from "./assets/contact/circle.png";
 import logo from "./assets/logo.png";
 import { Link } from "react-router-dom";

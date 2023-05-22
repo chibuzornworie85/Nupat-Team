@@ -1,6 +1,9 @@
 function About() {
   const [navClose, setNavClose] = useState(true);
   const [drop, setDrop] = useState(true);
+  useEffect(() => {
+    AOS.init({duration:3000});
+  }, []);
   // const form = useRef();
 
   // const sendEmail = (e) => {
@@ -50,7 +53,7 @@ function About() {
                       <Link>SERVICES</Link>
                       <img src={arrow} alt="arrow" />
                     </div>
-                    <div className="close1 absolute left-[540px] bg-black flex flex-col items-start gap-2 text-[#03cfd6] top-[50px] p-[20px]">
+                    <div className="close1 absolute lg:left-[400px] xl:left-[540px] bg-black flex flex-col items-start gap-2 text-[#03cfd6] top-[50px] p-[20px]">
                       <h1 className=" hover:underline">
                         <Link to="/business">BUSINESS ADVISORY</Link>
                       </h1>
@@ -71,9 +74,9 @@ function About() {
                 )}
               </div>
             </li>
-            <li className=" hover:underline">
+            {/* <li className=" hover:underline">
               <Link to="/faq">FAQs</Link>
-            </li>
+            </li> */}
             <li className=" hover:underline">
               <Link to="/contact">CONTACT US</Link>
             </li>
@@ -112,9 +115,9 @@ function About() {
                 <li className=" flex items-center gap-2">
                   <Link to="/service">SERVICES</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to="/faq">FAQs</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to="/contact">CONTACT US</Link>
                 </li>
@@ -135,10 +138,10 @@ function About() {
         className="back flex xl:h-72 lg:h-72 md:h-[200px] h-[104px] justify-center items-center text-center"
       >
         <div className="">
-          <h1 className="hit font-semibold xl:text-3xl md:text-2xl lg:text-3xl lg:pb-10 text-base pb-5 xl:pb-10 ">
+          <h1 data-aos="zoom-in" className="hit font-semibold xl:text-3xl md:text-2xl lg:text-3xl lg:pb-10 text-base pb-5 xl:pb-10 ">
             WHY CHOOSE NUPAT
           </h1>
-          <p className=" text-white text-xs xl:text-2xl lg:text-2xl md:text-xl">
+          <p data-aos="zoom-in"  className=" text-white text-xs xl:text-2xl lg:text-2xl md:text-xl">
             GET TO KNOW WHY WE STAND OUT IN WHAT WE DO
           </p>
         </div>
@@ -146,26 +149,26 @@ function About() {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className="body pt-5 xl:pt-10 lg:pt-10"
+        className="body pt-5 xl:pt-10 lg:pt-10 xl:px-[2px"
       >
-        <div className=" xl:flex flex flex-col lg:flex-row xl:flex-row xl:gap-[100px] justify-around lg:px-20 xl:px-14">
-          <div className=" px-6 xl:px-6 lg:px-6 md:mx-4 lg:mx-0 xl:mx-0">
-            <div className=" flex gap-2 xl:gap-0 lg:block xl:block lg:gap-0">
-              <div className="pic1">
+        <div className=" xl:flex flex lg:flex flex-col lg:flex-col xl:flex-row xl:gap-[80px] justify-around lg:px-10 xl:px-14">
+          <div className=" px-6 xl:px-6 lg:px-0 md:mx-4 lg:mx-4 xl:mx-0">
+            <div data-aos="flip-right" className=" flex lg:gap-[10px] gap-2 xl:gap-0 lg:flex xl:block">
+              <div className="pic1 relative xl:left-[15px]">
                 <img src={pic1} alt="pic1" />
               </div>
-              <div className="pic2 relative xl:-mb-60 xl:bottom-60 lg:bottom-60 lg:-mb-60 lg:left-48 xl:left-48 ">
+              <div className="pic2 relative xl:-mb-60 xl:bottom-60 xl:left-48 ">
                 <img src={pic2} alt="pic2" />
               </div>
-              <div className="pic3 relative xl:left-8 xl:bottom-96 lg:bottom-96 lg:-mb-96 xl:-mb-96">
+              <div className="pic3 relative xl:left-8 xl:bottom-96 xl:-mb-96">
                 <img src={pic3} alt="pic3" />
               </div>
             </div>
-            <div className=" relative xl:bottom-72 px-20 xl:px-0 bottom-8 lg:bottom-72 lg:-mb-72 lg:left-20 md:ml-20 lg:pt-3 -mb-8 xl:left-60 xl:-mb-72">
+            <div data-aos="flip-left" className=" relative xl:bottom-72 px-20 xl:px-0 bottom-8 lg:flex lg:justify-center md:ml-20 lg:pt-3 -mb-8 xl:left-60 xl:-mb-72">
               <img src={pic4} alt="pic4" />
             </div>
           </div>
-          <div className=" xl:pt-40 lg:pt-40">
+          <div data-aos="zoom-in" className=" xl:pt-40 lg:pt-[20px] lg:pl-[20px] xl:pl-0">
             <p className=" bg-[#03CFD6] text-xl xl:text-2xl lg:text-2xl md:text-2xl md:flex lg:flex xl:flex flex text-center justify-center mx-6 mt-8 lg:mt-0 lg:mx-0 xl:mt-0 w-36 xl:mx-0 rounded-xl xl:w-52 lg:w-52 md:w-52 md:p-2 lg:p-2 xl:p-2 items-center text-black mb-4 lg:mb-4 lg:pl-5 xl:mb-4 xl:pl-5 md:ml-10">
               About Us
             </p>
@@ -197,13 +200,13 @@ function About() {
         style={{ fontFamily: "Montserrat" }}
         className=" pt-8 xl:pt-16 items-center lg:pt-16 md:pt-16"
       >
-        <p className="tex rounded-3xl flex justify-center items-center p-4 w-56 md:w-80 lg:w-80 xl:w-[390px] xl:h-[80px] mx-6 xl:ml-20 lg:ml-16 md:text-xl lg:text-xl text-sm xl:text-2xl xl:mb-8 mb-12 md:ml-12">
+        <p className="tex rounded-3xl flex justify-center items-center p-4 w-56 md:w-80 lg:w-80 xl:w-[390px] xl:h-[80px] mx-6 xl:ml-[90px] lg:ml-16 md:text-xl lg:text-xl text-sm xl:text-2xl xl:mb-8 mb-12 md:ml-12">
           What makes us Stand out
         </p>
-        <h1 className=" xl:pl-20 lg:pl-10 lg:text-3xl md:text-3xl text-base xl:text-4xl mx-6 xl:mx-0 pb-4 md:pl-6">
+        <h1 className=" xl:pl-[90px] lg:pl-10 lg:text-3xl md:text-3xl text-base xl:text-4xl mx-6 xl:mx-0 pb-4 md:pl-6">
           At <span className="hit font-semibold">NUPAT!</span>
         </h1>
-        <p className="hidden xl:block xl:text-xl lg:text-base xl:pl-[80px] lg:pl-16 lg:block md:hidden xl:w-[1232px]">
+        <p className="hidden xl:block xl:text-xl lg:text-base xl:px-[90px] lg:px-16 lg:block md:hidden xl:w-[1232px]">
           Our desire to consistently deliver value-added services to our clients
           has helped us to evolve into a pacesetter and standard bearer in our
           industry. We have a reputation for satisfying and surpassing our
@@ -229,12 +232,12 @@ function About() {
         style={{ fontFamily: "Montserrat" }}
         className=" pt-8 xl:pt-10 lg:pt-10 md:pt-10"
       >
-        <h1 className=" text-black text-base px-6 xl:px-0 xl:text-3xl md:text-2xl lg:text-2xl md:pl-12 lg:pl-16 font-semibold xl:pl-20 pb-10 ">
+        <h1 className=" text-black text-base px-6 xl:px-0 xl:text-3xl md:text-2xl lg:text-2xl md:pl-12 lg:pl-16 font-semibold xl:pl-[90px] pb-10 ">
           <span className=" underline underline-offset-4">OUR</span> CORE VALUES
         </h1>
         <div className=" flex justify-center">
-          <div className="value xl:mx-20 pb-12 pt-12 lg:mx-16 md:mx-10 xl:h-[780px] xl:w-[1232px] xl:px-0 lg:px-0 px-[30px]">
-            <div className="flex flex-col gap-8 xl:gap-0 lg:gap-0 md:gap-0 md:flex-row xl:flex-row lg:flex-row xl:flex justify-around text-center pb-10">
+          <div className="value xl:mx-[90px] pb-12 pt-12 lg:mx-16 md:mx-10 xl:h-[780px] xl:w-[1232px] xl:px-0 lg:px-0 px-[30px]">
+            <div data-aos="zoom-in" className="flex flex-col gap-8 xl:gap-0 lg:gap-0 md:gap-0 md:flex-row xl:flex-row lg:flex-row xl:flex justify-around text-center pb-10">
               <div>
                 <div className=" flex justify-center p-4">
                   <img src={group} alt="group" />
@@ -263,7 +266,7 @@ function About() {
                 </p>
               </div>
             </div>
-            <div className="flex flex-col xl:flex-row md:flex-row lg:flex-row xl:flex justify-around text-center gap-8 xl:gap-0 xl:pt-10 pb-10">
+            <div data-aos="zoom-in" className="flex flex-col xl:flex-row md:flex-row lg:flex-row xl:flex justify-around text-center gap-8 xl:gap-0 xl:pt-10 pb-10">
               <div>
                 <div className=" flex justify-center p-4">
                   <img src={group3} alt="group3" />
@@ -296,19 +299,19 @@ function About() {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" px-6 xl:px-6 lg:px-6 md:px-6"
+        className=" px-6 xl:px-[30px] lg:px-6 md:px-6"
       >
-        <h1 className=" font-semibold text-black text-xl xl:text-3xl md:text-3xl lg:text-3xl md:pl-5 lg:pl-16 md:pb-6 lg:pb-6 xl:pl-14 pb-3 xl:pb-6 pt-8 ">
+        <h1 className=" font-semibold text-black text-xl xl:text-3xl md:text-2xl lg:text-2xl md:pl-5 lg:pl-[40px] md:pb-6 lg:pb-6 xl:pl-14 pb-3 xl:pb-6 pt-8 ">
           <span className=" underline underline-offset-4">OUR</span> MISSION
         </h1>
-        <p className=" text-xs xl:text-2xl xl:pl-14 lg:pl-16 md:pl-5 md:text-xl lg:text-2xl">
+        <p className=" text-xs xl:text-2xl xl:pl-14 lg:pl-[40px] md:pl-5 md:text-xl lg:text-xl">
           To connect Top Talents with Global opportunities.
         </p>
 
-        <h1 className=" font-semibold text-black text-xl lg:text-3xl md:text-3xl xl:text-3xl md:pl-5 lg:pl-16 xl:pl-14 pb-3 md:pb-6 lg:pb-6 xl:pb-6 pt-4 ">
+        <h1 className=" font-semibold text-black text-xl lg:text-2xl md:text-2xl xl:text-3xl md:pl-5 lg:pl-[40px] xl:pl-14 pb-3 md:pb-6 lg:pb-6 xl:pb-6 pt-4 ">
           <span className=" underline underline-offset-4">OUR</span> VISION
         </h1>
-        <p className=" hidden xl:block h-[58px] md:text-x lg:text-2xl xl:text-2xl xl:pl-14 pl-32 lg:pl-16 md:pl-5 lg:block w-[1224px] md:hidden">
+        <p className=" hidden xl:block h-[58px] md:text-x lg:text-xl xl:text-2xl xl:pl-14 pl-32 lg:pl-[40px] md:pl-5 lg:block md:hidden">
           To build a world where Global opportunities are accessible to every
           talented individual regardless of location and background
         </p>
@@ -321,10 +324,10 @@ function About() {
           talented individual regardless of location and background
         </p>
 
-        <h1 className=" font-semibold text-black text-xl xl:text-3xl lg:text-3xl md:text-3xl lg:pl-16 md:pl-5 md:pb-6 lg:pb-6 xl:pl-14 pb-3 xl:pb-6 pt-4 ">
+        <h1 className=" font-semibold text-black text-xl xl:text-3xl lg:text-2xl md:text-2xl lg:pl-[40px] md:pl-5 md:pb-6 lg:pb-6 xl:pl-14 pb-3 xl:pb-6 pt-4 ">
           <span className=" underline underline-offset-4">OUR</span> TEAM
         </h1>
-        <p className=" hidden xl:block md:text-xl lg:text-2xl xl:text-2xl xl:pl-14 w-[1232px] h-[58px] lg:pl-16 md:pl-5 lg:block md:hidden">
+        <p className=" hidden xl:block md:text-xl lg:text-xl xl:text-2xl xl:pl-14 h-[58px] lg:pl-[40px] md:pl-5 lg:block md:hidden">
           Our team is made up of highly competent, experienced professionals
           fully committed to provide high quality client focused service that
           can add value to your business.
@@ -350,80 +353,84 @@ function About() {
         </div>
 
         <div className=" flex justify-center">
-          <div className="team hidden font-semibold lg:flex xl:flex text-black mt-12 pt-12 flex-col gap-10 px-20 pb-16 md:flex mx-5 xl:mx-0 lg:mx-0 w-[1200px] h-[1746px]">
-            <div className=" xl:flex lg:flex xl:justify-around lg:justify-around xl:gap-10 lg:gap-4 md:grid md:grid-cols-2 md:gap-24">
+          <div className="team hidden font-semibold lg:flex xl:flex text-black mt-12 pt-12 flex-col gap-10 lg:px-[40px] xl:px-20 pb-16 md:flex mx-5 xl:mx-0 lg:mx-0 xl:w-[1190px]">
+            <div data-aos="zoom-in"  className=" xl:flex lg:flex xl:justify-around lg:justify-around xl:gap-10 lg:gap-4 md:grid md:grid-cols-2 md:gap-24">
               <div>
-                <div className=" h-72 xl:w-[300px] xl:h-[280px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-3 -mt-[160px] top-[160px]">
-                  <img src={ceo} alt="" />
+                <div className=" h-72 xl:w-[300px] xl:h-[280px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-6 md:left-3 -mt-[160px] top-[160px]">
+                  <img src={ceo} className="image object-cover" alt="" />
                 </div>
-                <div className="text md:w-[300px] flex justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+                <div className="text md:w-[300px] flex justify-center items-center flex-col pt-40 text-xl lg:text-[15px] xl:h-[300px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                   <p>Nnamdi Ugwu</p>
                   <p>CEO/Managing Director</p>
                 </div>
               </div>
               <div>
-                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-3 -mt-[160px] top-[160px]">
-                  <img src={coo} alt="" />
+                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-6 md:left-3 -mt-[160px] top-[160px]">
+                  <img src={coo} className="image object-cover" alt="" />
                 </div>
-                <div className="text flex md:w-[300px] justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:w-[350px] xl:h-[400px] lg:w-64 lg:h-64 bg-white">
+                <div className="text flex md:w-[300px] justify-center items-center flex-col pt-40 text-xl lg:text-[15px] xl:w-[350px] xl:h-[300px] lg:w-64 lg:h-64 bg-white">
                   <p>Olanrewaju Paul</p>
                   <p>COO/Business Manager</p>
                 </div>
               </div>
               <div>
-                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-3 -mt-[160px] top-[160px]">
-                  <img src={cto} alt="" />
+                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-6 md:left-3 -mt-[160px] top-[160px]">
+                  <img src={cto} className="image object-cover" alt="" />
                 </div>
-                <div className="text flex md:w-[300px] justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+                <div className="text flex md:w-[300px] justify-center items-center flex-col pt-40 text-xl lg:text-[15px] xl:h-[300px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                   <p>Chibuike Ugwu</p>
-                  <p>CEO/Managing Director</p>
+                  <p>CTO/Managing Director</p>
                 </div>
               </div>
               <div className="md:block xl:hidden lg:hidden">
-                <div className=" h-72 xl:w-72 lg:w-52 rounded-3xl relative xl:left-4 lg:left-4 md:left-3 -mt-[160px] top-[160px] ">
-                  <img src={cbo} alt="" />
+                <div className=" h-72 xl:w-72 lg:w-52 rounded-3xl relative xl:left-4 lg:left-6 md:left-3 -mt-[160px] top-[160px] ">
+                  <img src={cbo} className="image object-cover" alt="" />
                 </div>
-                <div className="text flex md:w-[300px] justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-80 xl:w-80 lg:w-64 lg:h-64 bg-white">
+                <div className="text flex md:w-[300px] justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[300px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                   <p>Ogunfunmilade I.</p>
                   <p>CBO/Brand Manager</p>
                 </div>
               </div>
             </div>
 
-            <div className=" xl:flex lg:flex lg:justify-around xl:justify-around gap-12 md:grid md:grid-cols-2 md:gap-24 xl:gap-10 lg:gap-12">
+            <div data-aos="zoom-in"  className=" xl:flex lg:flex lg:justify-around xl:justify-around gap-12 md:grid md:grid-cols-2 md:gap-24 xl:gap-10 lg:gap-12">
               <div className="md:hidden xl:block lg:block">
                 <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative left-6 -mt-[160px] top-[160px] ">
-                  <img src={cbo} alt="" />
+                  <img src={cbo} className="image object-cover" alt="" />
                 </div>
-                <div className="text flex md:w-72 justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+                <div className="text flex md:w-72 justify-center items-center flex-col pt-40 text-xl lg:text-[15px] xl:h-[300px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                   <p>Ogunfunmilade Ibukunoluwa</p>
                   <p>CBO/Brand Manager</p>
                 </div>
               </div>
               <div>
-                <div className="imgs1 h-72 xl:w-[300px] lg:w-52 w-72 rounded-3xl relative xl:left-6 lg:left-4 md:left-3 -mt-[160px] top-[160px]">
-                  <img src="" alt="" />
+                <div className="imgs1 h-72 xl:w-[300px] lg:w-52 w-72 rounded-3xl relative xl:left-6 lg:left-6 md:left-3 -mt-[160px] top-[160px]">
+                  <img
+                    src={product}
+                    className="image object-cover"
+                    alt="an image"
+                  />
                 </div>
-                <div className="text flex md:w-[300px] justify-center items-center flex-col pt-44 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+                <div className="text flex md:w-[300px] justify-center items-center flex-col pt-44 text-xl lg:text-[15px] xl:h-[300px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                   <p>Anuoluwapo Adedeji</p>
-                  <p>Senior HR Manager</p>
+                  <p>Client Relationship Manager</p>
                 </div>
               </div>
               <div>
-                <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-4 md:left-3 -mt-[160px] top-[160px]">
-                  <img src={anu} alt="" />
+                <div className=" h-72 xl:w-[300px] xl:h-[280px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-6 md:left-3 -mt-[160px] top-[160px]">
+                  <img src={anu} className="image object-cover" alt="" />
                 </div>
-                <div className="text flex md:w-[300px] justify-center text-xl items-center lg:text-lg flex-col pt-40 xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
-                  <p>Anuoluwapo Bankole</p>
-                  <p>Talent Specialist</p>
+                <div className="text md:w-[300px] flex justify-center items-center flex-col pt-40 text-xl lg:text-[15px] xl:h-[300px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+                  <p>Anuoluwapo Abu-David</p>
+                  <p>Recruitment Specialist</p>
                 </div>
               </div>
             </div>
-            <div className=" flex flex-col items-center">
-              <div className="imgs1 h-72 xl:w-[300px] lg:w-52 w-72 rounded-3xl relative xl:left-0 lg:left-4 md:left-3 -mt-[160px] top-[160px]">
-                <img src="" alt="" />
+            <div data-aos="zoom-in"  className=" flex flex-col items-center">
+              <div className="image h-72 xl:w-[300px] lg:w-52 w-72 rounded-3xl relative xl:left-0 lg:left-0 md:left-3 -mt-[160px] top-[160px]">
+                <img src={deon} className="image object-cover" alt="an image" />
               </div>
-              <div className="text flex md:w-[300px] justify-center items-center flex-col pt-44 text-xl lg:text-lg xl:h-[400px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
+              <div className="text flex md:w-[300px] justify-center items-center flex-col pt-44 text-xl lg:text-[15px] xl:h-[300px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                 <p>Gbolaga Adegbola </p>
                 <p>Human Capital Manager</p>
               </div>
@@ -435,9 +442,9 @@ function About() {
       <div className=" flex justify-center">
         <div
           style={{ fontFamily: "Montserrat" }}
-          className="bg-[url('/src/assets/about/bg2.png')] xl:w-[1076px] xl:h-[280px] bg-no-repeat bg-center bg-cover xl:px-0 lg:px-0 px-2 mx-6 md:mt-20 h-36 md:h-72 lg:h-72 text-white lg:pt-5 xl:pt-10 md:mx-24 lg:mx-36 lg:mt-10 xl:mx-[130px] mt-5 xl:mt-10"
+          className="bg-[url('/src/assets/about/bg2.png')] xl:w-[1076px] xl:h-[280px] bg-no-repeat bg-center bg-cover xl:px-0 lg:px-[50px] px-2 mx-6 md:mt-20 h-36 md:h-72 lg:h-72 text-white lg:pt-5 xl:pt-10 md:mx-24 lg:mx-36 lg:mt-10 xl:mx-[130px] mt-5 xl:mt-10"
         >
-          <div className="flex justify-around items-center">
+          <div data-aos="flip-right" className="flex justify-around items-center">
             <div className=" text-[10px] xl:text-3xl lg:text-2xl md:text-xl xl:h-[117px] w-[183.29px] md:w-[519px] xl:w-[519px]">
               <h1>
                 Schedule a free consultaion to take your business to the next
@@ -539,7 +546,7 @@ function About() {
         <div className=" xl:flex flex flex-col xl:flex-row lg:flex-row justify-around">
           <div className="relative bottom-6">
             <img src={logo} alt="logo" className="relative right-8" />
-            <p className=" relative bottom-7 -mb-0 w-[296px]">
+            <p className=" relative bottom-7 -mb-0 lg:w-[296px] xl:w-[296px]">
               NUPAT Teams is a Business Process Outsourcing firm whose business
               is to increase clients' productivity, operational efficiency, and
               in turn profit by taking over some of their intensive business
@@ -669,6 +676,8 @@ import coo from "./assets/about/paulo.png";
 import cto from "./assets/about/henry.png";
 import cbo from "./assets/about/ibukun.png";
 import anu from "./assets/about/anu.png";
+import deon from "./assets/about/deon.png";
+import product from "./assets/about/product.jpeg";
 // import mess from "./assets/contact/circle.png";
 import foot from "./assets/foot.png";
 import foot1 from "./assets/foot1.png";
@@ -678,6 +687,10 @@ import foot4 from "./assets/foot4.png";
 import foot5 from "./assets/foot5.png";
 import foot6 from "./assets/foot6.png";
 import foot7 from "./assets/foot7.png";
+
+import { useEffect } from "react";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 // import emailjs from "emailjs-com";
 // import { useRef } from "react";
