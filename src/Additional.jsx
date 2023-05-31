@@ -1,38 +1,22 @@
 const Additional = () => {
-  // const [resume, setResume] = useState("");
   const [hear, setHear] = useState("");
   const [referral, setRerral] = useState("");
-  // const [resumeError, setResumeError] = useState("");
   const [hearError, setHearError] = useState("");
   const [referralError, setRerralError] = useState("");
 
   const validateForm = (event) => {
     event.preventDefault();
 
-    // if (!validateResume(resume)) {
-    //   setRerralError("Please add your resume.");
-    // }
-    if (!validateHear(hear)) {
+    if (hear.trim() === "") {
       setHearError("Please add up.");
+      return;
     }
-    if (!validateReferral(referral)) {
+    if (referral.trim() === "") {
       setRerralError("Please add up.");
+      return;
     }
 
-    alert("Form submitted successfully!");
-    setResume("");
-    setHear("");
-    setRerral("");
-  };
-
-  // const validateResume = (resume) => {
-  //   return resume.length >= 0;
-  // };
-  const validateHear = (hear) => {
-    return hear.length >= 0;
-  };
-  const validateReferral = (referral) => {
-    return referral.length >= 0;
+    window.location.href = "/";
   };
 
   const form = useRef();
@@ -43,7 +27,7 @@ const Additional = () => {
     emailjs
       .sendForm(
         "service_6z6j9vv",
-        "template_04ujg5i",
+        "template_l14i0u8",
         form.current,
         "KQagYOgrTv4yC0uV6"
       )
@@ -90,18 +74,14 @@ const Additional = () => {
                   type="file"
                   className=" h-[48px] w-[100%] text-black pl-2"
                   name="user_resume"
-                  // value={resume}
-                  // onChange={(e) => setResume(e.target.value)}
-                  // required
                 />
-                {/* {resumeError && <p>{resumeError}</p>} */}
               </div>
               <div className=" pb-2">
                 <p>How did you hear about us?</p>
                 <input
                   type="text"
                   className=" h-[48px] w-[100%] text-black pl-2"
-                  name="user_howDoYouHearAboutUs"
+                  name="user_howdidyouhear"
                   value={hear}
                   onChange={(e) => setHear(e.target.value)}
                   required
@@ -113,7 +93,7 @@ const Additional = () => {
                 <input
                   type="radius"
                   className=" h-[48px] w-[100%] text-black pl-2"
-                  name="user_referral"
+                  name="user_nameOfReferral"
                   value={referral}
                   onChange={(e) => setRerral(e.target.value)}
                   required
@@ -122,12 +102,14 @@ const Additional = () => {
               </div>
               <p>
                 By submitting to this form, you agree to Nupat Team's{" "}
-                <span className=" underline">term and condition</span>{" "}
+                <span className=" underline text-[red]">
+                  term and condition
+                </span>{" "}
               </p>
             </div>
             <div className=" text-white flex items-center justify-center text-[20px] bg-black w-[150px] h-[54px] rounded-[16px] mt-[15px]">
               <button type="submit" value="Send">
-                Submit
+                Submit form
               </button>
             </div>
           </form>
@@ -161,18 +143,14 @@ const Additional = () => {
                   type="file"
                   className=" h-[48px] w-[100%] text-black pl-2"
                   name="user_resume"
-                  // value={resume}
-                  // onChange={(e) => setResume(e.target.value)}
-                  // required
                 />
-                {/* {resumeError && <p>{resumeError}</p>} */}
               </div>
               <div className=" pb-2">
                 <p>How did you hear about us?</p>
                 <input
                   type="text"
                   className=" h-[48px] w-[100%] text-black pl-2"
-                  name="user_howDoYouHearAboutUs"
+                  name="user_howdidyouhear"
                   value={hear}
                   onChange={(e) => setHear(e.target.value)}
                   required
@@ -184,7 +162,7 @@ const Additional = () => {
                 <input
                   type="radius"
                   className=" h-[48px] w-[100%] text-black pl-2"
-                  name="user_referral"
+                  name="user_nameOfReferral"
                   value={referral}
                   onChange={(e) => setRerral(e.target.value)}
                   required
@@ -193,12 +171,14 @@ const Additional = () => {
               </div>
               <p>
                 By submitting to this form, you agree to Nupat Team's{" "}
-                <span className=" underline">term and condition</span>{" "}
+                <span className=" underline text-[red]">
+                  term and condition
+                </span>{" "}
               </p>
             </div>
             <div className=" text-white flex items-center justify-center text-[20px] bg-black w-[150px] h-[54px] rounded-[16px] ml-[15px] mt-[15px]">
               <button type="submit" value="Send">
-                Submit
+                Submit form
               </button>
             </div>
           </form>
@@ -210,7 +190,6 @@ const Additional = () => {
 
 export default Additional;
 
-// import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
 import React, { useState } from "react";
 import { useRef } from "react";

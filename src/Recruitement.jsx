@@ -150,7 +150,10 @@ const Recruitement = () => {
         style={{ fontFamily: "Montserrat" }}
         className="bg-[url('/src/assets/rec/bg.png')] bg-no-repeat bg-center bg-cover"
       >
-        <div data-aos="zoom-in" className=" xl:py-32 lg:py-32 md:py-16 py-12 pl-7 text-white xl:pl-[100px] md:pl-14 lg:pl-[60px]">
+        <div
+          data-aos="zoom-in"
+          className=" xl:py-32 lg:py-32 md:py-16 py-12 pl-7 text-white xl:pl-[100px] md:pl-14 lg:pl-[60px]"
+        >
           <h1 className=" font-semibold text-[13px] md:text-2xl lg:text-3xl xl:text-4xl xl:pb-4 lg:pb-4 pb-2">
             Outsource for Success, Hire Competency...
           </h1>
@@ -160,7 +163,8 @@ const Recruitement = () => {
         </div>
       </div>
 
-      <div data-aos="zoom-in"
+      <div
+        data-aos="zoom-in"
         style={{ fontFamily: "Montserrat" }}
         className=" bg-black h-[164px] xl:h-32 lg:h-32 px-0 text-[14px] lg:text-[16px] xl:text-[16px] lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-16 "
       >
@@ -195,7 +199,8 @@ const Recruitement = () => {
         </div>
       </div>
 
-      <div data-aos="zoom-in"
+      <div
+        data-aos="zoom-in"
         style={{ fontFamily: "Montserrat" }}
         className=" flex flex-col lg:flex-row xl:flex-row justify-around md:px-10 px-10 lg:px-[30px] xl:px-12 mt-10"
       >
@@ -223,7 +228,8 @@ const Recruitement = () => {
         </div>
       </div>
 
-      <div data-aos="zoom-in"
+      <div
+        data-aos="zoom-in"
         style={{ fontFamily: "Montserrat" }}
         className=" text-base md:text-xl lg:text-2xl xl:text-2xl flex justify-around items-center pt-10 lg:gap-72 xl:gap-72 xl:px-12"
       >
@@ -490,10 +496,22 @@ const Recruitement = () => {
               info@nupat.com.ng
             </p>
             <div className="flex gap-5 items-center pb-5 xl:pb-0 h-10 xl:h-8">
-              <img src={foot4} alt="foot4" />
+            <a href="https://www.instagram.com/nupat_teams/" target="_blank">
+                <img src={foot4} alt="foot4" />
+              </a>
               <img src={foot5} alt="foot5" className=" h-8" />
-              <img src={foot6} alt="foot6" className=" h-7" />
-              <img src={foot7} alt="foot7" className=" h-7" />
+              <a
+                href="https://twitter.com/NupatTeams?t=7iM3cAQTKvTV0F_wix6D5w&s=09"
+                target="_blank"
+              >
+                <img src={foot6} alt="foot6" className=" h-7" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/nupatteams/"
+                target="_blank"
+              >
+                <img src={foot7} alt="foot7" className=" h-7" />
+              </a>
             </div>
           </div>
         </div>

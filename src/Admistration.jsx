@@ -227,7 +227,8 @@ const Admistration = () => {
         </div>
       </div>
 
-      <div data-aos="zoom-in"
+      <div
+        data-aos="zoom-in"
         style={{ fontFamily: "Montserrat" }}
         className="text-base lg:text-2xl md:text-2xl xl:text-2xl flex justify-around items-center pt-10 lg:gap-72 xl:gap-72 xl:px-16"
       >
@@ -422,10 +423,22 @@ const Admistration = () => {
               info@nupat.com.ng
             </p>
             <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
-              <img src={foot4} alt="foot4" />
+            <a href="https://www.instagram.com/nupat_teams/" target="_blank">
+                <img src={foot4} alt="foot4" />
+              </a>
               <img src={foot5} alt="foot5" className=" h-8" />
-              <img src={foot6} alt="foot6" className=" h-7" />
-              <img src={foot7} alt="foot7" className=" h-7" />
+              <a
+                href="https://twitter.com/NupatTeams?t=7iM3cAQTKvTV0F_wix6D5w&s=09"
+                target="_blank"
+              >
+                <img src={foot6} alt="foot6" className=" h-7" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/nupatteams/"
+                target="_blank"
+              >
+                <img src={foot7} alt="foot7" className=" h-7" />
+              </a>
             </div>
           </div>
         </div>

@@ -1,5 +1,4 @@
 import React from "react";
-
 const Join = () => {
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -18,11 +17,14 @@ const Join = () => {
   const validateForm = (event) => {
     event.preventDefault();
 
-    if (!validateName(name)) {
+    if (name.trim() === "") {
       setNameError("Please add your name.");
+      return;
     }
 
-    if (!validateLastName(lastName)) {
+    window.location.href = "/employ";
+
+    if (lastName.trim() === "") {
       setLastNameError("Please add your last name.");
     }
 
@@ -31,51 +33,23 @@ const Join = () => {
       return;
     }
 
-    if (!validatePhoneNumber(phoneNumber)) {
+    if (phoneNumber.trim() === "") {
       setphoneNumberError("Please fill up this field.");
     }
 
-    if (!validateGender(gender)) {
+    if (gender.trim() === "") {
       setGenderError("Please fill up this field.");
     }
 
-    if (!validateCountry(country)) {
+    if (country.trim() === "") {
       setCountryError("Please fill up this field.");
     }
-
-    alert("Form submitted successfully!");
-    setName("");
-    setLastName("");
-    setEmail("");
-    setphoneNumber("");
-    setGender("");
-    setCountry("");
-  };
-
-  const validateName = (name) => {
-    return name.length >= 0;
-  };
-
-  const validateLastName = (lastName) => {
-    return lastName.length >= 0;
   };
 
   const validateEmail = (email) => {
     // Regular expression for email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
-  };
-
-  const validatePhoneNumber = (phoneNumber) => {
-    return phoneNumber.length >= 11;
-  };
-
-  const validateGender = (gender) => {
-    return gender.length >= 0;
-  };
-
-  const validateCountry = (country) => {
-    return country.length >= 0;
   };
 
   const form = useRef();
@@ -86,7 +60,7 @@ const Join = () => {
     emailjs
       .sendForm(
         "service_6z6j9vv",
-        "template_04ujg5i",
+        "template_l14i0u8",
         form.current,
         "KQagYOgrTv4yC0uV6"
       )
@@ -132,7 +106,7 @@ const Join = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_firstName"
+                    name="user_name"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
@@ -158,7 +132,7 @@ const Join = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_lastName"
+                    name="user_lastname"
                     value={lastName}
                     onChange={(e) => setLastName(e.target.value)}
                     required
@@ -170,7 +144,7 @@ const Join = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_phoneNo"
+                    name="user_number"
                     value={phoneNumber}
                     onChange={(e) => setphoneNumber(e.target.value)}
                     required
@@ -236,9 +210,9 @@ const Join = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_firstName"
+                    name="user_name"
                     value={name}
-                    onChange={(e)=> setName(e.target.value)}
+                    onChange={(e) => setName(e.target.value)}
                     required
                   />
                   {nameError && <p>{nameError}</p>}
@@ -248,9 +222,9 @@ const Join = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_lastName"
+                    name="user_lastname"
                     value={lastName}
-                    onChange={(e)=> setLastName(e.target.value)}
+                    onChange={(e) => setLastName(e.target.value)}
                     required
                   />
                   {lastNameError && <p>{lastNameError}</p>}
@@ -264,7 +238,7 @@ const Join = () => {
                     className=" h-[48px] w-[100%] text-black pl-2"
                     name="user_email"
                     value={email}
-                    onChange={(e)=> setEmail(e.target.value)}
+                    onChange={(e) => setEmail(e.target.value)}
                     required
                   />
                   {emailError && <p>{emailError}</p>}
@@ -274,9 +248,9 @@ const Join = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_phoneNo"
+                    name="user_number"
                     value={phoneNumber}
-                    onChange={(e)=> setphoneNumber(e.target.value)}
+                    onChange={(e) => setphoneNumber(e.target.value)}
                     required
                   />
                   {phoneNumberError && <p>{phoneNumberError}</p>}
@@ -290,7 +264,7 @@ const Join = () => {
                     name="user_gender"
                     type="text"
                     value={gender}
-                    onChange={(e)=> setGender(e.target.value)}
+                    onChange={(e) => setGender(e.target.value)}
                     required
                   />
                   {genderError && <p>{genderError}</p>}
@@ -302,7 +276,7 @@ const Join = () => {
                     name="user_country"
                     type="text"
                     value={country}
-                    onChange={(e)=> setCountry(e.target.value)}
+                    onChange={(e) => setCountry(e.target.value)}
                     required
                   />
                   {countryError && <p>{countryError}</p>}
@@ -325,6 +299,5 @@ export default Join;
 
 import emailjs from "emailjs-com";
 import { useRef, useState } from "react";
-// import { Link } from "react-router-dom";
 import logo from "./assets/logo.png";
 import "./join.css";

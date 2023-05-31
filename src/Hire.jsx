@@ -36,12 +36,14 @@ const Hire = () => {
   const validateForm = (event) => {
     event.preventDefault();
 
-    if (!validateName(name)) {
+    if (name.trim() === "") {
       setNameError("Please add your name.");
+      return;
     }
 
-    if (!validateLastName(lastName)) {
+    if (lastName.trim() === "") {
       setLastNameError("Please add your last name.");
+      return;
     }
 
     if (!validateEmail(email)) {
@@ -49,132 +51,73 @@ const Hire = () => {
       return;
     }
 
-    if (!validateEployee(employee)) {
+    if (employee.trim() === "") {
       setEmployeeError("Please fill up this field.");
+      return;
     }
 
-    if (!validateProjectHiring(projectHiring)) {
+    if (projectHiring.trim() === "") {
       setProjectHiringError("Please fill up this field.");
+      return;
     }
 
-    if (!validateCommitment(commitment)) {
+    if (commitment.trim() === "") {
       setCommitmentError("Please fill up this field.");
+      return;
     }
 
-    if (!validateRoleHiring(roleHiring)) {
+    if (roleHiring.trim() === "") {
       setRoleHiringError("Please fill up this field.");
+      return;
     }
 
-    if (!validateSkill(skill)) {
+    if (skill.trim() === "") {
       setSkillError("Please fill up this field.");
+      return;
     }
 
-    if (!validateComWeb(comWeb)) {
+    if (comWeb.trim() === "") {
       setComWebError("Please fill up this field.");
+      return;
     }
 
-    if (!validateComName(comName)) {
+    if (comName() === "") {
       setComNameError("Please fill up this field.");
+      return;
     }
 
-    if (!validateTeam(team)) {
+    if (team.trim() === "") {
       setTeamError("Please fill up this field.");
+      return;
     }
 
-    if (!validatePhoneNumber(phoneNumber)) {
+    if (phoneNumber.trim() === "") {
       setphoneNumberError("Please fill up this field.");
+      return;
     }
 
-    if (!validateClient(client)) {
+    if (client.trim() === "") {
       setClientError("Please fill up this field.");
+      return;
     }
 
-    if (!validateProposed(proposed)) {
+    if (proposed.trim() === "") {
       setProposedError("Please fill up this field.");
+      return;
     }
 
-    if (!validateModel(model)) {
+    if (model.trim() === "") {
       setModelError("Please fill up this field.");
+      return;
     }
 
-    alert("Form submitted successfully!");
-    setName("");
-    setLastName("");
-    setEmail("");
-    setModel("");
-    setProposed("");
-    setClient("");
-    setComName("");
-    setComWeb("");
-    setCommitment("");
-    setProjectHiring("");
-    setEmployee("");
-    setphoneNumber("");
-    setTeam("");
-    setSkill("");
-    setRoleHiring("");
-  };
-
-  const validateName = (name) => {
-    return name.length >= 0;
-  };
-
-  const validateLastName = (lastName) => {
-    return lastName.length >= 0;
+    window.location.href = "/";
   };
 
   const validateEmail = (email) => {
     // Regular expression for email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
-  };
-
-  const validateModel = (model) => {
-    return model.length >= 0;
-  };
-
-  const validateProposed = (proposed) => {
-    return proposed.length >= 0;
-  };
-
-  const validateClient = (client) => {
-    return client.length >= 0;
-  };
-
-  const validateComName = (comName) => {
-    return comName.length >= 0;
-  };
-
-  const validateSkill = (skill) => {
-    return skill.length >= 0;
-  };
-
-  const validateRoleHiring = (roleHiring) => {
-    return roleHiring.length >= 0;
-  };
-
-  const validateProjectHiring = (projectHiring) => {
-    return projectHiring.length >= 0;
-  };
-
-  const validateEployee = (employee) => {
-    return employee.length >= 0;
-  };
-
-  const validateTeam = (team) => {
-    return team.length >= 0;
-  };
-
-  const validateCommitment = (commitment) => {
-    return commitment.length >= 0;
-  };
-
-  const validateComWeb = (comWeb) => {
-    return comWeb.length >= 0;
-  };
-
-  const validatePhoneNumber = (phoneNumber) => {
-    return phoneNumber.length >= 11;
   };
 
   const form = useRef();
@@ -203,10 +146,7 @@ const Hire = () => {
       <div className="hidden lg:flex md:hidden xl:flex">
         <div className=" bg-[url(./assets/new/join.png)] bg-cover bg-no-repeat bg-center w-[20%] h-[100vh] sticky top-0">
           <div className=" flex items-center text-center h-20 pt-12">
-            <Link to="/">
-              {" "}
-              <img src={logo} alt="logo" />
-            </Link>
+            <img src={logo} alt="logo" />
           </div>
         </div>
         <div className=" bg-[#e0e0e069] w-[80%]">
@@ -675,6 +615,5 @@ export default Hire;
 import emailjs from "emailjs-com";
 import { useRef } from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import logo from "./assets/logo.png";
 import "./join.css";

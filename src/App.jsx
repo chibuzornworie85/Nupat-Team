@@ -1,6 +1,6 @@
 function App() {
   useEffect(() => {
-    AOS.init({duration:3000});
+    AOS.init({ duration: 3000 });
   }, []);
 
   const [navClose, setNavClose] = useState(true);
@@ -26,12 +26,14 @@ function App() {
   const validateForm = (event) => {
     event.preventDefault();
 
-    if (!validateName(name)) {
+    if (name.trim() === "") {
       setNameError("Please add your name.");
+      return;
     }
 
-    if (!validateLastName(lastName)) {
+    if (lastName.trim() === "") {
       setLastNameError("Please add your last name.");
+      return;
     }
 
     if (!validateEmail(email)) {
@@ -39,84 +41,40 @@ function App() {
       return;
     }
 
-    if (!validatephoneNumber(phoneNumber)) {
-      setPasswordError(
+    if (phoneNumber.trim() === "") {
+      setphoneNumberError(
         "Please enter a phoneNumber with at least 11 characters."
       );
       return;
     }
 
-    if (!validatecomName(comName)) {
+    if (comName.trim() === "") {
       setComNameError("Please enter your company name.");
       return;
     }
 
-    if (!validatecomWeb(comWeb)) {
+    if (comWeb.trim() === "") {
       setComWebError("Please enter website name.");
       return;
     }
 
-    if (!validateComment(comment)) {
+    if (comment.trim() === "") {
       setCommentError("Please enter a comment.");
       return;
     }
 
-    if (!validatehear(hear)) {
+    if (hear.trim() === "") {
       setHearError("Please enter any social media.");
       return;
     }
 
-    alert("Form submitted successfully!");
-    setName("");
-    setLastName("");
-    setEmail("");
-    setphoneNumber("");
-    setComName("");
-    setComWeb("");
-    setHear("");
-    setComment("");
-    setNameError("");
-    setNameError("");
-    setEmailError("");
-    setphoneNumberError("");
-    setComWebError("");
-    setComNameError("");
-    setHearError("");
-    setCommentError("");
-  };
-
-  const validateName = (name) => {
-    return name.length >= 0;
-  };
-
-  const validateLastName = (lastName) => {
-    return lastName.length >= 0;
+    window.location.href = "/";
   };
 
   const validateEmail = (email) => {
     // Regular expression for email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
-  };
-
-  const validatephoneNumber = (phoneNumber) => {
-    return phoneNumber.length >= 11;
-  };
-
-  const validatecomName = (comName) => {
-    return comName.length >= 0;
-  };
-
-  const validatecomWeb = (comWeb) => {
-    return comWeb.length >= 0;
-  };
-
-  const validateComment = (comment) => {
-    return comment.length >= 0;
-  };
-
-  const validatehear = (hear) => {
-    return hear.length >= 0;
   };
 
   const form = useRef();
@@ -126,7 +84,7 @@ function App() {
 
     emailjs
       .sendForm(
-        "service_so4bkjk",
+        "service_6z6j9vv",
         "template_l14i0u8",
         form.current,
         "KQagYOgrTv4yC0uV6"
@@ -140,6 +98,7 @@ function App() {
         }
       );
   };
+
   return (
     <>
       <div
@@ -218,14 +177,16 @@ function App() {
       </div>
 
       <div className="sec h-[120px] lg:h-[60vh] md:h-[200px] lg:pt-20 xl:h-[70vh] text-center pt-10 xl:pt-28">
-        <h1 data-aos="zoom-in"
+        <h1
+          data-aos="zoom-in"
           style={{ fontFamily: "Montserrat" }}
           className=" items-center h-0 font-semibold text-[11px] md:text-[25px] md:h-7 lg:h-12 lg:text-[34px] xl:h-12 xl:text-[42px] flex justify-center text-white"
         >
           FIND THE RIGHT TECH TALENT FOR YOUR BUSINESS
         </h1>
         <p
-          style={{ fontFamily: "Montserrat" }}  data-aos="zoom-in"
+          style={{ fontFamily: "Montserrat" }}
+          data-aos="zoom-in"
           className=" h-0 pt-5 xl:h-7 md:h-4 text-[#aeb1b6] text-[10px] md:text-xl xl:text-[32px] lg:text-2xl xl:pt-12"
         >
           DREAM JOBS, AFRICAN TOP TALENTS;{" "}
@@ -238,29 +199,47 @@ function App() {
         className=" bg-black h-[164px] xl:h-32 lg:h-32 px-0 text-[13px] md:text-[16px]  lg:text-[16px] xl:text-[16px] lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-16 "
       >
         <div className=" md:hidden flex flex-col lg:flex lg:flex-row lg:gap-[17px] lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-4 xl:gap-24 text-white">
-          <p data-aos="zoom-in" className=" flex text-center items-center gap-2 xl:gap-4">
+          <p
+            data-aos="zoom-in"
+            className=" flex text-center items-center gap-2 xl:gap-4"
+          >
             <img src={box} alt="box" />
             Access to Top Tech Talents in Africa
           </p>
-          <p data-aos="zoom-in" className=" flex text-center items-center gap-2 xl:gap-4">
+          <p
+            data-aos="zoom-in"
+            className=" flex text-center items-center gap-2 xl:gap-4"
+          >
             <img src={box} alt="box" />
             Gain Competitive Edge
           </p>
-          <p data-aos="zoom-in" className=" flex text-center items-center gap-2 xl:gap-4">
+          <p
+            data-aos="zoom-in"
+            className=" flex text-center items-center gap-2 xl:gap-4"
+          >
             <img src={box} alt="box" />
             Customized Solution for Your Business
           </p>
         </div>
         <div className=" xl:hidden lg:hidden hidden md:flex md:flex-col md:gap-5 md:pt-5 md:pl-[50px] text-white">
-          <p data-aos="zoom-in" className=" flex text-center items-center gap-4">
+          <p
+            data-aos="zoom-in"
+            className=" flex text-center items-center gap-4"
+          >
             <img src={box} alt="box" />
             Access to Top Tech Talents in Africa
           </p>
-          <p data-aos="zoom-in" className=" flex text-center items-center gap-4">
+          <p
+            data-aos="zoom-in"
+            className=" flex text-center items-center gap-4"
+          >
             <img src={box} alt="box" />
             Gain Competitive Edge
           </p>
-          <p data-aos="zoom-in" className=" flex text-center items-center gap-4">
+          <p
+            data-aos="zoom-in"
+            className=" flex text-center items-center gap-4"
+          >
             <img src={box} alt="box" />
             Customized Solution for Your Business
           </p>
@@ -318,7 +297,7 @@ function App() {
         </div> */}
       </div>
 
-      <div data-aos="flip-right"
+      <div
         style={{ fontFamily: "Montserrat" }}
         className=" xl:flex xl:justify-around pt-10 xl:px-[60px] lg:flex md:flex-col lg:flex-row xl:flex-row md:justify-around md:px-4 lg:justify-around lg:px-[20px]"
       >
@@ -421,7 +400,10 @@ function App() {
         </div>
         <div className="text-center items-center mt-10 flex flex-col gap-10 xl:gap-0">
           <div className=" flex justify-center mx-[25px]">
-            <div data-aos="zoom-in" className=" xl:flex md:gap-5 lg:gap-[30px] md:flex lg:flex xl:gap-[15px] flex flex-col md:flex-row lg:flex-row gap-6 justify-center">
+            <div
+              data-aos="zoom-in"
+              className=" xl:flex md:gap-5 lg:gap-[30px] md:flex lg:flex xl:gap-[15px] flex flex-col md:flex-row lg:flex-row gap-6 justify-center"
+            >
               <div className=" xl:h-[262px] lg:h-[262px] lg:w-[374px] pb-6 xl:pb-0 lg:pb-0 xl:w-[374px] bg-[#000] rounded-xl pt-4 xl:pt-8 flex flex-col">
                 <h1 className=" text-[#03cfd6] font-semibold  pb-2 xl:pb-4 flex justify-center">
                   RECRUITMENT
@@ -482,7 +464,10 @@ function App() {
           </div>
 
           <div className=" flex justify-center mx-[25px]">
-            <div data-aos="zoom-in" className=" xl:flex flex flex-col md:flex-row xl:flex-row lg:flex-row lg:pt-8 xl:gap-[15px] lg:gap-[30px] gap-5 xl:pt-8 items-center">
+            <div
+              data-aos="zoom-in"
+              className=" xl:flex flex flex-col md:flex-row xl:flex-row lg:flex-row lg:pt-8 xl:gap-[15px] lg:gap-[30px] gap-5 xl:pt-8 items-center"
+            >
               <div className="xl:h-[262px] xl:w-[374px] lg:h-[262px] lg:w-[374px] text-[#03cfd6] pb-6 xl:pb-0 lg:pb-0 font-semibold bg-[#000] rounded-xl pt-4 flex flex-col">
                 <h1 className="pb-2 xl:pb-4 flex justify-center">
                   TALENT HIRING
@@ -528,7 +513,10 @@ function App() {
             </div>
           </div>
           <div className=" flex justify-center">
-            <div data-aos="zoom-in" className="bg-[#000] mx-[20px] xl:mx-[60px] lg:mx-[60px] h-[350px] md:h-[316px] lg:h-[316px] md:mx-12 md:px-8 xl:h-[316px] rounded-xl xl:mt-10 lg:mt-10 pt-[20px] xl:pt-14 xl:px-28 flex flex-col items-center lg:px-20">
+            <div
+              data-aos="zoom-in"
+              className="bg-[#000] mx-[20px] xl:mx-[60px] lg:mx-[60px] h-[350px] md:h-[316px] lg:h-[316px] md:mx-12 md:px-8 xl:h-[316px] rounded-xl xl:mt-10 lg:mt-10 pt-[20px] xl:pt-14 xl:px-28 flex flex-col items-center lg:px-20"
+            >
               <h2 className=" lg:text-2xl text-xl xl:text-3xl text-white pb-4">
                 Reduce Costs through Outsourcing
               </h2>
@@ -596,7 +584,8 @@ function App() {
       </div> */}
 
       <div className=" flex justify-center">
-        <div data-aos="zoom-in"
+        <div
+          data-aos="zoom-in"
           style={{ fontFamily: "Montserrat" }}
           className=" xl:w-[1160px] xl:h-[456px] bg-[url('/src/assets/cover2.png')] bg-cover bg-center bg-no-repeat mt-10 pt-10 mb-10 mx-6 md:mx-12 xl:mx-0 lg:mx-[100px]"
         >
@@ -705,7 +694,10 @@ function App() {
             work with us for the progress of your business.
           </p>
         </div>
-        <div data-aos="flip-right" className=" flex flex-col xl:flex-row lg:flex-row md:flex-col justify-around mx-6 md:mx-12 lg:mx-[60px] xl:mx-[200px] gap-4">
+        <div
+          data-aos="flip-right"
+          className=" flex flex-col xl:flex-row lg:flex-row md:flex-col justify-around mx-6 md:mx-12 lg:mx-[60px] xl:mx-[200px] gap-4"
+        >
           <div className="jet pb-[20px] xl:h-[393px] lg:w-[520px] lg:h-[393px] xl:w-[520px]">
             <div className=" text-[#03CFD6] flex flex-col items-center p-3 xl:p-6 text-xl font-semibold">
               <img src={cost} alt="image" />
@@ -743,7 +735,10 @@ function App() {
             </p>
           </div>
         </div>
-        <div data-aos="flip-left" className=" flex flex-col xl:flex-row md:flex-col lg:flex-row justify-around mx-6 md:mx-12 lg:mx-[60px] xl:mx-[200px] gap-4">
+        <div
+          data-aos="flip-left"
+          className=" flex flex-col xl:flex-row md:flex-col lg:flex-row justify-around mx-6 md:mx-12 lg:mx-[60px] xl:mx-[200px] gap-4"
+        >
           <div className="jet pb-[20px] xl:h-[393px] lg:w-[520px] xl:w-[520px]">
             <div className=" text-[#03CFD6] flex flex-col items-center xl:p-6 p-4 text-xl font-semibold">
               <img src={team} alt="image" />
@@ -787,7 +782,10 @@ function App() {
           <h1 data-aos="zoom-in" className=" hidden xl:block lg:block md:block">
             Want your business to stand out?
           </h1>
-          <h1 data-aos="zoom-in" className=" xl:hidden text-center lg:hidden md:hidden">
+          <h1
+            data-aos="zoom-in"
+            className=" xl:hidden text-center lg:hidden md:hidden"
+          >
             Want your business <br /> to stand out?
           </h1>
         </div>
@@ -804,26 +802,35 @@ function App() {
           </div>
           <div data-aos="zoom-in" className=" items-center flex flex-col">
             <img src={business} alt="business" className=" pb-4" />
-            <p >
+            <p>
               Watch us offer you <br /> the best talents
             </p>
           </div>
         </div>
         <div className=" xl:hidden md:hidden lg:hidden pt-8 items-center text-center pb-10">
           <div className=" flex justify-around items-center text-center">
-            <div data-aos="zoom-in" className=" text-[15px] xl:text-[36px] items-center flex flex-col">
+            <div
+              data-aos="zoom-in"
+              className=" text-[15px] xl:text-[36px] items-center flex flex-col"
+            >
               <img src={group} alt="group" className=" pb-4" />
               <p>
                 Schedule your <br /> consultation
               </p>
             </div>
-            <div data-aos="zoom-in" className=" text-[15px] items-center flex flex-col">
+            <div
+              data-aos="zoom-in"
+              className=" text-[15px] items-center flex flex-col"
+            >
               <img src={customer} alt="customer" className=" pb-4" />
               <p>We contact you</p>
             </div>
           </div>
           <div className=" flex justify-center pt-4">
-            <div data-aos="zoom-in" className=" text-[15px] items-center flex flex-col">
+            <div
+              data-aos="zoom-in"
+              className=" text-[15px] items-center flex flex-col"
+            >
               <img src={business} alt="business" className=" pb-4" />
               <p>
                 Watch us offer you <br /> the best talents
@@ -1012,53 +1019,256 @@ function App() {
         style={{ fontFamily: "Montserrat" }}
         className=" bg-white pt-20 px-4 xl:px-0"
       >
-        <div className=" flex flex-col xl:ml-[130px] md:ml-5 lg:ml-20 md:w-[80%] lg:w-1/2 xl:w-1/2 gap-5 xl:pl-0">
+        <div className="flex flex-col xl:ml-[130px] md:ml-5 lg:ml-20 md:w-[80%] lg:w-1/2 xl:w-1/2 gap-5 xl:pl-0">
           <div className=" xl:text-3xl text-sm md:text-xl">
             <h1>Frequently Asked Questions</h1>
           </div>
-          <div className=" bg-black p-4 flex justify-between items-center text-white">
-            <p className=" flex items-center gap-4 xl:text-sm text-xs md:text-xl">
-              <img src={vector} alt="vector" />
-              What is Nupat Teams all about?
-            </p>
-            <img src={dot} alt="dot" />
-          </div>
-          <div className=" bg-black p-4 flex justify-between items-center text-white">
-            <p className=" flex items-center gap-4 text-xs xl:text-sm md:text-xl">
-              <img src={vector1} alt="vector1" />
-              Outsourcing services offered by NUPAT Outsourcing Agency?
-            </p>
-            <img src={dot} alt="dot" />
-          </div>
-          <div className=" bg-black p-4 flex justify-between items-center text-white">
-            <p className=" flex items-center gap-4 xl:text-sm text-xs md:text-xl">
-              <img src={vector5} alt="vector5" />
-              Does NUPAT Outsourcing Agency offer affordable service?
-            </p>
-            <img src={dot} alt="dot" />
-          </div>
-          <div className=" bg-black p-4 flex justify-between items-center text-white">
-            <p className=" flex items-center gap-4 xl:text-sm text-xs md:text-xl">
-              <img src={vector2} alt="vector2" />
-              Are clients information kept confidential?
-            </p>
-            <img src={dot} alt="dot" />
-          </div>
-          <div className=" bg-black p-4 flex justify-between items-center text-white">
-            <p className=" flex items-center gap-4 xl:text-sm text-xs md:text-xl">
-              <img src={vector3} alt="vector3" />
-              Does NUPAT Outsourcing Agency have adequate infrastructure to
-              support businesses?
-            </p>
-            <img src={dot} alt="dot" />
-          </div>
-          <div className=" bg-black p-4 flex justify-between items-center text-white">
-            <p className=" flex items-center gap-4 xl:text-sm text-xs md:text-xl">
-              <img src={vector4} alt="vector4" />I want to outsource to NUPAT
-              Outsourcing. What do i do?
-            </p>
-            <img src={dot} alt="dot" />
-          </div>
+
+          <Accordion>
+            <div className=" bg-black text-white p-2">
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{ color: "#ffff" }} />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>
+                  <div
+                    style={{ fontFamily: "Montserrat" }}
+                    className=" flex items-center gap-4 xl:text-sm text-xs md:text-xl"
+                  >
+                    <img src={vector} alt="vector" /> What is Nupat Teams?
+                  </div>
+                </Typography>
+              </AccordionSummary>
+            </div>
+            <AccordionDetails>
+              <Typography style={{ fontFamily: "Montserrat" }}>
+                Nupat Tearms is a global tech talent outsourcing company. We
+                specialize in providing business with highly skilled
+                professionals in various tech roles, including developers,
+                engineers, designer, and product managers, among others.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion>
+            <div className=" bg-black p-2 text-white">
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{ color: "#ffff" }} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+              >
+                <div>
+                  <Typography>
+                    <div
+                      style={{ fontFamily: "Montserrat" }}
+                      className=" flex items-center gap-4 xl:text-sm text-xs md:text-xl"
+                    >
+                      <img src={vector4} alt="vector4" />
+                      Can Nupat Teams scale its service as our business grows?
+                    </div>
+                  </Typography>
+                </div>
+              </AccordionSummary>
+            </div>
+            <AccordionDetails>
+              <Typography style={{ fontFamily: "Montserrat" }}>
+                Absolutely. We understand that business needs change over time.
+                Whether you require a single tech or an entire team, we have the
+                scalability to meet your evolving demands. Our vast network of
+                professionals allows us to quickly adapt and scale our service
+                accordingly.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion>
+            <div className=" bg-black p-2 text-white">
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{ color: "#ffff" }} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+              >
+                <div>
+                  <Typography>
+                    <div
+                      style={{ fontFamily: "Montserrat" }}
+                      className=" flex items-center gap-4 xl:text-sm text-xs md:text-xl"
+                    >
+                      <img src={vector1} alt="vector1" />
+                      How does Nupat Teams differ from traditional staffing
+                      agencies?
+                    </div>
+                  </Typography>
+                </div>
+              </AccordionSummary>
+            </div>
+            <AccordionDetails>
+              <Typography style={{ fontFamily: "Montserrat" }}>
+                Unlike traditional staffing agencies, Nupat Teams goes beyond
+                simply providing developers and engineers. We offer a
+                comprehensive range of tech talents, including product managers
+                and designers, to meet diverse business needs. Our expertise
+                lies in sourcing and matching top-qulity professionals to our
+                clients' specific requirement.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion>
+            <div className=" bg-black p-2 text-white">
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{ color: "#ffff" }} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+              >
+                <div>
+                  <Typography>
+                    <div
+                      style={{ fontFamily: "Montserrat" }}
+                      className=" flex items-center gap-4 xl:text-sm text-xs md:text-xl"
+                    >
+                      <img src={vector5} alt="vector5" />
+                      What is the pricing structure for Nupat Teams' services?
+                    </div>
+                  </Typography>
+                </div>
+              </AccordionSummary>
+            </div>
+            <AccordionDetails>
+              <Typography style={{ fontFamily: "Montserrat" }}>
+                We offer two pricing options: a one-time placement fee for
+                permanent recruitement and commission-based monthly fee for
+                outsourcing placements. Our flexible pricing models ensures that
+                you can choose the option that aligns with your hiring needs
+                budget.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion>
+            <div className=" bg-black p-2 text-white">
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{ color: "#ffff" }} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+              >
+                <div>
+                  <Typography>
+                    <div
+                      style={{ fontFamily: "Montserrat" }}
+                      className=" flex items-center gap-4 xl:text-sm text-xs md:text-xl"
+                    >
+                      <img src={vector2} alt="vector2" />
+                      What is the process for hiring tech talent through Nupat
+                      Teams?
+                    </div>
+                  </Typography>
+                </div>
+              </AccordionSummary>
+            </div>
+            <AccordionDetails>
+              <Typography style={{ fontFamily: "Montserrat" }}>
+                The process is simple. first, we understand your specific talent
+                requirements and project scope. Than, we leverage our extensive
+                network and industry expertise to identify the most suitable
+                candidates. Once we find the right match, we handle all the
+                necessary paperwork and facilitate a smooth onboarding process.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion>
+            <div className=" bg-black p-2 text-white">
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{ color: "#ffff" }} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+              >
+                <div>
+                  <Typography>
+                    <div
+                      style={{ fontFamily: "Montserrat" }}
+                      className=" flex items-center gap-4 xl:text-sm text-xs md:text-xl"
+                    >
+                      <img src={vector4} alt="vector4" />
+                      How can I get started with Nupat Teams?
+                    </div>
+                  </Typography>
+                </div>
+              </AccordionSummary>
+            </div>
+            <AccordionDetails>
+              <Typography style={{ fontFamily: "Montserrat" }}>
+                Getting started is easy. Simply reach out to us through our
+                contact form or give us a call. Our team will be happy to
+                discuss your talent requirements and guide you through the
+                process of partnering with Nupat Teams.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion>
+            <div className=" bg-black p-2 text-white">
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{ color: "#ffff" }} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+              >
+                <div>
+                  <Typography>
+                    <div
+                      style={{ fontFamily: "Montserrat" }}
+                      className=" flex items-center gap-4 xl:text-sm text-xs md:text-xl"
+                    >
+                      <img src={vector3} alt="vector3" />
+                      What industries does Nupat Teams serve?
+                    </div>
+                  </Typography>
+                </div>
+              </AccordionSummary>
+            </div>
+            <AccordionDetails>
+              <Typography style={{ fontFamily: "Montserrat" }}>
+                We carter to a wide range of industries, including but not
+                limited to technology, e-commerce, financial, healthcare, and
+                startups. Our talent pool is highly adaptale, allowing us to
+                serve business across various sectors.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
+
+          <Accordion>
+            <div className=" bg-black p-2 text-white">
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{ color: "#ffff" }} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+              >
+                <div>
+                  <Typography>
+                    <div
+                      style={{ fontFamily: "Montserrat" }}
+                      className=" flex items-center gap-4 xl:text-sm text-xs md:text-xl"
+                    >
+                      <img src={vector4} alt="vector4" />
+                      How does Nupat Teams ensure the quality of its tech
+                      talents
+                    </div>
+                  </Typography>
+                </div>
+              </AccordionSummary>
+            </div>
+            <AccordionDetails>
+              <Typography style={{ fontFamily: "Montserrat" }}>
+                At Nupat, we have a rigorous screeing and vetting process. We
+                evaluate candidates based on their technical skills, experience,
+                and cultural fit. we also conduct thoroughly background checks
+                and reference verification to ensure that our clients receive
+                top-tiers professionals.
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
         </div>
       </div>
 
@@ -1157,10 +1367,22 @@ function App() {
               info@nupat.com.ng
             </p>
             <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-5">
-              <img src={foot4} alt="foot4" />
+              <a href="https://www.instagram.com/nupat_teams/" target="_blank">
+                <img src={foot4} alt="foot4" />
+              </a>
               <img src={foot5} alt="foot5" className=" h-8" />
-              <img src={foot6} alt="foot6" className=" h-7" />
-              <img src={foot7} alt="foot7" className=" h-7" />
+              <a
+                href="https://twitter.com/NupatTeams?t=7iM3cAQTKvTV0F_wix6D5w&s=09"
+                target="_blank"
+              >
+                <img src={foot6} alt="foot6" className=" h-7" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/nupatteams/"
+                target="_blank"
+              >
+                <img src={foot7} alt="foot7" className=" h-7" />
+              </a>
             </div>
           </div>
         </div>
@@ -1223,6 +1445,12 @@ import { Link } from "react-router-dom";
 
 import emailjs from "emailjs-com";
 import { useRef, useEffect } from "react";
-import 'aos/dist/aos.css';
-import AOS from 'aos';
+import "aos/dist/aos.css";
+import AOS from "aos";
 
+import * as React from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";

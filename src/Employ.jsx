@@ -26,88 +26,48 @@ const Employ = () => {
   const validateForm = (event) => {
     event.preventDefault();
 
-    if (!validateSalary(salary)) {
+    if (salary.trim() === "") {
       setSalaryError("Please fill up this field.");
+      return;
     }
-    if (!validateCurrent(current)) {
+    if (current.trim() === "") {
       setCurrentError("Please fill up this field.");
+      return;
     }
-    if (!validateEmployment(employment)) {
+    if (employment.trim() === "") {
       setEmploymentError("Please fill up this field.");
+      return;
     }
-    if (!validateRole(role)) {
+    if (role.trim() === "") {
       setRoleError("Please fill up this field.");
+      return;
     }
-    if (!validateYear(year)) {
+    if (year.trim() === "") {
       setYearError("Please fill up this field.");
+      return;
     }
-    if (!validateNotice(notice)) {
+    if (notice.trim() === "") {
       setNoticeError("Please fill up this field.");
+      return;
     }
-    if (!validateLanguage(language)) {
+    if (language.trim() === "") {
       setLanguageError("Please fill up this field.");
+      return;
     }
-    if (!validateSkills(skills)) {
+    if (skills.trim() === "") {
       setSkillError("Please fill up this field.");
+      return;
     }
-    if (!validateLinkendin(linkendin)) {
+    if (linkendin.trim() === "") {
       setLinkendinError("Please fill up this field.");
+      return;
     }
-    if (!validateGithub(github)) {
+    if (github.trim() === "") {
       setGithubError("Please fill up this field.");
+      return;
     }
 
-    alert("Form submitted successfully!");
-    setSalary("");
-    setCurrent("");
-    setEmployment("");
-    setRole("");
-    setYear("");
-    setNotice("");
-    setLanguage("");
-    setSkill("");
-    setLinkendin("");
-    setGithub("");
-  };
-
-  const validateSalary = (salary) => {
-    return salary.length >= 0;
-  };
-
-  const validateCurrent = (current) => {
-    return current.length >= 0;
-  };
-
-  const validateEmployment = (employment) => {
-    return employment.length >= 0;
-  };
-
-  const validateRole = (role) => {
-    return role.length >= 0;
-  };
-
-  const validateYear = (year) => {
-    return year.length >= 0;
-  };
-
-  const validateNotice = (notice) => {
-    return notice.length >= 0;
-  };
-
-  const validateLanguage = (language) => {
-    return language.length >= 0;
-  };
-
-  const validateSkills = (skills) => {
-    return skills.length >= 0;
-  };
-
-  const validateLinkendin = (linkendin) => {
-    return linkendin.length >= 0;
-  };
-
-  const validateGithub = (github) => {
-    return github.length >= 0;
+    window.location.href = "/additional";
   };
 
   const form = useRef();
@@ -118,7 +78,7 @@ const Employ = () => {
     emailjs
       .sendForm(
         "service_6z6j9vv",
-        "template_04ujg5i",
+        "template_l14i0u8",
         form.current,
         "KQagYOgrTv4yC0uV6"
       )
@@ -164,7 +124,7 @@ const Employ = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_salaryUssd"
+                    name="user_salary"
                     value={salary}
                     onChange={(e) => setSalary(e.target.value)}
                     required
@@ -176,7 +136,7 @@ const Employ = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_currentOrganisation"
+                    name="user_organisation"
                     value={current}
                     onChange={(e) => setCurrent(e.target.value)}
                     required
@@ -190,7 +150,7 @@ const Employ = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_employmentStatus"
+                    name="user_status"
                     value={employment}
                     onChange={(e) => setEmployment(e.target.value)}
                     required
@@ -202,7 +162,7 @@ const Employ = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_role/job"
+                    name="user_role"
                     value={role}
                     onChange={(e) => setRole(e.target.value)}
                     required
@@ -216,7 +176,7 @@ const Employ = () => {
                   <input
                     type="radius"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_yearsOfExperience"
+                    name="user_experience"
                     value={year}
                     onChange={(e) => setYear(e.target.value)}
                     required
@@ -228,7 +188,7 @@ const Employ = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_noticePeriod"
+                    name="user_period"
                     value={notice}
                     onChange={(e) => setNotice(e.target.value)}
                     required
@@ -244,7 +204,7 @@ const Employ = () => {
                   </p>
                   <textarea
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_languageFramework"
+                    name="user_programmingLanguage"
                     value={language}
                     onChange={(e) => setLanguage(e.target.value)}
                     required
@@ -257,7 +217,7 @@ const Employ = () => {
                   <p>* Other technical skills</p>
                   <textarea
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_otherTechnicalSkill"
+                    name="user_technicalSkill"
                     value={skills}
                     onChange={(e) => setSkill(e.target.value)}
                     required
@@ -275,7 +235,7 @@ const Employ = () => {
                     placeholder="https://linkendin.com/in/myusername"
                     type="radius"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_linkedinProfile"
+                    name="user_linkedin"
                     value={linkendin}
                     onChange={(e) => setLinkendin(e.target.value)}
                     required
@@ -288,7 +248,7 @@ const Employ = () => {
                     placeholder="https://github.com/myusername"
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_githubURL"
+                    name="user_github"
                     value={github}
                     onChange={(e) => setGithub(e.target.value)}
                     required
@@ -330,7 +290,7 @@ const Employ = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_salaryUssd"
+                    name="user_salary"
                     value={salary}
                     onChange={(e) => setSalary(e.target.value)}
                     required
@@ -342,7 +302,7 @@ const Employ = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_currentOrganisation"
+                    name="user_organisation"
                     value={current}
                     onChange={(e) => setCurrent(e.target.value)}
                     required
@@ -356,7 +316,7 @@ const Employ = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_employmentStatus"
+                    name="user_status"
                     value={employment}
                     onChange={(e) => setEmployment(e.target.value)}
                     required
@@ -368,7 +328,7 @@ const Employ = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_role/job"
+                    name="user_role"
                     value={role}
                     onChange={(e) => setRole(e.target.value)}
                     required
@@ -382,7 +342,7 @@ const Employ = () => {
                   <input
                     type="radius"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_yearsOfExperience"
+                    name="user_experience"
                     value={year}
                     onChange={(e) => setYear(e.target.value)}
                     required
@@ -394,7 +354,7 @@ const Employ = () => {
                   <input
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_noticePeriod"
+                    name="user_period"
                     value={notice}
                     onChange={(e) => setNotice(e.target.value)}
                     required
@@ -410,7 +370,7 @@ const Employ = () => {
                   </p>
                   <textarea
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_languageFramework"
+                    name="user_programmingLanguage"
                     value={language}
                     onChange={(e) => setLanguage(e.target.value)}
                     required
@@ -422,7 +382,7 @@ const Employ = () => {
                 <p>* Other technical skills</p>
                 <textarea
                   className=" h-[48px] w-[100%] text-black pl-2"
-                  name="user_otherTechnicalSkill"
+                  name="user_technicalSkill"
                   value={skills}
                   onChange={(e) => setSkill(e.target.value)}
                   required
@@ -439,7 +399,7 @@ const Employ = () => {
                     placeholder="https://linkendin.com/in/myusername"
                     type="radius"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_linkedinProfile"
+                    name="user_linkedin"
                     value={linkendin}
                     onChange={(e) => setLinkendin(e.target.value)}
                     required
@@ -452,7 +412,7 @@ const Employ = () => {
                     placeholder="https://github.com/myusername"
                     type="text"
                     className=" h-[48px] w-[100%] text-black pl-2"
-                    name="user_githubURL"
+                    name="user_github"
                     value={github}
                     onChange={(e) => setGithub(e.target.value)}
                     required
@@ -475,7 +435,6 @@ const Employ = () => {
 
 export default Employ;
 
-// import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
 import { useRef, useState } from "react";
 import logo from "./assets/logo.png";

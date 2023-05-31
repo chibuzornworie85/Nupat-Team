@@ -27,12 +27,14 @@ const Contact = () => {
   const validateForm = (event) => {
     event.preventDefault();
 
-    if (!validateName(name)) {
+    if (name.trim() === "") {
       setNameError("Please add your name.");
+      return;
     }
 
-    if (!validateLastName(lastName)) {
+    if (lastName.trim() === "") {
       setLastNameError("Please add your last name.");
+      return;
     }
 
     if (!validateEmail(email)) {
@@ -40,84 +42,40 @@ const Contact = () => {
       return;
     }
 
-    if (!validatephoneNumber(phoneNumber)) {
-      setPasswordError(
+    if (phoneNumber.trim() === "") {
+      setphoneNumberError(
         "Please enter a phoneNumber with at least 11 characters."
       );
       return;
     }
 
-    if (!validatecomName(comName)) {
+    if (comName.trim() === "") {
       setComNameError("Please enter your company name.");
       return;
     }
 
-    if (!validatecomWeb(comWeb)) {
+    if (comWeb.trim() === "") {
       setComWebError("Please enter website name.");
       return;
     }
 
-    if (!validateComment(comment)) {
+    if (comment.trim() === "") {
       setCommentError("Please enter a comment.");
       return;
     }
 
-    if (!validatehear(hear)) {
+    if (hear.trim() === "") {
       setHearError("Please enter any social media.");
       return;
     }
 
-    alert("Form submitted successfully!");
-    setName("");
-    setLastName("");
-    setEmail("");
-    setphoneNumber("");
-    setComName("");
-    setComWeb("");
-    setHear("");
-    setComment("");
-    setNameError("");
-    setNameError("");
-    setEmailError("");
-    setphoneNumberError("");
-    setComWebError("");
-    setComNameError("");
-    setHearError("");
-    setCommentError("");
-  };
-
-  const validateName = (name) => {
-    return name.length >= 0;
-  };
-
-  const validateLastName = (lastName) => {
-    return lastName.length >= 0;
+    window.location.href = "/";
   };
 
   const validateEmail = (email) => {
     // Regular expression for email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
-  };
-
-  const validatephoneNumber = (phoneNumber) => {
-    return phoneNumber.length >= 11;
-  };
-
-  const validatecomName = (comName) => {
-    return comName.length >= 0;
-  };
-
-  const validatecomWeb = (comWeb) => {
-    return comWeb.length >= 0;
-  };
-
-  const validateComment = (comment) => {
-    return comment.length >= 0;
-  };
-
-  const validatehear = (hear) => {
-    return hear.length >= 0;
   };
 
   const form = useRef();
@@ -127,7 +85,7 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_so4bkjk",
+        "service_6z6j9vv",
         "template_l14i0u8",
         form.current,
         "KQagYOgrTv4yC0uV6"
@@ -254,10 +212,16 @@ const Contact = () => {
         className="sec1 h-[104px] lg:h-72 md:h-[200px] xl:h-72 flex justify-center text-center items-center "
       >
         <div className="">
-          <h1 data-aos="zoom-in" className=" hit text-base md:text-2xl md:pb-5 lg:text-3xl xl:text-3xl lg:pb-8 xl:pb-10 font-semibold ">
+          <h1
+            data-aos="zoom-in"
+            className=" hit text-base md:text-2xl md:pb-5 lg:text-3xl xl:text-3xl lg:pb-8 xl:pb-10 font-semibold "
+          >
             CONTACT US
           </h1>
-          <p data-aos="zoom-in" className=" text-white text-xs xl:text-2xl md:text-xl lg:text-2xl">
+          <p
+            data-aos="zoom-in"
+            className=" text-white text-xs xl:text-2xl md:text-xl lg:text-2xl"
+          >
             Get in touch with us today
           </p>
         </div>
@@ -268,23 +232,38 @@ const Contact = () => {
         className=" bg-black text-white lg:h-52 md:mx-10 lg:mx-28 lg:p-0 lg:mt-3 xl:h-[247px] xl:w-[120  0px] xl:mx-[90px] mt-3 xl:mt-6 p-6 xl:p-0"
       >
         <div className=" flex flex-col xl:items-center lg:items-center md:items-center xl:pt-10">
-          <h1 data-aos="zoom-in" className="hidden lg:block xl:block text-4xl pt-6 md:block">
+          <h1
+            data-aos="zoom-in"
+            className="hidden lg:block xl:block text-4xl pt-6 md:block"
+          >
             HOW CAN WE BE OF SERVICE TO YOU?
           </h1>
-          <h1 data-aos="zoom-in" className=" text-sm xl:hidden lg:hidden md:hidden">
+          <h1
+            data-aos="zoom-in"
+            className=" text-sm xl:hidden lg:hidden md:hidden"
+          >
             HOW CAN WE BE OF SERVICE <br /> TO YOU?
           </h1>
-          <p data-aos="zoom-in" className="hidden xl:block text-xl xl:pt-6 md:pt-6 lg:pt-6 lg:hidden md:hidden">
+          <p
+            data-aos="zoom-in"
+            className="hidden xl:block text-xl xl:pt-6 md:pt-6 lg:pt-6 lg:hidden md:hidden"
+          >
             Thank you for your interest in Nupat Teams Outsourcing services. For
             us to help you better, <br /> please take a moment to complete this
             form and we will get in touch with you soon.
           </p>
-          <p data-aos="zoom-in" className="hidden xl:hidden text-xl xl:pt-6 md:pt-6 lg:pt-6 lg:block lg:p-6 md:block">
+          <p
+            data-aos="zoom-in"
+            className="hidden xl:hidden text-xl xl:pt-6 md:pt-6 lg:pt-6 lg:block lg:p-6 md:block"
+          >
             Thank you for your interest in Nupat Teams Outsourcing services. For
             us to help you better, please take a moment to complete this form
             and we will get in touch with you soon.
           </p>
-          <p data-aos="zoom-in" className=" text-xs pt-4 xl:hidden lg:hidden md:hidden">
+          <p
+            data-aos="zoom-in"
+            className=" text-xs pt-4 xl:hidden lg:hidden md:hidden"
+          >
             Thank you for your interest in Nupat Teams Outsourcing services. For
             us to help you better, please take a moment to complete this form
             and we will get in touch with you soon.
@@ -292,7 +271,8 @@ const Contact = () => {
         </div>
       </div>
 
-      <div data-aos="flip-right"
+      <div
+        data-aos="flip-right"
         style={{ fontFamily: "Montserrat" }}
         className=" bg-white pt-5 md:pt-14 lg:pt-14 md:px-10 lg:px-12 xl:pt-14 xl:px-12 px-4"
       >
@@ -451,10 +431,25 @@ const Contact = () => {
                 +2348031958586, +2347081475750
               </p>
               <div className=" flex justify-center items-center bg-white p-4 gap-4 h-14 lg:h-16 xl:h-16 mb-4 xl:mb-20">
-                <img src={foot4} alt="" />
+                <a
+                  href="https://www.instagram.com/nupat_teams/"
+                  target="_blank"
+                >
+                  <img src={foot4} alt="foot4" />
+                </a>
                 <img src={foot5} alt="foot5" className=" h-8" />
-                <img src={foot6} alt="foot6" className=" h-7" />
-                <img src={foot7} alt="foot7" className=" h-7" />
+                <a
+                  href="https://twitter.com/NupatTeams?t=7iM3cAQTKvTV0F_wix6D5w&s=09"
+                  target="_blank"
+                >
+                  <img src={foot6} alt="foot6" className=" h-7" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/nupatteams/"
+                  target="_blank"
+                >
+                  <img src={foot7} alt="foot7" className=" h-7" />
+                </a>
               </div>
             </div>
             <div className=" xl:flex md:flex justify-end relative md:top-28 lg:top-28 xl:top-28 md:-mt-28 lg:-mt-28 xl:-mt-28 hidden">
@@ -561,10 +556,22 @@ const Contact = () => {
               info@nupat.com.ng
             </p>
             <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
-              <img src={foot4} alt="foot4" />
+              <a href="https://www.instagram.com/nupat_teams/" target="_blank">
+                <img src={foot4} alt="foot4" />
+              </a>
               <img src={foot5} alt="foot5" className=" h-8" />
-              <img src={foot6} alt="foot6" className=" h-7" />
-              <img src={foot7} alt="foot7" className=" h-7" />
+              <a
+                href="https://twitter.com/NupatTeams?t=7iM3cAQTKvTV0F_wix6D5w&s=09"
+                target="_blank"
+              >
+                <img src={foot6} alt="foot6" className=" h-7" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/nupatteams/"
+                target="_blank"
+              >
+                <img src={foot7} alt="foot7" className=" h-7" />
+              </a>
             </div>
           </div>
         </div>

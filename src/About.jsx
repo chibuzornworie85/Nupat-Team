@@ -2,7 +2,7 @@ function About() {
   const [navClose, setNavClose] = useState(true);
   const [drop, setDrop] = useState(true);
   useEffect(() => {
-    AOS.init({duration:3000});
+    AOS.init({ duration: 3000 });
   }, []);
   // const form = useRef();
 
@@ -138,10 +138,16 @@ function About() {
         className="back flex xl:h-72 lg:h-72 md:h-[200px] h-[104px] justify-center items-center text-center"
       >
         <div className="">
-          <h1 data-aos="zoom-in" className="hit font-semibold xl:text-3xl md:text-2xl lg:text-3xl lg:pb-10 text-base pb-5 xl:pb-10 ">
+          <h1
+            data-aos="zoom-in"
+            className="hit font-semibold xl:text-3xl md:text-2xl lg:text-3xl lg:pb-10 text-base pb-5 xl:pb-10 "
+          >
             WHY CHOOSE NUPAT
           </h1>
-          <p data-aos="zoom-in"  className=" text-white text-xs xl:text-2xl lg:text-2xl md:text-xl">
+          <p
+            data-aos="zoom-in"
+            className=" text-white text-xs xl:text-2xl lg:text-2xl md:text-xl"
+          >
             GET TO KNOW WHY WE STAND OUT IN WHAT WE DO
           </p>
         </div>
@@ -153,7 +159,10 @@ function About() {
       >
         <div className=" xl:flex flex lg:flex flex-col lg:flex-col xl:flex-row xl:gap-[80px] justify-around lg:px-10 xl:px-14">
           <div className=" px-6 xl:px-6 lg:px-0 md:mx-4 lg:mx-4 xl:mx-0">
-            <div data-aos="flip-right" className=" flex lg:gap-[10px] gap-2 xl:gap-0 lg:flex xl:block">
+            <div
+              data-aos="flip-right"
+              className=" flex lg:gap-[10px] gap-2 xl:gap-0 lg:flex xl:block"
+            >
               <div className="pic1 relative xl:left-[15px] h-[300px] w-[300px]">
                 <img src={pic1} alt="pic1" />
               </div>
@@ -164,11 +173,17 @@ function About() {
                 <img src={pic3} alt="pic3" />
               </div>
             </div>
-            <div data-aos="flip-left" className=" relative px-20 xl:px-0 bottom-8 lg:flex lg:justify-center md:ml-20 lg:pt-3 -mb-8 xl:left-[90px] xl:bottom-[200px] xl:-mb-[200px]">
+            <div
+              data-aos="flip-left"
+              className=" relative px-20 xl:px-0 bottom-8 lg:flex lg:justify-center md:ml-20 lg:pt-3 -mb-8 xl:left-[90px] xl:bottom-[200px] xl:-mb-[200px]"
+            >
               <img src={pic4} alt="pic4" />
             </div>
           </div>
-          <div data-aos="zoom-in" className=" xl:pt-40 lg:pt-[20px] lg:pl-[20px] xl:pl-0">
+          <div
+            data-aos="zoom-in"
+            className=" xl:pt-40 lg:pt-[20px] lg:pl-[20px] xl:pl-0"
+          >
             <p className=" bg-[#03CFD6] text-xl xl:text-2xl lg:text-2xl md:text-2xl md:flex lg:flex xl:flex flex text-center justify-center mx-6 mt-8 lg:mt-0 lg:mx-0 xl:mt-0 w-36 xl:mx-0 rounded-xl xl:w-52 lg:w-52 md:w-52 md:p-2 lg:p-2 xl:p-2 items-center text-black mb-4 lg:mb-4 lg:pl-5 xl:mb-4 xl:pl-5 md:ml-10">
               About Us
             </p>
@@ -237,7 +252,10 @@ function About() {
         </h1>
         <div className=" flex justify-center">
           <div className="value xl:mx-[90px] pb-12 pt-12 lg:mx-16 md:mx-10 xl:h-[780px] xl:w-[1232px] xl:px-0 lg:px-0 px-[30px]">
-            <div data-aos="zoom-in" className="flex flex-col gap-8 xl:gap-0 lg:gap-0 md:gap-0 md:flex-row xl:flex-row lg:flex-row xl:flex justify-around text-center pb-10">
+            <div
+              data-aos="zoom-in"
+              className="flex flex-col gap-8 xl:gap-0 lg:gap-0 md:gap-0 md:flex-row xl:flex-row lg:flex-row xl:flex justify-around text-center pb-10"
+            >
               <div>
                 <div className=" flex justify-center p-4">
                   <img src={group} alt="group" />
@@ -266,7 +284,10 @@ function About() {
                 </p>
               </div>
             </div>
-            <div data-aos="zoom-in" className="flex flex-col xl:flex-row md:flex-row lg:flex-row xl:flex justify-around text-center gap-8 xl:gap-0 xl:pt-10 pb-10">
+            <div
+              data-aos="zoom-in"
+              className="flex flex-col xl:flex-row md:flex-row lg:flex-row xl:flex justify-around text-center gap-8 xl:gap-0 xl:pt-10 pb-10"
+            >
               <div>
                 <div className=" flex justify-center p-4">
                   <img src={group3} alt="group3" />
@@ -354,7 +375,10 @@ function About() {
 
         <div className=" flex justify-center">
           <div className="team hidden font-semibold lg:flex xl:flex text-black mt-12 pt-12 flex-col gap-10 lg:px-[40px] xl:px-20 pb-16 md:flex mx-5 xl:mx-0 lg:mx-0 xl:w-[1190px]">
-            <div data-aos="zoom-in"  className=" xl:flex lg:flex xl:justify-around lg:justify-around xl:gap-10 lg:gap-4 md:grid md:grid-cols-2 md:gap-24">
+            <div
+              data-aos="zoom-in"
+              className=" xl:flex lg:flex xl:justify-around lg:justify-around xl:gap-10 lg:gap-4 md:grid md:grid-cols-2 md:gap-24"
+            >
               <div>
                 <div className=" h-72 xl:w-[300px] xl:h-[280px] lg:w-52 rounded-3xl relative xl:left-6 lg:left-6 md:left-3 -mt-[160px] top-[160px]">
                   <img src={ceo} className="image object-cover" alt="" />
@@ -393,7 +417,10 @@ function About() {
               </div>
             </div>
 
-            <div data-aos="zoom-in"  className=" xl:flex lg:flex lg:justify-around xl:justify-around gap-12 md:grid md:grid-cols-2 md:gap-24 xl:gap-10 lg:gap-12">
+            <div
+              data-aos="zoom-in"
+              className=" xl:flex lg:flex lg:justify-around xl:justify-around gap-12 md:grid md:grid-cols-2 md:gap-24 xl:gap-10 lg:gap-12"
+            >
               <div className="md:hidden xl:block lg:block">
                 <div className=" h-72 xl:w-[300px] lg:w-52 rounded-3xl relative left-6 -mt-[160px] top-[160px] ">
                   <img src={cbo} className="image object-cover" alt="" />
@@ -426,7 +453,7 @@ function About() {
                 </div>
               </div>
             </div>
-            <div data-aos="zoom-in"  className=" flex flex-col items-center">
+            <div data-aos="zoom-in" className=" flex flex-col items-center">
               <div className="image h-72 xl:w-[300px] lg:w-52 w-72 rounded-3xl relative xl:left-0 lg:left-0 md:left-3 -mt-[160px] top-[160px]">
                 <img src={deon} className="image object-cover" alt="an image" />
               </div>
@@ -444,7 +471,10 @@ function About() {
           style={{ fontFamily: "Montserrat" }}
           className="bg-[url('/src/assets/about/bg2.png')] xl:w-[1076px] xl:h-[280px] bg-no-repeat bg-center bg-cover xl:px-0 lg:px-[50px] px-2 mx-6 md:mt-20 h-36 md:h-72 lg:h-72 text-white lg:pt-5 xl:pt-10 md:mx-24 lg:mx-36 lg:mt-10 xl:mx-[130px] mt-5 xl:mt-10"
         >
-          <div data-aos="flip-right" className="flex justify-around items-center">
+          <div
+            data-aos="flip-right"
+            className="flex justify-around items-center"
+          >
             <div className=" text-[10px] xl:text-3xl lg:text-2xl md:text-xl xl:h-[117px] w-[183.29px] md:w-[519px] xl:w-[519px]">
               <h1>
                 Schedule a free consultaion to take your business to the next
@@ -634,10 +664,22 @@ function About() {
               info@nupat.com.ng
             </p>
             <div className="flex items-center justify-start gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
-              <img src={foot4} alt="foot4" />
+              <a href="https://www.instagram.com/nupat_teams/" target="_blank">
+                <img src={foot4} alt="foot4" />
+              </a>
               <img src={foot5} alt="foot5" className=" h-8" />
-              <img src={foot6} alt="foot6" className=" h-7" />
-              <img src={foot7} alt="foot7" className=" h-7" />
+              <a
+                href="https://twitter.com/NupatTeams?t=7iM3cAQTKvTV0F_wix6D5w&s=09"
+                target="_blank"
+              >
+                <img src={foot6} alt="foot6" className=" h-7" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/nupatteams/"
+                target="_blank"
+              >
+                <img src={foot7} alt="foot7" className=" h-7" />
+              </a>
             </div>
           </div>
         </div>
@@ -689,8 +731,8 @@ import foot6 from "./assets/foot6.png";
 import foot7 from "./assets/foot7.png";
 
 import { useEffect } from "react";
-import 'aos/dist/aos.css';
-import AOS from 'aos';
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 // import emailjs from "emailjs-com";
 // import { useRef } from "react";

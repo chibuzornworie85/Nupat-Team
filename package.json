@@ -9,6 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/joy": "^5.0.0-alpha.82",
+    "@mui/material": "^5.13.3",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "emailjs-com": "^3.2.0",

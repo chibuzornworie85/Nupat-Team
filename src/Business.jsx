@@ -3,7 +3,7 @@ const Business = () => {
   const [drop, setDrop] = useState(true);
 
   useEffect(() => {
-    AOS.init({duration:3000});
+    AOS.init({ duration: 3000 });
   }, []);
 
   // const form = useRef();
@@ -151,7 +151,10 @@ const Business = () => {
         style={{ fontFamily: "Montserrat" }}
         className="bg-[url('/src/assets/business/bg1.png')] bg-no-repeat bg-center bg-cover"
       >
-        <div data-aos="zoom-in" className=" xl:py-32 lg:py-32 md:py-12 py-12 pl-7 text-white md:pl-12 lg:pl-[60px] xl:pl-[100px]">
+        <div
+          data-aos="zoom-in"
+          className=" xl:py-32 lg:py-32 md:py-12 py-12 pl-7 text-white md:pl-12 lg:pl-[60px] xl:pl-[100px]"
+        >
           <h1 className=" font-semibold text-[13px] lg:text-3xl md:text-3xl xl:text-4xl xl:pb-4 pb-2">
             Outsource for Success, Hire Competency...
           </h1>
@@ -161,11 +164,12 @@ const Business = () => {
         </div>
       </div>
 
-      <div data-aos="zoom-in"
+      <div
+        data-aos="zoom-in"
         style={{ fontFamily: "Montserrat" }}
         className=" bg-black h-[164px] xl:h-32 lg:h-32 px-0 text-[14px] lg:text-[16px] xl:text-[16px] lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-16 "
       >
-           <div className=" md:hidden flex flex-col lg:flex lg:flex-row lg:gap-[17px] lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-4 xl:gap-24 text-white">
+        <div className=" md:hidden flex flex-col lg:flex lg:flex-row lg:gap-[17px] lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-4 xl:gap-24 text-white">
           <p className=" flex text-center items-center gap-2 xl:gap-4">
             <img src={box} alt="box" />
             Access to Top Tech Talents in Africa
@@ -196,7 +200,8 @@ const Business = () => {
         </div>
       </div>
 
-      <div data-aos="zoom-in"
+      <div
+        data-aos="zoom-in"
         style={{ fontFamily: "Montserrat" }}
         className=" flex flex-col lg:flex-row xl:flex-row justify-around md:px-10 px-10 lg:px-[30px] xl:px-12 mt-10"
       >
@@ -225,7 +230,8 @@ const Business = () => {
       </div>
 
       <div
-        style={{ fontFamily: "Montserrat" }} data-aos="zoom-in"
+        style={{ fontFamily: "Montserrat" }}
+        data-aos="zoom-in"
         className=" flex flex-col lg:flex-row xl:flex-row justify-around items-center pt-10 lg:gap-72 xl:gap-72 lg:pl-20 lg:px-1 xl:px-12"
       >
         <Link to="/faq">
@@ -303,7 +309,9 @@ const Business = () => {
             point.
           </p>
 
-          <h1 className=" font-semibold text-[15px] lg:text-xl xl:text-2xl">Cost Transformation</h1>
+          <h1 className=" font-semibold text-[15px] lg:text-xl xl:text-2xl">
+            Cost Transformation
+          </h1>
 
           <p className=" hidden xl:block lg:block">
             Genuine cost change is tied in with disentangling, pulling together
@@ -321,7 +329,9 @@ const Business = () => {
             and consistently improve a reasonable cost of executives culture.
           </p>
 
-          <h1 className=" font-semibold text-[15px] lg:text-xl xl:text-2xl">Strategy</h1>
+          <h1 className=" font-semibold text-[15px] lg:text-xl xl:text-2xl">
+            Strategy
+          </h1>
 
           <p className=" hidden xl:block lg:block">
             In a period of disturbance, strategy is a higher priority than any
@@ -532,10 +542,22 @@ const Business = () => {
               info@nupat.com.ng
             </p>
             <div className="flex gap-5 items-center pb-5 xl:pb-0 h-10 xl:h-8">
-              <img src={foot4} alt="foot4" />
+            <a href="https://www.instagram.com/nupat_teams/" target="_blank">
+                <img src={foot4} alt="foot4" />
+              </a>
               <img src={foot5} alt="foot5" className=" h-8" />
-              <img src={foot6} alt="foot6" className=" h-7" />
-              <img src={foot7} alt="foot7" className=" h-7" />
+              <a
+                href="https://twitter.com/NupatTeams?t=7iM3cAQTKvTV0F_wix6D5w&s=09"
+                target="_blank"
+              >
+                <img src={foot6} alt="foot6" className=" h-7" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/nupatteams/"
+                target="_blank"
+              >
+                <img src={foot7} alt="foot7" className=" h-7" />
+              </a>
             </div>
           </div>
         </div>
@@ -572,8 +594,8 @@ import foot6 from "./assets/foot6.png";
 import foot7 from "./assets/foot7.png";
 
 import { useEffect } from "react";
-import 'aos/dist/aos.css';
-import AOS from 'aos';
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 // import emailjs from "emailjs-com";
 // import { useRef } from "react";

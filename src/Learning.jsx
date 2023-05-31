@@ -3,7 +3,7 @@ const Learning = () => {
   const [drop, setDrop] = useState(true);
 
   useEffect(() => {
-    AOS.init({duration:3000});
+    AOS.init({ duration: 3000 });
   }, []);
   // const form = useRef();
 
@@ -148,7 +148,10 @@ const Learning = () => {
         style={{ fontFamily: "Montserrat" }}
         className="bg-[url('/src/assets/learning/bg1.png')] bg-no-repeat bg-center bg-cover"
       >
-        <div data-aos="zoom-in" className=" xl:py-32 py-12 pl-7 text-white xl:pl-[100px] lg:pl-[50px] md:pl-14 lg:py-32">
+        <div
+          data-aos="zoom-in"
+          className=" xl:py-32 py-12 pl-7 text-white xl:pl-[100px] lg:pl-[50px] md:pl-14 lg:py-32"
+        >
           <h1 className=" font-semibold text-[13px] xl:text-4xl md:text-2xl md:pb-4 lg:text-4xl xl:pb-4 pb-2 lg:pb-4">
             Outsource for Success, Hire Competency...
           </h1>
@@ -158,11 +161,12 @@ const Learning = () => {
         </div>
       </div>
 
-      <div data-aos="zoom-in"
+      <div
+        data-aos="zoom-in"
         style={{ fontFamily: "Montserrat" }}
         className=" bg-black h-[164px] xl:h-32 lg:h-32 px-0 text-[14px] lg:text-[16px] xl:text-[16px] lg:items-center lg:flex lg:justify-center lg:px-16 xl:items-center xl:justify-center flex xl:px-16 "
       >
-          <div className=" md:hidden flex flex-col lg:flex lg:flex-row lg:gap-[17px] lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-4 xl:gap-24 text-white">
+        <div className=" md:hidden flex flex-col lg:flex lg:flex-row lg:gap-[17px] lg:justify-around m-auto xl:flex-row xl:flex xl:text-center xl:items-center xl:justify-around gap-4 xl:gap-24 text-white">
           <p className=" flex text-center items-center gap-2 xl:gap-4">
             <img src={box} alt="box" />
             Access to Top Tech Talents in Africa
@@ -193,7 +197,8 @@ const Learning = () => {
         </div>
       </div>
 
-      <div data-aos="zoom-in"
+      <div
+        data-aos="zoom-in"
         style={{ fontFamily: "Montserrat" }}
         className=" flex flex-col lg:flex-row xl:flex-row justify-around md:px-10 px-10 lg:px-[40px] xl:px-12 mt-10"
       >
@@ -221,7 +226,8 @@ const Learning = () => {
         </div>
       </div>
 
-      <div data-aos="zoom-in"
+      <div
+        data-aos="zoom-in"
         style={{ fontFamily: "Montserrat" }}
         className=" text-base md:text-2xl xl:text-2xl lg:text-2xl flex justify-around items-center pt-10 xl:gap-72 lg:gap-72 lg:px-0 xl:px-10 xl:ml-0 lg:ml-36"
       >
@@ -449,10 +455,22 @@ const Learning = () => {
               info@nupat.com.ng
             </p>
             <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
-              <img src={foot4} alt="foot4" />
+            <a href="https://www.instagram.com/nupat_teams/" target="_blank">
+                <img src={foot4} alt="foot4" />
+              </a>
               <img src={foot5} alt="foot5" className=" h-8" />
-              <img src={foot6} alt="foot6" className=" h-7" />
-              <img src={foot7} alt="foot7" className=" h-7" />
+              <a
+                href="https://twitter.com/NupatTeams?t=7iM3cAQTKvTV0F_wix6D5w&s=09"
+                target="_blank"
+              >
+                <img src={foot6} alt="foot6" className=" h-7" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/nupatteams/"
+                target="_blank"
+              >
+                <img src={foot7} alt="foot7" className=" h-7" />
+              </a>
             </div>
           </div>
         </div>
