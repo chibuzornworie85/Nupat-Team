@@ -22,8 +22,6 @@ const Join = () => {
       return;
     }
 
-    window.location.href = "/employ";
-
     if (lastName.trim() === "") {
       setLastNameError("Please add your last name.");
     }
@@ -44,6 +42,8 @@ const Join = () => {
     if (country.trim() === "") {
       setCountryError("Please fill up this field.");
     }
+
+    window.location.href = "/employ";
   };
 
   const validateEmail = (email) => {
@@ -300,4 +300,4 @@ export default Join;
 import emailjs from "emailjs-com";
 import { useRef, useState } from "react";
 import logo from "./assets/logo.png";
-import "./join.css";
+// import "./join.css";

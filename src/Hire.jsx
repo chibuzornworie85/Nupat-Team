@@ -81,7 +81,7 @@ const Hire = () => {
       return;
     }
 
-    if (comName() === "") {
+    if (comName.trim() === "") {
       setComNameError("Please fill up this field.");
       return;
     }
@@ -616,4 +616,4 @@ import emailjs from "emailjs-com";
 import { useRef } from "react";
 import { useState } from "react";
 import logo from "./assets/logo.png";
-import "./join.css";
+// import "./join.css";

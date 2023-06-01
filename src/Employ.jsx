@@ -438,4 +438,4 @@ export default Employ;
 import emailjs from "emailjs-com";
 import { useRef, useState } from "react";
 import logo from "./assets/logo.png";
-import "./join.css";
+// import "./join.css";
