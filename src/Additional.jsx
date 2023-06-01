@@ -4,6 +4,8 @@ const Additional = () => {
   const [hearError, setHearError] = useState("");
   const [referralError, setRerralError] = useState("");
 
+  const navigate = useNavigate();
+
   const validateForm = (event) => {
     event.preventDefault();
 
@@ -16,7 +18,8 @@ const Additional = () => {
       return;
     }
 
-    window.location.href = "/";
+    // window.location.href = "/";
+    navigate("/");
   };
 
   const form = useRef();
@@ -195,3 +198,4 @@ import React, { useState } from "react";
 import { useRef } from "react";
 import logo from "./assets/logo.png";
 import "./join.css";
+import { useNavigate } from "react-router-dom";

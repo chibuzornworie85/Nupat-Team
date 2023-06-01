@@ -14,6 +14,8 @@ const Join = () => {
   const [genderError, setGenderError] = useState("");
   const [countryError, setCountryError] = useState("");
 
+  const navigate = useNavigate();
+
   const validateForm = (event) => {
     event.preventDefault();
 
@@ -43,7 +45,8 @@ const Join = () => {
       setCountryError("Please fill up this field.");
     }
 
-    window.location.href = "/employ";
+    // window.location.href = "/employ";
+    navigate("/employ");
   };
 
   const validateEmail = (email) => {
@@ -300,4 +303,5 @@ export default Join;
 import emailjs from "emailjs-com";
 import { useRef, useState } from "react";
 import logo from "./assets/logo.png";
+import { useNavigate } from "react-router-dom";
 // import "./join.css";

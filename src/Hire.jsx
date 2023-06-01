@@ -33,6 +33,8 @@ const Hire = () => {
   const [phoneNumberError, setphoneNumberError] = useState("");
   const [clientError, setClientError] = useState("");
 
+  const navigate = useNavigate();
+
   const validateForm = (event) => {
     event.preventDefault();
 
@@ -111,7 +113,8 @@ const Hire = () => {
       return;
     }
 
-    window.location.href = "/";
+    // window.location.href = "/";
+    navigate("/");
   };
 
   const validateEmail = (email) => {
@@ -616,4 +619,5 @@ import emailjs from "emailjs-com";
 import { useRef } from "react";
 import { useState } from "react";
 import logo from "./assets/logo.png";
+import { useNavigate } from "react-router-dom";
 // import "./join.css";

@@ -23,6 +23,8 @@ const Employ = () => {
   const [linkendinError, setLinkendinError] = useState("");
   const [githubError, setGithubError] = useState("");
 
+  const navigate = useNavigate();
+
   const validateForm = (event) => {
     event.preventDefault();
 
@@ -67,7 +69,8 @@ const Employ = () => {
       return;
     }
 
-    window.location.href = "/additional";
+    // window.location.href = "/additional";
+    navigate("/additional");
   };
 
   const form = useRef();
@@ -438,4 +441,5 @@ export default Employ;
 import emailjs from "emailjs-com";
 import { useRef, useState } from "react";
 import logo from "./assets/logo.png";
+import { useNavigate } from "react-router-dom";
 // import "./join.css";

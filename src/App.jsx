@@ -23,6 +23,8 @@ function App() {
   const [commentError, setCommentError] = useState("");
   const [hearError, setHearError] = useState("");
 
+  const navigate = useNavigate();
+
   const validateForm = (event) => {
     event.preventDefault();
 
@@ -68,7 +70,8 @@ function App() {
       return;
     }
 
-    window.location.href = "/";
+    // window.location.href = "/";
+    navigate("/");
   };
 
   const validateEmail = (email) => {
@@ -1454,3 +1457,5 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+import { useNavigate } from "react-router-dom";

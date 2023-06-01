@@ -24,6 +24,8 @@ const Contact = () => {
   const [commentError, setCommentError] = useState("");
   const [hearError, setHearError] = useState("");
 
+  const navigate = useNavigate();
+
   const validateForm = (event) => {
     event.preventDefault();
 
@@ -69,7 +71,8 @@ const Contact = () => {
       return;
     }
 
-    window.location.href = "/";
+    // window.location.href = "/";
+    navigate("/");
   };
 
   const validateEmail = (email) => {
@@ -615,3 +618,5 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
+
+import { useNavigate } from "react-router-dom";
