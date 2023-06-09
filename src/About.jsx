@@ -385,7 +385,7 @@ function About() {
                 </div>
                 <div className="text md:w-[300px] flex justify-center items-center flex-col pt-40 text-xl lg:text-[15px] xl:h-[300px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                   <p>Nnamdi Ugwu</p>
-                  <p>CEO/Managing Director</p>
+                  <p>CEO Managing Director</p>
                 </div>
               </div>
               <div>
@@ -394,7 +394,7 @@ function About() {
                 </div>
                 <div className="text flex md:w-[300px] justify-center items-center flex-col pt-40 text-xl lg:text-[15px] xl:w-[350px] xl:h-[300px] lg:w-64 lg:h-64 bg-white">
                   <p>Olanrewaju Paul</p>
-                  <p>COO/Business Manager</p>
+                  <p>COO Business Manager</p>
                 </div>
               </div>
               <div>
@@ -403,7 +403,7 @@ function About() {
                 </div>
                 <div className="text flex md:w-[300px] justify-center items-center flex-col pt-40 text-xl lg:text-[15px] xl:h-[300px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                   <p>Chibuike Ugwu</p>
-                  <p>CTO/Managing Director</p>
+                  <p>CTO Managing Director</p>
                 </div>
               </div>
               <div className="md:block xl:hidden lg:hidden">
@@ -412,7 +412,7 @@ function About() {
                 </div>
                 <div className="text flex md:w-[300px] justify-center items-center flex-col pt-40 text-xl lg:text-lg xl:h-[300px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                   <p>Ogunfunmilade I.</p>
-                  <p>CBO/Brand Manager</p>
+                  <p>CBO Brand Manager</p>
                 </div>
               </div>
             </div>
@@ -427,7 +427,7 @@ function About() {
                 </div>
                 <div className="text flex md:w-72 justify-center items-center flex-col pt-40 text-xl lg:text-[15px] xl:h-[300px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                   <p>Ogunfunmilade Ibukunoluwa</p>
-                  <p>CBO/Brand Manager</p>
+                  <p>CBO Brand Manager</p>
                 </div>
               </div>
               <div>
@@ -459,7 +459,7 @@ function About() {
               </div>
               <div className="text flex md:w-[300px] justify-center items-center flex-col pt-44 text-xl lg:text-[15px] xl:h-[300px] xl:w-[350px] lg:w-64 lg:h-64 bg-white">
                 <p>Gbolaga Adegbola </p>
-                <p>Human Capital Manager</p>
+                <p>Talent Manager</p>
               </div>
             </div>
           </div>
@@ -482,7 +482,9 @@ function About() {
               </h1>
             </div>
             <div className=" py-1 xl:py-0 lg:py-0 md:py-0 text-[10px] xl:text-xl md:text-xl xl:w-[224px] lg:w-[224px] md:w-[220px] xl:h-[48px] md:h-[48px] lg:h-[48px] flex items-center lg:text-xl text-black xl:bg-yellow-300 md:bg-yellow-300 lg:bg-yellow-300 bg-[#03CFD6] rounded-md px-1 md:p-2 lg:p-2 lg:mt-40 md:mt-40 xl:p-2 mt-20 xl:mt-40">
-              <p>Get in touch with us </p>
+              <p>
+                <Link to="/contact">Get in touch with us</Link>
+              </p>
             </div>
           </div>
         </div>
@@ -590,58 +592,50 @@ function About() {
             <div className=" grid-cols-2 grid lg:grid-cols-1 xl:grid xl:grid-cols-1">
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                About Us
+                <Link to="/about">About Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Jobs
+                <Link to="/service">Services</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Contact Us
+                <Link to="/contact">Contact Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                FAQs
+                <Link to="/join">Join Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Find other services
-              </p>
-              <p className=" flex items-center gap-4 pb-5">
-                <img src={foot} alt="foot" />
-                Talent Acquisition
+                <Link to="/hire">Hire Talent</Link>
               </p>
             </div>
           </div>
           <div>
             <h1 className=" pb-4 text-base xl:text-2xl font-semibold">
-              BUSINESS SUPPORT SERVICES
+              BUSINESS SERVICES
             </h1>
             <div className=" grid grid-cols-2 lg:grid-cols-1 xl:grid xl:grid-cols-1">
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Recruitment
+                <Link to="/recruitement">Recruitment</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Background Checks
+                <Link to="/business">Business Advisory</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                IT Outsourcing
+                <Link to="/it">IT Outsourcing</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Digital Marketing
+                <Link to="/learning">Learning</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Learning Solution
-              </p>
-              <p className=" flex items-center xl:pl-16 gap-4 pb-5">
-                <img src={foot} alt="foot" />
-                Sales Outsourcing
+                <Link to="/admistration">Administration</Link>
               </p>
             </div>
           </div>
@@ -663,11 +657,10 @@ function About() {
               <img src={foot3} alt="foot3" className=" h-4" />
               info@nupat.com.ng
             </p>
-            <div className="flex items-center justify-start gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
+            <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-5">
               <a href="https://www.instagram.com/nupat_teams/" target="_blank">
                 <img src={foot4} alt="foot4" />
               </a>
-              <img src={foot5} alt="foot5" className=" h-8" />
               <a
                 href="https://twitter.com/NupatTeams?t=7iM3cAQTKvTV0F_wix6D5w&s=09"
                 target="_blank"
@@ -726,7 +719,7 @@ import foot1 from "./assets/foot1.png";
 import foot2 from "./assets/foot2.png";
 import foot3 from "./assets/foot3.png";
 import foot4 from "./assets/foot4.png";
-import foot5 from "./assets/foot5.png";
+// import foot5 from "./assets/foot5.png";
 import foot6 from "./assets/foot6.png";
 import foot7 from "./assets/foot7.png";
 

@@ -179,7 +179,7 @@ function App() {
         </div>
       </div>
 
-      <div className="sec h-[120px] lg:h-[60vh] md:h-[200px] lg:pt-20 xl:h-[70vh] text-center pt-10 xl:pt-28">
+      <div className="sec h-[140px] lg:h-[70vh] md:h-[200px] lg:pt-20 xl:h-[90vh] text-center pt-10 xl:pt-28">
         <h1
           data-aos="zoom-in"
           style={{ fontFamily: "Montserrat" }}
@@ -538,7 +538,7 @@ function App() {
                 verifable positive business results.
               </p>
               <button className="font-normal text-sm xl:text-base h-10 bg-[#03cfd6] rounded-xl lg:mx-20 xl:mx-20 px-4 m-auto">
-                SCHEDULE OUR FREE CONSULTATION
+                <Link to="/hire">SCHEDULE OUR FREE CONSULTATION</Link>
               </button>
             </div>
           </div>
@@ -1021,6 +1021,7 @@ function App() {
       <div
         style={{ fontFamily: "Montserrat" }}
         className=" bg-white pt-20 px-4 xl:px-0"
+        id="faq"
       >
         <div className="flex flex-col xl:ml-[130px] md:ml-5 lg:ml-20 md:w-[80%] lg:w-1/2 xl:w-1/2 gap-5 xl:pl-0">
           <div className=" xl:text-3xl text-sm md:text-xl">
@@ -1296,58 +1297,60 @@ function App() {
             <div className=" grid-cols-2 grid lg:grid-cols-1 xl:grid xl:grid-cols-1">
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                About Us
+                <Link to="/about">About Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Jobs
+                <Link to="/service">Services</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Contact Us
+                <Link to="/contact">Contact Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                FAQs
+                {faq.map((link) => {
+                  return (
+                    <a href={link.url} key={link.id}>
+                      {link.text}
+                    </a>
+                  );
+                })}
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Find other services
+                <Link to="/join">Join Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Talent Acquisition
+                <Link to="/hire">Hire Talent</Link>
               </p>
             </div>
           </div>
           <div>
             <h1 className=" pb-4 text-base xl:text-2xl font-semibold">
-              BUSINESS SUPPORT SERVICES
+              BUSINESS SERVICES
             </h1>
             <div className=" grid grid-cols-2 lg:grid-cols-1 xl:grid xl:grid-cols-1">
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Recruitment
+                <Link to="/recruitement">Recruitment</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Background Checks
+                <Link to="/business">Business Advisory</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                IT Outsourcing
+                <Link to="/it">IT Outsourcing</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Digital Marketing
+                <Link to="learning">Learning</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Learning Solution
-              </p>
-              <p className=" flex items-center xl:pl-16 gap-4 pb-5">
-                <img src={foot} alt="foot" />
-                Sales Outsourcing
+                <Link to="admistration">Administration</Link>
               </p>
             </div>
           </div>
@@ -1373,7 +1376,6 @@ function App() {
               <a href="https://www.instagram.com/nupat_teams/" target="_blank">
                 <img src={foot4} alt="foot4" />
               </a>
-              <img src={foot5} alt="foot5" className=" h-8" />
               <a
                 href="https://twitter.com/NupatTeams?t=7iM3cAQTKvTV0F_wix6D5w&s=09"
                 target="_blank"
@@ -1434,14 +1436,14 @@ import vector5 from "./assets/Vector5.png";
 import vector2 from "./assets/Vector2.png";
 import vector3 from "./assets/Vector3.png";
 import vector4 from "./assets/Vector4.png";
-import dot from "./assets/dot.png";
+// import dot from "./assets/dot.png";
 
 import foot from "./assets/foot.png";
 import foot1 from "./assets/foot1.png";
 import foot2 from "./assets/foot2.png";
 import foot3 from "./assets/foot3.png";
 import foot4 from "./assets/foot4.png";
-import foot5 from "./assets/foot5.png";
+// import foot5 from "./assets/foot5.png";
 import foot6 from "./assets/foot6.png";
 import foot7 from "./assets/foot7.png";
 import { Link } from "react-router-dom";
@@ -1459,3 +1461,4 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 import { useNavigate } from "react-router-dom";
+import { faq } from "./Data";

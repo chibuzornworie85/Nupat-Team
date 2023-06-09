@@ -229,13 +229,8 @@ const Learning = () => {
       <div
         data-aos="zoom-in"
         style={{ fontFamily: "Montserrat" }}
-        className=" text-base md:text-2xl xl:text-2xl lg:text-2xl flex justify-around items-center pt-10 xl:gap-72 lg:gap-72 lg:px-0 xl:px-10 xl:ml-0 lg:ml-36"
+        className=" text-base md:text-2xl xl:text-2xl lg:text-2xl flex justify-around items-center pt-10 xl:flex xl:justify-end lg:flex lg:justify-end lg:px-0 xl:px-10 xl:ml-0 lg:ml-36"
       >
-        <Link to="/faq">
-          <div className=" xl:flex lg:flex pt-96 items-center hidden xl:ml-[50px]">
-            <img src={mess} alt="mess" />
-          </div>
-        </Link>
         <div className=" what1 md:text-xl xl:text-[20px] lg:text-[20px] flex flex-col gap-4 px-6 xl:px-0 lg:px-0 md:px-14 lg:w-[600px] xl:w-[702px] xl:ml-[180px]">
           <p className=" hidden xl:block lg:block">
             As the global leader in professional training, NUPAT provides
@@ -381,58 +376,50 @@ const Learning = () => {
             <div className=" grid-cols-2 grid lg:grid-cols-1 xl:grid xl:grid-cols-1">
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                About Us
+                <Link to="/about">About Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Jobs
+                <Link to="/service">Services</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Contact Us
+                <Link to="/contact">Contact Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                FAQs
+                <Link to="/join">Join Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Find other services
-              </p>
-              <p className=" flex items-center gap-4 pb-5">
-                <img src={foot} alt="foot" />
-                Talent Acquisition
+                <Link to="/hire">Hire Talent</Link>
               </p>
             </div>
           </div>
           <div>
             <h1 className=" pb-4 text-base xl:text-2xl font-semibold">
-              BUSINESS SUPPORT SERVICES
+              BUSINESS SERVICES
             </h1>
             <div className=" grid grid-cols-2 lg:grid-cols-1 xl:grid xl:grid-cols-1">
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Recruitment
+                <Link to="/recruitement">Recruitment</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Background Checks
+                <Link to="/business">Business Advisory</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                IT Outsourcing
+                <Link to="/it">IT Outsourcing</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Digital Marketing
+                <Link to="/learning">Learning</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Learning Solution
-              </p>
-              <p className=" flex items-center xl:pl-16 gap-4 pb-5">
-                <img src={foot} alt="foot" />
-                Sales Outsourcing
+                <Link to="/admistration">Administration</Link>
               </p>
             </div>
           </div>
@@ -454,11 +441,10 @@ const Learning = () => {
               <img src={foot3} alt="foot3" className=" h-4" />
               info@nupat.com.ng
             </p>
-            <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
-            <a href="https://www.instagram.com/nupat_teams/" target="_blank">
+            <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-5">
+              <a href="https://www.instagram.com/nupat_teams/" target="_blank">
                 <img src={foot4} alt="foot4" />
               </a>
-              <img src={foot5} alt="foot5" className=" h-8" />
               <a
                 href="https://twitter.com/NupatTeams?t=7iM3cAQTKvTV0F_wix6D5w&s=09"
                 target="_blank"
@@ -496,13 +482,12 @@ import logo from "./assets/logo.png";
 import arrow from "./assets/arrow.png";
 import { Link } from "react-router-dom";
 import box from "./assets/box.png";
-import mess from "./assets/contact/circle.png";
 import foot from "./assets/foot.png";
 import foot1 from "./assets/foot1.png";
 import foot2 from "./assets/foot2.png";
 import foot3 from "./assets/foot3.png";
 import foot4 from "./assets/foot4.png";
-import foot5 from "./assets/foot5.png";
+// import foot5 from "./assets/foot5.png";
 import foot6 from "./assets/foot6.png";
 import foot7 from "./assets/foot7.png";
 import { useEffect } from "react";

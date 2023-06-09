@@ -4,7 +4,6 @@ import App from "../App";
 import Contact from "../Contact";
 import About from "../About";
 import Service from "../Service";
-import Faq from "../Faq";
 import Recruitement from "../Recruitement";
 import Admission from "../Admistration";
 import IT from "../It";
@@ -26,7 +25,6 @@ const Route1 = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<Service />} />
-        <Route path="/faq" element={<Faq />} />
         <Route path="/recruitement" element={<Recruitement />} />
         <Route path="/admistration" element={<Admission />} />
         <Route path="/it" element={<IT />} />

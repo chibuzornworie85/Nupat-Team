@@ -1,4 +1,8 @@
 const Team = () => {
+  useEffect(() => {
+    AOS.init({ duration: 3000 });
+  }, []);
+
   const [navClose, setNavClose] = useState(true);
   return (
     <>
@@ -20,9 +24,6 @@ const Team = () => {
             <li className=" flex items-center gap-2">
               <Link to="/service">SERVICES</Link>
             </li>
-            {/* <li>
-              <Link to="/faq">FAQs</Link>
-            </li> */}
             <li>
               <Link to="/contact">CONTACT US</Link>
             </li>
@@ -65,9 +66,6 @@ const Team = () => {
                   <img src={arrow} alt="arrow" />
                 </li>
                 <li>
-                  <Link to="/faq">FAQs</Link>
-                </li>
-                <li>
                   <Link to="/contact">CONTACT US</Link>
                 </li>
                 <button className="but text-[#000]">Join Us</button>
@@ -84,7 +82,7 @@ const Team = () => {
         style={{ fontFamily: "Montserrat" }}
         className="back flex h-[104px] justify-center items-center text-center"
       >
-        <div className="">
+        <div data-aos="zoom-in" className="">
           <h1 className="hit font-semibold text-base pb-4">MANAGEMENT TEAM</h1>
           <p className=" text-white text-xs pr-28">
             YOUR BUSINESS IS IN SAFE HAND
@@ -96,37 +94,37 @@ const Team = () => {
         style={{ fontFamily: "Montserrat" }}
         className="team2 flex flex-col items-center gap-8 font-semibold pt-8 pb-[50px]"
       >
-        <div>
+        <div data-aos="zoom-in">
           <div className=" h-72 w-72 rounded-3xl relative -mt-[160px] top-[160px]">
             <img src={ceo} className="image1 object-cover" alt="" />
           </div>
           <div className="text flex justify-center items-center bg-[white] flex-col pt-40 text-lg h-[260px] w-[100%]">
             <p>Nnamdi Ugwu</p>
-            <p>CEO/Managing Director</p>
+            <p>CEO Managing Director</p>
             {/* <button className=" bg-[#1F335F] text-white mt-4 px-4 py-1 rounded-lg">
               See More
             </button> */}
           </div>
         </div>
-        <div>
+        <div data-aos="zoom-in">
           <div className=" h-72 w-72 rounded-3xl relative -mt-[160px] top-[160px]">
             <img src={coo} className="image1 object-cover" alt="" />
           </div>
           <div className="text flex justify-center items-center bg-[white] flex-col pt-40 text-lg h-[260px] w-[100%]">
             <p>Olanrewaju Paul</p>
-            <p>COO/Business Manager</p>
+            <p>COO Business Manager</p>
             {/* <button className=" bg-[#1F335F] text-white mt-4 px-4 py-1 rounded-lg">
               See More
             </button> */}
           </div>
         </div>
-        <div>
+        <div data-aos="zoom-in">
           <div className=" h-72 w-72 rounded-3xl relative -mt-[160px] top-[160px]">
             <img src={cto} className="image1 object-cover" alt="" />
           </div>
           <div className="text flex justify-center items-center bg-[white] flex-col pt-40 text-lg h-[260px] w-[100%]">
             <p>Chibuike Ugwu</p>
-            <p>CEO/Managing Director</p>
+            <p>CEO Managing Director</p>
             {/* <button className=" bg-[#1F335F] text-white mt-4 px-4 py-1 rounded-lg">
               See More
             </button> */}
@@ -168,12 +166,12 @@ const Team = () => {
 
       <div
         style={{ fontFamily: "Montserrat" }}
-        className=" mt-10 xl:mt-24 md:mt-10 text-white md:text-xl xl:text-base lg:text-base text-sm p-8 xl:px-20 lg:px-16 pt-10 bg-black mx-4 lg:mx-0 xl:mx-0"
+        className=" mt-10 xl:mt-24 md:mt-10 text-white md:text-xl xl:text-base lg:text-base text-sm p-8 xl:px-14 lg:px-16 pt-10 bg-black mx-4 lg:mx-0 xl:mx-0"
       >
         <div className=" xl:flex flex flex-col xl:flex-row lg:flex-row justify-around">
           <div className="relative bottom-6">
             <img src={logo} alt="logo" className="relative right-8" />
-            <p className=" relative bottom-7 -mb-0 xl:w-[296px]">
+            <p className=" relative bottom-7 -mb-0 lg:w-[296px] xl:w-[296px]">
               NUPAT Teams is a Business Process Outsourcing firm whose business
               is to increase clients' productivity, operational efficiency, and
               in turn profit by taking over some of their intensive business
@@ -187,58 +185,50 @@ const Team = () => {
             <div className=" grid-cols-2 grid lg:grid-cols-1 xl:grid xl:grid-cols-1">
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                About Us
+                <Link to="/about">About Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Jobs
+                <Link to="/service">Services</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Contact Us
+                <Link to="/contact">Contact Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                FAQs
+                <Link to="/join">Join Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Find other services
-              </p>
-              <p className=" flex items-center gap-4 pb-5">
-                <img src={foot} alt="foot" />
-                Talent Acquisition
+                <Link to="/hire">Hire Talent</Link>
               </p>
             </div>
           </div>
           <div>
             <h1 className=" pb-4 text-base xl:text-2xl font-semibold">
-              BUSINESS SUPPORT SERVICES
+              BUSINESS SERVICES
             </h1>
             <div className=" grid grid-cols-2 lg:grid-cols-1 xl:grid xl:grid-cols-1">
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Recruitment
+                <Link to="/recruitement">Recruitment</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Background Checks
+                <Link to="/business">Business Advisory</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                IT Outsourcing
+                <Link to="/it">IT Outsourcing</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Digital Marketing
+                <Link to="/learning">Learning</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Learning Solution
-              </p>
-              <p className=" flex items-center xl:pl-16 gap-4 pb-5">
-                <img src={foot} alt="foot" />
-                Sales Outsourcing
+                <Link to="/admistration">Administration</Link>
               </p>
             </div>
           </div>
@@ -260,11 +250,10 @@ const Team = () => {
               <img src={foot3} alt="foot3" className=" h-4" />
               info@nupat.com.ng
             </p>
-            <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
+            <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-5">
               <a href="https://www.instagram.com/nupat_teams/" target="_blank">
                 <img src={foot4} alt="foot4" />
               </a>
-              <img src={foot5} alt="foot5" className=" h-8" />
               <a
                 href="https://twitter.com/NupatTeams?t=7iM3cAQTKvTV0F_wix6D5w&s=09"
                 target="_blank"
@@ -307,9 +296,13 @@ import foot1 from "./assets/foot1.png";
 import foot2 from "./assets/foot2.png";
 import foot3 from "./assets/foot3.png";
 import foot4 from "./assets/foot4.png";
-import foot5 from "./assets/foot5.png";
+// import foot5 from "./assets/foot5.png";
 import foot6 from "./assets/foot6.png";
 import foot7 from "./assets/foot7.png";
 import ceo from "./assets/about/nupat.png";
 import coo from "./assets/about/paulo.png";
 import cto from "./assets/about/henry.png";
+
+import { useEffect } from "react";
+import "aos/dist/aos.css";
+import AOS from "aos";

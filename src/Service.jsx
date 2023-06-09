@@ -261,10 +261,10 @@ const Service = () => {
             <img src={pic5} alt="" className=" hidden xl:block lg:block" />
           </div>
           <div className=" xl:pt-[40px]">
-            <p className=" text-[#03CFD6] hidden lg:flex xl:flex lg:text-2xl xl:text-4xl bg-black justify-center mb-4 rounded-xl lg:mx-20 xl:mx-36 py-2">
+            <p className=" text-[#03CFD6] font-semibold hidden lg:flex xl:flex lg:text-2xl xl:text-4xl bg-black justify-center mb-4 rounded-xl lg:mx-20 xl:mx-36 py-2">
               IT SOLUTION
             </p>
-            <p className=" text-[#03CFD6] w-56 lg:hidden xl:hidden text-base bg-black flex justify-center mb-4 rounded-xl py-3 ml-6 md:py-4 md:ml-12">
+            <p className=" text-[#03CFD6] w-56 font-semibold lg:hidden xl:hidden text-base bg-black flex justify-center mb-4 rounded-xl py-3 ml-6 md:py-4 md:ml-12">
               IT SOLUTION
             </p>
             <div>
@@ -310,10 +310,10 @@ const Service = () => {
             </button>
           </div>
           <div className=" xl:mt-[50px]">
-            <p className=" text-[#03CFD6] hidden xl:w-[552px] h-[61px] m-auto lg:flex xl:flex lg:text-2xl xl:text-4xl bg-black justify-center mb-4 rounded-xl py-2">
+            <p className=" text-[#03CFD6] font-semibold hidden xl:w-[552px] h-[61px] m-auto lg:flex xl:flex lg:text-2xl xl:text-4xl bg-black justify-center mb-4 rounded-xl py-2">
               LEARNING & DEVELOPMENT
             </p>
-            <p className=" text-[#03CFD6] text-[16px] lg:hidden xl:hidden mx-[10px] text-base bg-black flex justify-center mb-4 rounded-xl py-3 ml-6 md:py-4 md:ml-10">
+            <p className=" text-[#03CFD6] font-semibold text-[16px] lg:hidden xl:hidden mx-[10px] text-base bg-black flex justify-center mb-4 rounded-xl py-3 ml-6 md:py-4 md:ml-10">
               LEARNING & DEVELOPMENT
             </p>
             <div
@@ -366,10 +366,10 @@ const Service = () => {
             <img src={pic4} alt="" className="hidden xl:block lg:block" />
           </div>
           <div className=" xl:pt-[40px]">
-            <p className=" text-[#03CFD6] lg:text-2xl xl:text-4xl bg-black justify-center mb-4 rounded-xl xl:mx-28 lg:mx-20 py-2 xl:flex lg:flex hidden">
+            <p className=" text-[#03CFD6] font-semibold lg:text-2xl xl:text-4xl bg-black justify-center mb-4 rounded-xl xl:mx-[90px] lg:mx-20 py-2 xl:flex lg:flex hidden">
               ADMINISTRATION
             </p>
-            <p className=" text-[#03CFD6] w-56 text-base bg-black flex justify-center mb-4 rounded-xl py-3 ml-6 xl:hidden lg:hidden md:py-4 md:ml-12">
+            <p className=" text-[#03CFD6] font-semibold w-56 text-base bg-black flex justify-center mb-4 rounded-xl py-3 ml-6 xl:hidden lg:hidden md:py-4 md:ml-12">
               ADMINISTRATION
             </p>
             <div>
@@ -400,11 +400,6 @@ const Service = () => {
             <button className=" lg:ml-0 xl:ml-[50px] ml-5 w-[120px] xl:w-[160px] h-[48px] md:ml-12 xl:mt-14">
               <Link to="/admistration">Read More</Link>
             </button>
-            <Link to="/faq">
-              <div className=" flex justify-end lg:pt-14 xl:pt-14 pb-10 pr-8 lg:pr-0 xl:pr-0">
-                <img src={mess} alt="mess" />
-              </div>
-            </Link>
           </div>
         </div>
       </div>
@@ -425,7 +420,9 @@ const Service = () => {
               </h1>
             </div>
             <div className=" py-1 xl:py-0 lg:py-0 md:py-0 text-[10px] xl:text-xl md:text-xl xl:w-[224px] lg:w-[224px] md:w-[220px] xl:h-[48px] md:h-[48px] lg:h-[48px] flex items-center lg:text-xl text-black xl:bg-yellow-300 md:bg-yellow-300 lg:bg-yellow-300 bg-[#03CFD6] rounded-md px-1 md:p-2 lg:p-2 lg:mt-40 md:mt-40 xl:p-2 mt-20 xl:mt-40">
-              <p>Get in touch with us </p>
+              <p>
+                <Link to="/contact">Get in touch with us</Link>
+              </p>
             </div>
           </div>
         </div>
@@ -498,58 +495,50 @@ const Service = () => {
             <div className=" grid-cols-2 grid lg:grid-cols-1 xl:grid xl:grid-cols-1">
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                About Us
+                <Link to="/about">About Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Jobs
+                <Link to="/service">Services</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Contact Us
+                <Link to="/contact">Contact Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                FAQs
+                <Link to="/join">Join Us</Link>
               </p>
               <p className=" flex items-center gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Find other services
-              </p>
-              <p className=" flex items-center gap-4 pb-5">
-                <img src={foot} alt="foot" />
-                Talent Acquisition
+                <Link to="/hire">Hire Talent</Link>
               </p>
             </div>
           </div>
           <div>
             <h1 className=" pb-4 text-base xl:text-2xl font-semibold">
-              BUSINESS SUPPORT SERVICES
+              BUSINESS SERVICES
             </h1>
             <div className=" grid grid-cols-2 lg:grid-cols-1 xl:grid xl:grid-cols-1">
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Recruitment
+                <Link to="/recruitement">Recruitment</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Background Checks
+                <Link to="/business">Business Advisory</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                IT Outsourcing
+                <Link to="/it">IT Outsourcing</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Digital Marketing
+                <Link to="/learning">Learning</Link>
               </p>
               <p className=" flex items-center xl:pl-16 gap-4 pb-5">
                 <img src={foot} alt="foot" />
-                Learning Solution
-              </p>
-              <p className=" flex items-center xl:pl-16 gap-4 pb-5">
-                <img src={foot} alt="foot" />
-                Sales Outsourcing
+                <Link to="/admistration">Administration</Link>
               </p>
             </div>
           </div>
@@ -571,11 +560,10 @@ const Service = () => {
               <img src={foot3} alt="foot3" className=" h-4" />
               info@nupat.com.ng
             </p>
-            <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-8">
+            <div className="flex items-center gap-5 pb-5 xl:pb-0 h-10 xl:h-5">
               <a href="https://www.instagram.com/nupat_teams/" target="_blank">
                 <img src={foot4} alt="foot4" />
               </a>
-              <img src={foot5} alt="foot5" className=" h-8" />
               <a
                 href="https://twitter.com/NupatTeams?t=7iM3cAQTKvTV0F_wix6D5w&s=09"
                 target="_blank"
@@ -612,7 +600,6 @@ import logo from "./assets/logo.png";
 import { useState } from "react";
 import arrow from "./assets/arrow.png";
 import { Link } from "react-router-dom";
-import mess from "./assets/contact/circle.png";
 import pic from "./assets/service/pic.png";
 import pic2 from "./assets/service/pic2.png";
 import pic3 from "./assets/service/pic3.png";
@@ -623,7 +610,7 @@ import foot1 from "./assets/foot1.png";
 import foot2 from "./assets/foot2.png";
 import foot3 from "./assets/foot3.png";
 import foot4 from "./assets/foot4.png";
-import foot5 from "./assets/foot5.png";
+// import foot5 from "./assets/foot5.png";
 import foot6 from "./assets/foot6.png";
 import foot7 from "./assets/foot7.png";
 import { useEffect } from "react";
